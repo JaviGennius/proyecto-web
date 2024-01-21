@@ -22,9 +22,9 @@ body {
   }
 button{ 
     position: block;
-    grid-column: 3;
     align-self: center;
     margin: 50px;
+    
 }
 
 nav{
