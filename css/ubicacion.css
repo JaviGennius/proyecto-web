@@ -1,3 +1,17 @@
+main h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;; 
+    text-align: center;
+    font-size: 54px;
+}
+main h2 {
+    font-size: 28px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+main h3 {
+    padding: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 .table {
     height: auto;
     width: auto;
@@ -39,12 +53,12 @@ table {
 .horas2 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #ff5f4a;
-    background-color: aliceblue;
+    background-color: #ffffff;
 }
 
 .horas1 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: aliceblue;
+    color: #ffffff;
     background-color: #ff5f4a;
 }
 th, td {
@@ -144,5 +158,5 @@ td:hover {
     font-size: medium;
     color: #ffffff;
     font-display: 20px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
