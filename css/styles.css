@@ -40,7 +40,9 @@ ul li:hover{
 	position: sticky;
 	top: 10px;
 	bottom: 100%;
+	text-align: center;
 	z-index: 5;
+
 }
   
 .navegacion ul{
@@ -96,3 +98,25 @@ ul li:hover{
 	opacity: 1;
 }
 
+.twitter{
+	color: blue;
+	transition color: 0.4s;
+	transform: scale(2);
+}
+.facebook {
+	color: lightblue;
+	transition color: 0.4;
+
+}
+.instagram {
+	color: pink;
+	transition color: 0.4s;
+
+}
+a{
+	text-decoration: none;
+}
+.socialmedia:hover{
+	
+	color: green;
+}
