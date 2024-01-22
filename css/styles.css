@@ -86,10 +86,9 @@ ul li:hover{
 .boton_registro {
     display: grid;
     grid-column: 3;
-    width: 10em;
-    height: 5em;
-    align-self: center;
+    
     margin: auto;
+    margin-top: 7.5% ;
 }
 .navegacion ul{
 	list-style: none;
