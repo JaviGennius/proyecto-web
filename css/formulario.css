@@ -3,7 +3,7 @@ body {
     background-color: #f4f4f4;
     padding: 0;
     display: grid;
-    grid-template-columns: 37% 67%;
+    grid-template-columns: 37% 57%;
     align-items: center;
     justify-content: center;
   }
@@ -57,13 +57,13 @@ main {
 }
 legend {
   color: #000000;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
   label {
     display: block;
     margin-bottom: 8px;
     color: #020202;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 
   input, select, textarea {
@@ -73,7 +73,7 @@ legend {
     box-sizing: border-box;
     border: 1px solid #ccc; 
     border-radius: 4px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 
   input.valid, select.valid, textarea.valid {
