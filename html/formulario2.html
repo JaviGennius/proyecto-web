@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <script src="logica.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form id="formulario" onsubmit="enviar_formulario(event)">
+            <label for="nombre_de_usuario">Nombre de usuario</label>
+            <br>
+            <input type="text" id="nombre_de_usuario" name="nombre_de_usuario" required onblur="validarCampo(this, /^[a-zA-Z\s]+$/, 'Nombre de usuario')">
+            <br><br>
+            <label for="dni">DNI</label>
+            <br>
+            <input type="text" id="dni" name="dni" pattern="[0-9]{8}[A-Za-z]" title="Introduce un DNI válido" required onblur="validarCampo(this, /^[0-9]{8}[A-Za-z]$/, 'DNI')">
+            <br><br>
+            <label for="contraseña">Contraseña</label>
+            <br>
+            <input type="password" id="contraseña" name="contraseña" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$" title="Debe contener al menos 8 caracteres, incluyendo al menos un número, una letra minúscula y una letra mayúscula" required onblur="validarCampo(this, /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/, 'Contraseña')">
+            <br><br>
+            <button type="submit">Acceder</button>
+        </form>
+    </div>
+</body>
+</html>
+
+
