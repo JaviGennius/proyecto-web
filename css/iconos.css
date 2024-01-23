@@ -7,8 +7,55 @@
 
 :root{
     --facebook: #3b5999;
-    --instagram: #e4405f;
+    --instagram: #d75d90;
     --twitter: #0f0f0f;
     --youtube: #ff0000;
     --linkedin: #0a66c2;
+}
+.redessociales {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+
+}
+.redessociales ul li {
+    display: inline-block;
+    margin: 0 5px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+.redessociales ul li a {
+    display: block;
+    padding:0 10px;
+    background-color: grey;
+    color: rgb(255, 255, 255);
+    line-height: 50px;
+    font-size: 18px;
+    box-shadow: 0 3px 5px 0px;
+    transition: 0.4s;
+}
+.redessociales ul:hover a{
+    filter:blur(1px);
+}
+.redessociales ul li a:hover {
+    transform: translateY(-3px) scale(1.5);
+    filter: none;
+}
+
+.redessociales ul li .facebook {
+    background-color: var(--facebook);
+}
+.redessociales ul li .instagram {
+    background-color: var(--instagram);
+}
+.redessociales ul li .twitter {
+    background-color: var(--twitter);
+}
+.redessociales ul li .youtube{
+    background-color: var(--youtube);
+}
+.redessociales ul li .linkedin{
+    background-color: var(--linkedin);
 }
