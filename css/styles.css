@@ -230,22 +230,38 @@ main {
  footer .parrafos {
     background-color:mediumblue;
 }
-
+/*Tabla*/
 .descripcion, .servicios {
     background-color: #f2f2f2;
     border: 1px black;
     border-radius: 5px;
     margin: 20px 0;
     padding: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-
+.h3 {
+    font-size: x-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.h31 {
+    font-size: x-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: grid;
+    margin-left: 20%;
+    grid-column: 2;
+}
 .servicios ul {
     list-style-type: none;
     padding: 0;
 }
 
+.servicios > ul > li:hover {
+    background-color: #bbb;
+    font-size: large;
+}
 .servicios li {
     padding: 5px 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 table.medicos {
@@ -262,3 +278,77 @@ table.medicos th, table.medicos td {
 table.medicos th {
     background-color: #e18a8a;
 }
+
+/*Jefe (Carta)*/
+.cartas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 150px;
+}
+.contorno1{
+    grid-column: 2;
+    width: 100%;
+    margin-left: 100px;
+}
+.contorno1, .contorno2, .contorno3, .contorno4{
+    display: grid;
+    grid-gap: 80px;
+    grid-row: 3;
+}
+.carta, .cara1 {
+    width: 300px;
+    height: 504px;
+    perspective: 2000px;
+}
+
+.cara1 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../imagenes/doctor_1.jpg');
+    background-position: center;
+}
+.medio {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 20 (black, 0.2);
+    border-radius: 28px;
+    transition: all 0.5s;
+    transform-style: preserve-3d;
+}
+.cara1, .cara2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 28px;
+    backface-visibility: hidden;
+}
+
+.cara2 {
+    font-size: 1.25rem;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    padding: 32px;
+    background-color: #d10002;
+    transform: rotateY(-180deg);
+}
+
+.carta:hover .medio {
+    transform: rotateY(-180deg);
+}
+
+.cara2 h4 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    color: #ffffff;
+}
+
+.cara2 p {
+    font-size: medium;
+    color: #ffffff;
+    font-display: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
