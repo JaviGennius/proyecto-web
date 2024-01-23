@@ -247,3 +247,8 @@ main {
 .servicios li {
     padding: 5px 0;
 }
+
+table.medicos {
+    border-collapse: collapse;
+    width: 100%;
+}
