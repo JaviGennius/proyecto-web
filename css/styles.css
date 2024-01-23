@@ -258,3 +258,7 @@ table.medicos th, table.medicos td {
     padding: 8px;
     text-align: left;
 }
+
+table.medicos th {
+    background-color: #e18a8a;
+}
