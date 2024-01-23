@@ -279,6 +279,10 @@ table.medicos th {
     background-color: #e18a8a;
 }
 
+table.medicos > tbody > tr:hover {
+    background-color: #d10002;
+    color: #fff;
+}
 /*Jefe (Carta)*/
 .cartas {
     display: grid;

@@ -31,7 +31,7 @@ input {
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: #d12424;
     color: #fff;
     padding: 10px;
     border: none;
@@ -40,11 +40,11 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #2d35a3;
 }
 
 input.correcto {
-    border-color: #4CAF50  
+    border-color: #2d35a3; 
 }
 
 input.incorrecto {
@@ -60,7 +60,7 @@ input.incorrecto {
 
 .validar-icono.correcto::before {
     content: "\2713"; 
-    color: #4CAF50;
+    color: #3c2dc0;
 }
 
 .validar-icono.incorrecto::before {
