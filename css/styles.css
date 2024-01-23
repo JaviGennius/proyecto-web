@@ -252,3 +252,8 @@ table.medicos {
     border-collapse: collapse;
     width: 100%;
 }
+
+table.medicos th, table.medicos td {
+    border: 1px solid black;
+
+}
