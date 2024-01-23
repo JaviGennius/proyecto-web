@@ -16,13 +16,10 @@ body {
     display: grid;
     height: 200px;
     text-align: center;
-    background: url("../imagenes/hospital_loop.gif");
+    background: url("../imagenes/hospital_gif.gif");
     background-repeat: no-repeat;
     background-size:cover;
-    position: sticky;
     z-index: 5;
-    top: 10px;
-	  bottom: 100%;
 }
 header > .image1 {
     grid-column: 3;
@@ -85,7 +82,7 @@ legend {
   }
 
   button {
-    background-color: #4c6baf;
+    background-color: #d10002;
     color: #fff;
     padding: 10px 15px;
     border: none;
@@ -93,7 +90,9 @@ legend {
     cursor: pointer;
     margin-left: 40%;
   }
-
+  button:hover {
+    background-color: #0000ff;
+  }
   .error {
     color: #ff0000;
     font-size: 12px;

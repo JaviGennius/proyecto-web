@@ -249,44 +249,29 @@ main {
     margin-left: 20%;
     grid-column: 2;
 }
+.servicios {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    
+}
 .servicios ul {
     list-style-type: none;
     padding: 0;
+    grid-column: 2;
+    margin-left: 100px;
 }
-
+.servicios .h3 {
+    align-self: center;
+    text-align: center;
+}
 .servicios > ul > li:hover {
-    background-color: #bbb;
-    font-size: large;
+    background-color: #f2f2f2;
 }
 .servicios li {
     padding: 5px 0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-table.medicos {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-table.medicos th, table.medicos td {
-    border: 1px solid black;
-    padding: 8px;
-    text-align: left;
-    border: 0px;
-}
-.medicos > tbody > .fran {
-    width: 400px;
-    height: 400px;
-    background-image: url("../imagenes/doctor_1.jpg");
-}
-table.medicos th {
-    background-color: #e18a8a;
-}
-
-table.medicos > tbody > tr:hover {
-    background-color: #d10002;
-    color: #fff;
-}
 main .cardiologos{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -350,6 +335,7 @@ main > .cardiologos > div > p {
     width: 300px;
     margin: auto;
 }
+
 /*Jefe (Carta)*/
 .cartas {
     display: grid;
