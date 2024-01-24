@@ -392,3 +392,22 @@ main > .cardiologos > div > p {
 .redessociales ul li .linkedin{
     background-color: var(--linkedin);
 }
+
+/*reloj*/
+
+.cont_fecha {
+    background-color:#0199cb;
+    text-align: center;
+    width: 100%;
+    position: sticky;
+   
+}
+#reloj {
+    font-size: 25px;
+    display: inline;
+}
+#fecha {
+    font-size:18px;
+    display: inline;
+    padding-left: 50px;
+}
