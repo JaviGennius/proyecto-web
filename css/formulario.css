@@ -3,7 +3,7 @@ body {
     background-color: #f4f4f4;
     padding: 0;
     display: grid;
-    grid-template-columns: 37% 67%;
+    grid-template-columns: 37% 57%;
     align-items: center;
     justify-content: center;
   }
@@ -16,13 +16,10 @@ body {
     display: grid;
     height: 200px;
     text-align: center;
-    background: url("../imagenes/hospital_loop.gif");
+    background: url("../imagenes/hospital_gif.gif");
     background-repeat: no-repeat;
     background-size:cover;
-    position: sticky;
     z-index: 5;
-    top: 10px;
-	  bottom: 100%;
 }
 header > .image1 {
     grid-column: 3;
@@ -57,13 +54,13 @@ main {
 }
 legend {
   color: #000000;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
   label {
     display: block;
     margin-bottom: 8px;
     color: #020202;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 
   input, select, textarea {
@@ -73,7 +70,7 @@ legend {
     box-sizing: border-box;
     border: 1px solid #ccc; 
     border-radius: 4px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 
   input.valid, select.valid, textarea.valid {
@@ -85,7 +82,7 @@ legend {
   }
 
   button {
-    background-color: #4c6baf;
+    background-color: #d10002;
     color: #fff;
     padding: 10px 15px;
     border: none;
@@ -93,7 +90,9 @@ legend {
     cursor: pointer;
     margin-left: 40%;
   }
-
+  button:hover {
+    background-color: #0000ff;
+  }
   .error {
     color: #ff0000;
     font-size: 12px;
