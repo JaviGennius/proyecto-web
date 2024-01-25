@@ -414,3 +414,15 @@ main > .cardiologos > div > p {
 
 /*noticias del index*/
 
+.articulo {
+    border:1px solid black;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width:auto;
+}
+.articulo p{
+    align-items: center;
+    list-style: none;
+    justify-content: center;
+}
