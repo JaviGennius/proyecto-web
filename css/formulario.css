@@ -7,7 +7,8 @@ body {
     align-items: center;
     justify-content: center;
   }
-  header {
+/*Cabecera*/
+header {
     background-color: #ffffff;
     color: #ffffff;
     font-family: 'Courier New', Courier, monospace;
@@ -39,6 +40,7 @@ header > .imagenhospital {
     display: grid;
     align-self: center;   
 }
+/*Formulario*/
   form {
     background-color: #fff;
     padding: 20px;
@@ -52,6 +54,7 @@ main {
   display: grid;
   grid-template-columns: 100% 100% 120%;
 }
+/*Estilo del Formulario*/
 legend {
   color: #000000;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
