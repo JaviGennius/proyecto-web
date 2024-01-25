@@ -418,7 +418,10 @@ main > .cardiologos > div > p {
     display:grid;
     grid-template-columns: auto auto;
     padding:5%;
-    background-image: ;
+    background-image: url("../imagenes/hospitalgeneral.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     
 }
 .articulo p{
@@ -426,14 +429,25 @@ main > .cardiologos > div > p {
     grid-column: 2;
     grid-row:1;
     padding-left:2%;
-}
-.hospitalart {
-    height:200px;
-    width: 200px;
+    color: white;
+    font-size:25px;
+    background-color:#0f2b645c;
     
 }
-.articulo h3 {
+    .hospitalart {
+        height:200px;
+        width: 200px;
+        
+    }
+.articulo h1 {
     grid-column:2;
     grid-row:1;
     padding-left: 3%;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(to right, rgba(26, 26, 159, 0.495), pink);
+}
+.articulo hr {
+    margin: 4%;
+    height: 3px;
+    color: white;
 }
