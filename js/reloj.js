@@ -27,3 +27,6 @@ setInterval(actualizarRelojYFecha, 1000);
 
 // Llamar a la función inicialmente para mostrar la hora y fecha inmediatamente
 actualizarRelojYFecha();
+
+
+//sacado y modificado varias veces en chatGPT...
