@@ -10,8 +10,6 @@ body {
     height: 100%;
     text-align: right;
     margin: 0;
-    -webkit-transition: all 0.25s ease;
-    -o-transition: all 0.25s ease;
     transition: all 0.25s ease;
     text-align: left;
     line-height: 65px;
@@ -24,7 +22,7 @@ body {
 	list-style: none;
 	margin: 0;
 	padding: 0;
-  }
+}
 header {
     background-color: #ffffff;
     color: #ffffff;
@@ -104,7 +102,6 @@ ul.menu {
 	position: relative;
 	display: inline-block;
 }
-  
 .menu > li > a{
 	display: block;
 	padding: 15px 20px;
@@ -112,14 +109,12 @@ ul.menu {
 	font-family: 'Open sans';
 	text-decoration: none;
 }
-  
 .menu li a:hover{
 	color: #000000;
 	transition: all 0.7s;
     text-decoration: underline 2px;
     transform: all 0.7s;
 }
-  
 .sumenu{
 	position: absolute;
 	width: 120%;
@@ -127,8 +122,7 @@ ul.menu {
 	opacity: 0;
 	transition: opacity 1.5s;
     z-index: 5;
-}
-  
+} 
 .sumenu li a{
 	display: block;
 	padding: 15px;
@@ -182,7 +176,6 @@ main {
     margin-bottom: 30px;
 }
 
-
 .contenedor ul li:not(:last-child){
     margin-bottom: 10px;
 }
@@ -226,10 +219,11 @@ main {
     color: #fff;
 }
 
- footer .parrafos {
+footer .parrafos {
     background-color:mediumblue;
 }
-/*Tabla*/
+
+/*Departamentos: Servicios y Descripción*/
 .descripcion, .servicios {
     background-color: #f2f2f2;
     border: 1px black;
@@ -254,6 +248,7 @@ main {
     grid-template-columns: 50% 50%;
     
 }
+
 .servicios ul {
     list-style-type: none;
     padding: 0;
@@ -272,6 +267,7 @@ main {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+/*Parte de Imágenes de Médicos*/
 main .cardiologos{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -286,11 +282,13 @@ main > .cardiologos > .c1 {
     border-radius: 50px;
 }
 main > .cardiologos > .c1 > img, main > .cardiologos > .c2 > img,
- main > .cardiologos > .c3 > img, main > .cardiologos > .c5 > img
- , main > .cardiologos > .c4 > img ,main > .cardiologos > .c6 > img{
+main > .cardiologos > .c3 > img, main > .cardiologos > .c5 > img
+, main > .cardiologos > .c4 > img ,main > .cardiologos > .c6 > img{
     width: 300px;
     height: 100%;
 }
+
+/*Imágenes y Contenido Médicos*/
 main > .cardiologos > .c2 {
     grid-column: 2;
     grid-row: 2;
@@ -335,7 +333,7 @@ main > .cardiologos > div > p {
     width: 300px;
     margin: auto;
 }
-
+/*Favicons*/
 :root{
     --facebook: #3b5999;
     --instagram: #d75d90;
@@ -399,8 +397,7 @@ main > .cardiologos > div > p {
     background-color:#0199cb;
     text-align: center;
     width: 100%;
-    position: sticky;
-   
+    position: sticky; 
 }
 #reloj {
     font-size: 25px;

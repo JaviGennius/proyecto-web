@@ -1,12 +1,11 @@
-/*https://www.youtube.com/shorts/T3UOeVNMRWc*/
+/* Hacer texto sin fondo: https://www.youtube.com/shorts/T3UOeVNMRWc*/
 body {
     background: #000;
     color: #fff;
     font-family: 'Ignis et Glacies Sharp', sans-serif;
     grid-template-rows: 0.25fr 1fr 0.05fr;
     grid-template-columns: 1fr 1fr;
-    display: grid;
-                                                                                           
+    display: grid;                                                                                           
 }
 div {
     position: relative;
@@ -39,7 +38,7 @@ main {
     margin-right: 30px;
     align-items: center;
 }
-/*https://youtube.com/shorts/D1p2Sl6lxX4?si=UoNSPapoSwPAzN6i*/
+/* Imágenes con Efecto: https://youtube.com/shorts/D1p2Sl6lxX4?si=UoNSPapoSwPAzN6i*/
 article {
     position: relative;
     width: 400px;
@@ -97,14 +96,13 @@ main > p {
     font-size: 30px;
     font-family: 'Goladon', sans-serif;
 }
-/*https://www.youtube.com/watch?v=fzFXkvFM1yI*/
+/* Perfil: https://www.youtube.com/watch?v=fzFXkvFM1yI*/
 .carrusel {
     grid-column:2;
     grid-row: 2;
     width: 100%;
     list-style: none;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-   
 }
 .carrusel h4 {
     margin: 10px 0;
