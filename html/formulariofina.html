@@ -9,14 +9,14 @@
 </head>
 <body>
   <header id="cabecera">
-    <a href="../index.html"><img src="../imagenes/hospital.png" title="Inicio"clas="image2"/></a>
+    <a href="../index.html"><img src="../imagenes/hospital.png" title="Inicio" class="image2"/></a>
     <h1>Formulario del Pacientes</h1>
 </header>
   <main>
     <form id="patientForm" method="post" action="../index.html" enctype="multipart/form-data">
     <fieldset>
       <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" placeholder="Introduzca Nombre" required onblur="validarCampo(this)">
+      <input type="text" id="nombre" name="nombre" placeholder="Introduzca Nombre">
       <br>
       <label for="primero">Primer Apellido:</label>
       <input type="text" id="primero" placeholder="Introduzca Primer Apellido" pattern="[a-zA-Z]{0-100}">
@@ -63,8 +63,8 @@
         <option value="30">30</option>
         <option value="31">31</option>
   </select>
-<label for="m">Mes:</label>
-  <select id="m" name="mes">
+<label for="mes">Mes:</label>
+  <select id="mes">
     <option value="" default>--Mes del Año--</option>
     <option value="" disabled>--------------</option>
     <option value="Enero">Enero</option>
@@ -81,8 +81,8 @@
     <option value="Diciembre">Diciembre</option>
   </select>
   <br>
-  <label for="a">Rango de Año:</label>
-  <select id="a" name="mes">
+  <label for="ano">Rango de Año:</label>
+  <select id="ano">
     <option value="" default>--Año--</option>
     <option value="" disabled>--------------</option>
     <option value="1930-1940">1930-1939</option>
@@ -111,23 +111,23 @@
       <option value="">--Continente--</option>
       <option value="" disabled>---------</option>
       <option value="Europa">Europa</option>
-      <option value="Ámerica">Ámerica</option>
+      <option value="América">América</option>
       <option value="Oceanía">Oceanía</option>
       <option value="África">África</option>
       <option value="Asia">Asia</option>
     </select>
 <br>
   <label for="provincia">Provincia (En Caso de España):</label>
-     <select id="provincia">
+    <select id="provincia">
       <option value="">--Provincia de España--</option>
       <option value="" disabled>---------</option>
       <option value="La Coruña">A Coruña</option>
-       <option value="Lugo">Lugo</option>
-       <option value="Pontevedra">Pontevedra</option>
-       <option value="Orense">Orense</option>
+      <option value="Lugo">Lugo</option>
+      <option value="Pontevedra">Pontevedra</option>
+      <option value="Orense">Orense</option>
       <option value="Asturias">Asturias</option>
       <option value="Cantabria">Cantabria</option>
-      <option value="Guipuzcua">Guipúzcoa</option>
+      <option value="Guipúzcoa">Guipúzcoa</option>
       <option value="Álava">Álava</option>
       <option value="Vizcaya">Vizcaya</option>
       <option value="Navarra">Navarra</option>
@@ -135,9 +135,9 @@
       <option value="Zaragoza">Zaragoza</option>
       <option value="Huesca">Huesca</option>
       <option value="Barcelona">Barcelona</option>
-       <option value="Tarragona">Tarragona</option>
+      <option value="Tarragona">Tarragona</option>
       <option value="Lérida">Lérida</option>
-       <option value="Gerona">Gerona</option>
+      <option value="Gerona">Gerona</option>
       <option value="La Rioja">La Rioja</option>
       <option value="León">León</option>
       <option value="Palencia">Palencia</option>
@@ -147,32 +147,32 @@
       <option value="La Rioja">Valladolid</option>
       <option value="La Rioja">Segovia</option>
       <option value="La Rioja">Salamanca</option>
-      <option value="Avila">Ávila</option>
+      <option value="Ávila">Ávila</option>
       <option value="Madrid">Madrid</option>
-       <option value="Toledo">Toledo</option>
+      <option value="Toledo">Toledo</option>
       <option value="Cuenca">Cuenca</option>
       <option value="Ciudad Real">Ciudad Real</option>
       <option value="Guadalajara">Guadalajara</option>
-       <option value="Albacete">Albacete</option>
+      <option value="Albacete">Albacete</option>
       <option value="Valencia">Valencia</option>
       <option value="Alicante">Alicante</option>
       <option value="Castellón">Castellón</option>
       <option value="Alicante">Alicante</option>
-       <option value="Huelva">Huelva</option>
-       <option value="Cordoba">Córdoba</option>
-       <option value="Sevilla">Sevilla</option>
-       <option value="Jaen">Jaén</option>
-       <option value="Granada">Granada</option>
-       <option value="Malaga">Málaga</option>
-       <option value="Cadiz">Cádiz</option>
-       <option value="Almeria">Almeria</option>
+      <option value="Huelva">Huelva</option>
+      <option value="Córdoba">Córdoba</option>
+      <option value="Sevilla">Sevilla</option>
+      <option value="Jaén">Jaén</option>
+      <option value="Granada">Granada</option>
+      <option value="Málaga">Málaga</option>
+      <option value="Cádiz">Cádiz</option>
+      <option value="Almería">Almería</option>
       <option value="Murcia">Murcia</option>
       <option value="Ceuta">Ceuta</option>
-       <option value="Melilla">Melilla</option>
+      <option value="Melilla">Melilla</option>
       <option value="Baleares">Baleares</option>
       <option value="Las Palmas">Las Palmas</option>
       <option value="Tenerife">Tenerife</option>
-     </select>
+    </select>
   <br>
   <fieldset>
   <legend>Domicilio:</legend>
@@ -194,10 +194,10 @@
 <br>
 </fieldset>
 <br>
- <label for="telefono">Teléfono:</label>
-  <input type="tel" id="telefono" name="telefono" pattern="[0-9\s\-\(\)]{10,}" placeholder="Introduzca Número de Télefono" required onblur="validarCampo(this)">
+<label for="telefono">Teléfono:</label>
+  <input type="tel" id="telefono" name="telefono" placeholder="Introduzca Número de Teléfono">
   <label for="email">Correo Electrónico:</label>
-    <input type="email" id="email" name="email" placeholder="Introduzca Correo Electrónico" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" onblur="validarCampo(this)">
+    <input type="email" id="email" name="email" placeholder="Introduzca Correo Electrónico">
   <span class="error" id="emailError"></span>
   <label for="enfermedades">Enfermedades Previas:</label>
   <textarea id="enfermedades" name="enfermedades" rows="4"></textarea>
