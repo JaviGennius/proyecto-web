@@ -497,7 +497,9 @@ color de fondo, además del tamaño que va a ocupar la página*/
     color: rgb(0, 0, 0);
     background: #ffffff;
 }
-/*https://www.youtube.com/shorts/8Rc18lfl68c*/
+/*Galería de imágenes con enlaces: https://www.youtube.com/shorts/8Rc18lfl68c*/
+/*Le indicamos que la disposición sea flex, es decir, que se vayan colocando en formato flexible en funcion de lo que ocupen unos al lado de los otros. Además le indicaremos el tamaño
+en ancho y largo que ocupará el contenedor*/
 .noticias {
     margin-top: 100px;
     display: flex;
@@ -505,21 +507,24 @@ color de fondo, además del tamaño que va a ocupar la página*/
     height: 430px;
 
 }
+/*A las imagenes le indicamos que tengan un width de inicio. Le decimos que tenga un flex grow, es decir, nos permite hacer que la imagen ocupe el espacio disponible dentro de su contenedor.
+A continuación le decimos con object-fit en cover que se escale en función del tamaño dentro del contenedor. Le damos una opacidad de solo 0.8 y la transición que haga al volver a su posición original se haga 
+en medio segundo y con una velocidad ease, es decir, lento al principio pero que termine un poco más rápido*/
 .noticias img {
     width: 0px;
     flex-grow: 1;
     object-fit: cover;
-    opacity: .8;
-    transition: .5s ease;   
+    opacity: 0.8;
+    transition: 0.5s ease;   
 }
-
+/*Le indicamos que cuando hagamos hover sobre la imagen coja un tamaño de 300px y una opacidad de 1. Por último, le hacemos que la tenga un filtro de los colores que tenga la imagen respecto al original
+que es pasar de 0% a una diferencia de 100%*/
 .noticias img:hover {
-    cursor: crosshair;
     width: 300px;
     opacity: 1;
-    filter: contrast(120%);
+    filter: contrast(100%);
 }
-
+/*Al igual que hemos hecho en las imágenes, lo que hacemos con esto es que los enlaces acompañen la animación que tienen las imágenes*/
 .noticias a {
     display: flex;
     flex-grow: 1;
