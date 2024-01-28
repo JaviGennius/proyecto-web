@@ -284,6 +284,7 @@ main > .cardiologos > .c1 {
     background-color: #d10002;
     text-align: center;
     border-radius: 50px;
+    animation: fadeIn 2s 3s ease both;
 }
 main > .cardiologos > .c1 > img, main > .cardiologos > .c2 > img,
  main > .cardiologos > .c3 > img, main > .cardiologos > .c5 > img
@@ -297,6 +298,7 @@ main > .cardiologos > .c2 {
     background: #4e0cc9;
     text-align: center;
     border-radius: 50px;
+    animation: fadeOut 2s 4s ease both;
 }
 main > .cardiologos > .c3 {
     grid-column: 1;
@@ -304,6 +306,7 @@ main > .cardiologos > .c3 {
     background-color: #d10002;
     text-align: center;
     border-radius: 50px;
+    animation: fadeIn 2s 3s ease both;
 }
 main > .cardiologos > .c4 {
     grid-column: 2;
@@ -311,6 +314,7 @@ main > .cardiologos > .c4 {
     background-color: #4e0cc9;
     border-radius: 50px;
     text-align: center;
+    animation: fadeIn 2s 3s ease both;
 }
 main > .cardiologos > .c5 {
     grid-column: 3;
@@ -318,6 +322,7 @@ main > .cardiologos > .c5 {
     background-color: #d10002;
     text-align: center;
     border-radius: 50px;
+    animation: fadeOut 2s 4s ease both;
 }
 main > .cardiologos > .c6 {
     grid-column: 3;
@@ -325,6 +330,7 @@ main > .cardiologos > .c6 {
     background-color: #d10002;
     border-radius: 50px;
     text-align: center;
+    animation: fadeOut 2s 4s ease both;
 }
 main > .cardiologos > div > p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -411,3 +417,28 @@ main > .cardiologos > div > p {
     display: inline;
     padding-left: 50px;
 }
+
+/*Animación*/
+  
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes*/
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeOut {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+  }
