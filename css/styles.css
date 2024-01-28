@@ -268,19 +268,15 @@ footer .parrafos {
 }
 
 /*Parte de Imágenes de Médicos*/
+/*Indicamos que tiene una disposición en grid y le indicamos las filas y columnas que tendrá. Por último, al tener el main una disposición en grid, le damos lo que queremos 
+que ocupe respecto al main, que será desde la columna 1 a la 3.*/
 main .cardiologos{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-column: 1/3;
 }
-main > .cardiologos > .c1 {
-    grid-column: 1;
-    grid-row: 1;
-    background-color: #d10002;
-    text-align: center;
-    border-radius: 50px;
-}
+/*Indicamos el ancho y alto que tendrán las imágenes de los médicos*/
 main > .cardiologos > .c1 > img, main > .cardiologos > .c2 > img,
 main > .cardiologos > .c3 > img, main > .cardiologos > .c5 > img
 , main > .cardiologos > .c4 > img ,main > .cardiologos > .c6 > img{
@@ -289,6 +285,14 @@ main > .cardiologos > .c3 > img, main > .cardiologos > .c5 > img
 }
 
 /*Imágenes y Contenido Médicos*/
+/*Indicamos la posición que tendrá cada imagen y la disposición que tendrá el texto. Por otro lado, le redondearemos el borde indicándole su radio.*/
+main > .cardiologos > .c1 {
+    grid-column: 1;
+    grid-row: 1;
+    background-color: #d10002;
+    text-align: center;
+    border-radius: 50px;
+}
 main > .cardiologos > .c2 {
     grid-column: 2;
     grid-row: 2;
@@ -324,16 +328,19 @@ main > .cardiologos > .c6 {
     border-radius: 50px;
     text-align: center;
 }
+/*Le damos un color y estilo a la fuente de los médicos*/
 main > .cardiologos > div > p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #fff;
 }
+/*le damos un tamaño y un margen a los contenedores de las imágenes de los médicos*/
 .c1,.c2,.c3,.c4,.c5,.c6 {
     height: auto;
     width: 300px;
     margin: auto;
 }
 /*Favicons*/
+/*Indica mediante variables el color que tomqrán los iconos de las redes sociales en el pie (footer)*/
 :root{
     --facebook: #3b5999;
     --instagram: #d75d90;
@@ -341,6 +348,8 @@ main > .cardiologos > div > p {
     --youtube: #ff0000;
     --linkedin: #0a66c2;
 }
+/*Permite tener una disposición flex al contenedor de los iconos y nos da una posición central. Por otro lado, le indicamos que sea una posición que acompañará la subida,
+haciendo que suba cuando hagamos scroll con el ratón*/
 .redessociales {
     display: flex;
     background-color: #d10002;
@@ -350,6 +359,7 @@ main > .cardiologos > div > p {
     position: sticky;
     bottom: 0;
 }
+/*Ponemos todos los iconos en linea y le damos margen y tamaño a los iconos*/
 .redessociales ul li {
     display: inline-block;
     margin: 0 5px;
@@ -357,6 +367,7 @@ main > .cardiologos > div > p {
     height: 30px;
     text-align: center;
 }
+/*Le indicamos la disposición que tendrá los enlaces de los iconos, el fondo y le damos una sombra al enlace. Le damos una transición para hacer la animación*/
 .redessociales ul li a {
     display: block;
     padding:0 10px;
@@ -370,11 +381,12 @@ main > .cardiologos > div > p {
 .redessociales ul:hover a{
     filter:blur(1px);
 }
+/*Le indicamos una transformación que nos permite agrandar el icono al hacer hover y transladarlo en Y. Por último, le quitamos el filtro al icono*/
 .redessociales ul li a:hover {
     transform: translateY(-3px) scale(1.5);
     filter: none;
 }
-
+/*Mediante variables, le indicamos los colores que tendrá cada icono*/
 .redessociales ul li .facebook {
     background-color: var(--facebook);
 }
@@ -392,13 +404,18 @@ main > .cardiologos > div > p {
 }
 
 /*reloj*/
-
+/*Le indicamos la posición que tendrá el contendor, le damos un color de fondo, además, le diremos que a la hora de bajar, se quede en una posición fija junto al encabezado,
+por último, para que vaya hacia abajo, le inddicamos un bottom. Le indicamos una fuente al texto.*/
 .cont_fecha {
     background-color:#0199cb;
     text-align: center;
     width: 100%;
     position: sticky; 
+    top: 130px;
+	bottom: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+/*Indicamos la posición y el tamaño de la fuente que tendrá el reloj*/
 #reloj {
     font-size: 25px;
     display: inline;
@@ -409,11 +426,13 @@ main > .cardiologos > div > p {
     padding-left: 50px;
 }
 
-/*noticias del index*/
-
+/*Noticias del index*/
+/*Le damos una posición al contenedor del texto, le damos un borde y alto/ancho. A continuación, le damos una disposición en grid, lo cual nos permitirá colocar el contenido
+por reguillas. Le damos un padding al contenido. Por último, le indicamos una imagen de fondo y el comportamiento que tendrá la imagen (No se repetirá, cubrirá todo el contenido y
+tendrá una fijación cuando subamos y bajemos en la página.*/
 .articulo {
     border:1px solid black;
-    height: 200px;
+    height: auto;
     width:auto;
     display:grid;
     grid-template-columns: auto auto;
@@ -424,21 +443,25 @@ main > .cardiologos > div > p {
     background-attachment: fixed;
     
 }
+/*Indicamos donde se va a situar dentro del div, luego le damos un padding a la izquierda para separarlo un poco del margen, le damos un color y tamaña al texto y le damos un 
+color de fondo, además del tamaño que va a ocupar la página*/
 .articulo p{
-    list-style: none;
     grid-column: 2;
     grid-row:1;
     padding-left:2%;
     color: white;
     font-size:25px;
     background-color:#0f2b645c;
+    width: 100%;
     
 }
-    .hospitalart {
-        height:200px;
-        width: 200px;
+/*Le damos un alto y un archo a la imagen del contendor*/
+.hospitalart {
+    height:200px;
+    width: auto;
         
-    }
+}
+/*Indicamos donde se va a colocarse el titulo del contenedor. Al igual que el texto le damos un padding a la izquierda y un color, tanto de fondo como a la fuente*/
 .articulo h1 {
     grid-column:2;
     grid-row:1;
@@ -446,32 +469,88 @@ main > .cardiologos > div > p {
     color: rgb(255, 255, 255);
     background: linear-gradient(to right, rgba(26, 26, 159, 0.495), pink);
 }
+/*Por último, le damos estilos a la linea horizontal, que tendrá un margen en todos los lados, una altura acorde al contendor y le damos color*/
 .articulo hr {
     margin: 4%;
     height: 3px;
-    color: white;
+    color: rgb(0, 0, 0);
+    background: #ffffff;
 }
-
+/*https://www.youtube.com/shorts/8Rc18lfl68c*/
 .noticias {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
     margin-top: 100px;
-    height: 100px;
+    display: flex;
     width: 100%;
-}
-.noticias .noticia1 {
-    grid-column: 1;
-}
-.noticias .noticia2 {
-    grid-column: 2;
-}
-.noticias .noticia3 {
-    grid-column: 3;
-}
-.noticias .noticia4 {
-    grid-column: 4;
+    height: 430px;
+
 }
 .noticias img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;   
+}
+
+.noticias img:hover {
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+.noticias a {
+    display: flex;
+    flex-grow: 1;
+}
+/*https://www.youtube.com/watch?v=ogiaTnas2-A*/
+.noticias2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.noticias21 {
+    margin: 150px auto;
+    width: 70%;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.noticias21 img {
+    max-width: 320px;
+    float: left;
+    border: 3px solid #0199cb;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+.noticias211 p {
+    margin-top: 50px;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
     width: 100%;
-    height: 20em;
+} 
+.noticias211 h2{
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+}
+.noticias211 h3{
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+}
+.texto {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    width: 100%;
+}
+.p1 {
+    border-right: #000000 1px solid;
+    grid-column: 1;
+    text-align: justify;
+    padding-right: 10px;
+}
+.p2 {
+    margin-left: 10px;
+    grid-column: 3;
+    padding-left: 10px;
+    text-align: justify;
 }
