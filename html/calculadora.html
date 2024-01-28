@@ -13,46 +13,52 @@
     <p class="parrafo2">¡¡¡Ten en cuenta que esto es una estimación y que se deberá tomar como una aproximación a la realidad!!!</p>
     </div>
     <div class="genero">
-        <label for="sexo" class="ejercicios">Género:</label>
-        <img src="../imagenes/hombre.png" class="icono">
-        <input class="preguntar" type="radio" value="1" name="sexo" id="sexo" checked/><font color="yellow" face="cursive">Hombre</font>
-        <img src="../imagenes/mujer.png" class="icono"></td>		
-        <input class="preguntar" type="radio" value="2" name="sexo" id="sexo" /><font color="yellow" face="cursive">Mujer</font>
+        <label for="sexo" class="sexo">Género:</label>
+        <div class="hombre">
+        <img src="../imagenes/hombre.png" class="sexoicono">
+        <p class="sexoh"><input  type="radio" value="1" name="sexo" id="sexo" checked/>Hombre</p>
+        </div>
+        <div class="mujer">
+        <img src="../imagenes/mujer.png" class="sexoicono"></td>		
+        <p class="sexom"><input  type="radio" value="2" name="sexo" id="sexo"/>Mujer</p>
+        </div>
     </div>
     <div class="peso_talla">
+        <div class="peso">
         <img src="../imagenes/peso1.png" class="icono">
-        <label class="preguntar"><label for="peso" class="ejercicios">Peso<font color="red">*</font>:</label><input type="number"  value="0" name="peso" min="0" max="300" id="peso"><font color="yellow" face="cursive"> Kg</font></label>
-        
+        <p><label class="preguntar"><label for="peso" class="ejercicios">Peso:</label><input type="number"  value="0" name="peso" min="0" max="300" id="peso">Kg</label></p>
+        </div>
+        <div class="edad">
         <img src="../imagenes/edad.png" class="icono">
-        <label class="preguntar"><label for="edad" class="ejercicios">Edad<font color="red">*</font>:</label><input type="number"  value="0" id="edad" name="edad" min="0" max="100"></label>
-        
+        <p><label class="preguntar"><label for="edad" class="ejercicios">Edad:</label><input type="number"  value="0" id="edad" name="edad" min="0" max="100"></label></p>
+        </div>
+        <div class="altura">
         <img src="../imagenes/altura.png" class="icono">
-        <label class="preguntar"><label for="altura" class="ejercicios">Altura<font color="red">*</font>:</label><input type="number" value="0" id="altura" name="altura" min="0" max="250"><font color="yellow" face="cursive"> cm</font></label>
-
+        <p><label class="preguntar"><label for="altura" class="ejercicios">Altura:</label><input type="number" value="0" id="altura" name="altura" min="0" max="250">cm</p>
+        </div>
     </div>
-    <div class="tipo_ejecicio">
-        <label for="pregunta" class="ejercicios">Tipo de Ejercicio<font color="red">*</font></label>
-            
-        <input type="radio" value="1" name="pregunta" id="nada" checked/><font color="yellow" face="cursive">Muy Ligero</p>
-        <img src="../imagenes/sedentario.png" class="icono"></td>
-        <p class="preguntar"><font color="yellow" face="cursive">1 hora/semana</font></p>
-        
-        <input type="radio" value="2" name="pregunta" id="nada"/><font color="yellow" face="cursive">Ligero</font></td>
-        <img src="../imagenes/moderado.png" class="icono"></td>
-        <p class="preguntar"><font  color="yellow" face="cursive">1-2 horas/semana</font></p>
-        
-        <input type="radio" value="3" name="pregunta" id="poco"/><font color="yellow" face="cursive">Moderado</font></td>
-        <img src="../imagenes/parcial.png" class="icono"></td>
-        <p><font class="preguntar"color="yellow" face="cursive">3-5 horas/semana</p></font>
-        
-        <input type="radio" value="4" name="pregunta" id="diario"/><font color="yellow" face="cursive">Activo</font></td>
-        <img src="../imagenes/andador.png" class="icono"></td>
-        <p class="preguntar"><font color="yellow" face="cursive">8-10 horas/semana</p></font>
-        
-        <input type="radio" value="5" name="pregunta" id="depor"/><font color="yellow" face="cursive">Muy Activo</font></td>
+    <div class="tipo_ejercicio">
+        <label for="pregunta" class="ejercicios">Tipo de Ejercicio</label>
+        <div class="sedentario">
+        <img src="../imagenes/sedentario.png" class="icono">
+        <p><input type="radio" value="1" name="pregunta" id="nada" checked/>Muy Ligero(1 hora/semana)</p>
+        </div>
+        <div class="ligero">
+        <img src="../imagenes/moderado.png" class="icono">
+        <p><input type="radio" value="2" name="pregunta" id="nada"/>Ligero(1-2 horas/semana)</p>
+        </div>
+        <div class="moderado">
+        <img src="../imagenes/parcial.png" class="icono">
+        <p><input type="radio" value="3" name="pregunta" id="poco"/>Moderado(3-5 horas/semana)</p>
+        </div>
+        <div class="activo">
+        <img src="../imagenes/andador.png" class="icono">
+        <p><input type="radio" value="4" name="pregunta" id="diario"/>Activo(8-10 horas/semana)</p>
+        </div>
+        <div class="deportista">
         <img src="../imagenes/deportista.png" class="icono">
-        <p class="preguntar"><font color="yellow" face="cursive">+10 horas/semana</font></p>
-        
+        <p><input type="radio" value="5" name="pregunta" id="depor"/>Muy Activo(+10 horas/semana)</p>
+    </div>
     </div>
     <div class="botones">
         <input type="button" value="Calcular" onclick="calcular()" class="rer">
