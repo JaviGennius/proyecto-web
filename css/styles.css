@@ -1,30 +1,16 @@
 /*Cuerpo*/
+/*Indicamos la forma en la que se van a colocar los elementos será en grid. Además, le indicamos las columnas y filas que tendrá el cuerpo*/
 body {
 	display: grid;
 	grid-template-columns: 33% 67% ;
     grid-template-rows: auto auto 1fr auto;
 }
-/*Imagen Hospital Felipe VI*/
-.hospital {
-    width: 475px;
-    height: 100%;
-    text-align: right;
-    margin: 0;
-    transition: all 0.25s ease;
-    text-align: left;
-    line-height: 65px;
-    z-index: 5px;
-    grid-column: 1;
-    
-}
-/*Menú*/
-.navegacion ul{
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
+
+/*Header*/
+/*En este caso, haremos que el header tenga una imagen de fondo (es un gif), le damos formato al texto que tendrá la página, por otro lado le indicaremos que ocupe todo las columnas.
+Además, le diremos que tenga un alto, y una disposición en grid, lo cual nos permitirá colocar los objetos por celdas. En el caso del fondo, le diremos que no se repita, que cubra todo
+el ancho y que tenga un fijación cuando hagamos scroll*/
 header {
-    background-color: #ffffff;
     color: #ffffff;
     font-family: 'Courier New', Courier, monospace;
     grid-column: 1/3;
@@ -38,12 +24,14 @@ header {
     background-attachment: fixed;
     grid-row: 1;
 }
+/*Indicamos en la imagen como se va a comportar respecto al contenedor header, y le damos un ancho y un alto relativo al header*/
 header > .image1 {
     grid-column: 3;
     grid-row: 1/2;
     width: 5em;
     height: 50%;
 }
+/*Le indicamos al h1 su posición en el grid, además, le indicaremos que será alineado en el centro respecto al div como a si mismo.*/
 header > h1 {
     grid-column: 2/3;
     grid-row: 1/2;
@@ -51,13 +39,31 @@ header > h1 {
     text-align: center;
     align-self: center;
 }
+/*Le indicamos la disposición que tendrá la imagen de la cabecera llamada Hospital Felipe VI, por último, le diremos que se alinee al centro y que tenga un borde de 10px*/
 header > .imagenhospital {
     border: 10px;
     display: grid;
     align-self: center;
     
 }
-
+/*Imagen Comunidad de Madrid*/
+/*Damos formato a la imagen que esta de cabecera. Le indicamos que tenga el tamaño, donde se va a colocar, el margen respecto al div, y donde se dispondrá respecto al fondo que
+para ello le indicamos el z-index*/
+.hospital {
+    width: 475px;
+    height: 100%;
+    text-align: right;
+    margin: 0;
+    z-index: 5px;
+    grid-column: 1;
+    
+}
+/*Indicamos como se va colocar las listas, además de que le quitaremos la decoración (el icono que viene con ellas)*/
+.navegacion ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
 nav{
 	grid-column: 1/3;
 	position: sticky;
@@ -136,16 +142,18 @@ ul.menu {
 	opacity: 1;
 }
 /*Main*/
+/*Indicamos la posición que tendrá el main respecto al body*/
 main {
     grid-column: 1/3;
     grid-row: 3;
 }
 
 /*Footer*/
+/*Indicamos que se quiten la decoración de las listas en el footer*/
 .contenedor > ul > li, .fila > .contenedor > ul{
     list-style-type: none;
 }
-
+/*Indicamos el color de fondo del footer, el padding que tendrá horizontalmente y verticalmente. Además de la posición que tendrá dentro del body y el formato del texto*/
 .footer {
     background-color: #d10002;
     padding: 0px 0;
@@ -154,42 +162,48 @@ main {
     grid-row: 4;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-
+/*Le indicamos el tamaño máximo que tendrá el contenedor general, además del color del fondo y el margen*/
 .cont {
     max-width: 1170px;
     background-color: #d10002;
     margin: auto;
 }
+/*Le indicamos el tamaño que ocupará cada div de las listas que pondremos en el footer*/
 .contenedor {
     width: 25%;
     padding: 0 15px;
 }
+/*Indicamos como se van a colocar los diferentes contenedores del footer*/
 .fila {
     display: flex;
     flex-wrap: wrap;
 }
-
+/*Le damos un formato al texto que tendrá el pie de página, siendo este el tamaño de la letra, el color y el margen inferior. 
+Por último, indicar que haremos que la primera letra sea capital, es decir, mayúscula*/
 .contenedor h4, .fila > .contenedor > ul {
     font-size: 18px;
     color: #ffffff;
     text-transform: capitalize;
     margin-bottom: 30px;
 }
-
+/*Le indicamos que todos los hijos, meno el último, dentro de la etiqueta de clase contenedor, tengan un margen inferior de 10px*/
 .contenedor ul li:not(:last-child){
     margin-bottom: 10px;
 }
+/*Indicamos el formato que tendrán los enlaces dentro del footer, que se comportarán con un tamaño de fuente de 16px, que tenga letra capital y que no tenga decoración. 
+Además indicamos el ancho que tendrá y su disposición que a diferencia de otras será block,lo cual nos permitirá que todo sea un bloque. 
+Por último, le damos una transición de que se ejecute a todo y que dure 0,3s, que ease haga que la animación se de forma lenta a rápida*/
 .contenedor ul li a, .fila > .contenedor > ul > a{
     font-size: 16px;
     text-transform: capitalize;
-    color: #4e0cc9;
     text-decoration: none;
     font-weight: 300;
     color: #ffffff;
     display: block;
     transition: all 0.3s ease;
 }
-
+/*Le indicamos los estilos al hacer hover sobre la imagen y que será un cambio de color a negro, le podremos un subrayado, un padding a la izquierda, y le daremos una transición
+de 0.5s a todo*/
 .contenedor ul li a:hover, .fila > .contenedor > ul > a:hover{
     color: #000000;
     padding-left: 0px ;
@@ -197,18 +211,8 @@ main {
     transition: all 0.5s;
 
 }
-@media(max-width: 767px){
-    .contenedor {
-        width: 50%;
-        margin-bottom: 30px;
-    }
-}
-@media(max-width:574px) {
-    .contenedor {
-        width: 100%;
-    }
-}
-
+/*Le daremos un formato a los párrafo, lo cual será de un ancho, un margin general automático, alinearemos al centro el texto, le daremos un formato de texto largo, 
+le pondremos una fuente y un color*/
 .footer p{
     width: 390px;
     margin: auto;
@@ -218,50 +222,50 @@ main {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #fff;
 }
-
+/*Le damos un fondo al div con clase de párrafos*/
 footer .parrafos {
     background-color:mediumblue;
 }
 
 /*Departamentos: Servicios y Descripción*/
+/*Damos estilos a los servicios y descripción de los distintos departamentos, lo cual le daremos un fondo gris y un borde de un pixel, con color negro y que sea solido. 
+Le damos un radio al borde. Le indicamos un margen y un padding, y por último, le indicaremos una fuente */
 .descripcion, .servicios {
     background-color: #f2f2f2;
-    border: 1px black;
+    border: 1px black solid;
     border-radius: 5px;
     margin: 20px 0;
     padding: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+/*Damos formato a la cabecerá de formato h3, que tendrá un tamaño de fuente y la familia de la fuente*/
 .h3 {
     font-size: x-large;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.h31 {
-    font-size: x-large;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    display: grid;
-    margin-left: 20%;
-    grid-column: 2;
-}
+/*Le damos a los servicios un formato en grid y le indicamos cuantas columnas van a haber*/
 .servicios {
     display: grid;
     grid-template-columns: 50% 50%;
     
 }
-
+/*Quitamos la decoración de los listados, además, le damos un padding de 0. Le diremos que ocupe la columna 2 respecto al div de servicios y le damos un margen izquierdo.*/
 .servicios ul {
     list-style-type: none;
     padding: 0;
     grid-column: 2;
     margin-left: 100px;
 }
+/*Indicamos donde se va a colocar dentro del contenedor */
 .servicios .h3 {
     align-self: center;
     text-align: center;
 }
+/*Le indicamos el comportamiento al hacer hover sobre la lista*/
 .servicios > ul > li:hover {
     background-color: #f2f2f2;
 }
+/*Le indicamos el padding que tendrá el listado y la fuente que tendrá el texto*/
 .servicios li {
     padding: 5px 0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -420,6 +424,7 @@ por último, para que vaya hacia abajo, le inddicamos un bottom. Le indicamos un
     font-size: 25px;
     display: inline;
 }
+/*Formato que tendrá la fecha dentro del contenedor, que tendrá tamaño, la posición respecto al texto anterior y un padding a la izquierda*/
 #fecha {
     font-size:18px;
     display: inline;
