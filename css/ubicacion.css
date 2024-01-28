@@ -74,7 +74,7 @@ th, td {
 .cartas {
     display: grid;
     grid-template-columns: auto auto auto auto;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
 }
 .contorno1{
     grid-column: 1;
@@ -152,4 +152,28 @@ th, td {
     color: #ffffff;
     font-display: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*Mapa*/
+.mapa {
+    width: 100%;
+    margin-bottom: 100px;
+    text-align:  center;
+    grid-template-columns: 0.25fr 1fr;
+    display: grid;
+}
+.mapa iframe {
+    width: 100%;
+    height: 30em;
+    grid-column: 2;
+    margin-left: auto;
+    border-radius: 50px;
+}
+
+.mapa h3 {
+    grid-column: 1;
+    align-self: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: underline #d10002 5px;
+    font-size: 40px;
 }
