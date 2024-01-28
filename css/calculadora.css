@@ -19,11 +19,9 @@ body{
     grid-row: 2;
     grid-template-columns:auto  auto;
     grid-template-rows: auto auto;
+    background-color: aliceblue;
 }
-.genero .sexo {
-    grid-row: 1;
-    grid-column: 1;
-}
+
 .genero .mujer {
     grid-column: 2;
     grid-row: 2;
@@ -36,35 +34,47 @@ body{
     display: grid;
     grid-template-rows: auto auto;
 }
-.genero .sexo {
-    text-align: center;
-    grid-column: 1/2;
+.hombre p {
+    text-align: left;
 }
 .hombre .sexoh {
     grid-row: 2;
     align-self: center;
-    text-align: center;
+    text-align: right;
+    margin-right: 40px;
 }
 .mujer .sexom {
     grid-row: 2;
     align-self: center;
-    text-align: center;
+    text-align: left;
+    margin-left: 40px;
 }
-.genero img {
+.hombre img {
     width: 150px;
     height: auto;
-    margin: auto;
+    margin-left: auto;
+    border-right: 1px solid #000;
+    margin-top: 20px;
+}
+.mujer img {
+    width: 150px;
+    height: auto;
+    margin-right: auto;
+    margin-top: 20px;
 }
 .peso_talla img {
     width: 150px;
     height: auto;
     margin: auto;
+    
+    margin-top: 20px;
 }
 .peso_talla {
     grid-row: 3;
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto;
+    background-color: rgb(92, 169, 204);
 }
 .peso {
     grid-column: 1;
@@ -95,6 +105,7 @@ body{
     display: grid;
     grid-template-rows: auto auto;
     grid-template-columns: auto auto auto auto auto;
+    background-color: rgb(94, 143, 165);
 }
 .tipo_ejercicio .sedentario {
     grid-column: 1;
@@ -144,6 +155,7 @@ body{
     width: 15em;
     height: 10em;
     margin: auto;
+    margin-top: 10px;
 }
 .tipo_ejercicio .deportista {
     grid-column: 5;
@@ -159,7 +171,65 @@ body{
 
 .botones {
     grid-row: 5;
+    margin-top: 10px;
+    text-align: center;
 }
 .calculadora {
     grid-row: 6;
+    display: grid;
+    grid-template-rows: auto auto auto;
+}
+.calculadora h2 {
+    grid-row: 1;
+}
+.funcion {
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border-left: #000 solid 1px;
+    border-right: #000 solid 1px;
+    
+    text-align: center;
+    margin-top: 50px;
+    background-color: cornflowerblue;
+}
+.funcion .ganar {
+    grid-column: 1;
+    display: grid;
+    grid-row: auto auto auto;
+}
+.ganar h3 {
+    grid-row: 1;
+    text-align: center;
+}
+.funcion .mantener {
+    grid-column: 2;
+    display: grid;
+    grid-row: auto auto auto;
+    border-left: #000 solid 1px;
+    border-right: #000 solid 1px;
+}
+.mantener h3 {
+    grid-row: 1;
+    text-align: center;
+}
+
+.funcion .perder {
+    grid-column: 3;
+    display: grid;
+    grid-row: auto auto auto;
+}
+.perder h3 {
+    grid-row: 1;
+    text-align: center;
+}
+.funcion img {
+    margin: auto;
+    width: 70%;
+    height: auto;
+}
+.periodo {
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
 }
