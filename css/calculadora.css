@@ -13,6 +13,8 @@ body{
 }
 .enunciado {
     grid-row: 1;
+    text-align: center;
+    font-size: 40px;
 }
 .genero {
     display: grid;
@@ -178,9 +180,13 @@ body{
     grid-row: 6;
     display: grid;
     grid-template-rows: auto auto auto;
+    display: none;
 }
 .calculadora h2 {
     grid-row: 1;
+    text-align: center;
+    font-size: 50px;
+    text-decoration: underline #000;
 }
 .funcion {
     grid-row: 2;
@@ -188,9 +194,7 @@ body{
     grid-template-columns: auto auto auto;
     border-left: #000 solid 1px;
     border-right: #000 solid 1px;
-    
     text-align: center;
-    margin-top: 50px;
     background-color: cornflowerblue;
 }
 .funcion .ganar {
@@ -213,7 +217,12 @@ body{
     grid-row: 1;
     text-align: center;
 }
-
+.funcion > .mantener > img  {
+    margin: auto;
+    width: 74%;
+    height: auto;
+    margin-bottom: 10px;
+}
 .funcion .perder {
     grid-column: 3;
     display: grid;
@@ -232,4 +241,63 @@ body{
     grid-row: 3;
     display: grid;
     grid-template-columns: auto auto auto auto auto;
+    border: #000 1px solid;
+    background-color:skyblue;
+}
+
+.periodo .desayuno {
+    grid-column: 1;
+    text-align: center;
+    border-right: #000 1px solid;
+}
+
+.periodo .media {
+    grid-column: 2;
+    text-align: center;
+    border-right: #000 1px solid;
+}
+
+.periodo .comida {
+    grid-column: 3;
+    text-align: center;
+    border-right: #000 1px solid;
+}
+
+.periodo .merienda {
+    grid-column: 4;
+    text-align: center;
+    border-right: #000 1px solid;
+}
+
+.periodo .cena {
+    grid-column: 5;
+    text-align: center;
+    
+}
+.caloria {
+    font-size: larger;
+    margin-bottom: 0%;
+    border-top: #000 1px solid;
+    border-bottom: #000 1px solid;
+    align-self: center;
+    padding-top: 10px;
+    background: rgb(99, 32, 175);
+}
+.boton {
+    background-color: #000000;
+    height: 50px;
+    font-family: cursive;
+    color: rgb(6, 93, 255);
+    border-radius: 15px;
+    transition: all 1s;
+}
+.boton:hover {
+    background-color: aliceblue;
+    color: #000;
+    transition: all 1s;
+}
+input {
+    background-color: #9a19b4;
+    border: #000 1px solid;
+    color: white;
 }

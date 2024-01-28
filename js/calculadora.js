@@ -1,5 +1,5 @@
 function calcular(){
-    re=14
+    inicial=14
     var sexos = document.getElementById("sexo")
     var peso = document.getElementById("peso")
     var pesoValor= peso.value
@@ -10,12 +10,9 @@ function calcular(){
     var elementos = document.getElementsByName("pregunta")
     if(sexos.value=="1")
     {
-        var tabla = document.getElementById("tabla1")
-        var t = document.getElementById("t")
-        var te = document.getElementById("te")
-        t = t.style.display="block"
-        te = te.style.display="block"
-        for(i=0;i<re;i++){
+        var calculadora = document.getElementById("calculadora")
+        calculadora = calculadora.style.display="block"
+        for(i=0;i<inicial;i++){
             var h = document.getElementById("h")
             h.innerHTML = Math.round((66 + (13.7*pesoValor) + (5*ValorAltura) - (6.8*edadValor))*0.2)
             var mm = document.getElementById("mm")
@@ -34,7 +31,7 @@ function calcular(){
             totalgp.innerHTML =  Math.floor((Math.round((66 + (13.7*pesoValor) + (5*ValorAltura) - (6.8*edadValor))*0.2)*2 + Math.round((66 + (13.7*pesoValor) + (5*ValorAltura) - (6.8*edadValor))*0.1)*2 + Math.round((66 + (13.7*pesoValor) + (5*ValorAltura) - (6.8*edadValor))*0.4))+500)
             
             if(elementos[i].value=="1" && sexos.value=="1"){
-            for(i=0;i<re;i++){
+            for(i=0;i<inicial;i++){
             var hd = document.getElementById("hd")
             hd.innerHTML = Math.round(((66 + (13.7*pesoValor) + (5*ValorAltura) - (6.8*edadValor))*0.2)*1.2)
             var mmd = document.getElementById("mmd")
@@ -48,7 +45,7 @@ function calcular(){
             }
             }
             else if(elementos[i].value=="2" && sexos.value=="1"){
-            for(i=0;i<re;i++){
+            for(i=0;i<inicial;i++){
             var hd = document.getElementById("hd")
             hd.innerHTML = Math.round(((66 + (13.7*pesoValor) + (5*ValorAltura) - (6.8*edadValor))*0.2)*1.35)
             var mmd = document.getElementById("mmd")
@@ -62,7 +59,7 @@ function calcular(){
             }
         }
         else if(elementos[i].value=="3" && sexos[i].value=="1"){
-            for(i=0;i<re;i++){
+            for(i=0;i<inicial;i++){
             var hd = document.getElementById("hd")
             hd.innerHTML = Math.round(((66 + (13.7*pesoValor) + (5*ValorAltura) - (6.8*edadValor))*0.2)*1.55)
             var mmd = document.getElementById("mmd")
@@ -76,7 +73,7 @@ function calcular(){
             } 
         }   
         else if(elementos[i].value=="4" && sexos.value=="1"){
-            for(i=0;i<re;i++){
+            for(i=0;i<inicial;i++){
             var hd = document.getElementById("hd")
             hd.innerHTML = Math.round(((66 + (13.7*pesoValor) + (5*ValorAltura) - (6.8*edadValor))*0.2)*1.725)
             var mmd = document.getElementById("mmd")
@@ -90,7 +87,7 @@ function calcular(){
             }
         }
         else if(elementos[i].value=="5" && sexos.value=="1"){
-            for(i=0;i<re;i++){
+            for(i=0;i<inicial;i++){
             var hd = document.getElementById("hd")
             hd.innerHTML = Math.round(((66 + (13.7*pesoValor) + (5*ValorAltura) - (6.8*edadValor))*0.2)*1.9)
             var mmd = document.getElementById("mmd")
@@ -107,12 +104,9 @@ function calcular(){
         }
     }
     else if(sexos.value=="2")
-        var tabla = document.getElementById("tabla1")
-        var t = document.getElementById("t")
-        var te = document.getElementById("te")
-        t = t.style.display="block"
-        te = te.style.display="block"
-        for(i=0;i<re.length;i++){
+        var calculadora = document.getElementById("calculadora")
+        calculadora = calculadora.style.display="block"
+        for(i=0;i<inicial.length;i++){
             var h = document.getElementById("h")
             h.innerHTML = Math.round((665 + (9.6*pesoValor) + (1.8*ValorAltura) - (4.7*edadValor))*0.2)
             var mm = document.getElementById("mm")
@@ -130,7 +124,7 @@ function calcular(){
             var totalgp= document.getElementById("gp")
             totalgp.innerHTML =  Math.floor((Math.round((665 + (9.6*pesoValor) + (1.8*ValorAltura) - (6.8*edadValor))*0.2)*2 + Math.round((665+ (9.6*pesoValor) + (1.8*ValorAltura) - (4.7*edadValor))*0.1)*2 + (Math.round((665+ (9.6*pesoValor) + (1.8*ValorAltura) - (4.7*edadValor))*0.4)))+500)
             if(elementos[i].value=="1" && sexos.value=="2"){
-            for(i=0;i<re;i++){
+            for(i=0;i<inicial;i++){
             var hd = document.getElementById("hd")
             hd.innerHTML = Math.round(((665 + (9.6*pesoValor) + (1.8*ValorAltura) - (4.7*edadValor))*0.2)*1.2)
             var mmd = document.getElementById("mmd")
@@ -144,7 +138,7 @@ function calcular(){
             }
             }
             else if(elementos[i].value=="2" && sexos.value=="2"){
-            for(i=0;i<re;i++){
+            for(i=0;i<inicial;i++){
             var hd = document.getElementById("hd")
             hd.innerHTML = Math.round(((665 + (9.6*pesoValor) + (1.8*ValorAltura) - (4.7*edadValor))*0.2)*1.35)
             var mmd = document.getElementById("mmd")
@@ -158,7 +152,7 @@ function calcular(){
         }
         }
         else if(elementos[i].value=="3" && sexos.value=="2"){
-            for(i=0;i<re;i++){
+            for(i=0;i<inicial;i++){
             var hd = document.getElementById("hd")
             hd.innerHTML = Math.round(((665 + (9.6*pesoValor) + (1.8*ValorAltura) - (4.7*edadValor))*0.2)*1.55)
             var mmd = document.getElementById("mmd")
@@ -172,7 +166,7 @@ function calcular(){
         } 
         }   
         else if(elementos[i].value=="4" && sexos.value=="2"){
-            for(i=0;i<re;i++){
+            for(i=0;i<inicial;i++){
             var hd = document.getElementById("hd")
             hd.innerHTML = Math.round(((665 + (9.6*pesoValor) + (1.8*ValorAltura) - (4.7*edadValor))*0.2)*1.725)
             var mmd = document.getElementById("mmd")
@@ -186,7 +180,7 @@ function calcular(){
         }
         }
         else if(elementos[i].value=="5" && sexos.value=="2"){
-            for(i=0;i<re;i++){
+            for(i=0;i<inicial;i++){
             var hd = document.getElementById("hd")
             hd.innerHTML = Math.round(((665 + (9.6*pesoValor) + (1.8*ValorAltura) - (4.7*edadValor))*0.2)*1.9)
             var mmd = document.getElementById("mmd")
@@ -203,8 +197,6 @@ function calcular(){
 }
 
 function resetear(){
-    var t = document.getElementById("t")
-    var te = document.getElementById("te")
-    te = te.style.display="none"
-    t = t.style.display="none"
+    var calculadora = document.getElementById("calculadora")
+    calculadora = calculadora.style.display="none"
 }

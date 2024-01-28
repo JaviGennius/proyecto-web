@@ -9,8 +9,8 @@
 </head>
 <body>
     <div class="enunciado">
-    <h1 class="field">Calculadora de Calorías Diarias</h1>	
-    <p class="parrafo2">¡¡¡Ten en cuenta que esto es una estimación y que se deberá tomar como una aproximación a la realidad!!!</p>
+    <h1>Calculadora de Calorías Diarias</h1>	
+    <p>¡¡¡Ten en cuenta que esto es una estimación y que se deberá tomar como una aproximación a la realidad!!!</p>
     </div>
     <div class="genero">
         <div class="hombre">
@@ -24,119 +24,122 @@
     </div>
     <div class="peso_talla">
         <div class="peso">
-        <img src="../imagenes/peso1.png" class="icono">
+        <img src="../imagenes/peso1.png">
         <p><label class="preguntar"><label for="peso" class="ejercicios">Peso:</label><input type="number"  value="0" name="peso" min="0" max="300" id="peso"> Kg</label></p>
         </div>
         <div class="edad">
-        <img src="../imagenes/edad.png" class="icono">
+        <img src="../imagenes/edad.png">
         <p><label class="preguntar"><label for="edad" class="ejercicios">Edad:</label><input type="number"  value="0" id="edad" name="edad" min="0" max="100"></label></p>
         </div>
         <div class="altura">
-        <img src="../imagenes/altura.png" class="icono">
+        <img src="../imagenes/altura.png">
         <p><label class="preguntar"><label for="altura" class="ejercicios">Altura:</label><input type="number" value="0" id="altura" name="altura" min="0" max="250"> cm</p>
         </div>
     </div>
     <div class="tipo_ejercicio">
         <div class="sedentario">
-        <img src="../imagenes/sedentario.png" class="icono">
+        <img src="../imagenes/sedentario.png">
         <p><input type="radio" value="1" name="pregunta" id="nada" checked/>Muy Ligero (1 hora/semana)</p>
         </div>
         <div class="ligero">
-        <img src="../imagenes/moderado.png" class="icono">
+        <img src="../imagenes/moderado.png">
         <p><input type="radio" value="2" name="pregunta" id="nada"/>Ligero (1-2 horas/semana)</p>
         </div>
         <div class="moderado">
-        <img src="../imagenes/parcial.png" class="icono">
+        <img src="../imagenes/parcial.png">
         <p><input type="radio" value="3" name="pregunta" id="poco"/>Moderado (3-5 horas/semana)</p>
         </div>
         <div class="activo">
-        <img src="../imagenes/andador.png" class="icono">
+        <img src="../imagenes/andador.png">
         <p><input type="radio" value="4" name="pregunta" id="diario"/>Activo (8-10 horas/semana)</p>
         </div>
         <div class="deportista">
-        <img src="../imagenes/deportista.png" class="icono">
+        <img src="../imagenes/deportista.png" >
         <p><input type="radio" value="5" name="pregunta" id="depor"/>Muy Activo (+10 horas/semana)</p>
     </div>
     </div>
     <div class="botones">
-        <input type="button" value="Calcular" onclick="calcular()" class="rer">
-        <input type="reset" value="Resetear Valores" onclick="resetear()" class="rer">
+        <input type="button" value="Calcular" class="boton" onclick="calcular()">
+        <input type="reset" value="Resetear Valores" onclick="resetear()" class="boton">
     </div>
-    <div class="calculadora">
+    <div class="calculadora" id="calculadora">
         <h2>Resultados:</h2>
     <div class="funcion">
         <div class="ganar">
         <h3 class="titulo">Ganar Peso</h3>
-        <p><img src="../imagenes/ancho.png" class="icono"></p>
-        <p id="gp" class="numero"></p>
-        <p class="calorias">Calorias</p>
+        <p><img src="../imagenes/ancho.png""></p>
+        <p class="caloria">Calorias</p>
+        <p id="gp"></p>
+        
         
         </div>
 
         <div class="mantener">
             <h3 class="titulo">Mantener</h3>
-            <img src="../imagenes/peso.png" class="icono">
+            <img src="../imagenes/peso.png">
+            <p class="caloria">Calorias</p>
             <p id="totald" class="numero"></p>
-            <p  class="calorias">Calorias</p>
+            
         </div>
 
         <div class="perder">
         <h3 class="titulo">Perder Peso</h3>
-        <p><img src="../imagenes/estrecho.png" class="icono"></p>
-        <p id="p" class="numero"></p>
-        <p class="calorias">Calorias</p>            
+        <p><img src="../imagenes/estrecho.png"></p>
+        <p class="caloria">Calorias</p>
+        <p id="p"></p>
+                    
         </div>
     </div>    
-    < class="periodo">   
+    <div class="periodo">   
         <div class="desayuno">
-            <p class="enuncias">Desayuno</p>
+            <h3>Desayuno</h3>
             
-            <p id="h" class="numero"></p>
-            <p class="calorias">Calorias</p>
+            <p class="caloria">Calorias</p>
+            <p id="h"></p>
             
-
-            <p id="hd" class="numero"></p>
-            <p class="calorias">Calorias en Base al ejercicio diario</p>
+            <p class="caloria">Calorias en Base al ejercicio diario</p>
+            <p id="hd"></p>
             
         </div>
         <div class="media">
-            <p class="enuncias">Media Mañana</p>
+            <h3>Media Mañana</h3>
 
-            <p id="mm" class="numero"></p>
-            <p class="calorias">Calorias</p>
+            <p class="caloria">Calorias</p>
+            <p id="mm"></p>
             
-
-            <p id="mmd" class="numero"></p>
-            <p class="calorias">Calorias en Base al ejercicio diario</p>
-            
+            <p class="caloria">Calorias en Base al ejercicio diario</p>
+            <p id="mmd"></p>
         </div>
         <div class="comida">
-            <p class="enuncias">Comida</p>
+            <h3>Comida</h3>
 
-            <p id="c" class="numero"></p>
-            <p class="calorias">Calorias</p>
+            <p class="caloria">Calorias</p>
+            <p id="c"></p>
             
-
-            <p id="cd" class="numero"></p>
-            <p class="calorias">Calorias en Base al ejercicio diario</p>
+            
+            <p class="caloria">Calorias en Base al ejercicio diario</p>
+            <p id="cd"></p>
             
         </div>
         <div class="merienda">
-            <p class="enuncias">Merienda</p>
+            <h3>Merienda</h3>
 
-            <p id="m" class="numero"></p>
-            <p class="calorias">Calorias</p>
+            <p class="caloria">Calorias</p>
+            <p id="m"></p>
             
-            <p id="md" class="numero"></p>
-            <p class="calorias">Calorias en Base al ejercicio diario</p>
+            <p class="caloria">Calorias en Base al ejercicio diario</p>
+            <p id="md"></p>
+            
         </div>
         <div class="cena">
-            <p class="enuncias">Cena</p>
-            <p id="cen" class="numero"></p>
-            <p class="calorias">Calorias</p>
+            <h3>Cena</h3>
 
-            <p id="cend" class="numero"></p> 
-            <p class="calorias">Calorias en Base al ejercicio diario</p>
+            <p class="caloria">Calorias</p>
+            <p id="cen"></p>
+            
+            <p class="caloria">Calorias en Base al ejercicio diario</p>
+            <p id="cend"></p> 
+            
         </div>
     </div>
 </body>
