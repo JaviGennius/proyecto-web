@@ -13,7 +13,7 @@ main h3 {
     padding: 40px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-/*Tabla de Horarios: https://youtu.be/5XsSN4vTFK8?si=dvZlhFjw19QwvKnG*/
+/*Tabla de Horarios*/
 .table {
     height: auto;
     width: auto;
@@ -69,15 +69,7 @@ th, td {
     width: 200px;
     height: 100px;
 }
-tr:hover {
-    font-size: large;  
-}
-td:hover {
-    color: #ffffff;
-    background-color: #d10002;
-    transition: all 0.5s;
-    font-size: x-large;
-}
+
 /*Cartas Giratorias: https://youtu.be/dlsjiphBris?si=1-D5fzfHSfkS8ZDs*/
 .cartas {
     display: grid;
