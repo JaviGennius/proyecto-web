@@ -64,6 +64,8 @@ para ello le indicamos el z-index*/
 	margin: 0;
 	padding: 0;
 }
+/*Damos propiedades al navar, que tendrá una posición sticky, un origen top y va a ir hasta el final con el bottom al 100%. 
+Por otro lado, le indicamos que tenga un z-index, es decir, la posición respecto al fondo. El margen que tendrá será de 0px y el background*/
 nav{
 	grid-column: 1/3;
 	position: sticky;
@@ -74,12 +76,14 @@ nav{
     background-color: #d10002;
     grid-row: 2;
 }
-
+/*Al hacer hover sobre los elementos de las listas que se ponga un background rojo y que quite la decoración del texto*/
 ul li:hover{
 	background-color: #d10002;
 	text-decoration: none;
 }
-
+/*Le indicamos a la clase navegación que será el contenedor de nuestro menú que ocupe la totalidad del ancho de donde se ubique. Que la fuente dentro de el sea de tamaño medium.
+Al igual que tendrá el footer, tiene una posición sticky la cual irá desde 10px de top y hasta el final de hay que tenga un bottom 100%. La alineación del texto será al centro
+y la disposición en grid. Le indicamos las columnas que tendrá el menú*/
 .navegacion{
 	width: 100%;
 	font-size: medium;
@@ -90,6 +94,8 @@ ul li:hover{
     display: grid;
     grid-template-columns: 33% 47% 20%;
 }
+/*El botón de registro tendrá una disposición en grid, le indicaremos que ocupe la columna 3, además le indicamos que tenga un margen auto, aunque le indicaremos a parte un 
+margen en superior*/
 .boton_registro {
     display: grid;
     grid-column: 3;
@@ -97,17 +103,22 @@ ul li:hover{
     margin: auto;
     margin-top: 7.5% ;
 }
+/*Dentro del listado le quitaremos el estilo de los listados, además de alinearlo al centro*/
 .navegacion ul{
 	list-style: none;
     align-self: center;
 }
+/*Le indicamos que el margen sea 1em, es decir, que ocupe un 1 unidad respecto al contenedor*/
 ul.menu {
     margin: 1em;	
 }
+/*Le indicamos que la posición sea relativa y que todos los listados estén uno al lado del otro*/
 .menu > li{
 	position: relative;
 	display: inline-block;
 }
+/*Los enlaces dentro de los listados tendrá una disposición en bloque, es decir cada uno ocupará la posición que tiene dentro del html. 
+Además le daremos un padding superior e inferior, el color de la fuente será en blanco y la fuente será Open Sans. Por último, le decimos que no tenga decoración el texto*/
 .menu > li > a{
 	display: block;
 	padding: 15px 20px;
@@ -115,12 +126,14 @@ ul.menu {
 	font-family: 'Open sans';
 	text-decoration: none;
 }
+/*Cuando hagamos hover sobre los enlaces de los elementos li de los listados haremos que se pongan en color negro, que tengan una transición de 0.7s y se subrayen.*/
 .menu li a:hover{
 	color: #000000;
 	transition: all 0.7s;
     text-decoration: underline 2px;
-    transform: all 0.7s;
 }
+/*Le decimos que el menú desplegable tenga una posición absoluta y que ocupe un total de 120% de ancho. Por otro lado le decimos que este oculto con visibility hidden,
+ y que tenga una opacidad igual a 0. Por último, le daremos una transición a la opacidad de 1.5s */
 .sumenu{
 	position: absolute;
 	width: 120%;
@@ -129,6 +142,8 @@ ul.menu {
 	transition: opacity 1.5s;
     z-index: 5;
 } 
+/*Le damos el estilo a los enlaces del submenu que tendrá una disposición en bloque, además le diremos que tenga un padding de 15px. El color del texto será blanco, el formato de la fuente
+será Open sans, no tendrá decoración y el fondo será rojo.*/
 .sumenu li a{
 	display: block;
 	padding: 15px;
@@ -137,6 +152,7 @@ ul.menu {
 	text-decoration: none;
     background-color: #d10002;
 }
+/*Le diremos que al hacer hover la visibilidad en vez de hidden sea visible y la opacidad será 1.*/
 .menu li:hover .sumenu{
 	visibility: visible;
 	opacity: 1;
