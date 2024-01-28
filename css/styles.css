@@ -54,7 +54,7 @@ para ello le indicamos el z-index*/
     height: 100%;
     text-align: right;
     margin: 0;
-    z-index: 5px;
+    z-index: 5;
     grid-column: 1;
     
 }
@@ -339,7 +339,7 @@ main > .cardiologos > .c1 {
     text-align: center;
     border-radius: 50px;
     /*En todos los medicos le asignamos la animación que tendrán, le indicamos el tiempo que dura la animación y a partir de cuando se carga la página cuando se va a ejecutar.*/
-    animation: fadeIn 2s 3s ease both;
+    animation: fadeIn 2s 1s ease both;
 }
 main > .cardiologos > .c2 {
     grid-column: 2;
@@ -347,7 +347,7 @@ main > .cardiologos > .c2 {
     background: #4e0cc9;
     text-align: center;
     border-radius: 50px;
-    animation: fadeOut 2s 4s ease both;
+    animation: fadeOut 2s 2s ease both;
 }
 main > .cardiologos > .c3 {
     grid-column: 1;
@@ -355,7 +355,7 @@ main > .cardiologos > .c3 {
     background-color: #d10002;
     text-align: center;
     border-radius: 50px;
-    animation: fadeIn 2s 3s ease both;
+    animation: fadeIn 2s 1s ease both;
 }
 main > .cardiologos > .c4 {
     grid-column: 2;
@@ -363,7 +363,7 @@ main > .cardiologos > .c4 {
     background-color: #4e0cc9;
     border-radius: 50px;
     text-align: center;
-    animation: fadeIn 2s 3s ease both;
+    animation: fadeIn 2s 1s ease both;
 }
 main > .cardiologos > .c5 {
     grid-column: 3;
@@ -371,7 +371,7 @@ main > .cardiologos > .c5 {
     background-color: #d10002;
     text-align: center;
     border-radius: 50px;
-    animation: fadeOut 2s 4s ease both;
+    animation: fadeOut 2s 2s ease both;
 }
 main > .cardiologos > .c6 {
     grid-column: 3;
@@ -379,7 +379,7 @@ main > .cardiologos > .c6 {
     background-color: #d10002;
     border-radius: 50px;
     text-align: center;
-    animation: fadeOut 2s 4s ease both;
+    animation: fadeOut 2s 2s ease both;
 }
 /*Le damos un color y estilo a la fuente de los médicos*/
 main > .cardiologos > div > p {

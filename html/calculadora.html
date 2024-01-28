@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link href="../css/calculadora.css" rel="stylesheet"/>
+    <script src="../js/calculadora.js"></script>
+</head>
+<body>
+    <div class="enunciado">
+    <h1 class="field">Calculadora de Calorías Diarias</h1>	
+    <p class="parrafo2">¡¡¡Ten en cuenta que esto es una estimación y que se deberá tomar como una aproximación a la realidad!!!</p>
+    </div>
+    <div class="genero">
+        <label for="sexo" class="ejercicios">Género:</label>
+        <img src="../imagenes/hombre.png" class="icono">
+        <input class="preguntar" type="radio" value="1" name="sexo" id="sexo" checked/><font color="yellow" face="cursive">Hombre</font>
+        <img src="../imagenes/mujer.png" class="icono"></td>		
+        <input class="preguntar" type="radio" value="2" name="sexo" id="sexo" /><font color="yellow" face="cursive">Mujer</font>
+    </div>
+    <div class="peso_talla">
+        <img src="../imagenes/peso1.png" class="icono">
+        <label class="preguntar"><label for="peso" class="ejercicios">Peso<font color="red">*</font>:</label><input type="number"  value="0" name="peso" min="0" max="300" id="peso"><font color="yellow" face="cursive"> Kg</font></label>
+        
+        <img src="../imagenes/edad.png" class="icono">
+        <label class="preguntar"><label for="edad" class="ejercicios">Edad<font color="red">*</font>:</label><input type="number"  value="0" id="edad" name="edad" min="0" max="100"></label>
+        
+        <img src="../imagenes/altura.png" class="icono">
+        <label class="preguntar"><label for="altura" class="ejercicios">Altura<font color="red">*</font>:</label><input type="number" value="0" id="altura" name="altura" min="0" max="250"><font color="yellow" face="cursive"> cm</font></label>
+
+    </div>
+    <div class="tipo_ejecicio">
+        <label for="pregunta" class="ejercicios">Tipo de Ejercicio<font color="red">*</font></label>
+            
+        <input type="radio" value="1" name="pregunta" id="nada" checked/><font color="yellow" face="cursive">Muy Ligero</p>
+        <img src="../imagenes/sedentario.png" class="icono"></td>
+        <p class="preguntar"><font color="yellow" face="cursive">1 hora/semana</font></p>
+        
+        <input type="radio" value="2" name="pregunta" id="nada"/><font color="yellow" face="cursive">Ligero</font></td>
+        <img src="../imagenes/moderado.png" class="icono"></td>
+        <p class="preguntar"><font  color="yellow" face="cursive">1-2 horas/semana</font></p>
+        
+        <input type="radio" value="3" name="pregunta" id="poco"/><font color="yellow" face="cursive">Moderado</font></td>
+        <img src="../imagenes/parcial.png" class="icono"></td>
+        <p><font class="preguntar"color="yellow" face="cursive">3-5 horas/semana</p></font>
+        
+        <input type="radio" value="4" name="pregunta" id="diario"/><font color="yellow" face="cursive">Activo</font></td>
+        <img src="../imagenes/andador.png" class="icono"></td>
+        <p class="preguntar"><font color="yellow" face="cursive">8-10 horas/semana</p></font>
+        
+        <input type="radio" value="5" name="pregunta" id="depor"/><font color="yellow" face="cursive">Muy Activo</font></td>
+        <img src="../imagenes/deportista.png" class="icono">
+        <p class="preguntar"><font color="yellow" face="cursive">+10 horas/semana</font></p>
+        
+    </div>
+    <div class="botones">
+        <input type="button" value="Calcular" onclick="calcular()" class="rer">
+        
+        <input type="reset" value="Resetear Valores" onclick="resetear()" class="rer">
+
+    </div>
+    <div class="calculadora">
+        <p class="enuncias" colspan="3">Mantener</p>
+        <p colspan="3"><img src="../imagenes/peso.png" class="icono"></p>
+        <p colspan="3" class="calorias">Calorias</d>
+            <p id="totald" colspan="3" class="numero"></p>
+                
+        <p class="enuncias"colspan="3">Ganar Peso</p>
+        
+        <p colspan="3"><img src="../imagenes/ancho.png" class="icono"></p>
+        <p colspan="3"class="calorias">Calorias</p>
+        <p id="gp" colspan="3" class="numero"></p>
+            
+        <p class="enuncias"colspan="3">Perder Peso</p>
+        <p colspan="3"><img src="../imagenes/estrecho.png" class="icono"></p>
+        <p colspan="2" class="calorias">Calorias</p>            
+        <p id="p" colspan="3" class="numero"></p>
+            
+
+            
+            <p class="enuncias" colspan="2">Desayuno</p>
+            <p class="calorias">Calorias</p>
+            <p id="h" class="numero"></p>
+            <p class="calorias">Calorias en Base al ejercicio diario</p>
+            <p id="hd" class="numero"></p>
+        
+            <p colspan="2" class="enuncias">Media Mañana</p>
+            <p class="calorias">Calorias</p>
+            <p id="mm" class="numero"></p>
+        
+            <p class="calorias">Calorias en Base al ejercicio diario</p>
+            <p id="mmd" class="numero"></p>
+        
+            <p colspan="2" class="enuncias">Comida</p>
+            <p class="calorias">Calorias</p>
+        
+            <p id="c" class="numero"></p>
+            <p class="calorias">Calorias en Base al ejercicio diario</p>
+            <p id="cd" class="numero"></p>
+        
+            <p colspan="2" class="enuncias">Merienda</p>
+            <p class="calorias">Calorias</p>
+            <p id="m" class="numero"></p>
+        
+            <p class="calorias">Calorias en Base al ejercicio diario</p>
+            <p id="md" class="numero"></p>
+        
+            <p colspan="2" class="enuncias">Cena</p>
+            <p class="calorias">Calorias</p>
+            <p id="cen" class="numero"></p>
+            
+            <p class="calorias">Calorias en Base al ejercicio diario</p>
+            <p id="cend" class="numero"></p>
+
+            
+            
+    </div>
+</body>
+</html>
