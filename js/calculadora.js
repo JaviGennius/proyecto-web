@@ -99,8 +99,7 @@ function calcular(){
             var cen = document.getElementById("cend")
             cend.innerHTML = Math.round(((66 + (13.7*pesoValor) + (5*ValorAltura) - (6.8*edadValor))*0.2)*1.9)
             }
-        }
-       
+        }  
         }
     }
     else if(sexos.value=="2")
