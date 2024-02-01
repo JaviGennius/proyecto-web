@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chat Bot</title>
+  <title>ChatBot</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -86,6 +86,12 @@
     return 'Adiós, que tengas un buen día.';
   } else if (lowerCaseMessage.includes('gracias')) {
     return 'De nada, estoy aquí para ayudar.';
+  } else if (lowerCaseMessage.includes('horarios')) {
+    return 'Los horarios de los diferentes departamentos del hospital son los siguientes:\n\n- Departamento de cardiología: Lunes a viernes de 8:00 a 16:00.\n- Departamento de pediatría: Lunes a viernes de 8:00 a 16:00.\n- Departamento de neurología: Lunes a viernes de 8:00 a 16:00.\n- Departamento de ginecología: Lunes a viernes de 8:00 a 16:00.\n- Departamento de traumatología: Lunes a viernes de 8:00 a 16:00.\n- Departamento de cirugía: Lunes a viernes de 8:00 a 16:00.';
+  } else if (lowerCaseMessage.includes('ubicación')) {
+    return 'Las ubicaciones de los diferentes departamentos del hospital son las siguientes:\n\n- Departamento de cardiología: Sala 101.\n- Departamento de pediatría: Sala 102.\n- Departamento de neurología: Sala 103.\n- Departamento de ginecología: Sala 104.\n- Departamento de traumatología: Sala 105.\n- Departamento de cirugía: Sala 106.';
+  } else if (lowerCaseMessage.includes('contacto')) {
+    return 'Los contactos de los diferentes departamentos del hospital son los siguientes:\n\n- Departamento de cardiología: Dr. Juan Pérez, Tel: 123456789.\n- Departamento de pediatría: Dra. María Rodríguez, Tel: 123456789.\n- Departamento de neurología: Dr. Carlos Sánchez, Tel: 123456789.\n- Departamento de ginecología: Dra. Laura García, Tel: 123456789.\n- Departamento de traumatología: Dr. Carlos López, Tel: 123456789.\n- Departamento de cirugía: Dr. Laura Ramírez, Tel: 123456789.';
   } else {
     return 'Lo siento, no entiendo lo que dices. Por favor, intenta con otra pregunta.';
   }
