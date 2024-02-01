@@ -4,6 +4,7 @@ body {
 	display: grid;
 	grid-template-columns: 33% 67% ;
     grid-template-rows: auto auto 1fr auto;
+    margin: 0%;
 }
 
 /*Header*/
@@ -54,7 +55,7 @@ para ello le indicamos el z-index*/
     height: 100%;
     text-align: right;
     margin: 0;
-    z-index: 5px;
+    z-index: 5;
     grid-column: 1;
     
 }
@@ -305,6 +306,32 @@ main > .cardiologos > .c3 > img, main > .cardiologos > .c5 > img
 }
 
 /*Imágenes y Contenido Médicos*/
+
+/*Animación*/
+
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes*/
+/*Con esta primera animación hacemos que aparezcan los medicos de izquierda a derecha*/
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/*Con esta segunda animación hacemos que aparezcan los médicos de derecha a izquierda*/
+@keyframes fadeOut {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 /*Indicamos la posición que tendrá cada imagen y la disposición que tendrá el texto. Por otro lado, le redondearemos el borde indicándole su radio.*/
 main > .cardiologos > .c1 {
     grid-column: 1;
@@ -312,7 +339,8 @@ main > .cardiologos > .c1 {
     background-color: #d10002;
     text-align: center;
     border-radius: 50px;
-    animation: fadeIn 2s 3s ease both;
+    /*En todos los medicos le asignamos la animación que tendrán, le indicamos el tiempo que dura la animación y a partir de cuando se carga la página cuando se va a ejecutar.*/
+    animation: fadeIn 2s 1s ease both;
 }
 main > .cardiologos > .c2 {
     grid-column: 2;
@@ -320,7 +348,7 @@ main > .cardiologos > .c2 {
     background: #4e0cc9;
     text-align: center;
     border-radius: 50px;
-    animation: fadeOut 2s 4s ease both;
+    animation: fadeOut 2s 2s ease both;
 }
 main > .cardiologos > .c3 {
     grid-column: 1;
@@ -328,7 +356,7 @@ main > .cardiologos > .c3 {
     background-color: #d10002;
     text-align: center;
     border-radius: 50px;
-    animation: fadeIn 2s 3s ease both;
+    animation: fadeIn 2s 1s ease both;
 }
 main > .cardiologos > .c4 {
     grid-column: 2;
@@ -336,7 +364,7 @@ main > .cardiologos > .c4 {
     background-color: #4e0cc9;
     border-radius: 50px;
     text-align: center;
-    animation: fadeIn 2s 3s ease both;
+    animation: fadeIn 2s 1s ease both;
 }
 main > .cardiologos > .c5 {
     grid-column: 3;
@@ -344,7 +372,7 @@ main > .cardiologos > .c5 {
     background-color: #d10002;
     text-align: center;
     border-radius: 50px;
-    animation: fadeOut 2s 4s ease both;
+    animation: fadeOut 2s 2s ease both;
 }
 main > .cardiologos > .c6 {
     grid-column: 3;
@@ -352,7 +380,7 @@ main > .cardiologos > .c6 {
     background-color: #d10002;
     border-radius: 50px;
     text-align: center;
-    animation: fadeOut 2s 4s ease both;
+    animation: fadeOut 2s 2s ease both;
 }
 /*Le damos un color y estilo a la fuente de los médicos*/
 main > .cardiologos > div > p {
@@ -451,6 +479,148 @@ por último, para que vaya hacia abajo, le inddicamos un bottom. Le indicamos un
     font-size:18px;
     display: inline;
     padding-left: 50px;
+}
+
+/*Noticias del index*/
+/*Le damos una posición al contenedor del texto, le damos un borde y alto/ancho. A continuación, le damos una disposición en grid, lo cual nos permitirá colocar el contenido
+por reguillas. Le damos un padding al contenido. Por último, le indicamos una imagen de fondo y el comportamiento que tendrá la imagen (No se repetirá, cubrirá todo el contenido y
+tendrá una fijación cuando subamos y bajemos en la página.*/
+.articulo {
+    border:1px solid black;
+    height: auto;
+    width:auto;
+    display:grid;
+    grid-template-columns: auto auto;
+    padding:5%;
+    background-image: url("../imagenes/hospitalgeneral.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+/*Indicamos donde se va a situar dentro del div, luego le damos un padding a la izquierda para separarlo un poco del margen, le damos un color y tamaña al texto y le damos un 
+color de fondo, además del tamaño que va a ocupar la página*/
+.articulo p{
+    grid-column: 2;
+    grid-row:1;
+    padding-left:2%;
+    color: white;
+    font-size:25px;
+    background-color:#0f2b645c;
+    width: 100%;
+    
+}
+/*Le damos un alto y un archo a la imagen del contendor*/
+.hospitalart {
+    height:200px;
+    width: auto;
+        
+}
+/*Indicamos donde se va a colocarse el titulo del contenedor. Al igual que el texto le damos un padding a la izquierda y un color, tanto de fondo como a la fuente*/
+.articulo h1 {
+    grid-column:2;
+    grid-row:1;
+    padding-left: 3%;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(to right, rgba(26, 26, 159, 0.495), pink);
+}
+/*Por último, le damos estilos a la linea horizontal, que tendrá un margen en todos los lados, una altura acorde al contendor y le damos color*/
+.articulo hr {
+    margin: 4%;
+    height: 3px;
+    color: rgb(0, 0, 0);
+    background: #ffffff;
+}
+/*Galería de imágenes con enlaces: https://www.youtube.com/shorts/8Rc18lfl68c*/
+/*Le indicamos que la disposición sea flex, es decir, que se vayan colocando en formato flexible en funcion de lo que ocupen unos al lado de los otros. Además le indicaremos el tamaño
+en ancho y largo que ocupará el contenedor*/
+.noticias {
+    margin-top: 100px;
+    display: flex;
+    width: 100%;
+    height: 430px;
+
+}
+/*A las imagenes le indicamos que tengan un width de inicio. Le decimos que tenga un flex grow, es decir, nos permite hacer que la imagen ocupe el espacio disponible dentro de su contenedor.
+A continuación le decimos con object-fit en cover que se escale en función del tamaño dentro del contenedor. Le damos una opacidad de solo 0.8 y la transición que haga al volver a su posición original se haga 
+en medio segundo y con una velocidad ease, es decir, lento al principio pero que termine un poco más rápido*/
+.noticias img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: 0.5s ease;   
+}
+/*Le indicamos que cuando hagamos hover sobre la imagen coja un tamaño de 300px y una opacidad de 1. Por último, le hacemos que la tenga un filtro de los colores que tenga la imagen respecto al original
+que es pasar de 0% a una diferencia de 100%*/
+.noticias img:hover {
+    width: 300px;
+    opacity: 1;
+    filter: contrast(100%);
+}
+/*Al igual que hemos hecho en las imágenes, lo que hacemos con esto es que los enlaces acompañen la animación que tienen las imágenes*/
+.noticias a {
+    display: flex;
+    flex-grow: 1;
+}
+/*https://www.youtube.com/watch?v=ogiaTnas2-A*/
+/*Hacemos que todo el contenido este centrado y a la vez tenga una disposición en flex*/
+.noticias2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+/*Le damos un margen general de 150px, le decimos que ocupe un 70% del total de la página, le decimos que tenga un tipo de familia de fuente*/
+.noticias21 {
+    margin: 150px;
+    width: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/*A la imagen le decimos que tenga un ancho máximo de 320px, además con float en left que se encuentre flotante a la izquierda del contenido que le sigue, le damos un radio de borde de 10px y 
+le damos un margen a la derecha de 10px*/
+.noticias21 img {
+    max-width: 320px;
+    float: left;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+/*Al texto le diremos que tenga un margen superior de 50px respecto a los elementos anteriores, le damos color, un tamaño de fuente y que ocupe el 100% del contenedor que ocupa*/
+.noticias211 p {
+    margin-top: 50px;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    width: 100%;
+} 
+/*Le damos un tamaño de fuente y color*/
+.noticias211 h2{
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+}
+/*Igual que en el h2*/
+.noticias211 h3{
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+}
+/*Para el div del texto, le damos una disposición en grid y le indicamos el número de columnas que tendrá el grid. Por último, le decimos que ocupe la totalidad de ancho*/
+.texto {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    width: 100%;
+}
+/*Le damos un color al borde de la derecha en negro y de un pixel, el solid servirá para que se vea. Le indicamos su posición respecto al display grid del div .texto y el padding derecho que tendrá*/
+.p1 {
+    border-right: #000000 1px solid;
+    grid-column: 1;
+    text-align: justify;
+    padding-right: 10px;
+}
+/*Le damos un padding izquierdo al contrario que al párrafo anterior, le diremos que ocupa la columna 3 y que tenga un margen izquierdo. Por último, que tenga una alineación de texto justificada*/
+.p2 {
+    margin-left: 10px;
+    grid-column: 3;
+    padding-left: 10px;
+    text-align: justify;
 }
 
 @keyframes fadeIn {
