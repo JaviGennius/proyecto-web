@@ -26,12 +26,7 @@ header {
     grid-row: 1;
 }
 /*Indicamos en la imagen como se va a comportar respecto al contenedor header, y le damos un ancho y un alto relativo al header*/
-header > .image1 {
-    grid-column: 3;
-    grid-row: 1/2;
-    width: 5em;
-    height: 50%;
-}
+
 /*Le indicamos al h1 su posición en el grid, además, le indicaremos que será alineado en el centro respecto al div como a si mismo.*/
 header > h1 {
     grid-column: 2/3;
@@ -76,6 +71,7 @@ nav{
     margin: 0;
     background-color: #d10002;
     grid-row: 2;
+    width: auto;
 }
 /*Al hacer hover sobre los elementos de las listas que se ponga un background rojo y que quite la decoración del texto*/
 ul li:hover{
@@ -86,7 +82,6 @@ ul li:hover{
 Al igual que tendrá el footer, tiene una posición sticky la cual irá desde 10px de top y hasta el final de hay que tenga un bottom 100%. La alineación del texto será al centro
 y la disposición en grid. Le indicamos las columnas que tendrá el menú*/
 .navegacion{
-	width: 100%;
 	font-size: medium;
     position: sticky;
 	top: 10px;
@@ -95,12 +90,26 @@ y la disposición en grid. Le indicamos las columnas que tendrá el menú*/
     display: grid;
     grid-template-columns: 33% 47% 20%;
 }
+@media (max-width: 1400px) {
+    nav{
+        width: auto;
+    }
+    .hospital {
+        width: 100%;
+        height: auto;
+    }
+    img {
+        width: 20%;
+        height: auto;
+    }
+
+}
 /*El botón de registro tendrá una disposición en grid, le indicaremos que ocupe la columna 3, además le indicamos que tenga un margen auto, aunque le indicaremos a parte un 
 margen en superior*/
 .boton_registro {
     display: grid;
     grid-column: 3;
-    
+    width: auto;
     margin: auto;
     margin-top: 7.5% ;
 }
