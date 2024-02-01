@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Bot</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    #chat-container {
+      max-width: 400px;
+      margin: 20px auto;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    #chat-messages {
+      height: 300px;
+      overflow-y: scroll;
+      padding: 10px;
+    }
+
+    #user-input {
+      width: 80%;
+      padding: 8px;
+      margin: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    #send-button {
+      padding: 8px;
+      margin: 5px;
+      border: 1px solid #4CAF50;
+      background-color: #4CAF50;
+      color: white;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div id="chat-container">
+  <div id="chat-messages"></div>
+  <input type="text" id="user-input" placeholder="Type a message...">
+  <button id="send-button" onclick="sendMessage()">Send</button>
+</div>
+
+<script>
+  const chatMessages = document.getElementById('chat-messages');
+  const userInput = document.getElementById('user-input');
+
+  function sendMessage() {
+    const userMessage = userInput.value;
+    appendMessage('user', userMessage);
+    const botResponse = getBotResponse(userMessage);
+    appendMessage('bot', botResponse);
+    userInput.value = '';
+  }
+
+  function appendMessage(sender, message) {
+    const messageElement = document.createElement('div');
+    messageElement.classList.add(sender);
+    messageElement.textContent = message;
+    chatMessages.appendChild(messageElement);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+
+  function getBotResponse(userMessage) {
+    return "Bot: " + userMessage;
+  }
+
+  function getBotResponse(userMessage) {
+  const lowerCaseMessage = userMessage.toLowerCase();
+
+  if (lowerCaseMessage.includes('hola')) {
+    return 'Hola, ¿cómo estás?';
+  } else if (lowerCaseMessage.includes('adios')) {
+    return 'Adiós, que tengas un buen día.';
+  } else if (lowerCaseMessage.includes('gracias')) {
+    return 'De nada, estoy aquí para ayudar.';
+  } else {
+    return 'Lo siento, no entiendo lo que dices. Por favor, intenta con otra pregunta.';
+  }
+}
+</script>
+
+</body>
+</html>
