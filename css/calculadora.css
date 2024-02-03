@@ -423,16 +423,16 @@ main{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .boton {
-    background-color: #000000;
+    background-color: #d10002;
     height: 50px;
     font-family: cursive;
-    color: rgb(6, 93, 255);
+    color: #fff;
     border-radius: 15px;
     transition: all 1s;
 }
 .boton:hover {
     background-color: aliceblue;
-    color: #000;
+    color: #d10002;
     transition: all 1s;
 }
 input {
