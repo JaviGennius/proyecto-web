@@ -1,4 +1,16 @@
 function calcular(){
+    const abrir = document.querySelector("#abrir_correo")
+    const modal = document.querySelector("#correo")
+    abrir.addEventListener("click", ()=> {modal.show();modal.style.display="block";
+    })
+}
+
+function cerrar() {
+    const cerrar = document.querySelector("#confirmar")
+    const modal = document.querySelector("#correo")
+    cerrar.addEventListener("click", ()=> {modal.close();modal.style.display="none"
+    })
+
     inicial=14
     var sexos = document.getElementById("sexo")
     var peso = document.getElementById("peso")
@@ -194,8 +206,9 @@ function calcular(){
         }
     }
 }
-
 function resetear(){
     var calculadora = document.getElementById("calculadora")
     calculadora = calculadora.style.display="none"
+    var modal = document.getElementById("correo")
+    modal = modal.style.display="none"
 }
