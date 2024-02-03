@@ -1,60 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ChatBot</title>
-  <style>
-/*http://www.java2s.com/Code/HTMLCSS/Style-Basics/CatalogStyle-Basics.htm*/
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-    }
-
-    #chat-contenedor {
-      max-width: 400px;
-      margin: 20px auto;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      overflow: hidden;
-    }
-
-    #chat-mensajes {
-      height: 300px;
-      overflow-y: scroll;
-      padding: 10px;
-    }
-
-    #usuario-input {
-      width: 80%;
-      padding: 8px;
-      margin: 5px;
-      border: 1px solid #ccc;
-      border-radius: 3px;
-    }
-
-    #enviar-boton {
-      padding: 8px;
-      margin: 5px;
-      border: 1px solid #4CAF50;
-      background-color: #4CAF50;
-      color: white;
-      border-radius: 3px;
-      cursor: pointer;
-    }
-  </style>
-</head>
-<body>
-
-<div id="chat-contenedor">
-  <div id="chat-mensajes"></div>
-  <input type="text" id="usuario-input" placeholder="Escribe aquí tu pregunta">
-  <button id="enviar-boton" onclick="enviarmensaje()">Enviar</button>
-</div>
-
-<script>
   /*https://youtu.be/nRF4HrUoAh4?si=9deMtFIWkZn4P6jK*/    /*https://stackoverflow.com/questions/12491182/how-to-send-user-data-using-sendmessage-function*/
   const chatMessages = document.getElementById('chat-mensajes');
   const userInput = document.getElementById('usuario-input');
@@ -98,7 +41,3 @@
     return 'Lo siento, no entiendo lo que dices. Por favor, intentalo de nuevo.';
   }
 }
-</script>
-
-</body>
-</html>
