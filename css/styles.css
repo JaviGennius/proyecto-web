@@ -91,18 +91,36 @@ y la disposición en grid. Le indicamos las columnas que tendrá el menú*/
     grid-template-columns: 33% 47% 20%;
 }
 @media (max-width: 1400px) {
+    body {
+        margin-top: 0;
+    }
     nav{
         width: auto;
+       
     }
     .hospital {
         width: 100%;
         height: auto;
     }
     img {
-        width: 20%;
+        width: auto;
         height: auto;
     }
 
+}
+@media screen and (max-width: 700px) {
+    header {
+        display: none;
+    }
+    nav .boton_registro{
+        display: none;
+    }
+    nav{
+        height:95%;
+    }
+    main .cont_fecha {
+        top:40;
+    }
 }
 /*El botón de registro tendrá una disposición en grid, le indicaremos que ocupe la columna 3, además le indicamos que tenga un margen auto, aunque le indicaremos a parte un 
 margen en superior*/
@@ -653,3 +671,4 @@ le damos un margen a la derecha de 10px*/
         transform: translateX(0);
     }
 }
+

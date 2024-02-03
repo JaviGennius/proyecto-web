@@ -546,4 +546,20 @@ footer .parrafos {
         margin-left: auto; 
         margin-right: auto;
     }
+    header {
+        display: none;
+    }
+    nav .boton_registro{
+        display: none;
+    }
+    nav{
+        height:95%;
+    }
+    main .cont_fecha {
+        top:40;
+    }
+    .hospital {
+        width: 100%;
+        height: auto;
+    }
 }
