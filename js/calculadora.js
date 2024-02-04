@@ -1,3 +1,4 @@
+/*JavaScript Modal: https://www.youtube.com/watch?v=9guclqCu6Hc&ab_channel=JuanSebasti%C3%A1nHerreraCarvajal*/
 function calcular(){
     const abrir = document.querySelector("#abrir_correo")
     const modal = document.querySelector("#correo")
