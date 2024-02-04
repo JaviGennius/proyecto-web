@@ -1,8 +1,10 @@
+/* CSS Buscador: https://www.youtube.com/watch?v=Gqto7IflO84&ab_channel=MagtimusPro*/
 .buscar1 {
     grid-row: 1;
     grid-column: 2;
     text-align: center;
 }
+
 #buscador {
     width: 300px;
     height: 40px;
