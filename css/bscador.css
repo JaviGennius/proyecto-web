@@ -1,0 +1,40 @@
+.buscar1 {
+    grid-row: 1;
+    grid-column: 2;
+    text-align: center;
+}
+#buscador {
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+    text-indent: 10px;
+}
+.contenido {
+    width: 80%;
+    max-height:100px;
+    height: auto;
+    margin-left: 10px; 
+    overflow-y: visible;
+    overflow-x: hidden;  
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.contenido ul{
+    width: 100%;
+    list-style: none;
+}
+.buscar1 ul li a{
+    display: block;
+    padding: 10px;
+    color: #ffffff;
+    text-decoration: none;
+}
+.buscar {
+    margin-left: 200px;
+    margin-right: 180px;
+}
+ul li a:hover{
+    background-color: #d10002;
+}
+.filtro {
+    display: none;
+}
