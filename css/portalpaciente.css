@@ -1,7 +1,7 @@
 /* Hacer texto sin fondo: https://www.youtube.com/shorts/T3UOeVNMRWc*/
 body {
-    background: #000;
-    color: #fff;
+    background: #000000;
+    color: #ffffff;
     font-family: 'Ignis et Glacies Sharp', sans-serif;
     grid-template-rows: 0.25fr 1fr 0.05fr;
     grid-template-columns: 1fr 1fr;
@@ -37,6 +37,7 @@ main {
     grid-row: 2;
     margin-right: 30px;
     align-items: center;
+    background-color: #fff;
 }
 /* Imágenes con Efecto: https://youtube.com/shorts/D1p2Sl6lxX4?si=UoNSPapoSwPAzN6i*/
 article {
@@ -49,7 +50,7 @@ article {
     margin-top: 20px;
 }
 article img:first-child {
-    box-shadow: 0 60px 60px -60px rgba(0, 30, 255, 0.5);
+    box-shadow: 0 60px 60px -60px rgba(255, 0, 0, 0.5);
     width: 100%;
 }
 article img:last-child {
@@ -72,7 +73,7 @@ article::before{
     bottom: 0;
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(to bottom, transparent 10%, rgba(0,0,0,0.5) 50%, rgba(0,0,0) 95%);
+    background-image: linear-gradient(to bottom, transparent 10%, #ffffff80 50%, #ffffff 95%);
     opacity: 0;
     transition: all 0.3s ease;
 }
@@ -99,6 +100,7 @@ main > p {
 /* Perfil: https://www.youtube.com/watch?v=fzFXkvFM1yI*/
 .carrusel {
     grid-column:2;
+    background-color: #000;
     grid-row: 2;
     width: 100%;
     list-style: none;
@@ -130,7 +132,7 @@ main > p {
     border-radius: 5px;
     position: relative;
     text-align: center;
-    box-shadow: 0px 10px 20px white;
+    box-shadow: 0px 10px 20px rgb(255, 1, 1);
     align-items: center;
     justify-content: center;
 }

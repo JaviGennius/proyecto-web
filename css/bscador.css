@@ -27,7 +27,7 @@
 .buscar1 ul li a{
     display: block;
     padding: 10px;
-    color: #ffffff;
+    color: #000000;
     text-decoration: none;
 }
 .buscar {
@@ -36,6 +36,7 @@
 }
 ul li a:hover{
     background-color: #d10002;
+    color: #fff;
 }
 .filtro {
     display: none;
