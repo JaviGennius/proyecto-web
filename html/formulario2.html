@@ -11,7 +11,7 @@
 <body>
     <a href="../index.html"><img src="../imagenes/hospital.png"/></a>
     <div class="container">
-        <form id="formulario" method="post" action="../html/portalpaciente.html" onsubmit="enviar_formulario(event)">
+        <form id="formulario" method="post" onsubmit="enviar_formulario(event)">
             <label for="nombre_de_usuario" class="nombrel">Nombre de usuario</label>
             <br>
             <input type="text" class="nombre" id="nombre_de_usuario" name="nombre_de_usuario" required onblur="validarCampo(this, /^[a-zA-Z\s]+$/, 'Nombre de usuario')">

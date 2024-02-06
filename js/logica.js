@@ -15,6 +15,7 @@ function enviar_formulario(event) {
 
     if (nombre_de_usuario_correcto && dni_correcto && contraseña_correcta) {
         alert("Formulario enviado");
+        window.location.href="../html/portalpaciente.html"
     }
 }
 

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link href="../css/calculadora.css" rel="stylesheet"/>
+    <script src="../js/calculadora.js"></script>
+</head>
+<body>
+    <header>
+        <img src="../imagenes/hospital.png" class="imagenhospital">
+    </header>
+    <nav class="navegacion">
+            <a href="../index.html"><img src="../imagenes/hospital 2.png" title="Inicio" class="hospital"/></a>
+            <ul class="menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="#">Departamentos</a>
+                    <ul class="sumenu">
+                        <li><a href="../html/oncologia.html">Oncología</li></a>
+                        <li><a href="../html/cardiologia.html">Cardiología</li></a>
+                        <li><a href="../html/traumatologia.html">Traumatología</li></a>
+                        <li><a href="../html/neurologia.html">Neurología</li></a>
+                    </ul>
+                </li>
+                <li><a href="#">Información</a>
+                    <ul class="sumenu">
+                        <li><a href="../html/calculadora.html">Calculadora</a></li>
+                        <li><a href="../html/horarios_ubicacion.html">Horarios y Ubicación</li></a>
+                    </ul>
+                </li>
+                <li><a href="../html/formulario2.html">Portal del Paciente</a></li>
+            </ul>
+            <a href="../html/formulariofina.html"><img src="../imagenes/boton_registro.png" class="boton_registro"/></a>
+            </nav>
+    <main>
+    <div class="enunciado">
+    <h1>Calculadora de Calorías Diarias</h1>	
+    <p>¡¡¡Ten en cuenta que esto es una estimación y que se deberá tomar como una aproximación a la realidad!!!</p>
+    </div>
+    <div class="genero">
+        <div class="hombre">
+        <img src="../imagenes/hombre.png" class="sexoicono">
+        <p class="sexoh"><input  type="radio" value="1" name="sexo" id="sexo" checked/>Hombre</p>
+        </div>
+        <div class="mujer">
+        <img src="../imagenes/mujer.png" class="sexoicono"></td>		
+        <p class="sexom"><input  type="radio" value="2" name="sexo" id="sexo"/>Mujer</p>
+        </div>
+    </div>
+    <div class="peso_talla">
+        <div class="peso">
+        <img src="../imagenes/peso1.png">
+        <p><label class="preguntar"><label for="peso" class="ejercicios">Peso: </label><input type="number"  value="0" name="peso" min="0" max="300" id="peso"> Kg</label></p>
+        </div>
+        <div class="edad">
+        <img src="../imagenes/edad.png">
+        <p><label class="preguntar"><label for="edad" class="ejercicios">Edad: </label><input type="number"  value="0" id="edad" name="edad" min="0" max="100"></label></p>
+        </div>
+        <div class="altura">
+        <img src="../imagenes/altura.png">
+        <p><label class="preguntar"><label for="altura" class="ejercicios">Altura: </label><input type="number" value="0" id="altura" name="altura" min="0" max="250"> cm</p>
+        </div>
+    </div>
+    <div class="tipo_ejercicio">
+        <div class="sedentario">
+        <img src="../imagenes/sedentario.png">
+        <p><input type="radio" value="1" name="pregunta" id="nada" checked/>Muy Ligero (1 hora/semana)</p>
+        </div>
+        <div class="ligero">
+        <img src="../imagenes/moderado.png">
+        <p><input type="radio" value="2" name="pregunta" id="nada"/>Ligero (1-2 horas/semana)</p>
+        </div>
+        <div class="moderado">
+        <img src="../imagenes/parcial.png">
+        <p><input type="radio" value="3" name="pregunta" id="poco"/>Moderado (3-5 horas/semana)</p>
+        </div>
+        <div class="activo">
+        <img src="../imagenes/andador.png">
+        <p><input type="radio" value="4" name="pregunta" id="diario"/>Activo (8-10 horas/semana)</p>
+        </div>
+        <div class="deportista">
+        <img src="../imagenes/deportista.png" >
+        <p><input type="radio" value="5" name="pregunta" id="depor"/>Muy Activo (+10 horas/semana)</p>
+    </div>
+    </div>
+    <div class="botones">
+        <input type="button" id="abrir_correo" value="Calcular" class="boton" onclick="calcular()">
+        <input type="reset" value="Resetear Valores" onclick="resetear()" class="boton">
+    </div>
+    <!--HTML MODAL: https://www.youtube.com/watch?v=9guclqCu6Hc&ab_channel=JuanSebasti%C3%A1nHerreraCarvajal-->
+    <dialog class="iniciosesion" id="correo">
+        <h2>Solicitud de Información</h2>
+        <p> Para acceder a la información solicitada, requerimos que ingreses tu nombre de usuario y contraseña. 
+            Esta medida garantiza la seguridad de tus datos personales y nos ayuda a mantener un entorno protegido.</p>
+        <form>
+        <p>DNI: <input id="dni_usuario" type="text"/></p>
+        <p>Contraseña: <input id="contrasena_usuario" type="text"/></p>
+        </form>
+        <p>¡Gracias por confiar en nosotros!</p>
+        <button id="confirmar" onclick="cerrar()">Enviar</button>
+    </dialog>
+    <div class="calculadora" id="calculadora">
+        <h2>Resultados:</h2>
+    <div class="funcion">
+        <div class="ganar">
+        <h3 class="titulo">Ganar Peso</h3>
+        <p><img src="../imagenes/ancho.png""></p>
+        <p class="caloria">Calorias</p>
+        <p id="gp"></p>
+        
+        </div>
+
+        <div class="mantener">
+            <h3 class="titulo">Mantener</h3>
+            <img src="../imagenes/peso.png">
+            <p class="caloria">Calorias</p>
+            <p id="totald" class="numero"></p>
+            
+        </div>
+
+        <div class="perder">
+        <h3 class="titulo">Perder Peso</h3>
+        <p><img src="../imagenes/estrecho.png"></p>
+        <p class="caloria">Calorias</p>
+        <p id="p"></p>
+                    
+        </div>
+    </div>    
+    <div class="periodo">   
+        <div class="desayuno">
+            <h3>Desayuno</h3>
+            
+            <p class="caloria">Calorias</p>
+            <p id="h"></p>
+            
+            <p class="caloria">Calorias en Base al ejercicio diario</p>
+            <p id="hd"></p>
+            
+        </div>
+        <div class="media">
+            <h3>Media Mañana</h3>
+
+            <p class="caloria">Calorias</p>
+            <p id="mm"></p>
+            
+            <p class="caloria">Calorias en Base al ejercicio diario</p>
+            <p id="mmd"></p>
+        </div>
+        <div class="comida">
+            <h3>Comida</h3>
+
+            <p class="caloria">Calorias</p>
+            <p id="c"></p>
+            
+            
+            <p class="caloria">Calorias en Base al ejercicio diario</p>
+            <p id="cd"></p>
+            
+        </div>
+        <div class="merienda">
+            <h3>Merienda</h3>
+
+            <p class="caloria">Calorias</p>
+            <p id="m"></p>
+            
+            <p class="caloria">Calorias en Base al ejercicio diario</p>
+            <p id="md"></p>
+            
+        </div>
+        <div class="cena">
+            <h3>Cena</h3>
+
+            <p class="caloria">Calorias</p>
+            <p id="cen"></p>
+            
+            <p class="caloria">Calorias en Base al ejercicio diario</p>
+            <p id="cend"></p> 
+            
+        </div>
+    </div>
+</main>
+<footer class="footer">
+    <div class="cont">
+    <div class="fila">
+        <div class="contenedor">
+            <h4>Nuestras Páginas y Contactos</h4>
+            <ul>
+                <a href="../html/horarios_ubicacion.html"><li>Información</li></a>
+                <a href="../index.html"><li>Inicio</li></a>
+                <a href="../html/formulario2.html"><li>Portal del Paciente</li></a>
+            </ul>
+        </div>
+        <div class="contenedor">
+            <h4>Página de la Comunidad de Madrid</h4>
+                <ul>
+                    <li><a href="https://www.bocm.es/">BOCM</a></li>
+                    <li><a href="https://www.comunidad.madrid/servicios/salud">Salud</a></li>
+                    <li><a href="https://www.comunidad.madrid/servicios/atencion-ciudadano">Atención al Ciudadano</li>
+                    <li><a href="https://sede.comunidad.madrid/buscador?t=&tipo=All&consejeria=All&estado_pendiente%5B1%5D=1&estado_plazo%5B1%5D=1&estado_tramitacion%5B1%5D=1">Buscador de trámites</a></li>
+                </ul>
+        </div>
+        <div class="contenedor">
+            <h4>Página del Estado</h4>
+            <ul>
+                <li><a href="https://www.sanidad.gob.es/">Ministerio de Sanidad</li></a>
+                <li><a href="https://boe.es/">BOE</li></a>
+            </ul>
+        </div>
+    </div>
+</div>    
+    <div class="parrafos">
+    <p>Teléfono: +34 690 90 12 12</p>
+    <a href="mailto:hospitalfelipevi@madrid.org?subject=Petición de Información&body="><p>Correo: hospitalfelipevi@madrid.org</p></a>
+    </div>
+    </footer>
+</body>
+</html>

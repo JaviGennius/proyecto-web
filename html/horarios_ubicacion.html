@@ -6,7 +6,6 @@
     <link rel="icon" type="image/png" href="../imagenes/madrid.png"/>
     <link rel="stylesheet" href="../css/styles.css"/>
     <link rel="stylesheet" href="../css/ubicacion.css"/>
-    <link rel="icon" type="image/png" href="../imagenes/madrid.png"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384">
     <script src="https://kit.fontawesome.com/e3d46192fc.js" crossorigin="anonymous"></script>
 
@@ -28,52 +27,25 @@
                         <li><a href="../html/neurologia.html">Neurología</li></a>
                     </ul>
                 </li>
-                <li><a href="#">Sobre Nosotros</a>
+                <li><a href="#">Información</a>
                     <ul class="sumenu">
-                        <li><a href="#">Información de Nuestro Centro</li></a>
+                        <li><a href="../html/calculadora.html">Calculadora</a></li>
                         <li><a href="../html/horarios_ubicacion.html">Horarios y Ubicación</li></a>
                     </ul>
                 </li>
                 <li><a href="../html/formulario2.html">Portal del Paciente</a></li>
             </ul>
-            <a href="../html/formulariofina.html" target="_blank"><img src="../imagenes/boton_registro.png" class="boton_registro"/></a>
+            <a href="../html/formulariofina.html"><img src="../imagenes/boton_registro.png" class="boton_registro"/></a>
             </nav>
     <main>
         <div>
             <h1>Bienvenido al apartado de horarios y ubicación del Hospital Felipe VI.</h1>
             <h2>En el hospital Felipe VI tratamos con diferentes horarios para cada departamento presente en nuestro centro:</h2>
         </div>
-        <div class="table">
-            <h3 class="h3">Horarios</h3>
-            <table>
-                <thead>
-                    <th class="depart">Departamento</th>
-                    <th class="depart">De lunes a viernes</th>
-                    <th class="depart">Sábados, domingos y festivos</th>
-                </thead>
-                <tbody>
-                <tr>
-                    <td class="dp1">Cardiología</td>
-                    <td class="horas1">9:00-15:00</td>
-                    <td class="horas1">9:00-15:30</td>
-                </tr>
-                <tr>
-                    <td class="dp2">Neurología</td>
-                    <td class="horas2">7:00-21:00</td>
-                    <td class="horas2">8:30-20:30</td>
-                </tr>
-                <tr>
-                    <td class="dp1">Traumatología</td>
-                    <td class="horas1">10:00-19:00</td>
-                    <td class="horas1">9:30-19:30</td>
-                </tr>
-                <tr>
-                    <td class="dp2">Oncología</td>
-                    <td class="horas2">Todo el día</td>
-                    <td class="horas2">Todo el día</td>
-                </tr>
-            </tbody>
-            </table>
+        <div class="scroll">
+        <img src="../imagenes/salas.png">
+        <img src="../imagenes/tabla pacientes.png">
+        </div>
         </div>
         
             <h2>Ubicación</h2>
@@ -134,6 +106,10 @@
                         </div>  
         </div>
     </div>
+    <div class="mapa">
+    <h3>Mapa de Ubicación</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4029.9747791352543!2d-3.6153032705204344!3d40.53229181586673!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422da995a9e6ab%3A0x3dd2d61b103821da!2sUniversidad%20Europea%20de%20Madrid%20(Campus%20de%20Alcobendas)!5e0!3m2!1ses!2ses!4v1666594290396!5m2!1ses!2ses"></iframe>
+    </div>
     </main>
     <footer class="footer">
     <div class="cont">
@@ -141,10 +117,9 @@
     <div class="contenedor">
             <h4>Nuestras Páginas y Contactos</h4>
             <ul>
-                <a href="#"><li>Información</li></a>
+                <a href="../html/horarios_ubicacion.html"><li>Información</li></a>
                 <li><a href="../index.html">Inicio</li></a>
                 <a href="../html/formulario2.html"><li>Portal del Paciente</li></a>
-                <li></li>
             </ul>
         </div>
         <div class="contenedor">
@@ -176,7 +151,7 @@
 </div>
     <div class="parrafos">
     <p>Teléfono: +34 690 90 12 12</p>
-    <p>Correo: hospitalfelipevi@madrid.org</p>
+    <a href="mailto:hospitalfelipevi@madrid.org?subject=Petición de Información&body="><p>Correo: hospitalfelipevi@madrid.org</p></a>
     </div>
     </footer>
 </body>
