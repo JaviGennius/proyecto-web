@@ -1,65 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chat Bot</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-    }
-
-    #chat-contenedor {
-      max-width: 400px;
-      margin: 20px auto;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      overflow: hidden;
-    }
-
-    #chat-mensaje {
-      height: 300px;
-      overflow-y: scroll;
-      padding: 10px;
-    }
-
-    #usuario-input {
-      width: 80%;
-      padding: 8px;
-      margin: 5px;
-      border: 1px solid #ccc;
-      border-radius: 3px;
-    }
-
-    #boton-enviar {
-      padding: 8px;
-      margin: 5px;
-      border: 1px solid #4CAF50;
-      background-color: #4CAF50;
-      color: white;
-      border-radius: 3px;
-      cursor: pointer;
-    }
-  </style>
-</head>
-<body>
-
-<div id="chat-contenedor">
-  <div id="chat-mensaje"></div>
-  <input type="text" id="usuario-input" placeholder="Escribe un mensaje...">
-  <button id="boton-enviar" onclick="sendMessage()">Enviar</button>
-</div>
-
-<script>
-/*https://youtu.be/nRF4HrUoAh4?si=9deMtFIWkZn4P6jK*/    /*https://stackoverflow.com/questions/12491182/how-to-send-user-data-using-sendmessage-function*/
+  /*https://youtu.be/nRF4HrUoAh4?si=9deMtFIWkZn4P6jK*/    /*https://stackoverflow.com/questions/12491182/how-to-send-user-data-using-sendmessage-function*/
   const chatMessages = document.getElementById('chat-mensaje');
   const userInput = document.getElementById('usuario-input');
 
   function sendMessage() {
-    const userMessage = userInput.value;
+    const userMessage =userInput.value;
     appendMessage('user', userMessage);
     const botResponse = getBotResponse(userMessage);
     appendMessage('bot', botResponse);
@@ -90,13 +34,10 @@
   } else if (lowerCaseMessage.includes('horarios')) {
     return 'Los horarios de los diferentes departamentos del hospital son los siguientes:\n\n- Departamento de cardiología: Lunes a viernes de 8:00 a 16:00.\n- Departamento de pediatría: Lunes a viernes de 8:00 a 16:00.\n- Departamento de neurología: Lunes a viernes de 8:00 a 16:00.\n- Departamento de ginecología: Lunes a viernes de 8:00 a 16:00.\n- Departamento de traumatología: Lunes a viernes de 8:00 a 16:00.\n- Departamento de cirugía: Lunes a viernes de 8:00 a 16:00.';
   } else if (lowerCaseMessage.includes('ubicación')) {
-    return 'Las ubicaciones de los diferentes departamentos del hospital son las siguientes:\n\n- Departamento de cardiología: Sala 101.\n- Departamento de pediatría: Sala 102.\n- Departamento de neurología: Sala 103.\n- Departamento de ginecología: Sala 104.\n- Departamento de traumatología: Sala 105.\n- Departamento de cirugía: Sala 106.';
+    return 'Las ubicaciones de los diferentes departamentos del hospital son las siguientes:\n\n- Departamento de cardiología: Sala 101, 111 y 115.\n- Departamento de neurología: Sala 102, 112 y 116.\n- Departamento de traumatología: Sala 103, 113 y 117.\n- Departamento de oncología: Sala 104, 114 y 118.\n- Departamento de traumatología: Sala 105.\n- Departamento de cirugía: Sala 106.';
   } else if (lowerCaseMessage.includes('contacto')) {
     return 'Los contactos de los diferentes departamentos del hospital son los siguientes:\n\n- Departamento de oncología: Dr. Nicolás Urioitia, Tel: +34 911 23 45 17.\n- Departamento de cardiología: Dr. Fernando Alonso, Tel: +34 911 23 45 67.\n- Departamento de traumatología: Dr. Felipe Gimenez, Tel: +34 911 23 45 89.\n- Departamento de naurología: Dr. Fran Gonzalez, Tel: +34 911 23 45 42.';
   } else {
     return 'Lo siento, no entiendo lo que dices. Por favor, intentalo de nuevo.';
   }
 }
-</script>
-</body>
-</html>
