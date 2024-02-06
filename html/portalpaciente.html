@@ -9,6 +9,7 @@
     <link href="https://fonts.cdnfonts.com/css/goladon" rel="stylesheet">
     <link rel="stylesheet" href="../css/bscador.css">
     <script src="../js/buscador.js"></script>
+    <script src="../js/botonimg.js"></script>
     <link href="https://fonts.cdnfonts.com/css/ignis-et-glacies-sharp" rel="stylesheet">
     <body>
         <div>
@@ -47,7 +48,9 @@
             </article>
             <div class="carrusel">
                 <div class="informacion">
-                    <img src="../imagenes/perfil2.jpeg" class="perfil">
+            <!--La url del tutorial que bsuqué para hacer el script de cambio de imagenes ocn un botón: https://www.lawebdelprogramador.com/foros/JavaScript/1491641-cambiar-imagen-al-pusar-sobre-un-boton.html-->        
+                    <img id="foto" src="../imagenes/delante.png" class="perfil">
+                    <button onclick="cambioImagen()">Hazme click</button>
                     <h4>Ignacio Ortega Perales</h4>
                         <h5>Información Personal</h5>
                             <p>Fecha Nacimiento: 10/10/2003</p>

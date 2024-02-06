@@ -537,18 +537,9 @@ color de fondo, además del tamaño que va a ocupar la página*/
     width: 100%;
     
 }
-<<<<<<< HEAD
     .hospitalart {
         height:200px;
         width: 200px;
-        border-radius: 50%;
-        padding-right: 2%;
-=======
-/*Le damos un alto y un archo a la imagen del contendor*/
-.hospitalart {
-    height:200px;
-    width: auto;
->>>>>>> 6356ecbc8095a32607a38b135fa135a4ade83cf0
         
 }
 /*Indicamos donde se va a colocarse el titulo del contenedor. Al igual que el texto le damos un padding a la izquierda y un color, tanto de fondo como a la fuente*/
