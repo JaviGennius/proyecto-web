@@ -122,6 +122,9 @@ y la disposición en grid. Le indicamos las columnas que tendrá el menú*/
         top:40;
     }
 }
+.articulo {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 /*El botón de registro tendrá una disposición en grid, le indicaremos que ocupe la columna 3, además le indicamos que tenga un margen auto, aunque le indicaremos a parte un 
 margen en superior*/
 .boton_registro {
