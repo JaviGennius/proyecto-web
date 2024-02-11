@@ -1,6 +1,6 @@
 let  fotomedico = "delante";
 function flip() {
-    let imagen = document.getElementById("medico");
+    let imagen = document.getElementById("cardiologo1");
     if (fotomedico =="delante"){
         imagen.src = "../imagenes/c2.d.png";
         fotomedico ="detras"
@@ -17,4 +17,3 @@ function flipout(){
         imagen.src ="../imagenes/cardiolog1.jpg";
         fotomedico ="delante"
     }
-    
