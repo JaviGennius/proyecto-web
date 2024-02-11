@@ -1,169 +1,133 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Departamento de Cardiología</title>
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="icon" type="image/png" href="../imagenes/madrid.png"/>
+    <link rel="icon" type="image/png" href="../imagenes/madrid.png" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384">
     <script src="https://kit.fontawesome.com/e3d46192fc.js" crossorigin="anonymous"></script>
     <script src="../js/flipimg.js"></script>
 </head>
+
 <body>
     <header id="cabecera">
-        <img src="../imagenes/hospital.png" clas="image2"/>
+        <img src="../imagenes/hospital.png" clas="image2" />
         <h1>Departamento de Cardiología</h1>
     </header>
     <nav class="navegacion">
-        <a href="../index.html"><img src="../imagenes/hospital 2.png" title="Inicio" class="hospital"/></a>
+        <a href="../index.html"><img src="../imagenes/hospital 2.png" title="Inicio" class="hospital" /></a>
         <ul class="menu">
             <li><a href="../index.html">Inicio</a></li>
             <li><a href="#">Departamentos</a>
                 <ul class="sumenu">
-                    <li><a href="../html/oncologia.html">Oncología</li></a>
-                    <li><a href="../html/cardiologia.html">Cardilogía</li></a>
-                    <li><a href="../html/traumatologia.html">Traumatología</li></a>
-                    <li><a href="../html/neurologia.html">Neurología</li></a>
+                    <li><a href="../html/oncologia.html">Oncología</a></li>
+                    <li><a href="../html/cardiologia.html">Cardilogía</a></li>
+                    <li><a href="../html/traumatologia.html">Traumatología</a></li>
+                    <li><a href="../html/neurologia.html">Neurología</a></li>
                 </ul>
             </li>
             <li><a href="#">Información</a>
                 <ul class="sumenu">
                     <li><a href="../html/calculadora.html">Calculadora</a></li>
-                    <li><a href="../html/horarios_ubicacion.html">Horarios y Ubicación</li></a>
+                    <li><a href="../html/horarios_ubicacion.html">Horarios y Ubicación</a></li>
                 </ul>
             </li>
             <li><a href="../html/formulario2.html">Portal del Paciente</a></li>
         </ul>
-        <a href="../html/formulariofinal.html"><img src="../imagenes/boton_registro.png" class="boton_registro"/></a>
-        </nav>
-        <main>
-    <section class="descripcion">
-        <h3 class="h3">Descripción:</h3>
-        <p>
-            El departamento de Cardiología del Hospital Felipe VI es responsable de la evaluación, diagnóstico y tratamiento de pacientes con problemas del sistema cardiovascular. Nuestro equipo de médicos y personal médico altamente calificados garantizan un tratamiento rápido a los pacientes.
-        </p>
-    </section>
+        <a href="../html/formulariofinal.html"><img src="../imagenes/boton_registro.png" class="boton_registro" /></a>
+    </nav>
+    <main>
+        <section class="descripcion">
+            <h3 class="h3">Descripción:</h3>
+            <p>
+                El departamento de Cardiología del Hospital Felipe VI es responsable de la evaluación, diagnóstico y tratamiento de pacientes con problemas del sistema cardiovascular. Nuestro equipo de médicos y personal médico altamente calificados garantizan un tratamiento rápido a los pacientes.
+            </p>
+        </section>
 
-    <section class="servicios">
-        <h3 class="h3">Servicios:</h3>
-        <ul>
-            <li>Diagnóstico trastornos cardiológicos</li>
-            <li>Tratamiento y Evaluación accidentes cardiovasculares</li>
-            <li>Tratamiento de insuficiencia cardíaca</li>
-            <li>Tratamiento y Diagnóstico de cardiopatía congénita </li>
-            <li>Tratamiento de arritmia</li>
-            <li>Diagnóstico Enfermedad vascular periférica</li>
-            <li>Diagnóstico cardiología general</li>
-        </ul>
-    </section>
-    <h3 class="h3">Nuestros profesionales</h3>
-    <div class="cardiologos">
-    <div class="c1">
-        <img src="../imagenes/cardiolog1.jpg" onmouseover="flip()" onmouseout="flipout()" id="medico">
-        <P>Dr. Fernando Alonso<br> Accidentes cardiovasculares</P>          
-    </div>
-    <div class="c2">
-        <img src="../imagenes/c3.jpg" onclick="">
-        <p>Dra. Carla Fernández<br>Medicina vascular</p>
-    </div>
-    <div class="c3">
-        <img src="../imagenes/c2.jpg">
-        <p>Dr. Antonio Herrero <br>Cardiología general</p>
-    </div>
-    <div class="c4">
-        <img src="../imagenes/c4.png">
-        <p>Dra. Ana Sánchez<br>Cardiopatía congénita</p>
-    </div>
-    <div class="c5">
-        <img src="../imagenes/c5.jpeg">
-        <p>Dr. Carlos Rodríguez<br>Enfermedad vascular periférica</p>
-    </div>
-    <div class="c6"> 
-        <img src="../imagenes/c6.jpg">
-        <p>Dr. José Pérez<br>Insuficiencia cardíaca</p>
-    </div>
-</div>
-<br><br>
-<div class="chatbot" id="chat-contenedor">
-    <div id="chat-mensaje"></div>
-    <input type="text" id="usuario-input" placeholder="Escribe un mensaje...">
-    <button id="boton-enviar" onclick="sendMessage()">Enviar</button>
-  </div>
-</main>
-<script>
-    /*https://youtu.be/nRF4HrUoAh4?si=9deMtFIWkZn4P6jK*/    /*https://stackoverflow.com/questions/12491182/how-to-send-user-data-using-sendmessage-function*/
-  const chatMessages = document.getElementById('chat-mensaje');
-  const userInput = document.getElementById('usuario-input');
-
-  function sendMessage() {
-    const userMessage = userInput.value;
-    appendMessage('user', userMessage);
-    const botResponse = getBotResponse(userMessage);
-    appendMessage('bot', botResponse);
-    userInput.value = '';
-  }
-
-  function appendMessage(sender, message) {
-    const messageElement = document.createElement('div');
-    messageElement.classList.add(sender);
-    messageElement.textContent = message;
-    chatMessages.appendChild(messageElement);
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-  }
-
-  function getBotResponse(userMessage) {
-    return "Bot: " + userMessage;
-  }
-
-  function getBotResponse(userMessage) {
-  const lowerCaseMessage = userMessage.toLowerCase();
-
-  if (lowerCaseMessage.includes('hola')) {
-    return 'Hola, ¿cómo estás?';
-  } else if (lowerCaseMessage.includes('adios')) {
-    return 'Hasta luego, que tenga buen día.';
-  } else if (lowerCaseMessage.includes('gracias')) {
-    return 'De nada, estoy aquí para ayudarte.';
-  } else if (lowerCaseMessage.includes('horarios')) {
-    return 'Los horarios de los diferentes departamentos del hospital son los siguientes:\n\n- Departamento de cardiología: Lunes a viernes de 8:00 a 16:00.\n- Departamento de pediatría: Lunes a viernes de 8:00 a 16:00.\n- Departamento de neurología: Lunes a viernes de 8:00 a 16:00.\n- Departamento de ginecología: Lunes a viernes de 8:00 a 16:00.\n- Departamento de traumatología: Lunes a viernes de 8:00 a 16:00.\n- Departamento de cirugía: Lunes a viernes de 8:00 a 16:00.';
-  } else if (lowerCaseMessage.includes('ubicación')) {
-    return 'Las ubicaciones de los diferentes departamentos del hospital son las siguientes:\n\n- Departamento de cardiología: Sala 101, 111 y 115.\n- Departamento de neurología: Sala 102, 112 y 116.\n- Departamento de traumatología: Sala 103, 113 y 117.\n- Departamento de oncología: Sala 104, 114 y 118.\n- Departamento de traumatología: Sala 105.\n- Departamento de cirugía: Sala 106.';
-  } else if (lowerCaseMessage.includes('contacto')) {
-    return 'Los contactos de los diferentes departamentos del hospital son los siguientes:\n\n- Departamento de oncología: Dr. Nicolás Urioitia, Tel: +34 911 23 45 17.\n- Departamento de cardiología: Dr. Fernando Alonso, Tel: +34 911 23 45 67.\n- Departamento de traumatología: Dr. Felipe Gimenez, Tel: +34 911 23 45 89.\n- Departamento de naurología: Dr. Fran Gonzalez, Tel: +34 911 23 45 42.';
-  } else {
-    return 'Lo siento, no entiendo lo que dices. Por favor, intentalo de nuevo.';
-  }
-}
-  </script>
+        <section class="servicios">
+            <h3 class="h3">Servicios:</h3>
+            <ul>
+                <li>Diagnóstico trastornos cardiológicos</li>
+                <li>Tratamiento y Evaluación accidentes cardiovasculares</li>
+                <li>Tratamiento de insuficiencia cardíaca</li>
+                <li>Tratamiento y Diagnóstico de cardiopatía congénita </li>
+                <li>Tratamiento de arritmia</li>
+                <li>Diagnóstico Enfermedad vascular periférica</li>
+                <li>Diagnóstico cardiología general</li>
+            </ul>
+        </section>
+        <h3 class="h3">Nuestros profesionales</h3>
+        <div class="cardiologos">
+            <div class="c1">
+                <img src="../imagenes/cardiolog1.jpg">
+                <P>Dr. Fernando Alonso<br> Accidentes cardiovasculares</P>
+            </div>
+            <div class="c2">
+                <img src="../imagenes/c3.jpg">
+                <p>Dra. Carla Fernández<br>Medicina vascular</p>
+            </div>
+            <div class="c3">
+                <img src="../imagenes/c2.jpg">
+                <p>Dr. Antonio Herrero <br>Cardiología general</p>
+            </div>
+            <div class="c4">
+                <img src="../imagenes/c4.png">
+                <p>Dra. Ana Sánchez<br>Cardiopatía congénita</p>
+            </div>
+            <div class="c5">
+                <img src="../imagenes/c5.jpeg">
+                <p>Dr. Carlos Rodríguez<br>Enfermedad vascular periférica</p>
+            </div>
+            <div class="c6">
+                <img src="../imagenes/c6.jpg">
+                <p>Dr. José Pérez<br>Insuficiencia cardíaca</p>
+            </div>
+        </div>
+        <br><br>
+        <div class="chatbot" id="chat-contenedor">
+            <div id="chat-mensaje"></div>
+            <input type="text" id="usuario-input" placeholder="Escribe un mensaje...">
+            <button id="boton-enviar" onclick="sendMessage()">Enviar</button>
+        </div>
+    </main>
+    <script src="../js/chatb.js"></script>
     <footer class="footer">
         <div class="cont">
-        <div class="fila">
-        <div class="contenedor">
-                <h4>Nuestras Páginas y Contactos</h4>
-                <ul>
-                    <a href="../html/horarios_ubicacion.html"><li>Información</li></a>
-                    <a href="../index.html"><li>Inicio</li></a>
-                    <a href="../html/formulario2.html"><li>Portal del Paciente</li></a>                
-                </ul>
-            </div>
-            <div class="contenedor">
-                <h4>Página de la Comunidad de Madrid</h4>
+            <div class="fila">
+                <div class="contenedor">
+                    <h4>Nuestras Páginas y Contactos</h4>
+                    <ul>
+                        <a href="../html/horarios_ubicacion.html">
+                            <li>Información</li>
+                        </a>
+                        <a href="../index.html">
+                            <li>Inicio</li>
+                        </a>
+                        <a href="../html/formulario2.html">
+                            <li>Portal del Paciente</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="contenedor">
+                    <h4>Página de la Comunidad de Madrid</h4>
                     <ul>
                         <li><a href="https://www.bocm.es/">BOCM</a></li>
                         <li><a href="https://www.comunidad.madrid/servicios/salud">Salud</a></li>
                         <li><a href="https://www.comunidad.madrid/servicios/atencion-ciudadano">Atención al Ciudadano</li>
                         <li><a href="https://sede.comunidad.madrid/buscador?t=&tipo=All&consejeria=All&estado_pendiente%5B1%5D=1&estado_plazo%5B1%5D=1&estado_tramitacion%5B1%5D=1">Búscador de trámites</a></li>
                     </ul>
+                </div>
+                <div class="contenedor">
+                    <h4>Página del Estado</h4>
+                    <ul>
+                        <li><a href="https://www.sanidad.gob.es/">Ministerio de Sanidad</li></a>
+                        <li><a href="https://boe.es/">BOE</li></a>
+                    </ul>
+                </div>
             </div>
-            <div class="contenedor">
-                <h4>Página del Estado</h4>
-                <ul>
-                    <li><a href="https://www.sanidad.gob.es/">Ministerio de Sanidad</li></a>
-                    <li><a href="https://boe.es/">BOE</li></a>
-                </ul>
-            </div>
-        </div>
         </div>
         <div class="redessociales">
             <ul>
@@ -173,11 +137,14 @@
                 <li><a href="https://www.youtube.com/" class="youtube"><i class="fab fa-youtube"></i></a></li>
                 <li><a href="https://es.linkedin.com/" class="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
             </ul>
-    </div>
+        </div>
         <div class="parrafos">
             <p>Teléfono: +34 911 23 45 67</p>
-            <a href="mailto:cardiologia@hospitalfelipeVI.org?subject=Cardiología&body="><p>Correo: cardiologia@hospitalfelipeVI.org</p></a>
+            <a href="mailto:cardiologia@hospitalfelipeVI.org?subject=Cardiología&body=">
+                <p>Correo: cardiologia@hospitalfelipeVI.org</p>
+            </a>
         </div>
-        </footer>
+    </footer>
 </body>
+
 </html>
