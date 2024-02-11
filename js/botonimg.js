@@ -4,6 +4,7 @@ function cambioImagen() {
    if(fotoMostrada == "delante"){
     imagen.src = "../imagenes/detras.png";
     fotoMostrada = "detras"
+    
    }
    else{
     imagen.src = "../imagenes/delante.png";
