@@ -9,6 +9,7 @@ function flip() {
         imagen.src ="../imagenes/cardiolog1.jpg";
         fotomedico ="delante"
     }
+
 }
 function flipout(){
     let imagen = document.getElementById("medico");
@@ -16,3 +17,4 @@ function flipout(){
         imagen.src ="../imagenes/cardiolog1.jpg";
         fotomedico ="delante"
     }
+    
