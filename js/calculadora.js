@@ -213,3 +213,4 @@ function resetear(){
     var modal = document.getElementById("correo")
     modal = modal.style.display="none"
 }
+
