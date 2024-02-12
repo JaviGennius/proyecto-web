@@ -122,6 +122,9 @@ y la disposición en grid. Le indicamos las columnas que tendrá el menú*/
         top:40;
     }
 }
+.articulo {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 /*El botón de registro tendrá una disposición en grid, le indicaremos que ocupe la columna 3, además le indicamos que tenga un margen auto, aunque le indicaremos a parte un 
 margen en superior*/
 .boton_registro {
@@ -589,6 +592,14 @@ que es pasar de 0% a una diferencia de 100%*/
     display: flex;
     flex-grow: 1;
 }
+/*Distorisión enlaces de Paginas*/
+.noticias .enlaces{
+    transition: all 0.5s ease;
+}
+
+.filtro_distorsionado{
+    filter: blur(5px);
+}
 /*https://www.youtube.com/watch?v=ogiaTnas2-A*/
 /*Hacemos que todo el contenido este centrado y a la vez tenga una disposición en flex*/
 .noticias2 {
@@ -725,3 +736,4 @@ le damos un margen a la derecha de 10px*/
     border-radius: 5px;
     margin-bottom: 10px;
   }
+

@@ -62,31 +62,37 @@
     <h3 class="h3">Nuestros profesionales</h3>
     <div class="cardiologos">
         <div class="c1">
-            <img src="../imagenes/c14.jpeg">
+            <img src="../imagenes/c14.jpeg" draggable="false">
             <p>Dr. Felipe Gimenez<br>Lumbalgia</p>          
         </div>
         <div class="c2">
-            <img src="../imagenes/c15.jpeg">
+            <img src="../imagenes/c15.jpeg" draggable="false">
             <p>Dr. Daniel García<br>Fracturas de todo tipo</p>
         </div>
         <div class="c3">
-            <img src="../imagenes/c13.jpeg">
+            <img src="../imagenes/c13.jpeg" draggable="false">
             <p>Dr. José Pérez<br>Contracturas musculares</p>
         </div>
         <div class="c4">
-            <img src="../imagenes/c11.jpeg">
+            <img src="../imagenes/c11.jpeg" draggable="false">
             <p>Dra. Eva Hernando<br>Las muñecas y manos</p>
         </div>
         <div class="c5">
-            <img src="../imagenes/c16.jpeg"/>
+            <img src="../imagenes/c16.jpeg" draggable="false"/>
             <p>Dr. Carlos Rodríguez<br>La cadera</p>
         </div>
         <div class="c6"> 
-            <img src="../imagenes/c12.jpg">
+            <img src="../imagenes/c12.jpg" draggable="false">
             <p>Dra. Carla Fernandez<br>Sindrome del túnel carpiano</p>
         </div>
     </div><br><br>
+    <div class="chatbot" id="chat-contenedor">
+        <div id="chat-mensaje"></div>
+        <input type="text" id="usuario-input" placeholder="Escribe un mensaje...">
+        <button id="boton-enviar" onclick="sendMessage()">Enviar</button>
+      </div>
 </main>
+<script src="../js/chatb.js"></script>
     <footer class="footer">
         <div class="cont">
             <div class="fila">

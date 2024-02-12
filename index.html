@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384">
     <script src="https://kit.fontawesome.com/e3d46192fc.js" crossorigin="anonymous"></script>
     <script src="./js/reloj.js"></script> 
+    <script src="js/inicio.js"></script>
 </head>
 <body>
     <header>
-        <img src="imagenes/hospital.png" class="imagenhospital">
+        <img src="imagenes/hospital.png" class="imagenhospital" draggable="false">
     </header>
     <nav class="navegacion">
-            <a href="index.html"><img src="imagenes/hospital 2.png" title="Inicio" class="hospital"/></a>
+            <a href="index.html"><img src="imagenes/hospital 2.png" title="Inicio" class="hospital" draggable="false"/></a>
             <ul class="menu">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="#">Departamentos</a>
@@ -33,7 +34,7 @@
                 </li>
                 <li><a href="html/formulario2.html">Portal del Paciente</a></li>
             </ul>
-            <a href="html/formulariofina.html"><img src="imagenes/boton_registro.png" class="boton_registro"/></a>
+            <a href="html/formulariofina.html"><img src="imagenes/boton_registro.png" class="boton_registro" draggable="false"/></a>
             </nav>
     <main>
         <div class="cont_fecha">
@@ -50,10 +51,10 @@
             </div> 
             </section>
             <section class="noticias">
-                        <a href="https://www.oncohealth.eu/"><img src="imagenes/logo_oncosalud.png"/></a>
-                        <a href="html/formulario2.html"><img src="imagenes/portalPaciente.png"/></a>
-                        <a href="https://www.comunidad.madrid/servicios/salud"><img src="imagenes/fotomadrid.png"/></a>
-                        <a href="https://www.comunidad.madrid/servicios/salud/mi-carpeta-salud"><img src="imagenes/salud_madrid.png"/></a>
+                        <a href="https://www.oncohealth.eu/"><img src="imagenes/logo_oncosalud.png" class="enlaces" onmouseover="distorsion(this)" onmouseout="distorsion2()"/></a>
+                        <a href="html/formulario2.html"><img src="imagenes/portalPaciente.png" class="enlaces" onmouseover="distorsion(this)" onmouseout="distorsion2()"/></a>
+                        <a href="https://www.comunidad.madrid/servicios/salud"><img src="imagenes/fotomadrid.png" class="enlaces" onmouseover="distorsion(this)" onmouseout="distorsion2()"/></a>
+                        <a href="https://www.comunidad.madrid/servicios/salud/mi-carpeta-salud"><img src="imagenes/salud_madrid.png" class="enlaces" onmouseover="distorsion(this)" onmouseout="distorsion2()"/></a>
             </section>
             <section class="noticias2">
                 <div class="noticias21">

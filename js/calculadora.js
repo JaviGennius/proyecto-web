@@ -1,17 +1,12 @@
 /*JavaScript Modal: https://www.youtube.com/watch?v=9guclqCu6Hc&ab_channel=JuanSebasti%C3%A1nHerreraCarvajal*/
 function calcular(){
-    const abrir = document.querySelector("#abrir_correo")
     const modal = document.querySelector("#correo")
-    abrir.addEventListener("click", ()=> {modal.show();modal.style.display="block";
-    })
+    modal.style.display="block";
 }
 
-function cerrar() {
-    const cerrar = document.querySelector("#confirmar")
+function cerrarmodal() {
     const modal = document.querySelector("#correo")
-    cerrar.addEventListener("click", ()=> {modal.close();modal.style.display="none"
-    })
-
+    modal.style.display="none"
     inicial=14
     var sexos = document.getElementById("sexo")
     var peso = document.getElementById("peso")
@@ -116,8 +111,7 @@ function cerrar() {
         }
     }
     else if(sexos.value=="2")
-        var calculadora = document.getElementById("calculadora")
-        calculadora = calculadora.style.display="block"
+        document.getElementById("calculadora").style.display="block"
         for(i=0;i<inicial.length;i++){
             var h = document.getElementById("h")
             h.innerHTML = Math.round((665 + (9.6*pesoValor) + (1.8*ValorAltura) - (4.7*edadValor))*0.2)
@@ -213,3 +207,4 @@ function resetear(){
     var modal = document.getElementById("correo")
     modal = modal.style.display="none"
 }
+

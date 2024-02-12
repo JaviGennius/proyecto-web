@@ -2,7 +2,13 @@
 document.addEventListener("keyup",parametro => {
    if(parametro.target.matches("#buscador")){
       document.querySelectorAll(".pagina").forEach(pagina =>{
-         pagina.textContent.toLowerCase().includes(parametro.target.value.toLowerCase())?pagina.classList.remove("filtro"):pagina.classList.add("filtro")
-      })
-   }
+      if(pagina.textContent.toLowerCase().includes(parametro.target.value.toLowerCase())){
+      
+         pagina.classList.remove("filtro")
+      }
+      else{
+         pagina.classList.add("filtro")
+      }
+   })
+}
 })
