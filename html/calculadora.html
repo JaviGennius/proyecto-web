@@ -36,7 +36,6 @@
     <main>
     <div class="enunciado">
     <h1>Calculadora de Calorías Diarias</h1>	
-    <p>¡¡¡Ten en cuenta que esto es una estimación y que se deberá tomar como una aproximación a la realidad!!!</p>
     </div>
     <div class="genero">
         <div class="hombre">
@@ -90,15 +89,10 @@
     </div>
     <!--HTML MODAL: https://www.youtube.com/watch?v=9guclqCu6Hc&ab_channel=JuanSebasti%C3%A1nHerreraCarvajal-->
     <dialog class="iniciosesion" id="correo">
-        <h2>Solicitud de Información</h2>
-        <p> Para acceder a la información solicitada, requerimos que ingreses tu nombre de usuario y contraseña. 
-            Esta medida garantiza la seguridad de tus datos personales y nos ayuda a mantener un entorno protegido.</p>
-        <form>
-        <p>DNI: <input id="dni_usuario" type="text"/></p>
-        <p>Contraseña: <input id="contrasena_usuario" type="text"/></p>
-        </form>
+        <h2>Acceder</h2>
+        <p>¡¡¡Ten en cuenta que esto es una estimación y que se deberá tomar como una aproximación a la realidad!!!</p>
         <p>¡Gracias por confiar en nosotros!</p>
-        <button id="confirmar" onclick="cerrar()">Enviar</button>
+        <button id="confirmar" onclick="cerrarmodal()">Acceso</button>
     </dialog>
     <div class="calculadora" id="calculadora">
         <h2>Resultados:</h2>
