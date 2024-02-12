@@ -1,10 +1,9 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/formulario.css">
-    <script src="formlario_final.js"></script>
     <link rel="icon" type="image/png" href="../imagenes/madrid.png"/>
     <title>Formulario del Paciente</title>
 </head>
@@ -17,19 +16,19 @@
     <form id="patientForm" method="post" action="../index.html" enctype="multipart/form-data">
       <fieldset>
         <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Introduzca Nombre" onblur="validarNombre()">
+        <input type="text" id="nombre" name="nombre" placeholder="Introduzca Nombre">
         <br>
         <label for="primero">Primer Apellido:</label>
-        <input type="text" id="primero" name="primero" placeholder="Introduzca Primer Apellido" onblur="validarApellidos()">
+        <input type="text" id="primero" name="primero" placeholder="Introduzca Primer Apellido">
         <br>
         <label for="segundo">Segundo Apellido:</label>
-        <input type="text" id="segundo" name="segundo" placeholder="Introduzca Segundo Apellido" onblur="validarApellidos()">
+        <input type="text" id="segundo" name="segundo" placeholder="Introduzca Segundo Apellido">
         <br>
         <fieldset>
           <legend>Fecha de Nacimiento:</legend>
           <br>
           <label for="dia">Día:</label>
-          <select id="dia" name="dia" onblur="validarFechaNacimiento()">
+          <select id="dia" name="dia">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -63,7 +62,7 @@
             <option value="31">31</option>
           </select>
           <label for="mes">Mes:</label>
-          <select id="mes" onblur="validarFechaNacimiento()">
+          <select id="mes" name="mes">
             <option value="enero">enero</option>
             <option value="febrero">febrero</option>
             <option value="marzo">marzo</option>
@@ -78,30 +77,27 @@
             <option value="diciembre">diciembre</option>
           </select>
           <label for="ano">Año:</label>
-          <input type="number" min="1950" max="2030" id="ano" onblur="validarFechaNacimiento()">
-            
+          <input type="number" min="1950" max="2030" id="ano" name="ano">
         </fieldset>
         <br>
         <label for="sexo">Sexo:</label>
-        <select name="sexo" id="sexo" onblur="validarSexo()">
-        <option value="hombre">hombre</option>
-        <option value="mujer">mujer</option>
-        <option value="otro">otro</option>
+        <select name="sexo" id="sexo">
+          <option value="hombre">hombre</option>
+          <option value="mujer">mujer</option>
+          <option value="otro">otro</option>
         </select>
         <br>
         <label for="telefono">Teléfono:</label>
-        <input type="tel" id="telefono" name="telefono" placeholder="Introduzca Número de Teléfono" onblur="validarTelefono()">
+        <input type="tel" id="telefono" name="telefono" placeholder="Introduzca Número de Teléfono">
         <label for="email">Correo Electrónico:</label>
-        <input type="email" id="email" name="email" placeholder="Introduzca Correo Electrónico" onblur="validarEmail()">
+        <input type="email" id="email" name="email" placeholder="Introduzca Correo Electrónico">
         <span class="error" id="emailError"></span>
         <label for="enfermedades">Enfermedades Previas:</label>
         <textarea id="enfermedades" name="enfermedades" rows="4"></textarea>
       </fieldset>
       <br>      
-      <button type="button" onclick="validarFormulario()">Enviar</button>
+      <button type="button" id="submitButton">Enviar</button>
     </form>
   </main>
   
-</body>
-</html>
-
+  <script src="formulario_final.js"></script>
