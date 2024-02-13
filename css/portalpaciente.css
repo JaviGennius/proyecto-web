@@ -111,25 +111,26 @@ main > p {
 .carrusel h4 {
     margin: 10px 0;
     font-size: 40px;
+    color: #000;
 }
 .carrusel h5 { 
     font-size: large;
     margin: 5px 0;
-    color: #000000;
+    color: #ffffff;
     text-transform: uppercase;
     line-height: 60px;
     background-color: #f80000;
 }
 .carrusel p {
     font-size: 30px;
-    color: rgb(0, 158, 250);
+    color: #0a66c2;
     line-height: 40px;
 }
 
 .informacion {
     width: 50em;
     margin: 10px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     padding-top: 30px;
     border-radius: 5px;
     position: relative;
@@ -137,6 +138,12 @@ main > p {
     box-shadow: 0px 10px 20px #d10002;
     align-items: center;
     justify-content: center;
+}
+.informacion li{
+    color:#d10002
+}
+.informacion ul li {
+    color:#ffffff
 }
 .perfil {
     width: 230px;
@@ -156,7 +163,12 @@ main > p {
     color: #d10002;
 }
 .footer > .volver {
-    background-color: #377bca;
+    background-color: #0a66c2;
 
 }
 
+hr{
+    background-color: #d10002;
+    height: 2px;
+
+}
