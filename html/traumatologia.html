@@ -59,7 +59,14 @@
             <li>Tratamiento de traumatología general</li>
         </ul>
     </section>
-
+    <details open class="chatbotrobot">
+        <summary><img src="../imagenes/CBOT.png" class="imagenchatbot" onclick="openchatbot()"/></summary>
+        <div class="chatbot" id="chat-contenedor">
+            <div id="chat-mensaje"></div>
+            <input type="text" id="usuario-input" placeholder="Escribe un mensaje...">
+            <button id="boton-enviar" onclick="sendMessage()">Enviar</button>
+        </div>
+    </details>
     <h3 class="h3">Nuestros profesionales</h3>
     <div class="cardiologos">
         <div class="c1">
@@ -87,11 +94,6 @@
             <p>Dra. Carla Fernandez<br>Sindrome del túnel carpiano</p>
         </div>
     </div><br><br>
-    <div class="chatbot" id="chat-contenedor">
-        <div id="chat-mensaje"></div>
-        <input type="text" id="usuario-input" placeholder="Escribe un mensaje...">
-        <button id="boton-enviar" onclick="sendMessage()">Enviar</button>
-      </div>
 </main>
 <script src="../js/chatb.js"></script>
     <footer class="footer">

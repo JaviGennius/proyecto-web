@@ -59,6 +59,14 @@
             <li>Diagnóstico de neurología general</li>
         </ul>
     </section>
+    <details open class="chatbotrobot">
+        <summary><img src="../imagenes/CBOT.png" class="imagenchatbot" onclick="openchatbot()"/></summary>
+        <div class="chatbot" id="chat-contenedor">
+            <div id="chat-mensaje"></div>
+            <input type="text" id="usuario-input" placeholder="Escribe un mensaje...">
+            <button id="boton-enviar" class="boton-enviar" onclick="sendMessage()">Enviar</button>
+        </div>
+    </details>
     <h3 class="h3">Nuestros profesionales</h3>
     <div class="cardiologos">
         <div class="c1">
@@ -84,12 +92,7 @@
         <div class="c6"> 
             <img src="../imagenes/c23.jpg" draggable="false" onmouseover="flip6()" onmouseout="flipout6()" id="oncologo3">
             <p>Dr. David Almendra<br>Cáncer en adultos</p>
-        </div><br><br>  
-        <div class="chatbot" id="chat-contenedor">
-            <div id="chat-mensaje"></div>
-            <input type="text" id="usuario-input" placeholder="Escribe un mensaje...">
-            <button id="boton-enviar" onclick="sendMessage()">Enviar</button>
-          </div>
+        </div><br><br>
     </main>
     <script src="../js/chatb.js"></script>
     <footer class="footer">
