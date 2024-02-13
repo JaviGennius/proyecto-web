@@ -497,7 +497,6 @@ por último, para que vaya hacia abajo, le inddicamos un bottom. Le indicamos un
     position: sticky; 
     top: 120px;
 	bottom: 100%;
-    z-index: 5;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 /*Indicamos la posición y el tamaño de la fuente que tendrá el reloj*/
