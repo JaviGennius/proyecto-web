@@ -39,7 +39,7 @@ main {
     grid-row: 2;
     margin-right: 0;
     align-items: center;
-    background-color: #fff;
+    background-color: #000000;
 }
 /* Imágenes con Efecto: https://youtube.com/shorts/D1p2Sl6lxX4?si=UoNSPapoSwPAzN6i*/
 article {
@@ -52,7 +52,7 @@ article {
     margin-top: 20px;
 }
 article img:first-child {
-    box-shadow: 0 60px 60px -60px rgba(255, 0, 0, 0.856);
+    box-shadow: 0 60px 60px -60px rgba(0, 0, 0, 0.856);
     width: 100%;
 }
 article img:last-child {
@@ -75,7 +75,7 @@ article::before{
     bottom: 0;
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(to bottom, transparent 10%, #fd000080 50%, #000000 95%);
+    background-image: linear-gradient(to bottom, transparent 10%, #0019fd80 50%, #000000 95%);
     opacity: 0;
     transition: all 0.3s ease;
 }
@@ -102,7 +102,7 @@ main > p {
 /* Perfil: https://www.youtube.com/watch?v=fzFXkvFM1yI*/
 .carrusel {
     grid-column:2;
-    background-color: #000;
+    background-color: #ffffff;
     grid-row: 2;
     width: 100%;
     list-style: none;
@@ -115,7 +115,7 @@ main > p {
 .carrusel h5 { 
     font-size: large;
     margin: 5px 0;
-    color: #fff;
+    color: #000000;
     text-transform: uppercase;
     line-height: 60px;
     background-color: #f80000;
@@ -129,7 +129,7 @@ main > p {
 .informacion {
     width: 50em;
     margin: 10px;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     padding-top: 30px;
     border-radius: 5px;
     position: relative;
