@@ -52,7 +52,7 @@ function flip4() {
 }
 function flipout4() {
     let imagen = document.getElementById("oncologo1");
-    imagen.src = "../imagenes/c21.jpg";
+    imagen.src = "../imagenes/c21.png";
     fotomedico4 = "delante"
 }
 

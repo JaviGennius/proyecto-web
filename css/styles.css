@@ -284,10 +284,13 @@ Le damos un radio al borde. Le indicamos un margen y un padding, y por último, 
     margin: 20px 0;
     padding: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 /*Damos formato a la cabecerá de formato h3, que tendrá un tamaño de fuente y la familia de la fuente*/
 .h3 {
     font-size: x-large;
+    margin-left: 10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 /*Le damos a los servicios un formato en grid y le indicamos cuantas columnas van a haber*/
@@ -555,7 +558,6 @@ color de fondo, además del tamaño que va a ocupar la página*/
     color: rgb(255, 255, 255);
     background: linear-gradient(to right, rgba(26, 26, 159, 0.495), pink);
     width:89%;
-  
 }
 /*Por último, le damos estilos a la linea horizontal, que tendrá un margen en todos los lados, una altura acorde al contendor y le damos color*/
 .articulo hr {
