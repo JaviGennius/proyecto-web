@@ -14,11 +14,14 @@ main h3 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 /*Tabla de Horarios*/
-
+.tablas {
+    display: flex;
+}
 table {
     margin: auto;
     width: 40%;
     text-align: center;
+    height: 200px;
 }
 thead {
     background-color: #d10002;
@@ -27,17 +30,17 @@ thead {
     color: #ffffff;
     font-size: x-large;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: #ff5f4a;
+    background-color: #d10002;
 }
 .dp2 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: #ffffff;
-    color: #ff5f4a;
+    color: #d10002;
     font-size: large;
 }
 .dp1 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: #ff5f4a;
+    background-color: #d10002;
     color: #ffffff;
     font-size: large;
 }

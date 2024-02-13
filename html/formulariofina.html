@@ -30,7 +30,7 @@
           <label for="dia">Día:<font color="red">*</font></label>
           <select id="dia" name="dia">
             <option disabled></option>
-            <option>Seleccione día...</option>
+            <option value="">Seleccione día...</option>
             <option disabled></option>
             <hr>
             <option disabled></option>
@@ -69,6 +69,11 @@
           </select>
           <label for="mes">Mes:<font color="red">*</font></label>
           <select id="mes" name="mes">
+            <option disabled></option>
+            <option value="">Seleccione mes...</option>
+            <option disabled></option>
+            <hr>
+            <option disabled></option>
             <option value="enero">enero</option>
             <option value="febrero">febrero</option>
             <option value="marzo">marzo</option>
@@ -83,14 +88,19 @@
             <option value="diciembre">diciembre</option>
           </select>
           <label for="ano">Año:<font color="red">*</font></label>
-          <input type="number" min="1950" max="2030" id="ano" name="ano">
+          <input type="number" placeholder="Seleccione año..." min="1950" max="2030" id="ano" name="ano">
         </fieldset>
         <br>
         <label for="sexo">Sexo:<font color="red">*</font></label>
         <select name="sexo" id="sexo">
-          <option value="hombre">hombre</option>
-          <option value="mujer">mujer</option>
-          <option value="otro">otro</option>
+          <option disabled></option>
+          <option value="">Seleccione sexo...</option>
+          <option disabled></option>
+          <hr>
+          <option disabled></option>
+          <option value="hombre">Hombre</option>
+          <option value="mujer">Mujer</option>
+          <option value="otro">Otro</option>
         </select>
         <br>
         <label for="telefono">Teléfono:<font color="red">*</font></label>
@@ -99,9 +109,9 @@
         <input type="email" id="email" name="email" placeholder="Introduzca Correo Electrónico">
         <span class="error" id="emailError"></span>
         <label for="enfermedades">Enfermedades Previas:</label>
-        <textarea id="enfermedades" name="enfermedades" rows="4"></textarea>
+        <textarea id="enfermedades" name="enfermedades" rows="4" placeholder="Introduzca sus enfermedades en caso de tenerlas"></textarea>
       </fieldset>
-      <br>      
+      <br>     
       <button type="button" id="submitButton">Enviar</button>
     </form>
   </main>
