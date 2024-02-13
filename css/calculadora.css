@@ -235,6 +235,13 @@ main{
     height: auto;
     margin: auto;
 }
+.tipo_ejercicio h5 {
+    font-size: 20px;
+    text-decoration: underline black 1px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    grid-column: 3;
+}
 .tipo_ejercicio {
     grid-row: 4;
     display: grid;
