@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="icon" type="image/png" href="../imagenes/madrid.png"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384">
+    <script src="../js/flipimg.js"></script>
     <script src="https://kit.fontawesome.com/e3d46192fc.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -24,6 +25,7 @@
                     <li><a href="../html/cardiologia.html">Cardiología</li></a>
                     <li><a href="../html/traumatologia.html">Traumatología</li></a>
                     <li><a href="../html/neurologia.html">Neurología</li></a>
+                    
                 </ul>
             </li>
             <li><a href="#">Información</a>
@@ -60,11 +62,11 @@
     <h3 class="h3">Nuestros profesionales</h3>
     <div class="cardiologos">
         <div class="c1">
-            <img src="../imagenes/c21.jpg" draggable="false">
+            <img src="../imagenes/c21.jpg" draggable="false" onmouseover="flip4()" onmouseout="flipout4()" id="oncologo1">
             <p>Dr. Nicolás Urioitia<br>Quimioterapia</p>          
         </div>
         <div class="c2">
-            <img src="../imagenes/c18.jpg" draggable="false">
+            <img src="../imagenes/c18.jpg" draggable="false" onmouseover="flip5()" onmouseout="flipout5()" id="oncologo2">
             <p>Dr. Paco Urrutia<br>Cualquier tipo de cáncer</p>
         </div>
         <div class="c3">
@@ -80,7 +82,7 @@
             <p>Dr. Mikel Oyarzabal<br>Oncología de radiación</p>
         </div>
         <div class="c6"> 
-            <img src="../imagenes/c23.jpg" draggable="false">
+            <img src="../imagenes/c23.jpg" draggable="false" onmouseover="flip6()" onmouseout="flipout6()" id="oncologo3">
             <p>Dr. David Almendra<br>Cáncer en adultos</p>
         </div><br><br>  
         <div class="chatbot" id="chat-contenedor">
