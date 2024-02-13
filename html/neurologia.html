@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384">
     <script src="https://kit.fontawesome.com/e3d46192fc.js" crossorigin="anonymous"></script>
     <script src="../js/flipimg.js"></script>
-    <script src="../js/chatbot.js"></script>
 </head>
 <body>
     <header id="cabecera">
@@ -45,13 +44,7 @@
             El departamento de neurología del Hospital Felipe VI es responsable de la evaluación, diagnóstico y tratamiento de pacientes con problemas del sistema nervioso. Nuestro equipo de médicos y personal médico altamente calificados garantizan un tratamiento rápido a los pacientes.
         </p>
     </section>
-    <details open class="chatbotrobot">
-        <summary><img src="../imagenes/chatbot.png" class="imagenchatbot" onclick="openchatbot()"/></summary>
-        <div class="chatbot" id="chat-contenedor">
-            <div id="chat-mensaje"></div>
-            <input type="text" id="usuario-input" placeholder="Escribe un mensaje...">
-            <button id="boton-enviar" onclick="sendMessage()">Enviar</button>
-        </div>
+
     <section class="servicios">
         <h3 class="h3">Servicios</h3>
         <ul>
@@ -93,6 +86,11 @@
             <p>Dra. Carla Fernández<br>Parkinson</p>
         </div>
     </div><br><br>
+    <div class="chatbot" id="chat-contenedor">
+    <div id="chat-mensaje"></div>
+    <input type="text" id="usuario-input" placeholder="Escribe un mensaje...">
+    <button id="boton-enviar" onclick="sendMessage()">Enviar</button>
+  </div>
 </main>
 <script src="../js/chatb.js"></script>
     <footer class="footer">
