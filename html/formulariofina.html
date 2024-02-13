@@ -15,20 +15,25 @@
   <main>
     <form id="patientForm" method="post" action="../index.html" enctype="multipart/form-data">
       <fieldset>
-        <label for="nombre">Nombre:</label>
+        <label for="nombre">Nombre:<font color="red">*</font></label>
         <input type="text" id="nombre" name="nombre" placeholder="Introduzca Nombre">
         <br>
-        <label for="primero">Primer Apellido:</label>
+        <label for="primero">Primer Apellido:<font color="red">*</font></label>
         <input type="text" id="primero" name="primero" placeholder="Introduzca Primer Apellido">
         <br>
-        <label for="segundo">Segundo Apellido:</label>
+        <label for="segundo">Segundo Apellido:<font color="red">*</font></label>
         <input type="text" id="segundo" name="segundo" placeholder="Introduzca Segundo Apellido">
         <br>
         <fieldset>
           <legend>Fecha de Nacimiento:</legend>
           <br>
-          <label for="dia">Día:</label>
+          <label for="dia">Día:<font color="red">*</font></label>
           <select id="dia" name="dia">
+            <option disabled></option>
+            <option>Seleccione día...</option>
+            <option disabled></option>
+            <hr>
+            <option disabled></option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -51,6 +56,7 @@
             <option value="20">20</option>
             <option value="21">21</option>
             <option value="22">22</option>
+        
             <option value="23">23</option>
             <option value="24">24</option>
             <option value="25">25</option>
@@ -61,8 +67,13 @@
             <option value="30">30</option>
             <option value="31">31</option>
           </select>
-          <label for="mes">Mes:</label>
+          <label for="mes">Mes:<font color="red">*</font></label>
           <select id="mes" name="mes">
+            <option disabled></option>
+            <option>Seleccione el mes ...</option>
+            <option disabled></option>
+            <hr>
+            <option disabled></option>
             <option value="enero">enero</option>
             <option value="febrero">febrero</option>
             <option value="marzo">marzo</option>
@@ -76,20 +87,25 @@
             <option value="noviembre">noviembre</option>
             <option value="diciembre">diciembre</option>
           </select>
-          <label for="ano">Año:</label>
+          <label for="ano">Año:<font color="red">*</font></label>
           <input type="number" min="1950" max="2030" id="ano" name="ano">
         </fieldset>
         <br>
-        <label for="sexo">Sexo:</label>
+        <label for="sexo">Sexo:<font color="red">*</font></label>
         <select name="sexo" id="sexo">
+          <option disabled></option>
+          <option>Seleccione género...<font color="red">*</font></option>
+          <option disabled></option>
+          <hr>
+          <option disabled></option>
           <option value="hombre">hombre</option>
           <option value="mujer">mujer</option>
           <option value="otro">otro</option>
         </select>
         <br>
-        <label for="telefono">Teléfono:</label>
+        <label for="telefono">Teléfono:<font color="red">*</font></label>
         <input type="tel" id="telefono" name="telefono" placeholder="Introduzca Número de Teléfono">
-        <label for="email">Correo Electrónico:</label>
+        <label for="email">Correo Electrónico:<font color="red">*</font></label>
         <input type="email" id="email" name="email" placeholder="Introduzca Correo Electrónico">
         <span class="error" id="emailError"></span>
         <label for="enfermedades">Enfermedades Previas:</label>

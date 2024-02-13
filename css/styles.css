@@ -537,12 +537,14 @@ color de fondo, además del tamaño que va a ocupar la página*/
     color: white;
     font-size:25px;
     background-color:#0f2b645c;
-    width: 100%;
+    width: 90%;
     
 }
     .hospitalart {
         height:200px;
         width: 200px;
+        margin-top:20px;
+        margin-right: 10px;
         
 }
 /*Indicamos donde se va a colocarse el titulo del contenedor. Al igual que el texto le damos un padding a la izquierda y un color, tanto de fondo como a la fuente*/
@@ -552,6 +554,8 @@ color de fondo, además del tamaño que va a ocupar la página*/
     padding-left: 3%;
     color: rgb(255, 255, 255);
     background: linear-gradient(to right, rgba(26, 26, 159, 0.495), pink);
+    width:89%;
+  
 }
 /*Por último, le damos estilos a la linea horizontal, que tendrá un margen en todos los lados, una altura acorde al contendor y le damos color*/
 .articulo hr {
