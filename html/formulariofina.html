@@ -17,12 +17,15 @@
       <fieldset>
         <label for="nombre">Nombre:<font color="red">*</font></label>
         <input type="text" id="nombre" name="nombre" placeholder="Introduzca Nombre">
+        <span class="errores" id="mensajenombre">Debes incluir tu nombre</span>
         <br>
         <label for="primero">Primer Apellido:<font color="red">*</font></label>
         <input type="text" id="primero" name="primero" placeholder="Introduzca Primer Apellido">
+        <span class="errores" id="mensajeapellido1">Debes incluir tu primer apellido</span>
         <br>
         <label for="segundo">Segundo Apellido:<font color="red">*</font></label>
         <input type="text" id="segundo" name="segundo" placeholder="Introduzca Segundo Apellido">
+        <span class="errores" id="mensajeapellido2">Debes incluir tu segundo apellido</span>
         <br>
         <fieldset>
           <legend>Fecha de Nacimiento:</legend>
@@ -56,7 +59,6 @@
             <option value="20">20</option>
             <option value="21">21</option>
             <option value="22">22</option>
-        
             <option value="23">23</option>
             <option value="24">24</option>
             <option value="25">25</option>
@@ -67,6 +69,7 @@
             <option value="30">30</option>
             <option value="31">31</option>
           </select>
+          <span class="errores" id="mensajedia">Debes incluir el día</span>
           <label for="mes">Mes:<font color="red">*</font></label>
           <select id="mes" name="mes">
             <option disabled></option>
@@ -87,8 +90,10 @@
             <option value="noviembre">noviembre</option>
             <option value="diciembre">diciembre</option>
           </select>
+          <span class="errores" id="mensajemes">Debes incluir un mes</span>
           <label for="ano">Año:<font color="red">*</font></label>
           <input type="number" placeholder="Seleccione año..." min="1950" max="2030" id="ano" name="ano">
+          <span class="errores" id="mensajeano">Debes incluir el año de Nacimiento</span>
         </fieldset>
         <br>
         <label for="sexo">Sexo:<font color="red">*</font></label>
@@ -102,12 +107,15 @@
           <option value="mujer">Mujer</option>
           <option value="otro">Otro</option>
         </select>
+        <span class="errores" id="mensajesexo">Debes incluir tu sexo</span>
         <br>
         <label for="telefono">Teléfono:<font color="red">*</font></label>
         <input type="tel" id="telefono" name="telefono" placeholder="Introduzca Número de Teléfono">
+        <span class="errores" id="mensajetelefono">Debes incluir un telefono de contacto</span>
         <label for="email">Correo Electrónico:<font color="red">*</font></label>
         <input type="email" id="email" name="email" placeholder="Introduzca Correo Electrónico">
         <span class="error" id="emailError"></span>
+        <span class="errores" id="mensajecorreo">Debes incluir un correo de contacto</span>
         <label for="enfermedades">Enfermedades Previas:</label>
         <textarea id="enfermedades" name="enfermedades" rows="4" placeholder="Introduzca sus enfermedades en caso de tenerlas"></textarea>
       </fieldset>

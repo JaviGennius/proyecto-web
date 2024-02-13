@@ -3,9 +3,11 @@ function validarNombre() {
     var nombreValor = nombre.value.trim();
     if (nombreValor === "") {
         nombre.style.borderColor = "red";
+        document.getElementById('mensajenombre').style.display = 'block';
         return false;
     } else {
         nombre.style.borderColor = "green";
+        document.getElementById('mensajenombre').style.display = 'none';
         return true;
     }
 }
@@ -18,10 +20,14 @@ function validarApellidos() {
     if (primeroValor === "" || segundoValor === "") {
         primero.style.borderColor = "red";
         segundo.style.borderColor = "red";
+        document.getElementById('mensajeapellido1').style.display = 'block';
+        document.getElementById('mensajeapellido2').style.display = 'block';
         return false;
     } else {
         primero.style.borderColor = "green";
         segundo.style.borderColor = "green";
+        document.getElementById('mensajeapellido1').style.display = 'none';
+        document.getElementById('mensajeapellido2').style.display = 'none';
         return true;
     }
 }
@@ -40,11 +46,17 @@ function validarFechaNacimiento() {
         diaElement.style.borderColor = "red";
         mesElement.style.borderColor = "red";
         anoElement.style.borderColor = "red";
+        document.getElementById('mensajedia').style.display = 'block';
+        document.getElementById('mensajemes').style.display = 'block';
+        document.getElementById('mensajeano').style.display = 'block';
         return false;
     } else {
         diaElement.style.borderColor = "green";
         mesElement.style.borderColor = "green";
         anoElement.style.borderColor = "green";
+        document.getElementById('mensajedia').style.display = 'none';
+        document.getElementById('mensajemes').style.display = 'none';
+        document.getElementById('mensajeano').style.display = 'none';
         return true;
     }
 }
@@ -56,9 +68,11 @@ function validarSexo() {
     var sexo = document.getElementById("sexo");
     if (sexo.value === "") {
         sexo.style.borderColor = "red";
+        document.getElementById('mensajesexo').style.display = 'block';
         return false;
     } else {
         sexo.style.borderColor = "green";
+        document.getElementById('mensajesexo').style.display = 'none';
         return true;
     }
 }
@@ -69,9 +83,11 @@ function validarTelefono() {
     var telefonoRegex = /^\d+$/;
     if (telefono === "" || !telefonoRegex.test(telefono)) {
         telefonoInput.style.borderColor = "red";
+        document.getElementById('mensajetelefono').style.display = 'block';
         return false;
     } else {
         telefonoInput.style.borderColor = "green";
+        document.getElementById('mensajetelefono').style.display = 'none';
         return true;
     }
 }
@@ -84,9 +100,11 @@ function validarEmail() {
     var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (email === "" || !emailRegex.test(email)) {
         emailInput.style.borderColor = "red";
+        document.getElementById('mensajecorreo').style.display = 'block';
         return false;
     } else {
         emailInput.style.borderColor = "green";
+        document.getElementById('mensajecorreo').style.display = 'none';
         return true;
     }
 }
