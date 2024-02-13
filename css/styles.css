@@ -84,7 +84,7 @@ y la disposición en grid. Le indicamos las columnas que tendrá el menú*/
 .navegacion{
 	font-size: medium;
     position: sticky;
-	top: 10px;
+	top: 0;
 	bottom: 100%;
     text-align: center;
     display: grid;
@@ -495,7 +495,7 @@ por último, para que vaya hacia abajo, le inddicamos un bottom. Le indicamos un
     text-align: center;
     width: 100%;
     position: sticky; 
-    top: 130px;
+    top: 120px;
 	bottom: 100%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

@@ -3,7 +3,12 @@ function calcular(){
     const modal = document.querySelector("#correo")
     modal.style.display="block";
 }
-
+function  rechazar() {
+    const modal = document.querySelector("#correo")
+    modal.style.display="none"
+    const calculadora = document.getElementById("calculadora")
+        calculadora = calculadora.style.display="none"
+}
 function cerrarmodal() {
     const modal = document.querySelector("#correo")
     modal.style.display="none"

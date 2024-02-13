@@ -35,7 +35,7 @@
             </nav>
     <main>
     <div class="enunciado">
-    <h1>Calculadora de Calorías Diarias</h1>	
+    <h1 id="iniciocalc">Calculadora de Calorías Diarias</h1>	
     </div>
     <div class="genero">
         <div class="hombre">
@@ -92,14 +92,15 @@
         <h2>Acceder</h2>
         <p>¡¡¡Ten en cuenta que esto es una estimación y que se deberá tomar como una aproximación a la realidad!!!</p>
         <p>¡Gracias por confiar en nosotros!</p>
-        <button id="confirmar" onclick="cerrarmodal()">Acceso</button>
+       <a href="#final"><button id="confirmar" onclick="cerrarmodal()">Acceso</button></a>
+        <a href="#iniciocalc"><button id="denegar" onclick="rechazar()">Denegar</button></a>
     </dialog>
     <div class="calculadora" id="calculadora">
         <h2>Resultados:</h2>
     <div class="funcion">
         <div class="ganar">
         <h3 class="titulo">Ganar Peso</h3>
-        <p><img src="../imagenes/ancho.png" draggable="false"></p>
+        <p><img src="../imagenes/ancho.png" draggable="false" id="final"></p>
         <p class="caloria">Calorias</p>
         <p id="gp"></p>
         
