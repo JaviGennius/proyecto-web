@@ -26,41 +26,67 @@ function validarApellidos() {
     }
 }
 
+
+
 function validarFechaNacimiento() {
     var dia = document.getElementById("dia").value;
     var mes = document.getElementById("mes").value;
     var ano = document.getElementById("ano").value;
+    var diaElement = document.getElementById("dia");
+    var mesElement = document.getElementById("mes");
+    var anoElement = document.getElementById("ano");
+
     if (dia === "" || mes === "" || ano === "") {
+        diaElement.style.borderColor = "red";
+        mesElement.style.borderColor = "red";
+        anoElement.style.borderColor = "red";
         return false;
     } else {
+        diaElement.style.borderColor = "green";
+        mesElement.style.borderColor = "green";
+        anoElement.style.borderColor = "green";
         return true;
     }
 }
 
+
+
+
 function validarSexo() {
-    var sexo = document.getElementById("sexo").value;
-    if (sexo === "") {
+    var sexo = document.getElementById("sexo");
+    if (sexo.value === "") {
+        sexo.style.borderColor = "red";
         return false;
     } else {
+        sexo.style.borderColor = "green";
         return true;
     }
 }
 
 function validarTelefono() {
-    var telefono = document.getElementById("telefono").value;
-    if (telefono === "") {
+    var telefonoInput = document.getElementById("telefono");
+    var telefono = telefonoInput.value;
+    var telefonoRegex = /^\d+$/;
+    if (telefono === "" || !telefonoRegex.test(telefono)) {
+        telefonoInput.style.borderColor = "red";
         return false;
     } else {
+        telefonoInput.style.borderColor = "green";
         return true;
     }
 }
 
+
+
 function validarEmail() {
-    var email = document.getElementById("email").value;
+    var emailInput = document.getElementById("email");
+    var email = emailInput.value;
     var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (email === "" || !emailRegex.test(email)) {
+        emailInput.style.borderColor = "red";
         return false;
     } else {
+        emailInput.style.borderColor = "green";
         return true;
     }
 }
