@@ -31,7 +31,7 @@ if (lowerCaseMessage.includes('hola')) {
   return 'Hasta luego, que tenga buen día.';
 } else if (lowerCaseMessage.includes('gracias')){
   return 'De nada, estoy aquí para ayudarte.';
-} else if (lowerCaseMessage.includes('horarios')) {
+} else if (lowerCaseMessage.includes('horarios')|| lowerCaseMessage.includes('horario')) {
   return 'Los horarios de los diferentes departamentos del hospital son los siguientes:\n\n- Departamento de cardiología: Lunes a viernes de 8:00 a 16:00.\n- Departamento de pediatría: Lunes a viernes de 8:00 a 16:00.\n- Departamento de neurología: Lunes a viernes de 8:00 a 16:00.\n- Departamento de ginecología: Lunes a viernes de 8:00 a 16:00.\n- Departamento de traumatología: Lunes a viernes de 8:00 a 16:00.\n- Departamento de cirugía: Lunes a viernes de 8:00 a 16:00.';
 } else if (lowerCaseMessage.includes('ubicacion')||lowerCaseMessage.includes('ubicación')) {
   return 'Las ubicaciones de los diferentes departamentos del hospital son las siguientes:\n\n- Departamento de cardiología: Sala 101, 111 y 115.\n- Departamento de neurología: Sala 102, 112 y 116.\n- Departamento de traumatología: Sala 103, 113 y 117.\n- Departamento de oncología: Sala 104, 114 y 118.\n- Departamento de traumatología: Sala 105.\n- Departamento de cirugía: Sala 106.';
