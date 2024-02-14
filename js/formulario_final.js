@@ -1,7 +1,11 @@
 function validarNombre() {
     var nombre = document.getElementById("nombre");
     var nombreValor = nombre.value.trim();
+    var errorNombre = document.getElementById("error_nombre");
+    errorNombre.setAttribute("hidden", true);
+    
     if (nombreValor === "") {
+        errorNombre.removeAttribute("hidden");
         nombre.style.borderColor = "red";
         document.getElementById('mensajenombre').style.display = 'block';
         return false;
@@ -12,23 +16,32 @@ function validarNombre() {
     }
 }
 
-function validarApellidos() {
-    var primero = document.getElementById("primero");
-    var segundo = document.getElementById("segundo");
+
+function validarPrimerApellido() {
+    var primero=document.getElementById("primero");
     var primeroValor = primero.value.trim();
-    var segundoValor = segundo.value.trim();
-    if (primeroValor === "" || segundoValor === "") {
+    var errorApellido1=document.getElementById("error_apellido1");
+    errorApellido1.setAttribute("hidden",true);
+
+    if (primeroValor === "") {
+        errorApellido1.removeAttribute("hidden")
         primero.style.borderColor = "red";
-        segundo.style.borderColor = "red";
-        document.getElementById('mensajeapellido1').style.display = 'block';
-        document.getElementById('mensajeapellido2').style.display = 'block';
-        return false;
     } else {
+    
         primero.style.borderColor = "green";
+    }
+}
+    
+function validarSegundoApellido() {
+    var segundo = document.getElementById("segundo");
+    var segundoValor = segundo.value.trim();
+    var errorApellido2 = document.getElementById("error_apellido2");
+    errorApellido2.setAttribute("hidden",true);
+    if (segundoValor === "") {
+        errorApellido2.removeAttribute("hidden");
+        segundo.style.borderColor = "red";
+    } else {
         segundo.style.borderColor = "green";
-        document.getElementById('mensajeapellido1').style.display = 'none';
-        document.getElementById('mensajeapellido2').style.display = 'none';
-        return true;
     }
 }
 
@@ -41,8 +54,11 @@ function validarFechaNacimiento() {
     var diaElement = document.getElementById("dia");
     var mesElement = document.getElementById("mes");
     var anoElement = document.getElementById("ano");
+    var errorEdad = document.getElementById("error_edad");
+    errorEdad.setAttribute("hidden",true);
 
     if (dia === "" || mes === "" || ano === "") {
+        errorEdad.removeAttribute("hidden");
         diaElement.style.borderColor = "red";
         mesElement.style.borderColor = "red";
         anoElement.style.borderColor = "red";
@@ -66,7 +82,10 @@ function validarFechaNacimiento() {
 
 function validarSexo() {
     var sexo = document.getElementById("sexo");
+    var errorSexo = document.getElementById("error_sexo");
+    errorSexo.setAttribute("hidden",true);
     if (sexo.value === "") {
+        errorSexo.removeAttribute("hidden");
         sexo.style.borderColor = "red";
         document.getElementById('mensajesexo').style.display = 'block';
         return false;
@@ -81,7 +100,10 @@ function validarTelefono() {
     var telefonoInput = document.getElementById("telefono");
     var telefono = telefonoInput.value;
     var telefonoRegex = /^\d+$/;
+    var errorTelefono = document.getElementById("error_tel");
+    errorTelefono.setAttribute("hidden",true);
     if (telefono === "" || !telefonoRegex.test(telefono)) {
+        errorTelefono.removeAttribute("hidden");
         telefonoInput.style.borderColor = "red";
         document.getElementById('mensajetelefono').style.display = 'block';
         return false;
@@ -98,7 +120,10 @@ function validarEmail() {
     var emailInput = document.getElementById("email");
     var email = emailInput.value;
     var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    var errorEmail = document.getElementById("error_email");
+    errorEmail.setAttribute("hidden",true);
     if (email === "" || !emailRegex.test(email)) {
+        errorEmail.removeAttribute("hidden");
         emailInput.style.borderColor = "red";
         document.getElementById('mensajecorreo').style.display = 'block';
         return false;
@@ -131,8 +156,8 @@ function validarFormulario() {
 }
 
 document.getElementById("nombre").addEventListener("blur", validarNombre);
-document.getElementById("primero").addEventListener("blur", validarApellidos);
-document.getElementById("segundo").addEventListener("blur", validarApellidos);
+document.getElementById("primero").addEventListener("blur", validarPrimerApellido);
+document.getElementById("segundo").addEventListener("blur", validarSegundoApellido);
 document.getElementById("dia").addEventListener("blur", validarFechaNacimiento);
 document.getElementById("mes").addEventListener("blur", validarFechaNacimiento);
 document.getElementById("ano").addEventListener("blur", validarFechaNacimiento);
