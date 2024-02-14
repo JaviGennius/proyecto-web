@@ -119,7 +119,7 @@ function validarFormulario() {
 
     if (esNombreValido && sonApellidosValidos && esFechaNacimientoValida && esSexoValido && esTelefonoValido && esEmailValido) {
         setTimeout(function() {
-            window.location.href = '../index.html'; // Reemplaza con la URL de tu elección
+            window.location.href = '../index.html'; // Funcion sacada de Chatgpt
           }, 3000);
         document.getElementById("patientForm").style.display = "none";
         document.getElementById("cabecera").style.display = "none";
