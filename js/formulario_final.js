@@ -118,7 +118,13 @@ function validarFormulario() {
     var esEmailValido = validarEmail();
 
     if (esNombreValido && sonApellidosValidos && esFechaNacimientoValida && esSexoValido && esTelefonoValido && esEmailValido) {
-        document.getElementById("patientForm").submit();
+        setTimeout(function() {
+            window.location.href = '../index.html'; // Reemplaza con la URL de tu elección
+          }, 3000);
+        document.getElementById("patientForm").style.display = "none";
+        document.getElementById("cabecera").style.display = "none";
+        document.getElementById("cargar").style.display = "block";
+
     } else {
         alert("Por favor, complete todos los campos correctamente.");
     }
