@@ -22,9 +22,11 @@ function validarPrimerApellido() {
     if (primeroValor === "") {
         errorApellido1.style.display = "block";
         primero.style.borderColor = "red";
+        return false;
     } else {
         errorApellido1.style.display = "none";
         primero.style.borderColor = "green";
+        return true;
     }
 }
 
@@ -36,9 +38,11 @@ function validarSegundoApellido() {
     if (segundoValor === "") {
         errorApellido2.style.display = "block";
         segundo.style.borderColor = "red";
+        return false;
     } else {
         errorApellido2.style.display = "none";
         segundo.style.borderColor = "green";
+        return true;
     }
 }
 
@@ -51,7 +55,7 @@ function validarFechaNacimiento() {
     let anoElement = document.getElementById("ano");
     let errorEdad = document.getElementById("error_edad");
 
-    if (dia === "" || mes === "" || ano === "") {
+    if (dia === "" || mes === "" || ano === "" || ano < 1950) {
         errorEdad.style.display = "block";
         diaElement.style.borderColor = "red";
         mesElement.style.borderColor = "red";
