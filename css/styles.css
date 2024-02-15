@@ -344,27 +344,7 @@ main > .cardiologos > .c3 > img, main > .cardiologos > .c5 > img
 
 /*https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes*/
 /*Con esta primera animación hacemos que aparezcan los medicos de izquierda a derecha*/
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateX(-100px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-/*Con esta segunda animación hacemos que aparezcan los médicos de derecha a izquierda*/
-@keyframes fadeOut {
-    0% {
-        opacity: 0;
-        transform: translateX(100px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
+
 /*Indicamos la posición que tendrá cada imagen y la disposición que tendrá el texto. Por otro lado, le redondearemos el borde indicándole su radio.*/
 main > .cardiologos > .c1 {
     grid-column: 1;
