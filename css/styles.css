@@ -339,7 +339,27 @@ main > .cardiologos > .c3 > img, main > .cardiologos > .c5 > img
 }
 
 /*Imágenes y Contenido Médicos*/
-
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/*Con esta segunda animación hacemos que aparezcan los médicos de derecha a izquierda*/
+@keyframes fadeOut {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 /*Animación*/
 
 /*https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes*/
