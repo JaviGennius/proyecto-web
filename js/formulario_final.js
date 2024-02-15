@@ -1,7 +1,7 @@
 function validarNombre() {
-    var nombre = document.getElementById("nombre");
-    var nombreValor = nombre.value.trim();
-    var errorNombre = document.getElementById("error_nombre");
+    let nombre = document.getElementById("nombre");
+    let nombreValor = nombre.value.trim();
+    let errorNombre = document.getElementById("error_nombre");
     if (nombreValor === "") {
         errorNombre.style.display = "block"
         nombre.style.borderColor = "red";
@@ -14,12 +14,10 @@ function validarNombre() {
 }
 
 
-
-
 function validarPrimerApellido() {
-    var primero=document.getElementById("primero");
-    var primeroValor = primero.value.trim();
-    var errorApellido1=document.getElementById("error_apellido1");
+    let primero= document.getElementById("primero");
+    let primeroValor = primero.value.trim();
+    let errorApellido1= document.getElementById("error_apellido1");
 
     if (primeroValor === "") {
         errorApellido1.style.display = "block";
@@ -32,9 +30,9 @@ function validarPrimerApellido() {
 
 
 function validarSegundoApellido() {
-    var segundo = document.getElementById("segundo");
-    var segundoValor = segundo.value.trim();
-    var errorApellido2 = document.getElementById("error_apellido2");
+    let segundo = document.getElementById("segundo");
+    let segundoValor = segundo.value.trim();
+    let errorApellido2 = document.getElementById("error_apellido2");
     if (segundoValor === "") {
         errorApellido2.style.display = "block";
         segundo.style.borderColor = "red";
@@ -45,13 +43,13 @@ function validarSegundoApellido() {
 }
 
 function validarFechaNacimiento() {
-    var dia = document.getElementById("dia").value;
-    var mes = document.getElementById("mes").value;
-    var ano = document.getElementById("ano").value;
-    var diaElement = document.getElementById("dia");
-    var mesElement = document.getElementById("mes");
-    var anoElement = document.getElementById("ano");
-    var errorEdad = document.getElementById("error_edad");
+    let dia = document.getElementById("dia").value;
+    let mes = document.getElementById("mes").value;
+    let ano = document.getElementById("ano").value;
+    let diaElement = document.getElementById("dia");
+    let mesElement = document.getElementById("mes");
+    let anoElement = document.getElementById("ano");
+    let errorEdad = document.getElementById("error_edad");
 
     if (dia === "" || mes === "" || ano === "") {
         errorEdad.style.display = "block";
@@ -69,8 +67,8 @@ function validarFechaNacimiento() {
 }
 
 function validarSexo() {
-    var sexo = document.getElementById("sexo");
-    var errorSexo = document.getElementById("error_sexo");
+    let sexo = document.getElementById("sexo");
+    let errorSexo = document.getElementById("error_sexo");
     if (sexo.value === "") {
         errorSexo.style.display = "block";
         sexo.style.borderColor = "red";
@@ -84,10 +82,10 @@ function validarSexo() {
 
 
 function validarTelefono() {
-    var telefonoInput = document.getElementById("telefono");
-    var telefono = telefonoInput.value;
-    var telefonoRegex = /^\d+$/;
-    var errorTelefono = document.getElementById("error_tel");
+    let telefonoInput = document.getElementById("telefono");
+    let telefono = telefonoInput.value;
+    let telefonoRegex = /^\d+$/;
+    let errorTelefono = document.getElementById("error_tel");
     if (telefono === "" || !telefonoRegex.test(telefono)) {
         errorTelefono.style.display = "block";
         telefonoInput.style.borderColor = "red";
@@ -100,10 +98,10 @@ function validarTelefono() {
 }
 
 function validarEmail() {
-    var emailInput = document.getElementById("email");
-    var email = emailInput.value;
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    var errorEmail = document.getElementById("error_email");
+    let emailInput = document.getElementById("email");
+    let email = emailInput.value;
+    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    let errorEmail = document.getElementById("error_email");
     if (email === "" || !emailRegex.test(email)) {
         errorEmail.style.display = "block";
         emailInput.style.borderColor = "red";
@@ -117,16 +115,16 @@ function validarEmail() {
 
 
 function validarFormulario() {
-    var esNombreValido = validarNombre();
-    var esPrimerApellidosValido = validarPrimerApellido();
+    let esNombreValido = validarNombre();
+    let esPrimerApellidoValido = validarPrimerApellido();
     let esSegundoApellidoValido = validarSegundoApellido();
-    var esFechaNacimientoValida = validarFechaNacimiento();
-    var esSexoValido = validarSexo();
-    var esTelefonoValido = validarTelefono();
-    var esEmailValido = validarEmail();
+    let esFechaNacimientoValida = validarFechaNacimiento();
+    let esSexoValido = validarSexo();
+    let esTelefonoValido = validarTelefono();
+    let esEmailValido = validarEmail();
 
 
-    if (esNombreValido && esPrimerApellidosValido && esSegundoApellidoValido && esFechaNacimientoValida && esSexoValido && esTelefonoValido && esEmailValido) {
+    if (esNombreValido && esPrimerApellidoValido && esSegundoApellidoValido && esFechaNacimientoValida && esSexoValido && esTelefonoValido && esEmailValido) {
         setTimeout(function() {
             window.location.href = '../index.html'; // Funcion sacada de Chatgpt
         }, 3000);
