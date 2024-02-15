@@ -3,7 +3,7 @@ function validarNombre() {
     let nombreValor = nombre.value.trim();
     let errorNombre = document.getElementById("error_nombre");
     if (nombreValor === "") {
-        errorNombre.style.display = "block"
+        errorNombre.style.display = "block";
         nombre.style.borderColor = "red";
         return false;
     } else {
@@ -17,14 +17,13 @@ function validarPrimerApellido() {
     var primero=document.getElementById("primero");
     var primeroValor = primero.value.trim();
     var errorApellido1=document.getElementById("error_apellido1");
-    errorApellido1.setAttribute("hidden",true);
 
     if (primeroValor === "") {
-        errorApellido1.removeAttribute("hidden")
+        errorApellido1.style.display = "block";
         primero.style.borderColor = "red";
         return false;
     } else {
-    
+        errorApellido1.style.display = "none";
         primero.style.borderColor = "green";
         return true;
     }
@@ -55,7 +54,6 @@ function validarFechaNacimiento() {
     var mesElement = document.getElementById("mes");
     var anoElement = document.getElementById("ano");
     var errorEdad = document.getElementById("error_edad");
-    errorEdad.setAttribute("hidden",true);
 
     if (dia === "" || mes === "" || ano === "" || ano < 1950) {
         errorEdad.style.display = "block";
@@ -75,7 +73,6 @@ function validarFechaNacimiento() {
 function validarSexo() {
     var sexo = document.getElementById("sexo");
     var errorSexo = document.getElementById("error_sexo");
-    errorSexo.setAttribute("hidden",true);
     if (sexo.value === "") {
         errorSexo.style.display = "block";
         sexo.style.borderColor = "red";
@@ -93,7 +90,7 @@ function validarTelefono() {
     var telefono = telefonoInput.value;
     var telefonoRegex = /^\d+$/;
     var errorTelefono = document.getElementById("error_tel");
-    errorTelefono.setAttribute("hidden",true);
+    
     if (telefono === "" || !telefonoRegex.test(telefono)) {
         errorTelefono.style.display = "block";
         telefonoInput.style.borderColor = "red";
@@ -110,7 +107,7 @@ function validarEmail() {
     var email = emailInput.value;
     var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     var errorEmail = document.getElementById("error_email");
-    errorEmail.setAttribute("hidden",true);
+    
     if (email === "" || !emailRegex.test(email)) {
         errorEmail.style.display = "block";
         emailInput.style.borderColor = "red";
