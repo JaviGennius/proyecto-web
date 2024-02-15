@@ -1,9 +1,9 @@
 function validarNombre() {
-    var nombre = document.getElementById("nombre");
-    var nombreValor = nombre.value.trim();
-    var errorNombre = document.getElementById("error_nombre");
+    let nombre = document.getElementById("nombre");
+    let nombreValor = nombre.value.trim();
+    let errorNombre = document.getElementById("error_nombre");
     if (nombreValor === "") {
-        errorNombre.style.display = "block"
+        errorNombre.style.display = "block";
         nombre.style.borderColor = "red";
         return false;
     } else {
@@ -13,9 +13,6 @@ function validarNombre() {
     }
 }
 
-
-
-
 function validarPrimerApellido() {
     var primero=document.getElementById("primero");
     var primeroValor = primero.value.trim();
@@ -24,9 +21,11 @@ function validarPrimerApellido() {
     if (primeroValor === "") {
         errorApellido1.style.display = "block";
         primero.style.borderColor = "red";
+        return false;
     } else {
         errorApellido1.style.display = "none";
         primero.style.borderColor = "green";
+        return true;
     }
 }
 
@@ -35,12 +34,15 @@ function validarSegundoApellido() {
     var segundo = document.getElementById("segundo");
     var segundoValor = segundo.value.trim();
     var errorApellido2 = document.getElementById("error_apellido2");
+    errorApellido2.setAttribute("hidden",true);
     if (segundoValor === "") {
         errorApellido2.style.display = "block";
         segundo.style.borderColor = "red";
+        return false;
     } else {
         errorApellido2.style.display = "none";
         segundo.style.borderColor = "green";
+        return true;
     }
 }
 
@@ -53,7 +55,7 @@ function validarFechaNacimiento() {
     var anoElement = document.getElementById("ano");
     var errorEdad = document.getElementById("error_edad");
 
-    if (dia === "" || mes === "" || ano === "") {
+    if (dia === "" || mes === "" || ano === "" || ano < 1950) {
         errorEdad.style.display = "block";
         diaElement.style.borderColor = "red";
         mesElement.style.borderColor = "red";
@@ -88,6 +90,7 @@ function validarTelefono() {
     var telefono = telefonoInput.value;
     var telefonoRegex = /^\d+$/;
     var errorTelefono = document.getElementById("error_tel");
+    
     if (telefono === "" || !telefonoRegex.test(telefono)) {
         errorTelefono.style.display = "block";
         telefonoInput.style.borderColor = "red";
@@ -104,6 +107,7 @@ function validarEmail() {
     var email = emailInput.value;
     var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     var errorEmail = document.getElementById("error_email");
+    
     if (email === "" || !emailRegex.test(email)) {
         errorEmail.style.display = "block";
         emailInput.style.borderColor = "red";
@@ -117,16 +121,16 @@ function validarEmail() {
 
 
 function validarFormulario() {
-    var esNombreValido = validarNombre();
-    var esPrimerApellidosValido = validarPrimerApellido();
+    let esNombreValido = validarNombre();
+    let esPrimerApellidoValido = validarPrimerApellido();
     let esSegundoApellidoValido = validarSegundoApellido();
-    var esFechaNacimientoValida = validarFechaNacimiento();
-    var esSexoValido = validarSexo();
-    var esTelefonoValido = validarTelefono();
-    var esEmailValido = validarEmail();
+    let esFechaNacimientoValida = validarFechaNacimiento();
+    let esSexoValido = validarSexo();
+    let esTelefonoValido = validarTelefono();
+    let esEmailValido = validarEmail();
 
 
-    if (esNombreValido && esPrimerApellidosValido && esSegundoApellidoValido && esFechaNacimientoValida && esSexoValido && esTelefonoValido && esEmailValido) {
+    if (esNombreValido && esPrimerApellidoValido && esSegundoApellidoValido && esFechaNacimientoValida && esSexoValido && esTelefonoValido && esEmailValido) {
         setTimeout(function() {
             window.location.href = '../index.html'; // Funcion sacada de Chatgpt
         }, 3000);
