@@ -1,9 +1,12 @@
+/*Cabecera*/
 .dietas{
 	color: rgb(0, 0, 0);
 	font-family: cursive;
 	font-size: xx-large;
 	text-align: center;
 }
+/*Body*/
+
 body {
     display: grid;
     grid-template-rows: auto auto auto auto; 
@@ -13,6 +16,8 @@ body {
     background-attachment: fixed;
     margin: 0;
 }
+
+/*Header*/
 
 header {
     color: #ffffff;
@@ -40,6 +45,7 @@ header > .imagenhospital {
     align-self: center;
     
 }
+
 /*Imagen Comunidad de Madrid*/
 .hospital {
     width: 475px;
@@ -50,6 +56,7 @@ header > .imagenhospital {
     grid-column: 1;
     
 }
+/*Navar*/
 .navegacion ul{
 	list-style: none;
 	margin: 0;
@@ -69,6 +76,7 @@ ul li:hover{
 	background-color: #d10002;
 	text-decoration: none;
 }
+
 .navegacion{
 	width: 100%;
 	font-size: medium;
@@ -129,6 +137,8 @@ ul.menu {
 	visibility: visible;
 	opacity: 1;
 }
+/*Main*/
+
 main{
     display: grid;
     grid-row: 3;
@@ -139,6 +149,8 @@ main{
     background-attachment:fixed ;
     width: 100%;
 }
+/*Titulo calculadora*/
+
 .enunciado {
     grid-row: 1;
     text-align: center;
@@ -147,6 +159,8 @@ main{
     color: #ffffff;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+/*Genero*/
+
 .genero {
     display: grid;
     grid-row: 2;
@@ -196,6 +210,9 @@ main{
     margin-right: auto;
     margin-top: 20px;
 }
+
+/*Peso*/
+
 .peso_talla img {
     width: 150px;
     height: auto;
@@ -203,6 +220,7 @@ main{
     
     margin-top: 20px;
 }
+
 .peso_talla {
     grid-row: 3;
     display: grid;
@@ -217,24 +235,29 @@ main{
     grid-template-rows: auto auto;
     text-align: center;
 }
-
+/*Edad, Altura*/
 .edad {
     grid-column: 2;
     display: grid;
     grid-row: auto auto;
     text-align: center;
 }
+
 .altura {
     display: grid;
     grid-column: 3;
     grid-template-rows: auto auto;
     text-align: center;
 }
+
+/*Cantidad de ejercicio que realiza a la semana*/
+
 .tipo_ejercicio img {
     width: 100%;
     height: auto;
     margin: auto;
 }
+
 .tipo_ejercicio h5 {
     font-size: 20px;
     text-decoration: underline black 1px;
@@ -242,6 +265,7 @@ main{
     text-align: center;
     grid-column: 3;
 }
+
 .tipo_ejercicio {
     grid-row: 4;
     display: grid;
@@ -250,6 +274,7 @@ main{
     background-color: rgb(94, 143, 165);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
 .tipo_ejercicio .sedentario {
     grid-column: 1;
     grid-row: 2;
@@ -261,68 +286,82 @@ main{
     align-self: center;
     grid-row: 2;
 }
+
 .tipo_ejercicio .ligero {
     grid-column: 2;
     grid-row: 2;
     display: grid;
     grid-template-rows: auto auto;
 }
+
 .tipo_ejercicio > .ligero > p {
     text-align: center;
     align-self: center;
     grid-row: 2;
 }
+
 .tipo_ejercicio .moderado {
     grid-column: 3;
     grid-row: 2;
     display: grid;
     grid-template-rows: auto auto ;
 }
+
 .tipo_ejercicio > .moderado > p {
     text-align: center;
     align-self: center;
     grid-row: 2;
 }
+
 .tipo_ejercicio .activo {
     grid-column: 4;
     grid-row: 2;
     display: grid;
     grid-template-rows: auto auto ;
 }
+
 .tipo_ejercicio > .activo > p {
     grid-row: 2;
     text-align: center;
     align-self: center;
 }
+
 .tipo_ejercicio img {
     width: 15em;
     height: 10em;
     margin: auto;
     margin-top: 10px;
 }
+
 .tipo_ejercicio .deportista {
     grid-column: 5;
     grid-row: 2;
     display: grid;
     grid-template-rows: auto auto ;
 }
+
 .tipo_ejercicio > .deportista > p {
     grid-row: 2;
     text-align: center;
     align-self: center;
 }
 
+/*Boton de calcular y reiniciar*/
 .botones {
     grid-row: 5;
     margin-top: 10px;
     text-align: center;
 }
+
+/*Titulo de resultados y posicion de calculadora*/
+
 .calculadora {
     grid-row: 6;
     display: grid;
     grid-template-rows: auto auto auto;
     display: none;
 }
+
 .calculadora h2 {
     grid-row: 1;
     text-align: center;
@@ -330,6 +369,11 @@ main{
     text-decoration: underline #ffffff;
     color: #fff;
 }
+
+/*Calculador*/
+
+/*Resultado por idea de perder, ganar o mantener peso*/
+
 .funcion {
     grid-row: 2;
     display: grid;
@@ -340,15 +384,18 @@ main{
     background-color: cornflowerblue;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
 .funcion .ganar {
     grid-column: 1;
     display: grid;
     grid-row: auto auto auto;
 }
+
 .ganar h3 {
     grid-row: 1;
     text-align: center;
 }
+
 .funcion .mantener {
     grid-column: 2;
     display: grid;
@@ -380,6 +427,7 @@ main{
     width: 70%;
     height: auto;
 }
+/*Por periodo del día*/
 
 .periodo {
     grid-row: 3;
@@ -418,6 +466,8 @@ main{
     text-align: center;
     
 }
+/*Campo de las calorias*/
+
 .caloria {
     font-size: larger;
     margin-bottom: 0%;
@@ -429,6 +479,9 @@ main{
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+/*Boton Calcular y resetear*/
+
 .boton {
     background-color: #d10002;
     height: 50px;
@@ -448,6 +501,8 @@ input {
     color: white;
     text-align: center;
 }
+
+/*Footer*/
 
 .footer {
     background-color: #d10002;
@@ -548,6 +603,8 @@ footer .parrafos {
     color: #000;
     border: #000 1px solid;
 }
+
+/*Media query para a la hora de hacer más pequeña la pantalla*/
 @media screen and (max-width: 700px) {
     .iniciosesion {
         margin-left: auto; 

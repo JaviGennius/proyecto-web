@@ -6,8 +6,6 @@ function flip() {
         imagen.src = "../imagenes/c2.d.png";
         fotomedico ="detras"
     }
-  
-
 }
 function flipout(){
     let imagen = document.getElementById("cardiologo1");
@@ -41,6 +39,49 @@ function flipout3() {
     let imagen =document.getElementById("cardiologo3");
     imagen.src = "../imagenes/c6.jpg";
     fotomedico3 = "delante"
+}
+
+
+let  fotomedico13 = "delante";
+function flip13() {
+    let imagen = document.getElementById("cardiologo4");
+    if (fotomedico13 =="delante"){
+        imagen.src = "../imagenes/Descripcion_cardiologiageneral.png";
+        fotomedic13 ="detras"
+    }
+}
+
+function flipout13(){
+    let imagen = document.getElementById("cardiologo4");
+        imagen.src ="../imagenes/c13.jpeg";
+        fotomedico13 ="delante"
+}
+
+
+let fotomedico14 = "delante";
+function flip14() {
+    let  imagen = document.getElementById("cardiologo5");
+    if (fotomedico14 =="delante"){
+        imagen.src = "../imagenes/Descripcion_cardiologiaconge.png";
+        fotomedico14 ="detras"
+    }
+}
+function flipout14(){
+    let imagen = document.getElementById("cardiologo5");
+    imagen.src ="../imagenes/c4.png";
+    fotomedico14 ="delante"   
+}
+
+let fotomedico15 ="delante";
+function flip15() {
+    let imagen = document.getElementById("cardiologo6");
+    imagen.src = "../imagenes/Descripcion_cardiovascular.png";
+    fotomedico15 = "delante"
+}
+function flipout15() {
+    let imagen =document.getElementById("cardiologo6");
+    imagen.src = "../imagenes/c5.jpeg";
+    fotomedico15 = "delante"
 }
 //oncologos
 
@@ -78,6 +119,42 @@ let imagen = document.getElementById("oncologo3");
 imagen.src = "../imagenes/c23.jpg";
 fotomedico4 = "delante"
 }
+
+let fotomedico17 = "delante";
+function flip17() {
+    let imagen = document.getElementById("oncologo4");
+    imagen.src = "../imagenes/Descripcion_terapiahomron.png";
+    fotomedico17 = "detras"
+}
+function flipout17() {
+    let imagen = document.getElementById("oncologo4");
+    imagen.src = "../imagenes/c19.jpg";
+    fotomedico17 = "delante"
+}
+
+function flip18() {
+        let imagen = document.getElementById("oncologo5");
+        imagen.src = "../imagenes/Descricion_terbiol.png";
+        fotomedico17 = "detras"
+
+}
+function flipout18() {
+    let imagen = document.getElementById("oncologo5");
+    imagen.src = "../imagenes/c17.jpg";
+    fotomedico17 = "delante"
+}
+function flip19() {
+    let imagen = document.getElementById("oncologo6");
+    imagen.src = "../imagenes/Descriptcion_Radiacion.png";
+    fotomedico17 = "detras"
+
+}
+function flipout19() {
+let imagen = document.getElementById("oncologo6");
+imagen.src = "../imagenes/c22.jpeg";
+fotomedico17 = "delante"
+}
+
 //traumatologos
 let  fotomedico7 = "delante";
 function flip7() {
@@ -120,6 +197,48 @@ function flipout9() {
     imagen.src = "../imagenes/c12.jpg";
     fotomedico3 = "delante"
 }
+
+let  fotomedico18 = "delante";
+function flip20() {
+    let imagen = document.getElementById("traumatologo6");
+    if (fotomedico =="delante"){
+        imagen.src = "../imagenes/Descripcion_caderaarticulacion.png";
+        fotomedico18 ="detras"
+    }
+}
+function flipout20(){
+    let imagen = document.getElementById("traumatologo6");
+    
+        imagen.src ="../imagenes/c16.jpeg";
+        fotomedico18 ="delante"
+}
+
+
+let fotomedico19 = "delante";
+function flip22() {
+    let  imagen = document.getElementById("traumatologo4");
+    if (fotomedico19 =="delante"){
+        imagen.src = "../imagenes/Descripcion_contracturas.png";
+        fotomedico19 ="detras"
+    }
+}
+function flipout22(){
+    let imagen = document.getElementById("traumatologo4");
+    imagen.src ="../imagenes/c13.jpeg";
+    fotomedico19 ="delante"   
+}
+
+let fotomedico20 ="delante";
+function flip21() {
+    let imagen = document.getElementById("traumatologo5");
+    imagen.src = "../imagenes/Descripcion_munecas.png";
+    fotomedico20 = "delante"
+}
+function flipout21() {
+    let imagen =document.getElementById("traumatologo5");
+    imagen.src = "../imagenes/c11.jpeg";
+    fotomedico20 = "delante"
+}
 //neurologos
 
 let fotomedico10 = "delante";
@@ -155,4 +274,39 @@ function flipout12() {
 let imagen = document.getElementById("neurologo3");
 imagen.src = "../imagenes/c10.jpg";
 fotomedico4 = "delante"
+}
+
+let fotomedico21 = "delante";
+function flip23() {
+    let imagen = document.getElementById("neurologo4");
+    imagen.src = "../imagenes/Descripcion_neurologiageneral.png";
+    fotomedico21 = "detras"
+}
+function flipout23() {
+    let imagen = document.getElementById("neurologo4");
+    imagen.src = "../imagenes/doctor_3.jpeg";
+    fotomedico21 = "delante"
+}
+
+    function flip24() {
+        let imagen = document.getElementById("neurologo5");
+        imagen.src = "../imagenes/Descripcion_epilepsia.png";
+        fotomedico4 = "detras"
+
+}
+function flipout24() {
+    let imagen = document.getElementById("neurologo5");
+    imagen.src = "../imagenes/c9.jpg";
+    fotomedico21 = "delante"
+}
+function flip25() {
+    let imagen = document.getElementById("neurologo6");
+    imagen.src = "../imagenes/Descripcion_demencia.png";
+    fotomedico21 = "detras"
+
+}
+function flipout25() {
+let imagen = document.getElementById("neurologo6");
+imagen.src = "../imagenes/c7.jpg";
+fotomedico21 = "delante"
 }
