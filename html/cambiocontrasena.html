@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/cambio.css">
+    <link rel="icon" type="image/png" href="../imagenes/madrid.png"/>
+    <script src="../js/cambio.js"></script>
+    <title>Portal del paciente</title>
+</head>
+<body>
+    <a href="../html/formulario2.html" id="cabecera"><img src="../imagenes/hospital.png" draggable="false" title="Volver Inicio Sesión Portal Paciente"/></a>
+    <main class="container" id="container">
+        <form id="formulario" method="post" enctype="multipart/form-data">
+            <label for="dni" class="dnil">DNI<font color="red">*</font></label>
+            <input type="text" id="dni" name="dni" onblur="validarDNI()">
+            <label for="contrasena" class="contrasenal">Contraseña<font color="red">*</font></label>
+            <input type="password" id="contrasena" class="contrasena" name="contrasena" onblur="validarContrasena()">
+            <label for="contrasena_verific" class="verif_contrl " id="label_verif">Verificación de Contraseña<font color="red">*</font></label>
+            <br>
+            <input type="password"class="verif_contr" id="contrasena_verific" name="contrasena_verific" onblur="validarContrasenaVeficada()">
+            <button type="button" id="submitButton" onclick="validarFormulario()">Enviar</button>
+        </form>
+        <div class="cargador" id="cargar"></div>
+    </main>
+</body>
+</html>
