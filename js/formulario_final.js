@@ -1,9 +1,9 @@
 function validarDNI() {
     let dni=document.getElementById("dni");
-    let dniValor = primero.value.trim();
+    let dniValor = dni.value.trim();
     let errorDNI=document.getElementById("error_dni");
-
-    if (dniValor === "") {
+    let dni_correcto = /^[0-9]{8}[A-Za-z]$/;
+    if (!dni_correcto.test(dniValor) || dniValor === "") {
         errorDNI.style.display = "block";
         dni.style.borderColor = "red";
         return false;
@@ -139,7 +139,7 @@ function validarContrasena() {
     let contrasena=document.getElementById("contrasena");
     let contrasenaValor = contrasena.value.trim();
     let error_contrasena=document.getElementById("error_contrasena");
-    let expresionRegular = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{1,16}$/;
+    let expresionRegular = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{3,16}$/;
 
     if (expresionRegular.test(contrasena) || contrasenaValor === "") {
         error_contrasena.style.display = "block";
@@ -165,18 +165,11 @@ console.log("Prueba de la expresión regular:", contraseña_correcta.test(contra
     if (!contraseña_correcta.test(contrasenaValor) || contrasenaValor === "") {
         error_contrasena.style.display = "block";
         contrasena.style.borderColor = "red";
-        document.getElementById("label_verif").style.display = "none";
-        document.getElementById("contrasena_verific").style.display = "none";
-        document.getElementById("contrasena_verific").value = "";
-        document.getElementById("contrasena_verific").style.borderColor = "grey";
-        document.getElementById("error_contrasena_verificada").style.display = "none";
-        return true;
+        return false;
     } else{
         error_contrasena.style.display = "none";
         contrasena.style.borderColor = "green";
-        document.getElementById("label_verif").style.display = "block";
-        document.getElementById("contrasena_verific").style.display = "block";
-        return false;
+        return true;
     }
 }
 

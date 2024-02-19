@@ -122,8 +122,3 @@ legend {
     transform: rotate(360deg);
   }
 }
-
-
-#contrasena_verific, #label_verif {
-  display: none;
-}

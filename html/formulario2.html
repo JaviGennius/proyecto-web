@@ -22,7 +22,7 @@
             <br><br>
             <label for="contraseña" class="contrasenal">Contraseña<font color="red">*</font></label>
             <br>
-            <input type="password" id="contraseña" class="contrasena" name="contraseña" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$" title="Debe contener al menos 8 caracteres, incluyendo al menos un número, una letra minúscula y una letra mayúscula" required onblur="validarCampo(this, /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/, 'Contraseña')">
+            <input type="password" id="contraseña" class="contrasena" name="contraseña" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{3,16}$" title="Debe contener al menos 3 caracteres, incluyendo al menos un número, una letra minúscula y una letra mayúscula" required onblur="validarCampo(this, /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{3,16}$/, 'Contraseña')">
             <br><br>
             <button type="submit">Acceder</button>
         </form>
