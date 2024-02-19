@@ -15,6 +15,9 @@
   <main>
     <form id="patientForm" method="post" action="../index.html" enctype="multipart/form-data">
       <fieldset>
+        <label for="dni">DNI:<font color="red">*</font></label>
+        <input type="text" id="dni" name="dni" placeholder="Introduzca DNI">
+        <span class="errores" id="error_dni">Debes incluir tu DNI</span>
         <label for="nombre">Nombre:<font color="red">*</font></label>
         <input type="text" id="nombre" name="nombre" placeholder="Introduzca Nombre">
         <span class="errores" id="error_nombre">Debes incluir tu nombre</span>
@@ -116,6 +119,13 @@
         <span class="errores" id="error_email">Debes incluir un correo de contacto</span>
         <label for="enfermedades">Enfermedades Previas:</label>
         <textarea id="enfermedades" name="enfermedades" rows="4" placeholder="Introduzca sus enfermedades en caso de tenerlas"></textarea>
+        <label for="contrasena">Contraseña:<font color="red">*</font></label>
+        <input type="text" id="contrasena" name="contrasena" placeholder="Introduzca Contraseña">
+        <span class="errores" id="error_contrasena">Debes incluir tu Contraseña</span>
+        <label for="contrasena_verific" id="label_verif">Verificación de Contraseña:<font color="red">*</font></label>
+        <input type="text" id="contrasena_verific" name="contrasena_verific" placeholder="Vuelva a introducir la contraseña">
+        <span class="errores" id="error_contrasena_verificada">Debes rescribir la contraseña y que sea igual a la contraseña anterior</span>
+        <br>
       </fieldset>
       <br>     
       <button type="button" id="submitButton">Enviar</button>
