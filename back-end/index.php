@@ -3,7 +3,6 @@
 ?>
 <?php require("_header-index.php");?>    
             <section class="articulo">
-                
                 <img src="../imagenes/hospitalart.jpeg" class="hospitalart">
                 <div class="parrafo+h3">
                     <h1>Excelencía en el servicio: El Hospital Felipe VI como referente: </h1>
