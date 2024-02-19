@@ -1,3 +1,19 @@
+function validarDNI() {
+    let dni=document.getElementById("dni");
+    let dniValor = dni.value.trim();
+    let errorDNI=document.getElementById("error_dni");
+    let dni_correcto = /^[0-9]{8}[A-Za-z]$/;
+    if (!dni_correcto.test(dniValor) || dniValor === "") {
+        errorDNI.style.display = "block";
+        dni.style.borderColor = "red";
+        return false;
+    } else {
+        errorDNI.style.display = "none";
+        dni.style.borderColor = "green";
+        return true;
+    }
+}
+
 function validarNombre() {
     let nombre = document.getElementById("nombre");
     let nombreValor = nombre.value.trim();
@@ -119,6 +135,63 @@ function validarEmail() {
     }
 }
 
+function validarContrasena() {
+    let contrasena=document.getElementById("contrasena");
+    let contrasenaValor = contrasena.value.trim();
+    let error_contrasena=document.getElementById("error_contrasena");
+    let expresionRegular = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{3,16}$/;
+
+    if (expresionRegular.test(contrasena) || contrasenaValor === "") {
+        error_contrasena.style.display = "block";
+        contrasena.style.borderColor = "red";
+        return true;
+    } else {
+        error_contrasena.style.display = "none";
+        contrasena.style.borderColor = "green";
+        return false;
+    }
+}
+
+function validarContrasena() {
+    let contrasena=document.getElementById("contrasena");
+
+    let error_contrasena=document.getElementById("error_contrasena");
+    
+    let contrasenaValor = contrasena.value.trim();
+    let contraseña_correcta = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{1,16}$/;
+    console.log("Contraseña:", contrasenaValor);
+console.log("Prueba de la expresión regular:", contraseña_correcta.test(contrasenaValor));
+
+    if (!contraseña_correcta.test(contrasenaValor) || contrasenaValor === "") {
+        error_contrasena.style.display = "block";
+        contrasena.style.borderColor = "red";
+        return false;
+    } else{
+        error_contrasena.style.display = "none";
+        contrasena.style.borderColor = "green";
+        return true;
+    }
+}
+
+function validarContrasenaVeficada(){
+    let error_contrasena_verificada = document.getElementById("error_contrasena_verificada");
+    let contrasena=document.getElementById("contrasena");
+    let contrasena_verific=document.getElementById("contrasena_verific");
+    
+    let contrasenaValor = contrasena.value.trim();
+    let contrasena_verificValor = contrasena_verific.value.trim();
+
+    if (contrasena_verificValor === "" || contrasena_verificValor  !== contrasenaValor) {
+        error_contrasena_verificada.style.display = "block";
+        contrasena_verific.style.borderColor = "red";    
+        return false;
+    } else {
+        error_contrasena_verificada.style.display = "none";
+        contrasena_verific.style.borderColor = "green";
+        return true;
+    }
+}
+
 
 function validarFormulario() {
     let esNombreValido = validarNombre();
@@ -128,9 +201,11 @@ function validarFormulario() {
     let esSexoValido = validarSexo();
     let esTelefonoValido = validarTelefono();
     let esEmailValido = validarEmail();
+    let esDNI = validarDNI();
+    let esContrasena = validarContrasena()
+    let esVerificarContrasena = validarContrasenaVeficada()
 
-
-    if (esNombreValido && esPrimerApellidoValido && esSegundoApellidoValido && esFechaNacimientoValida && esSexoValido && esTelefonoValido && esEmailValido) {
+    if (esDNI && esNombreValido && esPrimerApellidoValido && esSegundoApellidoValido && esFechaNacimientoValida && esSexoValido && esTelefonoValido && esEmailValido && esContrasena && esVerificarContrasena) {
         setTimeout(function() {
             window.location.href = '../index.html'; // Funcion sacada de Chatgpt
         }, 3000);
@@ -142,7 +217,7 @@ function validarFormulario() {
     }
 }
 
-
+document.getElementById("dni").addEventListener("blur", validarDNI);
 document.getElementById("nombre").addEventListener("blur", validarNombre);
 document.getElementById("primero").addEventListener("blur", validarPrimerApellido);
 document.getElementById("segundo").addEventListener("blur", validarSegundoApellido);
@@ -152,4 +227,6 @@ document.getElementById("ano").addEventListener("blur", validarFechaNacimiento);
 document.getElementById("sexo").addEventListener("blur", validarSexo);
 document.getElementById("telefono").addEventListener("blur", validarTelefono);
 document.getElementById("email").addEventListener("blur", validarEmail);
+document.getElementById("contrasena").addEventListener("blur", validarContrasena);
+document.getElementById("contrasena_verific").addEventListener("blur", validarContrasenaVeficada);
 document.getElementById("submitButton").addEventListener("click", validarFormulario);

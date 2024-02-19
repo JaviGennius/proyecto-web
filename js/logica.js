@@ -7,7 +7,7 @@ function enviar_formulario(event) {
 
     const nombre_de_usuario_correcto = validar_campo(nombre_de_usuario, /^[a-zA-Z\s]+$/);
     const dni_correcto = validar_campo(dni, /^[0-9]{8}[A-Za-z]$/);
-    const contraseña_correcta = validar_campo(contraseña, /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/);
+    const contraseña_correcta = validar_campo(contraseña, /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{3,16}$/);
 
     mostrar_resultado_correcto(nombre_de_usuario, nombre_de_usuario_correcto);
     mostrar_resultado_correcto(dni, dni_correcto);
