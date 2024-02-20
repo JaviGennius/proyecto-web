@@ -37,7 +37,7 @@ if (lowerCaseMessage.includes('hola')) {
   return 'Las ubicaciones de los diferentes departamentos del hospital son las siguientes:\n\n- Departamento de cardiología: Sala 101, 111 y 115.\n- Departamento de neurología: Sala 102, 112 y 116.\n- Departamento de traumatología: Sala 103, 113 y 117.\n- Departamento de oncología: Sala 104, 114 y 118.\n- Departamento de traumatología: Sala 105.';
 } else if (lowerCaseMessage.includes('telefonos') || lowerCaseMessage.includes('telefono') || lowerCaseMessage.includes('teléfonos') || lowerCaseMessage.includes('teléfono')) {
   return 'Los contactos de los diferentes departamentos del hospital son los siguientes:\n\n- Departamento de oncología: Tel: +34 911 23 45 17.\n- Departamento de cardiología: Tel: +34 911 23 45 67.\n- Departamento de traumatología: Tel: +34 911 23 45 89.\n- Departamento de neurología: Tel: +34 911 23 45 42.';
-}else if(lowerCaseMessage.includes('telefonos')){
+}else if(lowerCaseMessage.includes('correo')||lowerCaseMessage.includes('correos')){
   return 'Los contactos de los diferentes departamentos del hospital son los siguientes:\n\n- Departamento de oncología: Correo: oncologia@hospitalfelipeVI.org.\n- Departamento de cardiología: Correo: cardiologia@hospitalfelipeVI.org.\n- Departamento de traumatología: Correo: traumatologia@hospitalfelipeVI.org.\n- Departamento de neurología: Correo: neurologia@hospitalfelipeVI.org.\n- Hospital: Correo: hospitalfelipevi@madrid.org.';
 } 
 else {
