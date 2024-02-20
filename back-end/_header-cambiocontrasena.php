@@ -6,5 +6,5 @@
     <link rel="stylesheet" type="text/css" href="../css/cambio.css">
     <link rel="icon" type="image/png" href="../imagenes/madrid.png"/>
     <script src="../js/cambio.js"></script>
-    <title>Portal del paciente</title>
+    <title><?= $titulo ?></title>
 </head>

@@ -30,6 +30,7 @@
     }
     mysql_close($con);   
 ?>
+<?php $titulo="Cambio Contraseña"?>
 <?php require("_header-cambiocontrasena.php")?>
 <body>
     <a href="../html/formulario2.html" id="cabecera"><img src="../imagenes/hospital.png" draggable="false" title="Volver Inicio Sesión Portal Paciente"/></a>
