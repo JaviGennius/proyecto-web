@@ -82,16 +82,16 @@ ALTER TABLE Servicios ADD FOREIGN KEY(ID_Departamento) REFERENCES Departamentos(
 
 /*Insertar los Datos*/
 /*Pacientes:*/
-INSERT INTO Pacientes VALUES ('12345678A', '1001', 'Juan', 'Gomez', 'Perez', '1990-05-15',"Hombre", 616164011, 'juan@gmail.com', 'juanito123', NULL);
-INSERT INTO Pacientes VALUES ('23456789B', '1002', 'Maria', 'Rodriguez', 'Lopez', '1985-08-22',"Mujer", 661626829, 'maria@yahoo.com', 'maria_85', NULL);
-INSERT INTO Pacientes VALUES ('34567890C', '1003', 'Carlos', 'Fernandez', 'Martinez', '1978-12-10',"Otro", 666666938, 'carlos@hotmail.com', 'cfm1978', NULL);
-INSERT INTO Pacientes VALUES ('45678901D', '1004', 'Laura', 'Sanchez', 'Garcia', '1995-04-03', "Mujer",669622447, 'laura@gmail.com', 'lsg95', NULL);
-INSERT INTO Pacientes VALUES ('56789012E', '1005', 'Roberto', 'Torres', 'Alvarez', '1980-09-27', "Hombre",606464525, 'roberto@gmail.com', 'rta80', NULL);
-INSERT INTO Pacientes VALUES ('67890123F', '1006', 'Ana', 'Gutierrez', 'Lopez', '1992-11-14', "Mujer",662616360, 'ana@yahoo.com', 'anaGL',NULL);
-INSERT INTO Pacientes VALUES ('78901234G', '1007', 'Francisco', 'Jimenez', 'Santos', '1987-07-08',"Hombre", 667161587, 'francisco@hotmail.com', 'fjs87', NULL);
-INSERT INTO Pacientes VALUES ('89012345H', '1008', 'Elena', 'Martinez', 'Ruiz', '1975-02-20', "Otro",636361968, 'elena@gmail.com', 'emr75', NULL);
-INSERT INTO Pacientes VALUES ('90123456I', '1009', 'David', 'Perez', 'Rodriguez', '1998-06-02', "Hombre",661621492, 'david@yahoo.com', 'dpr98', NULL);
-INSERT INTO Pacientes VALUES ('01234567J', '1010', 'Isabel', 'Sanz', 'Gomez', '1983-03-17',"Mujer" ,616451201, 'isabel@hotmail.com', 'isg83', NULL);
+INSERT INTO Pacientes VALUES ('12345678A', '1001', 'Juan', 'Gomez', 'Perez', '1990-05-15',"Hombre", 616164011, 'juan@gmail.com', 'juanito123' );
+INSERT INTO Pacientes VALUES ('23456789B', '1002', 'Maria', 'Rodriguez', 'Lopez', '1985-08-22',"Mujer", 661626829, 'maria@yahoo.com', 'maria_85', ;
+INSERT INTO Pacientes VALUES ('34567890C', '1003', 'Carlos', 'Fernandez', 'Martinez', '1978-12-10',"Otro", 666666938, 'carlos@hotmail.com', 'cfm1978' );
+INSERT INTO Pacientes VALUES ('45678901D', '1004', 'Laura', 'Sanchez', 'Garcia', '1995-04-03', "Mujer",669622447, 'laura@gmail.com', 'lsg95' );
+INSERT INTO Pacientes VALUES ('56789012E', '1005', 'Roberto', 'Torres', 'Alvarez', '1980-09-27', "Hombre",606464525, 'roberto@gmail.com', 'rta80');
+INSERT INTO Pacientes VALUES ('67890123F', '1006', 'Ana', 'Gutierrez', 'Lopez', '1992-11-14', "Mujer",662616360, 'ana@yahoo.com', 'anaGL');
+INSERT INTO Pacientes VALUES ('78901234G', '1007', 'Francisco', 'Jimenez', 'Santos', '1987-07-08',"Hombre", 667161587, 'francisco@hotmail.com', 'fjs87');
+INSERT INTO Pacientes VALUES ('89012345H', '1008', 'Elena', 'Martinez', 'Ruiz', '1975-02-20', "Otro",636361968, 'elena@gmail.com', 'emr75');
+INSERT INTO Pacientes VALUES ('90123456I', '1009', 'David', 'Perez', 'Rodriguez', '1998-06-02', "Hombre",661621492, 'david@yahoo.com', 'dpr98');
+INSERT INTO Pacientes VALUES ('01234567J', '1010', 'Isabel', 'Sanz', 'Gomez', '1983-03-17',"Mujer" ,616451201, 'isabel@hotmail.com', 'isg83';
 
 UPDATE Pacientes SET Cts_usuario = ? WHERE DNI = ?;
 /*Departamentos:*/
