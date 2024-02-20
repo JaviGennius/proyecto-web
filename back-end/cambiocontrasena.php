@@ -1,36 +1,40 @@
-<?php
-    require("initdb.php");
+<?php $titulo="Cambio Contraseña"
 
-    if(!isset($_POST['dni'])) {
-        exit();
-    };
+//Para validar
 
-    if(!isset($_POST['contrasena'])) {
-        exit();
-    };
-    if(!isset($_POST['contrasena_verific']) || $_POST['contrasena_verific'] === ['contrasena'] ) {
-        exit();
-    };
+// require("initdb.php");
 
-    $nombre = $_POST['dni'];
-    $apellidos = $_POST['contrasena'];
-    $dni = $_POST['contrasena_verific']; 
+// if(!isset($_POST['dni'])) {
+//     exit();
+// };
 
-    $resultado = mysqli_prepare($conn, "UPDATE pacientes SET contrasena = ? WHERE DNI_paciente = ?;");
+// if(!isset($_POST['contrasena'])) {
+//     exit();
+// };
+// if(!isset($_POST['contrasena_verific']) || $_POST['contrasena_verific'] === ['contrasena'] ) {
+//     exit();
+// };
 
-    mysqli_stmt_bind_param($consulta, "ss", $contrasena, $dni);
+// $nombre = $_POST['dni'];
+// $apellidos = $_POST['contrasena'];
+// $dni = $_POST['contrasena_verific']; 
 
-    mysqli_stmt_execute($consulta);
+// $resultado = mysqli_prepare($conn, "UPDATE pacientes SET contrasena = ? WHERE DNI_paciente = ?;");
 
-    if ($resultado){
-        header('Location: /formulario2.php');
-    }
-    else{
-        header('Location: /cambiocontrasena.php');
-    }
-    mysql_close($con);   
+// mysqli_stmt_bind_param($consulta, "ss", $contrasena, $dni);
+
+// mysqli_stmt_execute($consulta);
+
+// if ($resultado){
+//     header('Location: /formulario2.php');
+// }
+// else{
+//     header('Location: /cambiocontrasena.php');
+// }
+// mysql_close($con);   
+
+
 ?>
-<?php $titulo="Cambio Contraseña"?>
 <?php require("_header-cambiocontrasena.php")?>
 <body>
     <a href="../html/formulario2.html" id="cabecera"><img src="../imagenes/hospital.png" draggable="false" title="Volver Inicio Sesión Portal Paciente"/></a>
@@ -49,3 +53,4 @@
     </main>
 </body>
 </html>
+
