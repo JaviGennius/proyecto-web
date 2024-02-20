@@ -15,7 +15,6 @@ CREATE TABLE Pacientes(
     Telefono_paciente int,
     Correo_paciente varchar(50),
 	Cts_usuario varchar (16),
-	Foto_paciente blob
 	);
     
 CREATE TABLE Medicamentos (
