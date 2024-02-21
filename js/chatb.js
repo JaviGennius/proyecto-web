@@ -32,12 +32,15 @@ if (lowerCaseMessage.includes('hola')) {
 } else if (lowerCaseMessage.includes('gracias')){
   return 'De nada, estoy aquí para ayudarte.';
 } else if (lowerCaseMessage.includes('horarios')|| lowerCaseMessage.includes('horario')) {
-  return 'Los horarios de los diferentes departamentos del hospital son los siguientes:\n\n- Departamento de cardiología: Lunes a viernes de 8:00 a 16:00.\n- Departamento de pediatría: Lunes a viernes de 8:00 a 16:00.\n- Departamento de neurología: Lunes a viernes de 8:00 a 16:00.\n- Departamento de ginecología: Lunes a viernes de 8:00 a 16:00.\n- Departamento de traumatología: Lunes a viernes de 8:00 a 16:00.\n- Departamento de cirugía: Lunes a viernes de 8:00 a 16:00.';
+  return 'Los horarios de los diferentes departamentos del hospital son los siguientes:\n\n- Departamento de oncología: Lunes a viernes de 8:00 a 16:00.\n- Departamento de neurología: Lunes a viernes de 7:00 a 16:00.\n- Departamento de cardiología: Lunes a viernes de 9:00 a 15:30.\n- Departamento de traumatología: Lunes a viernes de 9:00 a 17:00.';
 } else if (lowerCaseMessage.includes('ubicacion')||lowerCaseMessage.includes('ubicación')) {
-  return 'Las ubicaciones de los diferentes departamentos del hospital son las siguientes:\n\n- Departamento de cardiología: Sala 101, 111 y 115.\n- Departamento de neurología: Sala 102, 112 y 116.\n- Departamento de traumatología: Sala 103, 113 y 117.\n- Departamento de oncología: Sala 104, 114 y 118.\n- Departamento de traumatología: Sala 105.\n- Departamento de cirugía: Sala 106.';
-} else if (lowerCaseMessage.includes('contacto')) {
-  return 'Los contactos de los diferentes departamentos del hospital son los siguientes:\n\n- Departamento de oncología: Dr. Nicolás Urioitia, Tel: +34 911 23 45 17.\n- Departamento de cardiología: Dr. Fernando Alonso, Tel: +34 911 23 45 67.\n- Departamento de traumatología: Dr. Felipe Gimenez, Tel: +34 911 23 45 89.\n- Departamento de naurología: Dr. Fran Gonzalez, Tel: +34 911 23 45 42.';
-} else {
+  return 'Las ubicaciones de los diferentes departamentos del hospital son las siguientes:\n\n- Departamento de cardiología: Sala 101, 111 y 115.\n- Departamento de neurología: Sala 102, 112 y 116.\n- Departamento de traumatología: Sala 103, 113 y 117.\n- Departamento de oncología: Sala 104, 114 y 118.\n- Departamento de traumatología: Sala 105.';
+} else if (lowerCaseMessage.includes('telefonos') || lowerCaseMessage.includes('telefono') || lowerCaseMessage.includes('teléfonos') || lowerCaseMessage.includes('teléfono')) {
+  return 'Los contactos de los diferentes departamentos del hospital son los siguientes:\n\n- Departamento de oncología: Tel: +34 911 23 45 17.\n- Departamento de cardiología: Tel: +34 911 23 45 67.\n- Departamento de traumatología: Tel: +34 911 23 45 89.\n- Departamento de neurología: Tel: +34 911 23 45 42.';
+}else if(lowerCaseMessage.includes('correo')||lowerCaseMessage.includes('correos')){
+  return 'Los contactos de los diferentes departamentos del hospital son los siguientes:\n\n- Departamento de oncología: Correo: oncologia@hospitalfelipeVI.org.\n- Departamento de cardiología: Correo: cardiologia@hospitalfelipeVI.org.\n- Departamento de traumatología: Correo: traumatologia@hospitalfelipeVI.org.\n- Departamento de neurología: Correo: neurologia@hospitalfelipeVI.org.\n- Hospital: Correo: hospitalfelipevi@madrid.org.';
+} 
+else {
   return 'Lo siento, no entiendo lo que dices. Por favor, intentalo de nuevo.';
 }
 }

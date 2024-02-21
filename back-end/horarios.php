@@ -1,44 +1,7 @@
-<!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
-    <link rel="icon" type="image/png" href="../imagenes/madrid.png"/>
-    <link rel="stylesheet" href="../css/styles.css"/>
-    <link rel="stylesheet" href="../css/ubicacion.css"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384">
-    <script src="https://kit.fontawesome.com/e3d46192fc.js" crossorigin="anonymous"></script>
+<?php $titulo="horarios_ubicacion"?>
 
-</head>
-<body>
-    <header>
-        <img src="../imagenes/hospital.png" class="imagenhospital" draggable="false">
-        <h1>Horarios y Ubicación del Hospital Felipe VI</h1>
-    </header>
-    <nav class="navegacion">
-            <a href="../index.html"><img src="../imagenes/hospital 2.png" title="Inicio" class="hospital" draggable="false"/></a>
-            <ul class="menu">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="#">Departamentos</a>
-                    <ul class="sumenu">
-                        <li><a href="../html/oncologia.html">Oncología</li></a>
-                        <li><a href="../html/cardiologia.html">Cardiología</li></a>
-                        <li><a href="../html/traumatologia.html">Traumatología</li></a>
-                        <li><a href="../html/neurologia.html">Neurología</li></a>
-                    </ul>
-                </li>
-                <li><a href="#">Información</a>
-                    <ul class="sumenu">
-                        <li><a href="../html/calculadora.html">Calculadora</a></li>
-                        <li><a href="../html/horarios_ubicacion.html">Horarios y Ubicación</li></a>
-                        <li><a href="#">Imagenes del Centro</a></li>
-                    </ul>
-                </li>
-                <li><a href="../html/formulario2.html">Portal del Paciente</a></li>
-            </ul>
-            <a href="../html/formulariofina.html"><img src="../imagenes/boton_registro.png" class="boton_registro"/></a>
-            </nav>
-    <main>
+<?php require("_header-horarios.php") ?> 
+<main>
         <div>
             <h1>Bienvenido al apartado de horarios y ubicación del Hospital Felipe VI.</h1>
             <h2>En el hospital Felipe VI tratamos con diferentes horarios para cada departamento presente en nuestro centro:</h2>
@@ -170,49 +133,4 @@
     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4029.9747791352543!2d-3.6153032705204344!3d40.53229181586673!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422da995a9e6ab%3A0x3dd2d61b103821da!2sUniversidad%20Europea%20de%20Madrid%20(Campus%20de%20Alcobendas)!5e0!3m2!1ses!2ses!4v1666594290396!5m2!1ses!2ses"></iframe>
     </div>
     </main>
-    <footer class="footer">
-    <div class="cont">
-    <div class="fila">
-    <div class="contenedor">
-            <h4>Nuestras Páginas y Contactos</h4>
-            <ul>
-                <a href="../html/horarios_ubicacion.html"><li>Información</li></a>
-                <li><a href="../index.html">Inicio</li></a>
-                <a href="../html/formulario2.html"><li>Portal del Paciente</li></a>
-                <li><a href="#">Imagenes del centro</a></li>
-            </ul>
-        </div>
-        <div class="contenedor">
-            <h4>Página de la Comunidad de Madrid</h4>
-                <ul>
-                    <li><a href="https://www.bocm.es/">BOCM</a></li>
-                    <li><a href="https://www.comunidad.madrid/servicios/salud">Salud</a></li>
-                    <li><a href="https://www.comunidad.madrid/servicios/atencion-ciudadano">Atención al Ciudadano</li>
-                    <li><a href="https://sede.comunidad.madrid/buscador?t=&tipo=All&consejeria=All&estado_pendiente%5B1%5D=1&estado_plazo%5B1%5D=1&estado_tramitacion%5B1%5D=1">Buscador de trámites</a></li>
-                </ul>
-        </div>
-        <div class="contenedor">
-            <h4>Página del Estado</h4>
-            <ul>
-                <li><a href="https://www.sanidad.gob.es/">Ministerio de Sanidad</li></a>
-                <li><a href="https://boe.es/">BOE</li></a>
-            </ul>
-        </div>
-    </div>
-    </div>
-    <div class="redessociales">
-        <ul>
-            <li><a href="https://es-es.facebook.com/" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a href="https://www.instagram.com/" class="instagram"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="https://twitter.com/" class="twitter"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://www.youtube.com/" class="youtube"><i class="fab fa-youtube"></i></a></li>
-            <li><a href="https://es.linkedin.com/" class="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
-        </ul>
-</div>
-    <div class="parrafos">
-    <p>Teléfono: +34 690 90 12 12</p>
-    <a href="mailto:hospitalfelipevi@madrid.org?subject=Petición de Información&body="><p>Correo: hospitalfelipevi@madrid.org</p></a>
-    </div>
-    </footer>
-</body>
-</html>
+    <?php require("_footer-horarios.php")?>

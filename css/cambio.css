@@ -45,30 +45,34 @@ form {
 
 /*Estilos label e Input formulario*/
 
-.nombrel {
-    grid-column: 1;
-    grid-row: 2;
-    text-align: center;
-}
-.dnil{
-    grid-column: 1;
-    grid-row: 3;
-    text-align: center;
-}
-.contrasenal {
+.verif_contrl {
     grid-column: 1;
     grid-row: 4;
     text-align: center;
 }
-.nombre {
+.dnil{
+    grid-column: 1;
+    grid-row: 2;
+    text-align: center;
+}
+.contrasenal {
+    grid-column: 1;
+    grid-row: 3;
+    text-align: center;
+}
+.verif_contr {
     grid-column: 2;
     grid-row: 2;
 }
-.dni{
+#dni{
     grid-column:2 ;
-    grid-row: 3;
+    grid-row: 2;
 }
 .contrasena {
+    grid-column: 2;
+    grid-row: 3;
+}
+.verif_contr {
     grid-column: 2;
     grid-row: 4;
 }
@@ -81,17 +85,6 @@ input {
     margin-bottom: 5px;
     border: 1px solid #ccc; 
 }
-.parrafo {
-    grid-row: 6;
-    grid-column: 1/3;
-    text-align: center;
-}
-.parrafo a{
-    color: #d12424;
-}
-.parrafo a:hover {
-    color: #2d35a3;
-}
 /*Estilos botón*/
 button {
     background-color: #d12424;
@@ -101,7 +94,8 @@ button {
     border-radius: 4px;
     cursor: pointer;
     grid-column: 1/3;
-    grid-row: 7;
+    margin-top: 20px;
+    grid-row: 5;
 }
 
 button:hover {
@@ -132,3 +126,29 @@ input.incorrecto {
     content: "\2717"; 
     color: #FF0000;
 }
+
+.robot {
+    grid-row: 5;
+    grid-column: 1/3;
+    text-align: center;
+}
+/*Sacado de Youtube: https://youtu.be/8nm9WPptL0c?si=XRXdnEUw17DXZX4L*/
+.cargador {
+    border: 20px solid rgba(0, 0, 0, 0.1);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border-left-color: #d10002;
+    animation: carga 2s linear infinite;
+    margin-left: 15%;
+    display: block;
+    display: none;
+  }
+  @keyframes carga{
+    0%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+  }

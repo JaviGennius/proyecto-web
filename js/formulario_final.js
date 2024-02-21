@@ -50,7 +50,6 @@ function validarSegundoApellido() {
     var segundo = document.getElementById("segundo");
     var segundoValor = segundo.value.trim();
     var errorApellido2 = document.getElementById("error_apellido2");
-    errorApellido2.setAttribute("hidden",true);
     if (segundoValor === "") {
         errorApellido2.style.display = "block";
         segundo.style.borderColor = "red";
@@ -159,8 +158,6 @@ function validarContrasena() {
     
     let contrasenaValor = contrasena.value.trim();
     let contraseña_correcta = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{1,16}$/;
-    console.log("Contraseña:", contrasenaValor);
-console.log("Prueba de la expresión regular:", contraseña_correcta.test(contrasenaValor));
 
     if (!contraseña_correcta.test(contrasenaValor) || contrasenaValor === "") {
         error_contrasena.style.display = "block";
