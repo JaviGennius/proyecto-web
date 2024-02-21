@@ -14,7 +14,7 @@ CREATE TABLE Pacientes(
 	Sexo ENUM("Hombre", "Mujer", "Otro"),
     Telefono_paciente int,
     Correo_paciente varchar(50),
-	Cts_usuario varchar (16),
+	Cts_usuario char(255)
 	);
     
 CREATE TABLE Medicamentos (
@@ -93,7 +93,6 @@ INSERT INTO Pacientes VALUES ('89012345H', '1008', 'Elena', 'Martinez', 'Ruiz', 
 INSERT INTO Pacientes VALUES ('90123456I', '1009', 'David', 'Perez', 'Rodriguez', '1998-06-02', "Hombre",661621492, 'david@yahoo.com', 'dpr98');
 INSERT INTO Pacientes VALUES ('01234567J', '1010', 'Isabel', 'Sanz', 'Gomez', '1983-03-17',"Mujer" ,616451201, 'isabel@hotmail.com', 'isg83');
 
-UPDATE Pacientes SET Cts_usuario = ? WHERE DNI = ?;
 /*Departamentos:*/
 INSERT INTO DEPARTAMENTOS VALUES ("d101", "Oncología","El departamento de neurología del Hospital Felipe VI es responsable de la evaluación,diagnóstico y tratamiento de pacientes con problemas del sistema nervioso. Nuestro equipo de médicos y personal médico altamente calificados garantizan un tratamiento rápido a los pacientes","8:00-16:00","neurologia@hospitalfelipeVI.org", "911234542");
 INSERT INTO DEPARTAMENTOS VALUES ("d102", "Cardiología","El departamento de Cardiología del Hospital Felipe VI es responsable de la evaluación, diagnóstico y tratamiento de pacientes con problemas del sistema cardiovascular. Nuestro equipo de médicos y personal médico altamente calificados garantizan un tratamiento rápido a los pacientes.","9:00-15:30","cardiologia@hospitalfelipeVI.org", "911234567");
