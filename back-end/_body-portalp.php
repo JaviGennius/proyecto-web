@@ -16,15 +16,15 @@
                 <div class="buscar">
                     <div class="contenido">
                         <ul>
-                            <li class="pagina"><a href="../index.html">Inicio</a></li>
-                            <li class="pagina"><a href="../html/calculadora.html">Calculadora</a></li>            
-                            <li class="pagina"><a href="../html/cardiologia.html">Cardiología</a></li>
-                            <li class="pagina"><a href="../html/formulario2.html">Formulario Paciente</a></li>
-                            <li class="pagina"><a href="../html/formulariofina.html">Formulario Registro</a></li>
-                            <li class="pagina"><a href="../html/horarios_ubicacion.html">Horarios y Ubicación</a></li>
-                            <li class="pagina"><a href="../html/neurologia.html">Neurología</a></li>
-                            <li class="pagina"><a href="../html/traumatologia.html">Traumatología</a></li>
-                            <li class="pagina"><a href="../html/oncologia.html">Oncología</a></li>
+                            <li class="pagina"><a href="../back-end/index.php">Inicio</a></li>
+                            <li class="pagina"><a href="../back-end/calculadora.php">Calculadora</a></li>            
+                            <li class="pagina"><a href="#">Cardiología</a></li>
+                            <li class="pagina"><a href="../back-end/portal_paciente.php">Formulario Paciente</a></li>
+                            <li class="pagina"><a href="#">Formulario Registro</a></li>
+                            <li class="pagina"><a href="../back-end/horarios.php">Horarios y Ubicación</a></li>
+                            <li class="pagina"><a href="#">Neurología</a></li>
+                            <li class="pagina"><a href="#">Traumatología</a></li>
+                            <li class="pagina"><a href="#">Oncología</a></li>
                             <li class="pagina"><a href="#">Imagenes del Centro</a></li>
                         </ul>
                     </div>

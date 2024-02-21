@@ -4,9 +4,9 @@
         <div class="contenedor">
             <h4>Nuestras Páginas y Contactos</h4>
             <ul>
-                <li><a href="../html/horarios_ubicacion.html">Información</a></li>
-                <li><a href="../index.html">Inicio</li></a>
-                <li><a href="../html/formulario2.html">Portal del Paciente</a></li>
+                <li><a href="../back-end/horarios.php">Información</a></li>
+                <li><a href="../back-end/index.php">Inicio</li></a>
+                <li><a href="#">Portal del Paciente</a></li>
                 <li><a href="#">Imagenes del centro</a></li>
             </ul>
         </div>

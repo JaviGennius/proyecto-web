@@ -5,7 +5,7 @@
 <body>
    
     <nav class="navegacion">
-            <a href="../index.html"><img src="../imagenes/hospital 2.png" title="Inicio" class="hospital"/></a>
+            <a href="../back-end/index.php"><img src="../imagenes/hospital 2.png" title="Inicio" class="hospital"/></a>
             <ul class="menu">
                 <li><a href="../back-end/index.php">Inicio</a></li>
                 <li><a href="#">Departamentos</a>
@@ -24,5 +24,5 @@
                 </li>
                 <li><a href="#">Portal del Paciente</a></li>
             </ul>
-            <a href="../html/formulariofina.html"><img src="../imagenes/boton_registro.png" class="boton_registro"/></a>
+            <a href="#"><img src="../imagenes/boton_registro.png" class="boton_registro"/></a>
         </nav>
