@@ -10,5 +10,8 @@
     <script src="https://kit.fontawesome.com/e3d46192fc.js" crossorigin="anonymous"></script>
 
 </head>
-
-<?php require("_menu-horarios.php") ?>
+<header>
+        <img src="../imagenes/hospital.png" class="imagenhospital" draggable="false">
+        <h1>Horarios y Ubicación del Hospital Felipe VI</h1>
+    </header>
+<?php require("_menu.php") ?>

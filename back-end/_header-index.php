@@ -11,5 +11,8 @@
     <script src="../js/inicio.js"></script>
 </head>
 <body>
-    <?php require_once("_menu-index.php")?>
+<header>
+        <img src="../imagenes/hospital.png" class="imagenhospital" draggable="false">
+    </header>
+    <?php require_once("_menu.php")?>
     <?php require_once("_reloj-index.php")?>

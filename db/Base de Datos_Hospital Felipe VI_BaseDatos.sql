@@ -1,7 +1,7 @@
 /*Creacion de un usuario*/
-CREATE USER 'hospital_felipeVI'@'localhost'  IDENTIFIED BY "1234";
+/*CREATE USER 'hospital_felipeVI'@'localhost'  IDENTIFIED BY "1234";
 GRANT ALL  PRIVILEGES ON hospital_felipe_vi.* TO "hospital_felipeVI"@"localhost";
-
+*/
 /*Creación de la Base de Datos*/
 DROP DATABASE IF EXISTS Hospital_Felipe_VI;
 CREATE DATABASE IF NOT EXISTS Hospital_Felipe_VI;
@@ -105,10 +105,10 @@ INSERT INTO Pacientes VALUES ('90123456I', '1009', 'David', 'Perez', 'Rodriguez'
 INSERT INTO Pacientes VALUES ('01234567J', '1010', 'Isabel', 'Sanz', 'Gomez', '1983-03-17',"Mujer" ,616451201, 'isabel@hotmail.com', 'isg83');
 
 /*Departamentos:*/
-INSERT INTO DEPARTAMENTOS VALUES ("1", "Oncología","El departamento de neurología del Hospital Felipe VI es responsable de la evaluación,diagnóstico y tratamiento de pacientes con problemas del sistema nervioso. Nuestro equipo de médicos y personal médico altamente calificados garantizan un tratamiento rápido a los pacientes","8:00-16:00","neurologia@hospitalfelipeVI.org", "911234542");
-INSERT INTO DEPARTAMENTOS VALUES ("2", "Cardiología","El departamento de Cardiología del Hospital Felipe VI es responsable de la evaluación, diagnóstico y tratamiento de pacientes con problemas del sistema cardiovascular. Nuestro equipo de médicos y personal médico altamente calificados garantizan un tratamiento rápido a los pacientes.","9:00-15:30","cardiologia@hospitalfelipeVI.org", "911234567");
-INSERT INTO DEPARTAMENTOS VALUES ("3", "Traumatología","El departamento de Traumatología del Hospital Felipe VI es responsable de la evaluación, diagnóstico y tratamiento de pacientes con problemas que afectan a músculos, articulaciones y huesos, al igual que infecciones, lesiones deportivas, fracturas y problemas en las articulaciones. Nuestro equipo de médicos y personal médico altamente calificados garantizan un tratamiento rápido a los pacientes.","7:00-16:00","traumatologia@hospitalfelipeVI.org","911234589");
-INSERT INTO DEPARTAMENTOS VALUES ("4", "Neurología","El departamento de neurología del Hospital Felipe VI es responsable de la evaluación, diagnóstico y tratamiento de pacientes con problemas del sistema nervioso. Nuestro equipo de médicos y personal médico altamente calificados garantizan un tratamiento rápido a los pacientes.","9:00-17:00","neurologia@hospitalfelipeVI.org","911234542");
+INSERT INTO DEPARTAMENTOS VALUES ("1", "Oncologia","El departamento de neurología del Hospital Felipe VI es responsable de la evaluación,diagnóstico y tratamiento de pacientes con problemas del sistema nervioso. Nuestro equipo de médicos y personal médico altamente calificados garantizan un tratamiento rápido a los pacientes","8:00-16:00","neurologia@hospitalfelipeVI.org", "911234542");
+INSERT INTO DEPARTAMENTOS VALUES ("2", "Cardiologia","El departamento de Cardiología del Hospital Felipe VI es responsable de la evaluación, diagnóstico y tratamiento de pacientes con problemas del sistema cardiovascular. Nuestro equipo de médicos y personal médico altamente calificados garantizan un tratamiento rápido a los pacientes.","9:00-15:30","cardiologia@hospitalfelipeVI.org", "911234567");
+INSERT INTO DEPARTAMENTOS VALUES ("3", "Traumatologia","El departamento de Traumatología del Hospital Felipe VI es responsable de la evaluación, diagnóstico y tratamiento de pacientes con problemas que afectan a músculos, articulaciones y huesos, al igual que infecciones, lesiones deportivas, fracturas y problemas en las articulaciones. Nuestro equipo de médicos y personal médico altamente calificados garantizan un tratamiento rápido a los pacientes.","7:00-16:00","traumatologia@hospitalfelipeVI.org","911234589");
+INSERT INTO DEPARTAMENTOS VALUES ("4", "Neurologia","El departamento de neurología del Hospital Felipe VI es responsable de la evaluación, diagnóstico y tratamiento de pacientes con problemas del sistema nervioso. Nuestro equipo de médicos y personal médico altamente calificados garantizan un tratamiento rápido a los pacientes.","9:00-17:00","neurologia@hospitalfelipeVI.org","911234542");
 
 /*oncologia*/
 
