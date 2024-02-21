@@ -2,30 +2,50 @@
 <html lang="en">
     <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,
-    initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="../css/imagenescentro.css">
     <title>menu</title>
     </head>
-    <body>
+    <body> 
         <header id="cabecera">
             <a href="../index.html"><img src="../imagenes/hospital.png" title="Inicio" class="image2" draggable="false"/></a>
-            <h1>Imagenes del centro</h1>
-        </header>  
-        <div class="icono-menu">
-            <img src="../imagenes/menu.png" id="icono-menu">
+            <h1>Imágenes del centro</h1>
+          </header>
+        <div class="navegador">
+            <img src="../imagenes/hospital 2.png" title="Inicio" class="hospital"/>
+            <div class="menuToggle"></div>
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Departamentos</a>
+                    <ul>
+                        <li><a href="#">Oncología</a></li>
+                        <li><a href="#">Cardiología</a></li>
+                        <li><a href="#">Traumatología</a></li>
+                        <li><a href="#">Neurología</a></li>
+                    </ul>
+                    </li>
+                    <li><a href="#">Información</a>
+                    <ul>
+                        <li><a href="#">Calculadora</a></li>
+                        <li><a href="#">Horarios y Ubicación</a></li>
+                        <li><a href="#">Imagenes del centro</a></li>
+                    </ul>
+                    </li>
+    
+                    <li><a href="#">Portal del paciente</a></li>
+                </ul>
+            </nav>
+            <a href="html/formulariofina.html"><img src="../imagenes/boton_registro.png" class="boton_registro" draggable="false"/></a>
         </div>
-        <nav class="cont-menu active" id="menu">
-            <button class="cerrar-menu" id="cerrar">X</button>
-            <ul>
-                <li>INICIO</li>
-                <li>DEPARTAMENTOS</li>
-                <li>INFORMACIÓN</li>
-                <li>PORTAL DEL PACIENTE</li>
-            </ul>
-        </nav>
-        <div></div>
-        <script src="../js/imagenescentro.js"></script>
+        <script>
+            let menuToggle = document.querySelector('.menuToggle');
+            let header = document.querySelector('.navegador');
+            menuToggle.onclick = function(){
+                header.classList.toggle('active');
+            
+            }
+        </script>
     </body>
 </html>
 
