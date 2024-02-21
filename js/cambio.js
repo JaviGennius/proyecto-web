@@ -47,9 +47,6 @@ function validarFormulario() {
     let esVerificarContrasena = validarContrasenaVeficada();
 
     if (esDNI && esContrasena && esVerificarContrasena) {
-        setTimeout(function() {
-            window.location.href = '../html/formulario2.html'; // Funcion sacada de Chatgpt
-        }, 5000);
         document.getElementById("formulario").style.display = "none";
         document.getElementById("cabecera").style.display = "none";
         document.getElementById("cargar").style.display = "block";
