@@ -1,5 +1,12 @@
 <?php $titulo="horarios_ubicacion"?>
-
+<?php require("initdb.php");
+    $consulta = "SELECT Nombre_departamento, Horario FROM Departamentos;";
+    $consulta2 = "SELECT Nombre_departamento, Sala_1, Sala_2, Sala_3 FROM Departamentos INNER JOIN Salas ON Salas.ID_departamento = Departamentos.ID_departamento;";
+    $guardar2 = $con -> query($consulta2);
+    $guardar = $con -> query($consulta);
+    $clase = 'dp2';
+    $clase2 = 'dp2';
+?>
 <?php require("_header-horarios.php") ?> 
 <main>
         <div>
@@ -15,22 +22,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="dp1">
-                        <td >Oncología</td>
-                        <td >8:00 a 16:00</td>
-                    </tr>
-                    <tr class="dp2">
-                        <td>Cardilogía</td>
-                        <td>9:00 a 15:30</td>
-                    </tr>
-                    <tr class="dp1">
-                        <td>Neurología</td>
-                        <td>7:00 a 16:00</td>
-                    </tr>
-                    <tr class="dp2">
-                        <td>Traumatología</td>
-                        <td>9:00 a 17:00</td>
-                    </tr>
+                    <?php while($row = $guardar->fetch_assoc()) { 
+                        $clase = ($clase === 'dp2') ? 'dp1' : 'dp2';
+                        
+                        echo "<tr class='$clase'>";
+                            echo "<td>" . $row['Nombre_departamento'] . "</td>";
+                            echo "<td>" . $row['Horario'] . "</td>";
+                        echo "</tr>";
+                    } ?>
                 </tbody>
             </table>
             <table>
@@ -41,30 +40,16 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="dp1">
-                        <td >Oncología</td>
-                        <td >104</td>
-                        <td>114</td>
-                        <td>118</td>
-                    </tr>
-                    <tr class="dp2">
-                        <td>Cardilogía</td>
-                        <td >101</td>
-                        <td>111</td>
-                        <td>115</td>
-                    </tr>
-                    <tr class="dp1">
-                        <td>Neurología</td>
-                        <td >102</td>
-                        <td>112</td>
-                        <td>116</td>
-                    </tr>
-                    <tr class="dp2">
-                        <td>Traumatología</td>
-                        <td >103</td>
-                        <td>113</td>
-                        <td>117</td>
-                    </tr>
+                <?php while($row2 = $guardar2->fetch_assoc()) { 
+                        $clase2 = ($clase2 === 'dp2') ? 'dp1' : 'dp2';
+                        
+                        echo "<tr class='$clase2'>";
+                            echo "<td>" . $row2['Nombre_departamento'] . "</td>";
+                            echo "<td>" . $row2['Sala_1'] . "</td>";
+                            echo "<td>" . $row2['Sala_2'] . "</td>";
+                            echo "<td>" . $row2['Sala_3'] . "</td>";
+                        echo "</tr>";
+                    } ?>
                 </tbody>
             </table>
         </div>
