@@ -3,5 +3,5 @@
     <a href="mailto:hospitalfelipevi@madrid.org?subject=Petición de Información&body="><p>Correo: hospitalfelipevi@madrid.org</p></a>
     </div>
     </footer>
-    </body>
+</body>
 </html>

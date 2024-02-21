@@ -4,9 +4,9 @@
         <div class="contenedor">
             <h4>Nuestras Páginas y Contactos</h4>
             <ul>
-                <a href="../html/horarios_ubicacion.html"><li>Información</li></a>
-                <a href="../index.html"><li>Inicio</li></a>
-                <a href="../html/formulario2.html"><li>Portal del Paciente</li></a>
+                <li><a href="../html/horarios_ubicacion.html">Información</a></li>
+                <li><a href="../index.html">Inicio</li></a>
+                <li><a href="../html/formulario2.html">Portal del Paciente</a></li>
                 <li><a href="#">Imagenes del centro</a></li>
             </ul>
         </div>
@@ -15,7 +15,7 @@
                 <ul>
                     <li><a href="https://www.bocm.es/">BOCM</a></li>
                     <li><a href="https://www.comunidad.madrid/servicios/salud">Salud</a></li>
-                    <li><a href="https://www.comunidad.madrid/servicios/atencion-ciudadano">Atención al Ciudadano</li>
+                    <li><a href="https://www.comunidad.madrid/servicios/atencion-ciudadano">Atención al Ciudadano</a></li>
                     <li><a href="https://sede.comunidad.madrid/buscador?t=&tipo=All&consejeria=All&estado_pendiente%5B1%5D=1&estado_plazo%5B1%5D=1&estado_tramitacion%5B1%5D=1">Buscador de trámites</a></li>
                 </ul>
         </div>
