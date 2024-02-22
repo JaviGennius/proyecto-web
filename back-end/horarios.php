@@ -1,4 +1,4 @@
-<?php $titulo="horarios_ubicacion"?>
+<?php $titulo="Ubicación y Horarios"?>
 <?php require("initdb.php");
     $consulta3 = "SELECT Nombre_departamento, Horario FROM Departamentos;";
     $consulta2 = "SELECT Nombre_departamento, Sala_1, Sala_2, Sala_3 FROM Departamentos INNER JOIN Salas ON Salas.ID_departamento = Departamentos.ID_departamento;";
