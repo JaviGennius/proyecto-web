@@ -215,18 +215,22 @@ main {
     flex-wrap: wrap;
 }
 
+.footer li{
+    list-style: none;
+}
 .contenedor h4, .fila > .contenedor > ul {
     font-size: 18px;
     color: #ffffff;
     text-transform: capitalize;
     margin-bottom: 30px;
+    padding: 10px;
 }
 
 .contenedor ul li:not(:last-child){
     margin-bottom: 10px;
 }
 
-.contenedor ul li a, .fila > .contenedor > ul > a{
+.contenedor ul li a, .fila > .contenedor > ul{
     font-size: 16px;
     text-transform: capitalize;
     text-decoration: none;
@@ -236,7 +240,7 @@ main {
     transition: all 0.3s ease;
 }
 
-.contenedor ul li a:hover, .fila > .contenedor > ul > a:hover{
+.contenedor ul li a:hover, .fila > .contenedor > ul:hover{
     color: #000000;
     padding-left: 0px ;
     text-decoration: underline;
