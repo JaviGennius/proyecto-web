@@ -4,14 +4,20 @@
 <?php require("initdb.php");
     $consulta2 = "SELECT Nombre_servicio FROM servicios INNER JOIN departamentos ON departamentos.ID_departamento = servicios.ID_departamento WHERE Nombre_departamento = '$titulo';";
     $guardar2 = $con -> query($consulta2);
+    $consulta3 = "SELECT Descripcion_departamento FROM departamentos WHERE Nombre_departamento = '$titulo';";
+    $guardar3 = $con -> query($consulta3);
+    $consulta4 = "SELECT Nombre_sanitario, Tipo_sanitario, Especialidad FROM sanitarios INNER JOIN departamentos ON departamentos.ID_departamento = sanitarios.ID_departamento WHERE Nombre_departamento = '$titulo';";
+    $guardar4 = $con -> query($consulta4);
 ?>
 <?php require("_header-neuro.php");?>
 <main>
     <section class="descripcion">
         <h3 class="h3">Descripción</h3>
-        <p>
-            El departamento de neurología del Hospital Felipe VI es responsable de la evaluación, diagnóstico y tratamiento de pacientes con problemas del sistema nervioso. Nuestro equipo de médicos y personal médico altamente calificados garantizan un tratamiento rápido a los pacientes.
-        </p>
+        <?php
+            while($row3 = $guardar3->fetch_assoc()) {
+                echo "<p>" . $row3['Descripcion_departamento'] . "</p>";
+            }
+        ?>
     </section>
 
     <section class="servicios">
