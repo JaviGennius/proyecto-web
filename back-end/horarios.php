@@ -23,8 +23,11 @@
                 </thead>
                 <tbody>
                     <?php while($row = $guardar3->fetch_assoc()) { 
-                        $clase = ($clase === 'dp2') ? 'dp1' : 'dp2';
-                        
+                        if ($clase === 'dp2'){
+                            $clase = 'dp1'; 
+                        } else {
+                            $clase = 'dp2';
+                        };
                         echo "<tr class='$clase'>";
                             echo "<td>" . $row['Nombre_departamento'] . "</td>";
                             echo "<td>" . $row['Horario'] . "</td>";

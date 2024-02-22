@@ -8,6 +8,7 @@
     $guardar3 = $con -> query($consulta3);
     $consulta4 = "SELECT Nombre_sanitario, Tipo_sanitario, Especialidad FROM sanitarios INNER JOIN departamentos ON departamentos.ID_departamento = sanitarios.ID_departamento WHERE Nombre_departamento = '$titulo';";
     $guardar4 = $con -> query($consulta4);
+    $clase = 'c1';
 ?>
 <?php require("_header-neuro.php");?>
 <main>
@@ -42,7 +43,7 @@
     <div class="cardiologos">
         <div class="c1">
             <img src="../imagenes/doctor_1.jpg" draggable="false" onmouseover="flip10()" onmouseout="flipout10()" id="neurologo1"/>
-            <p>Dr. Fran Gonzalez</td><br>Trastornos neurológicos</p>      
+            <p>Dr. Fran Gonzalez</td><br>Trastornos neurológicos</p>
 
         </div>
         <div class="c2">

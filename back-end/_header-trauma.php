@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html>
+<?php
+    $titulo = 'Traumatologia';
+    $consulta4 = "SELECT Nombre_departamento FROM departamentos WHERE Nombre_departamento = '$titulo';";
+    $guardar4 = $con -> query($consulta4);
+?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +19,10 @@
 <body>
     <header>
         <img src="../imagenes/hospital.png" class="image2"/>
-        <h1>Departamento de Traumatología</h1>
+        <?php
+            while($row4 = $guardar4->fetch_assoc()) {
+                echo "<h1>Departamento de " . $row4['Nombre_departamento'] . "</h1>";
+            };
+        ?>
     </header>
     <?php require_once("_menu.php")?>
