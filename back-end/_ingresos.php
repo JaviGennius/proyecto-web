@@ -1,36 +1,34 @@
+<?php require("initdb.php");
+    $consulta = "SELECT 
+    Fecha_alta,
+    Fecha_baja,
+    Nombre_medicamento,	
+    Nombre_tratamiento,
+    Nombre_enfermedad,
+    Nombre_Sanitario FROM ingresos 
+    INNER JOIN medicamentos ON ingresos.ID_medicamento = medicamentos.ID_medicamento
+    INNER JOIN enfermedades ON ingresos.ID_enfermedad = enfermedades.ID_enfermedad
+    INNER JOIN tratamientos ON ingresos.ID_tratamiento = tratamientos.ID_Tratamiento
+    INNER JOIN sanitarios ON ingresos.NIF_sanitario = sanitarios.NIF_sanitario
+    WHERE DNI_paciente = '01234567J';";
+    $guardar = $con -> query($consulta);
+?>
 <div class="ingresos">
-    <h4>Últimos ingresos:</h4>
-                    <li class="lista">Ingreso 1:
-                        <ul>
-                                <li>Fecha Alta: 11/01/2024</li>
-                                <li>Motivo: Dolor Abdominal</li>
-                                <li>Medicación: Paracetamol</li>
-                                <li>Tratamiento: Tomar paracetamol 2 veces a la semana</li>
-                                <li>Medico: Dr. José Pérez</li>
-                            </ul>
-                    </li>
-                    <li class="lista">Ingreso 2:
-                        <ul>
-                            <li>Fecha Alta: 01/01/2021</li>
-                            <li>Fecha Baja: 11/01/2021</li>
-                            <li>Motivo: Dolor de Cabeza</li>
-                            <li>Medicación: Ibuprofeno</li>
-                            <li>Tratamiento: Relajarse durante 3 horas al dia</li>
-                            <li>Medico: Dr. Fernando Alonso</li>
-                        </ul>
-                    </li>
-                        <li class="lista">Ingreso 3:
-                        <ul>
-                            <li>Fecha Alta: 19/04/2019</li>
-                            <li>Fecha Baja: 31/06/2019</li>
-                            <li>Motivo: Reconstrucción del pie</li>
-                            <li>Medicación. Lorazepam</li>
-                            <li>Tratamiento: Ir a rehabilitación</li>
-                            <li>Medico: Dr. Daniel García</li>
-                        </ul>
-                    </li>
-                    </div>
-                    </div>
-                    <br>
-                </div>
-                </main>  
+    <h4>Ingresos:</h4>
+            <?php while($row = $guardar->fetch_assoc()) { 
+                echo "<li class='lista'> Ingreso: ";
+                echo "<ul>";
+                echo "<li> Fecha Alta: " . $row['Fecha_alta'] . "</li>";
+                echo "<li>Fecha Baja: " . $row['Fecha_baja'] . "</li>";
+                echo "<li> Motivo: " . $row['Nombre_enfermedad'] . "</li>";
+                echo "<li>Medicación: " . $row['Nombre_medicamento'] . "</li>";
+                echo "<li> Tratamiento: " . $row['Nombre_tratamiento'] . "</li>";
+                echo "<li>Médico: " . $row['Nombre_Sanitario'] . "</li>";
+                echo "</ul>";
+                echo "</li>";
+            } ?>
+         </div>
+    </div>
+<br>
+</div>
+</main>  

@@ -1,3 +1,7 @@
+/*Creacion de un usuario*/
+/*CREATE USER 'hospital_felipeVI'@'localhost'  IDENTIFIED BY "1234";
+GRANT ALL  PRIVILEGES ON hospital_felipe_vi.* TO "hospital_felipeVI"@"localhost";
+*/
 /*Creación de la Base de Datos*/
 DROP DATABASE IF EXISTS Hospital_Felipe_VI;
 CREATE DATABASE IF NOT EXISTS Hospital_Felipe_VI;
@@ -48,11 +52,11 @@ CREATE TABLE Sanitarios(
     Nombre_Sanitario CHAR(45),
 	Tipo_sanitario ENUM("Medico","Enfermero","Auxiliar"),
     Especialidad CHAR(30),
-	ID_departamento varchar(4)
+	ID_departamento int
 	);
 
 CREATE TABLE Departamentos (
-   ID_departamento varchar(4) PRIMARY KEY,
+   ID_departamento int auto_increment PRIMARY KEY,
    Nombre_departamento varchar(50),
    Descripcion_Departamento text,
    Horario char(25),
@@ -62,9 +66,15 @@ CREATE TABLE Departamentos (
 CREATE TABLE Servicios (
    ID_servicio int PRIMARY KEY auto_increment,
    Nombre_servicio varchar(100),
-   ID_departamento varchar(4)
+   ID_departamento int
    );
-
+Create TABLE Salas (
+	ID_Sala int auto_increment PRIMARY KEY,
+    Sala_1 int,
+    Sala_2 int,
+    Sala_3 int,
+	ID_Departamento int
+);
 /*Claves Ajenas*/
 
 /*Ingresos:*/
@@ -79,7 +89,8 @@ ALTER TABLE Sanitarios ADD FOREIGN KEY(ID_Departamento) REFERENCES Departamentos
 
 /*Servicios:*/
 ALTER TABLE Servicios ADD FOREIGN KEY(ID_Departamento) REFERENCES Departamentos(ID_Departamento) ON UPDATE CASCADE ON DELETE SET NULL;
-
+/*Salas*/
+ALTER TABLE Salas ADD FOREIGN KEY(ID_Departamento) REFERENCES Departamentos(ID_Departamento) ON UPDATE CASCADE ON DELETE SET NULL;
 /*Insertar los Datos*/
 /*Pacientes:*/
 INSERT INTO Pacientes VALUES ('12345678A', '1001', 'Juan', 'Gomez', 'Perez', '1990-05-15',"Hombre", 616164011, 'juan@gmail.com', 'juanito123' );
@@ -94,88 +105,88 @@ INSERT INTO Pacientes VALUES ('90123456I', '1009', 'David', 'Perez', 'Rodriguez'
 INSERT INTO Pacientes VALUES ('01234567J', '1010', 'Isabel', 'Sanz', 'Gomez', '1983-03-17',"Mujer" ,616451201, 'isabel@hotmail.com', 'isg83');
 
 /*Departamentos:*/
-INSERT INTO DEPARTAMENTOS VALUES ("d101", "Oncología","El departamento de neurología del Hospital Felipe VI es responsable de la evaluación,diagnóstico y tratamiento de pacientes con problemas del sistema nervioso. Nuestro equipo de médicos y personal médico altamente calificados garantizan un tratamiento rápido a los pacientes","8:00-16:00","neurologia@hospitalfelipeVI.org", "911234542");
-INSERT INTO DEPARTAMENTOS VALUES ("d102", "Cardiología","El departamento de Cardiología del Hospital Felipe VI es responsable de la evaluación, diagnóstico y tratamiento de pacientes con problemas del sistema cardiovascular. Nuestro equipo de médicos y personal médico altamente calificados garantizan un tratamiento rápido a los pacientes.","9:00-15:30","cardiologia@hospitalfelipeVI.org", "911234567");
-INSERT INTO DEPARTAMENTOS VALUES ("d103", "Traumatología","El departamento de Traumatología del Hospital Felipe VI es responsable de la evaluación, diagnóstico y tratamiento de pacientes con problemas que afectan a músculos, articulaciones y huesos, al igual que infecciones, lesiones deportivas, fracturas y problemas en las articulaciones. Nuestro equipo de médicos y personal médico altamente calificados garantizan un tratamiento rápido a los pacientes.","7:00-16:00","traumatologia@hospitalfelipeVI.org","911234589");
-INSERT INTO DEPARTAMENTOS VALUES ("d104", "Neurología","El departamento de neurología del Hospital Felipe VI es responsable de la evaluación, diagnóstico y tratamiento de pacientes con problemas del sistema nervioso. Nuestro equipo de médicos y personal médico altamente calificados garantizan un tratamiento rápido a los pacientes.","9:00-17:00","neurologia@hospitalfelipeVI.org","911234542");
+INSERT INTO DEPARTAMENTOS VALUES ("1", "Oncologia","El departamento de neurología del Hospital Felipe VI es responsable de la evaluación,diagnóstico y tratamiento de pacientes con problemas del sistema nervioso. Nuestro equipo de médicos y personal médico altamente calificados garantizan un tratamiento rápido a los pacientes","8:00-16:00","neurologia@hospitalfelipeVI.org", "911234542");
+INSERT INTO DEPARTAMENTOS VALUES ("2", "Cardiologia","El departamento de Cardiología del Hospital Felipe VI es responsable de la evaluación, diagnóstico y tratamiento de pacientes con problemas del sistema cardiovascular. Nuestro equipo de médicos y personal médico altamente calificados garantizan un tratamiento rápido a los pacientes.","9:00-15:30","cardiologia@hospitalfelipeVI.org", "911234567");
+INSERT INTO DEPARTAMENTOS VALUES ("3", "Traumatologia","El departamento de Traumatología del Hospital Felipe VI es responsable de la evaluación, diagnóstico y tratamiento de pacientes con problemas que afectan a músculos, articulaciones y huesos, al igual que infecciones, lesiones deportivas, fracturas y problemas en las articulaciones. Nuestro equipo de médicos y personal médico altamente calificados garantizan un tratamiento rápido a los pacientes.","7:00-16:00","traumatologia@hospitalfelipeVI.org","911234589");
+INSERT INTO DEPARTAMENTOS VALUES ("4", "Neurologia","El departamento de neurología del Hospital Felipe VI es responsable de la evaluación, diagnóstico y tratamiento de pacientes con problemas del sistema nervioso. Nuestro equipo de médicos y personal médico altamente calificados garantizan un tratamiento rápido a los pacientes.","9:00-17:00","neurologia@hospitalfelipeVI.org","911234542");
 
 /*oncologia*/
 
 INSERT INTO Sanitarios (NIF_sanitario, Nombre_Sanitario, Tipo_sanitario, Especialidad, ID_departamento) VALUES
-    ('11111111A', 'Dr. Nicolás Urioitia', 'Medico', 'Quimioterapia', 'd101'),
-    ('22222222B', 'Dr. Paco Urrutia', 'Enfermero', 'Cualquier tipo de cáncer', 'd101'),
-    ('33333333C', 'Dr. Javier Espada', 'Medico', 'Terapia hormonal', 'd101'),
-    ('44444444D', 'Dra. Alba', 'Medico', 'Terapia biológica', 'd101'),
-    ('55555555E', 'Dr. Mikel Oyarzabal', 'Auxiliar', 'Oncología de radiación', 'd101'),
-    ('66666666F', 'Dr. David Almendra', 'Medico', 'Cáncer en adultos', 'd101');
+    ('11111111A', 'Dr. Nicolás Urioitia', 'Medico', 'Quimioterapia', '1'),
+    ('22222222B', 'Dr. Paco Urrutia', 'Enfermero', 'Cualquier tipo de cáncer', '1'),
+    ('33333333C', 'Dr. Javier Espada', 'Medico', 'Terapia hormonal', '1'),
+    ('44444444D', 'Dra. Alba', 'Medico', 'Terapia biológica', '1'),
+    ('55555555E', 'Dr. Mikel Oyarzabal', 'Auxiliar', 'Oncología de radiación', '1'),
+    ('66666666F', 'Dr. David Almendra', 'Medico', 'Cáncer en adultos', '1');
 
 /*cardiologia*/
 
 INSERT INTO Sanitarios (NIF_sanitario, Nombre_Sanitario, Tipo_sanitario, Especialidad, ID_departamento) VALUES
-    ('77777777G', 'Dr. Fernando Alonso', 'Medico', 'Accidentes cardiovasculares', 'd102'),
-    ('99999999H', 'Dra. Carla Fernández', 'Enfermero', 'Medicina vascular', 'd102'),
-    ('10101010I', 'Dr. Antonio Herrero', 'Medico', 'Cardiología general', 'd102'),
-    ('12121212J', 'Dra. Ana Sánchez', 'Medico', 'Cardiopatía congénita', 'd102'),
-    ('13131313K', 'Dr. Carlos Rodríguez', 'Auxiliar', 'Enfermedad vascular periférica', 'd102'),
-    ('14141414L', 'Dr. José Pérez', 'Medico', 'Insuficiencia cardíaca', 'd102');
+    ('77777777G', 'Dr. Fernando Alonso', 'Medico', 'Accidentes cardiovasculares', '2'),
+    ('99999999H', 'Dra. Carla Fernández', 'Enfermero', 'Medicina vascular', '2'),
+    ('10101010I', 'Dr. Antonio Herrero', 'Medico', 'Cardiología general', '2'),
+    ('12121212J', 'Dra. Ana Sánchez', 'Medico', 'Cardiopatía congénita', '2'),
+    ('13131313K', 'Dr. Carlos Rodríguez', 'Auxiliar', 'Enfermedad vascular periférica', '2'),
+    ('14141414L', 'Dr. José Pérez', 'Medico', 'Insuficiencia cardíaca', '2');
 /*traumatologia*/
 
 INSERT INTO Sanitarios (NIF_sanitario, Nombre_Sanitario, Tipo_sanitario, Especialidad, ID_departamento) VALUES
-    ('15151515M', 'Dr. Felipe Gimenez', 'Medico', 'Lumbalgia', 'd103'),
-    ('16161616N', 'Dr. Daniel García', 'Medico', 'Fracturas de todo tipo', 'd103'),
-    ('17171717O', 'Dr. José Pérez', 'Medico', 'Contracturas musculares', 'd103'),
-    ('18181818P', 'Dra. Eva Hernando', 'Auxiliar', 'Las muñecas y manos', 'd103'),
-    ('19191919Q', 'Dr. Carlos Rodríguez', 'Enfermero', 'La cadera', 'd103'),
-    ('20202020R', 'Dra. Carla Fernandez', 'Medico', 'Sindrome del túnel carpiano', 'd103');
+    ('15151515M', 'Dr. Felipe Gimenez', 'Medico', 'Lumbalgia', '3'),
+    ('16161616N', 'Dr. Daniel García', 'Medico', 'Fracturas de todo tipo', '3'),
+    ('17171717O', 'Dr. José Pérez', 'Medico', 'Contracturas musculares', '3'),
+    ('18181818P', 'Dra. Eva Hernando', 'Auxiliar', 'Las muñecas y manos', '3'),
+    ('19191919Q', 'Dr. Carlos Rodríguez', 'Enfermero', 'La cadera', '3'),
+    ('20202020R', 'Dra. Carla Fernandez', 'Medico', 'Sindrome del túnel carpiano', '3');
 
 /*neurologia*/
 
 INSERT INTO Sanitarios (NIF_sanitario, Nombre_Sanitario, Tipo_sanitario, Especialidad, ID_departamento) VALUES
-    ('21212121S', 'Dr. Fran Gonzalez', 'Medico', 'Trastornos neurológicos', 'd104'),
-    ('23232323T', 'Dr. Fernando Alonso', 'Medico', 'Accidentes cerebrovasculares', 'd104'),
-    ('24242424U', 'Dr. Antonio Herrero', 'Auxiliar', 'Cardiología general', 'd104'),
-    ('25252525V', 'Dra. Ana Sánchez', 'Medico', 'Epilepsia', 'd104'),
-    ('26262626W', 'Dr. Carlos Rodríguez', 'Medico', 'Demencia', 'd104'),
-    ('27272727X', 'Dra. Carla Fernández', 'Enfermero', 'Parkinson', 'd104');
+    ('21212121S', 'Dr. Fran Gonzalez', 'Medico', 'Trastornos neurológicos', '4'),
+    ('23232323T', 'Dr. Fernando Alonso', 'Medico', 'Accidentes cerebrovasculares', '4'),
+    ('24242424U', 'Dr. Antonio Herrero', 'Auxiliar', 'Cardiología general', '4'),
+    ('25252525V', 'Dra. Ana Sánchez', 'Medico', 'Epilepsia', '4'),
+    ('26262626W', 'Dr. Carlos Rodríguez', 'Medico', 'Demencia', '4'),
+    ('27272727X', 'Dra. Carla Fernández', 'Enfermero', 'Parkinson', '4');
 /*Servicios:*/
 
 /*Oncología:*/
-INSERT INTO Servicios VALUES (1,"Diagnóstico de cualquier tipo de cáncer","d101");
-INSERT INTO Servicios VALUES (2,"Tratamiento, Evaluación y Administraenfermedadesdepartamentosción de quimioterapia","d101");
-INSERT INTO Servicios VALUES (3,"Tratamiento de terapia hormonal","d101");
-INSERT INTO Servicios VALUES (4,"Diagnóstico de terapia biológica","d101");
-INSERT INTO Servicios VALUES (5,"Diagnóstico de oncología de radiación","d101");
-INSERT INTO Servicios VALUES (6,"Diagnóstico de oncología quirúrgica","d101");
-INSERT INTO Servicios VALUES (7,"Tratamiento y Diagnóstico del cáncer en adultos","d101");
-INSERT INTO Servicios VALUES (8,"Diagnóstico de neurología general","d101");
+INSERT INTO Servicios VALUES (1,"Diagnóstico de cualquier tipo de cáncer","1");
+INSERT INTO Servicios VALUES (2,"Tratamiento, Evaluación y Administraenfermedadesdepartamentosción de quimioterapia","1");
+INSERT INTO Servicios VALUES (3,"Tratamiento de terapia hormonal","1");
+INSERT INTO Servicios VALUES (4,"Diagnóstico de terapia biológica","1");
+INSERT INTO Servicios VALUES (5,"Diagnóstico de oncología de radiación","1");
+INSERT INTO Servicios VALUES (6,"Diagnóstico de oncología quirúrgica","1");
+INSERT INTO Servicios VALUES (7,"Tratamiento y Diagnóstico del cáncer en adultos","1");
+INSERT INTO Servicios VALUES (8,"Diagnóstico de neurología general","1");
 
 /*Cardiología:*/
-INSERT INTO Servicios VALUES (9,"Diagnóstico trastornos cardiológicos","d102");
-INSERT INTO Servicios VALUES (10,"Tratamiento y Evaluación accidentes cardiovasculares","d102");
-INSERT INTO Servicios VALUES (11,"Tratamiento de insuficiencia cardíaca","d102");
-INSERT INTO Servicios VALUES (12,"Tratamiento y Diagnóstico de cardiopatía congénita","d102");
-INSERT INTO Servicios VALUES (13,"Tratamiento de arritmia","d102");
-INSERT INTO Servicios VALUES (14,"Diagnóstico Enfermedad vascular periférica","d102");
-INSERT INTO Servicios VALUES (15,"Diagnóstico cardiología general","d102");
+INSERT INTO Servicios VALUES (9,"Diagnóstico trastornos cardiológicos","2");
+INSERT INTO Servicios VALUES (10,"Tratamiento y Evaluación accidentes cardiovasculares","2");
+INSERT INTO Servicios VALUES (11,"Tratamiento de insuficiencia cardíaca","2");
+INSERT INTO Servicios VALUES (12,"Tratamiento y Diagnóstico de cardiopatía congénita","2");
+INSERT INTO Servicios VALUES (13,"Tratamiento de arritmia","2");
+INSERT INTO Servicios VALUES (14,"Diagnóstico Enfermedad vascular periférica","2");
+INSERT INTO Servicios VALUES (15,"Diagnóstico cardiología general","2");
 
 /*Traumatología*/
-INSERT INTO Servicios VALUES (16,"Diagnóstico de lumbalgia", "d103");
-INSERT INTO Servicios VALUES (17,"Tratamiento y Evaluación de fracturas de todo tipo","d103");
-INSERT INTO Servicios VALUES (18,"Tratamiento de hernias discales","d103");
-INSERT INTO Servicios VALUES (19,"Tratamiento y Diagnóstico de contracturas musculares","d103");
-INSERT INTO Servicios VALUES (20,"Tratamiento de las muñecas y manos","d103");
-INSERT INTO Servicios VALUES (21,"Tratamiento de la cadera","d103");
-INSERT INTO Servicios VALUES (22,"Tratamiento de sindrome del túnel carpiano","d103");
-INSERT INTO Servicios VALUES (23,"Tratamiento de traumatología general","d103");
+INSERT INTO Servicios VALUES (16,"Diagnóstico de lumbalgia", "3");
+INSERT INTO Servicios VALUES (17,"Tratamiento y Evaluación de fracturas de todo tipo","3");
+INSERT INTO Servicios VALUES (18,"Tratamiento de hernias discales","3");
+INSERT INTO Servicios VALUES (19,"Tratamiento y Diagnóstico de contracturas musculares","3");
+INSERT INTO Servicios VALUES (20,"Tratamiento de las muñecas y manos","3");
+INSERT INTO Servicios VALUES (21,"Tratamiento de la cadera","3");
+INSERT INTO Servicios VALUES (22,"Tratamiento de sindrome del túnel carpiano","3");
+INSERT INTO Servicios VALUES (23,"Tratamiento de traumatología general","3");
 
 /*Neurología:*/
-INSERT INTO Servicios VALUES (24,"Diagnóstico trastornos neurológicos","d104");
-INSERT INTO Servicios VALUES (25,"Tratamiento y Evaluación accidentes cerebrovasculares","d104");
-INSERT INTO Servicios VALUES (26,"Tratamiento de TDA/TDAH","d104");
-INSERT INTO Servicios VALUES (27,"Tratamiento de epilepsia","d104");
-INSERT INTO Servicios VALUES (28,"Tratamiento y Diagnóstico de demencia","d104");
-INSERT INTO Servicios VALUES (29,"Tratamiento de Parkinson","d104");
-INSERT INTO Servicios VALUES (30,"Diagnóstico neurología general","d104");
+INSERT INTO Servicios VALUES (24,"Diagnóstico trastornos neurológicos","4");
+INSERT INTO Servicios VALUES (25,"Tratamiento y Evaluación accidentes cerebrovasculares","4");
+INSERT INTO Servicios VALUES (26,"Tratamiento de TDA/TDAH","4");
+INSERT INTO Servicios VALUES (27,"Tratamiento de epilepsia","4");
+INSERT INTO Servicios VALUES (28,"Tratamiento y Diagnóstico de demencia","4");
+INSERT INTO Servicios VALUES (29,"Tratamiento de Parkinson","4");
+INSERT INTO Servicios VALUES (30,"Diagnóstico neurología general","4");
 
 /*Enfermedades:*/
 INSERT INTO Enfermedades VALUES (1,'Diabetes Tipo 2');
@@ -246,3 +257,7 @@ INSERT INTO Ingresos VALUES ('0029', '2025-05-30', '2025-06-06', '90123456I', 5,
 INSERT INTO Ingresos VALUES ('0030', '2025-06-15', '2025-06-21', '01234567J', 6, 6, 6, '14141414L');
 
 
+INSERT INTO Salas VALUES (1,"104", "114","118",'1');
+INSERT INTO Salas VALUES (2,"101","111","115",'2');
+INSERT INTO Salas VALUES (3,"102","112","116",'4');
+INSERT INTO Salas VALUES (4,"103","113","117",'3');

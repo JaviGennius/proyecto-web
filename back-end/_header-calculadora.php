@@ -8,4 +8,8 @@
     <link href="../css/calculadora.css" rel="stylesheet"/>
     <script src="../js/calculadora.js"></script>
 </head>
-<?php require("_menu-calculadora.php"); ?>
+<body>
+<header>
+        <img src="../imagenes/hospital.png" class="imagenhospital">
+    </header>
+<?php require("_menu.php"); ?>

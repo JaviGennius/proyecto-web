@@ -1,5 +1,12 @@
-<?php $titulo="horarios_ubicacion"?>
-
+<?php $titulo="Ubicación y Horarios"?>
+<?php require("initdb.php");
+    $consulta3 = "SELECT Nombre_departamento, Horario FROM Departamentos;";
+    $consulta2 = "SELECT Nombre_departamento, Sala_1, Sala_2, Sala_3 FROM Departamentos INNER JOIN Salas ON Salas.ID_departamento = Departamentos.ID_departamento;";
+    $guardar2 = $con -> query($consulta2);
+    $guardar3 = $con -> query($consulta3);
+    $clase = 'dp2';
+    $clase2 = 'dp2';
+?>
 <?php require("_header-horarios.php") ?> 
 <main>
         <div>
@@ -15,22 +22,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="dp1">
-                        <td >Oncología</td>
-                        <td >8:00 a 16:00</td>
-                    </tr>
-                    <tr class="dp2">
-                        <td>Cardilogía</td>
-                        <td>9:00 a 15:30</td>
-                    </tr>
-                    <tr class="dp1">
-                        <td>Neurología</td>
-                        <td>7:00 a 16:00</td>
-                    </tr>
-                    <tr class="dp2">
-                        <td>Traumatología</td>
-                        <td>9:00 a 17:00</td>
-                    </tr>
+                    <?php while($row = $guardar3->fetch_assoc()) { 
+                        $clase = ($clase === 'dp2') ? 'dp1' : 'dp2';
+                        
+                        echo "<tr class='$clase'>";
+                            echo "<td>" . $row['Nombre_departamento'] . "</td>";
+                            echo "<td>" . $row['Horario'] . "</td>";
+                        echo "</tr>";
+                    } ?>
                 </tbody>
             </table>
             <table>
@@ -41,30 +40,16 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="dp1">
-                        <td >Oncología</td>
-                        <td >104</td>
-                        <td>114</td>
-                        <td>118</td>
-                    </tr>
-                    <tr class="dp2">
-                        <td>Cardilogía</td>
-                        <td >101</td>
-                        <td>111</td>
-                        <td>115</td>
-                    </tr>
-                    <tr class="dp1">
-                        <td>Neurología</td>
-                        <td >102</td>
-                        <td>112</td>
-                        <td>116</td>
-                    </tr>
-                    <tr class="dp2">
-                        <td>Traumatología</td>
-                        <td >103</td>
-                        <td>113</td>
-                        <td>117</td>
-                    </tr>
+                <?php while($row2 = $guardar2->fetch_assoc()) { 
+                        $clase2 = ($clase2 === 'dp2') ? 'dp1' : 'dp2';
+                        
+                        echo "<tr class='$clase2'>";
+                            echo "<td>" . $row2['Nombre_departamento'] . "</td>";
+                            echo "<td>" . $row2['Sala_1'] . "</td>";
+                            echo "<td>" . $row2['Sala_2'] . "</td>";
+                            echo "<td>" . $row2['Sala_3'] . "</td>";
+                        echo "</tr>";
+                    } ?>
                 </tbody>
             </table>
         </div>
@@ -133,4 +118,7 @@
     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4029.9747791352543!2d-3.6153032705204344!3d40.53229181586673!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422da995a9e6ab%3A0x3dd2d61b103821da!2sUniversidad%20Europea%20de%20Madrid%20(Campus%20de%20Alcobendas)!5e0!3m2!1ses!2ses!4v1666594290396!5m2!1ses!2ses"></iframe>
     </div>
     </main>
-    <?php require("_footer-horarios.php")?>
+<?php 
+    require("_footer.php");
+    require("_contacto-hospital.php");
+?>

@@ -34,6 +34,9 @@
                     </div>    
                     </div>
             </section>
-<?php require("_footer-index.php")?>
+<?php 
+    require("_footer.php");
+    require("_contacto-hospital.php");
+?>
 </body>
 </html>
