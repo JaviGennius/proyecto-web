@@ -3,7 +3,7 @@
 
 <?php require("_header-cambiocontrasena.php")?>
 <body>
-    <a href="../html/formulario2.html" id="cabecera"><img src="../imagenes/hospital.png" draggable="false" title="Volver Inicio Sesión Portal Paciente"/></a>
+    <a href="/back-end/inicio_sesion.php" id="cabecera"><img src="../imagenes/hospital.png" draggable="false" title="Volver Inicio Sesión Portal Paciente"/></a>
     <main class="container" id="container">
         <form id="formulario" method="post" action="/back-end/cambiocontrasena.php">
             <label for="dni" class="dnil">DNI<font color="red">*</font></label>
