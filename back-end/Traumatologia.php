@@ -1,5 +1,5 @@
 <?php
-    $titulo = "Departamento de Traumatología";
+    $titulo = "Traumatologia";
 ?>
 <?php require("_header-trauma.php");?>
 <section class="descripcion">
@@ -52,4 +52,5 @@
 </section>
 <?php 
     require("_footer.php");
+    require("_contacto-depart.php");
 ?>
