@@ -1,12 +1,14 @@
 <?php require("initdb.php");
-    $consulta = "SELECT Correo_Departamento, Telefono_Departamento FROM departamentos WHERE Nombre_departamento = $titulo;";
+    $consulta = "SELECT Correo_Departamento, Telefono_Departamento FROM departamentos WHERE Nombre_departamento = '$titulo';";
     $guardar = $con -> query($consulta);
 ?>
 <div class="parrafos">
 <?php
-    echo "<p>Teléfono: " . $consulta['Telefono_Departamento'] . "</p>";
-    echo "<p><a href='mailto:traumatologia@hospitalfelipeVI.com?subject=Traumatología&body='>Correo: " . $consulta['Correo_Departamento'] . "</a></p>";
-?>    
+    while($row = $guardar->fetch_assoc()) {
+    echo "<p>Teléfono: " . $row['Telefono_Departamento'] . "</p>";
+    echo "<a href='mailto:traumatologia@hospitalfelipeVI.com?subject=Traumatología&body='><p>Correo: " . $row['Correo_Departamento'] . "</p></a>";
+    }
+?>
         </div>
         </footer>
 </body>

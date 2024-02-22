@@ -2,26 +2,36 @@
     $titulo = "Traumatologia";
 ?>
 <?php require("_header-trauma.php");?>
-<section class="descripcion">
-    <h3 class="h3">Descripción</h3>
-    <p>
-       El departamento de Traumatología del Hospital Felipe VI es responsable de la evaluación, diagnóstico y tratamiento de pacientes con problemas que afectan a músculos, articulaciones y huesos, al igual que infecciones, lesiones deportivas, fracturas y problemas en las articulaciones. Nuestro equipo de médicos y personal médico altamente calificados garantizan un tratamiento rápido a los pacientes.
-    </p>
-</section>
-<section class="servicios">
-    <h3 class="h3">Servicios</h3>
-    <ul>
-        <li>Diagnóstico de lumbalgia</li>
-        <li>Tratamiento y Evaluación de fracturas de todo tipo</li>
-        <li>Tratamiento de hernias discales</li>
-        <li>Tratamiento y Diagnóstico de contracturas musculares</li>
-        <li>Tratamiento de las muñecas y manos</li>
-        <li>Tratamiento de la cadera</li>
-        <li>Tratamiento de síndrome del túnel carpiano</li>
-        <li>Tratamiento de traumatología general</li>
-    </ul>
-</section>
-<section class="profesionales">
+<main>
+    <section class="descripcion">
+        <h3 class="h3">Descripción</h3>
+        <p>
+            El departamento de Traumatología del Hospital Felipe VI es responsable de la evaluación, diagnóstico y tratamiento de pacientes con problemas que afectan a músculos, articulaciones y huesos, al igual que infecciones, lesiones deportivas, fracturas y problemas en las articulaciones.
+            Nuestro equipo de médicos y personal médico altamente calificados garantizan un tratamiento rápido a los pacientes.
+        </p>
+    </section>
+
+    <section class="servicios">
+        <h3 class="h3">Servicios</h3>
+        <ul>
+            <li>Diagnóstico de lumbalgia</li>
+            <li>Tratamiento y Evaluación de fracturas de todo tipo</li>
+            <li>Tratamiento de hernias discales</li>
+            <li>Tratamiento y Diagnóstico de contracturas musculares</li>
+            <li>Tratamiento de las muñecas y manos</li>
+            <li>Tratamiento de la cadera</li>
+            <li>Tratamiento de sindrome del túnel carpiano</li>
+            <li>Tratamiento de traumatología general</li>
+        </ul>
+    </section>
+    <details open class="chatbotrobot">
+        <summary><img src="../imagenes/CBOT.png" class="imagenchatbot" onclick="openchatbot()"/></summary>
+        <div class="chatbot" id="chat-contenedor">
+            <div id="chat-mensaje"></div>
+            <input type="text" id="usuario-input" placeholder="Escribe un mensaje...">
+            <button id="boton-enviar" onclick="sendMessage()">Enviar</button>
+        </div>
+    </details>
     <h3 class="h3">Nuestros profesionales</h3>
     <div class="cardiologos">
         <div class="c1">
@@ -46,10 +56,11 @@
         </div>
         <div class="c6"> 
             <img src="../imagenes/c12.jpg" draggable="false" onmouseover="flip9()" onmouseout="flipout9()" id="traumatologo3">
-            <p>Dra. Carla Fernandez<br>Síndrome del túnel carpiano</p>
+            <p>Dra. Carla Fernandez<br>Sindrome del túnel carpiano</p>
         </div>
-    </div>
-</section>
+    </div><br><br>
+</main>
+<script src="../js/chatb.js"></script>
 <?php 
     require("_footer.php");
     require("_contacto-depart.php");
