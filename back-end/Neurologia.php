@@ -1,6 +1,10 @@
 <?php
     $titulo = "Neurologia";
 ?>
+<?php require("initdb.php");
+    $consulta2 = "SELECT Nombre_servicio FROM servicios INNER JOIN departamentos ON departamentos.ID_departamento = servicios.ID_departamento WHERE Nombre_departamento = '$titulo';";
+    $guardar2 = $con -> query($consulta2);
+?>
 <?php require("_header-neuro.php");?>
 <main>
     <section class="descripcion">
@@ -13,13 +17,11 @@
     <section class="servicios">
         <h3 class="h3">Servicios</h3>
         <ul>
-            <li>Diagnóstico trastornos neurológicos</li>
-            <li>Tratamiento y Evaluación accidentes cerebrovasculares</li>
-            <li>Tratamiento de TDA/TDAH</li>
-            <li>Tratamiento de epilepsia</li>
-            <li>Tratamiento y Diagnóstico de demencia</li>
-            <li>Tratamiento de Parkinson</li>
-            <li>Diagnóstico neurología general</li>
+            <?php
+                while($row2 = $guardar2->fetch_assoc()) {
+                    echo "<li>" . $row2['Nombre_servicio'] . "</li>";
+                }
+            ?>
         </ul>
     </section>
     <details open class="chatbotrobot">
