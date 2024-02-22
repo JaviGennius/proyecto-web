@@ -12,32 +12,49 @@
             <h1>Imágenes del centro</h1>
           </header>
         <div class="navegador">
-            <img src="../imagenes/hospital 2.png" title="Inicio" class="hospital"/>
+            <a href="../index.html"><img src="../imagenes/hospital 2.png" title="Inicio" class="hospital" draggable="false" /></a>
             <div class="menuToggle"></div>
             <nav>
                 <ul>
-                    <li><a href="#">Inicio</a></li>
+                    <li><a href="../index.html">Inicio</a></li>
                     <li><a href="#">Departamentos</a>
                     <ul>
-                        <li><a href="#">Oncología</a></li>
-                        <li><a href="#">Cardiología</a></li>
-                        <li><a href="#">Traumatología</a></li>
-                        <li><a href="#">Neurología</a></li>
+                        <li><a href="../html/oncologia.html">Oncología</a></li>
+                        <li><a href="../html/cardiologia.html">Cardiología</a></li>
+                        <li><a href="../html/traumatologia.html">Traumatología</a></li>
+                        <li><a href="../html/neurologia.html">Neurología</a></li>
                     </ul>
                     </li>
                     <li><a href="#">Información</a>
                     <ul>
-                        <li><a href="#">Calculadora</a></li>
-                        <li><a href="#">Horarios y Ubicación</a></li>
-                        <li><a href="#">Imagenes del centro</a></li>
+                        <li><a href="../html/calculadora.html">Calculadora</a></li>
+                        <li><a href="../html/horarios_ubicacion.html">Horarios y Ubicación</a></li>
+                        <li><a href="../html/imagenescentro.html">Imagenes del centro</a></li>
                     </ul>
                     </li>
     
-                    <li><a href="#">Portal del paciente</a></li>
+                    <li><a href="../html/portalpaciente.html">Portal del paciente</a></li>
                 </ul>
             </nav>
-            <a href="html/formulariofina.html"><img src="../imagenes/boton_registro.png" class="boton_registro" draggable="false"/></a>
+            <a href="../html/formulariofina.html"><img src="../imagenes/boton_registro.png" class="boton_registro" draggable="false"/></a>
         </div>
+
+        <div class="img-completa" id="imgcompletacaja">
+            <img src="1.jpg" id="imgcompleta">
+            <span onclick="cerrarImagen()">X</span>
+        </div><br><br><br>
+        <div class="galeria">
+           <img src="../imagenes/hospitalslicer.png" onclick="abririmagen(this.src)" >
+           <img src="../imagenes/saladeingresos.png" onclick="abririmagen(this.src)">
+           <img src="../imagenes/salaespera.png" onclick="abririmagen(this.src)">
+           <img src="../imagenes/quirofano.png" onclick="abririmagen(this.src)">
+           <img src="../imagenes/personal.png" onclick="abririmagen(this.src)">
+           <img src="../imagenes/entradahsopital.png" onclick="abririmagen(this.src)">
+           <img src="../imagenes/parking.png" onclick="abririmagen(this.src)">
+           <img src="../imagenes/cafeteria.png" onclick="abririmagen(this.src)">
+
+        </div>
+
         <script>
             let menuToggle = document.querySelector('.menuToggle');
             let header = document.querySelector('.navegador');
@@ -45,6 +62,19 @@
                 header.classList.toggle('active');
             
             }
+            
+            const imgcompletacaja = document.getElementById("imgcompletacaja");
+            imgcompleta = document.getElementById("imgcompleta");
+
+            function abririmagen(reference){
+            imgcompletacaja.style.display ="flex";
+            imgcompleta.src = reference
+        }
+
+            function cerrarImagen(){
+            imgcompletacaja.style.display = "none";
+        }
+
         </script>
     </body>
 </html>
