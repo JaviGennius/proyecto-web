@@ -1,3 +1,7 @@
+<?php
+    $titulo = "Departamento de Traumatología";
+?>
+<?php require("_header-trauma.php");?>
 <section class="descripcion">
     <h3 class="h3">Descripción</h3>
     <p>
@@ -46,3 +50,6 @@
         </div>
     </div>
 </section>
+<?php 
+    require("_footer.php");
+?>
