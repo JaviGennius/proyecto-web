@@ -42,6 +42,39 @@ if (lowerCaseMessage.includes('hola')) {
 }
 }
 
+function getBotResponse(userMessage) {
+  const xhr = new XMLHttpRequest();
+  xhr.open('POST', 'https://your-api-url.com/bot', true);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      const response = JSON.parse(xhr.responseText);
+      console.log(response.message);
+      // Aquí puedes mostrar la respuesta del bot en tu interfaz de usuario
+    }
+  };
+  const data = JSON.stringify({ message: userMessage });
+  xhr.send(data);
+}
+
+async function getBotResponse(userMessage) {
+  const response = await fetch('https://your-api-url.com/bot', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ message: userMessage }),
+  });
+
+  if (response.ok) {
+    const data = await response.json();
+    console.log(data.message);
+    // Aquí puedes mostrar la respuesta del bot en tu interfaz de usuario
+  } else {
+    console.error('Error al obtener la respuesta del bot');
+  }
+}
+
 function openchatbot() {
   var chatbot = document.getElementById("chat-contenedor");
 
