@@ -1,5 +1,6 @@
-<?php require("initdb.php");
-    $consulta = "SELECT DNI_paciente, Num_Historial, Nombre_paciente, Primer_apellido_paciente, Segundo_apellido_paciente, Fecha_nacimiento,Sexo,Telefono_paciente,Correo_paciente FROM Pacientes WHERE DNI_paciente = '01234567J';";
+<?php session_start();
+require("initdb.php");
+    $consulta = "SELECT DNI_paciente, Num_Historial, Nombre_paciente, Primer_apellido_paciente, Segundo_apellido_paciente, Fecha_nacimiento,Sexo,Telefono_paciente,Correo_paciente FROM Pacientes WHERE DNI_paciente = '$_SESSION['dni']';";
     $guardar = $con -> query($consulta);
 ?>
 <div class="carrusel">

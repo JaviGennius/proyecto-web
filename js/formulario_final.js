@@ -203,9 +203,7 @@ function validarFormulario() {
     let esVerificarContrasena = validarContrasenaVeficada()
 
     if (esDNI && esNombreValido && esPrimerApellidoValido && esSegundoApellidoValido && esFechaNacimientoValida && esSexoValido && esTelefonoValido && esEmailValido && esContrasena && esVerificarContrasena) {
-        setTimeout(function() {
-            window.location.href = '../index.html'; // Funcion sacada de Chatgpt
-        }, 3000);
+
         document.getElementById("patientForm").style.display = "none";
         document.getElementById("cabecera").style.display = "none";
         document.getElementById("cargar").style.display = "block";

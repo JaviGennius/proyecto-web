@@ -1,62 +1,40 @@
-function enviar_formulario(event) {
-    event.preventDefault();
-
-    const nombre_de_usuario = document.getElementById("nombre_de_usuario");
-    const dni = document.getElementById("dni");
-    const contraseña = document.getElementById("contraseña");
-
-    const nombre_de_usuario_correcto = validar_campo(nombre_de_usuario, /^[a-zA-Z\s]+$/);
-    const dni_correcto = validar_campo(dni, /^[0-9]{8}[A-Za-z]$/);
-    const contraseña_correcta = validar_campo(contraseña, /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{3,16}$/);
-
-    mostrar_resultado_correcto(nombre_de_usuario, nombre_de_usuario_correcto);
-    mostrar_resultado_correcto(dni, dni_correcto);
-    mostrar_resultado_correcto(contraseña, contraseña_correcta);
-
-    if (nombre_de_usuario_correcto && dni_correcto && contraseña_correcta) {
-        alert("Formulario enviado");
-        window.location.href="../html/portalpaciente.html"
-    }
-}
-
-function validarCampo(input, regex, campo) {
-    const correcto = regex.test(input.value);
-
-    if (correcto) {
-        input.classList.remove("incorrecto");
-        input.classList.add("correcto");
+function validarDNI() {
+    let dni=document.getElementById("dni");
+    let dniValor = dni.value.trim();
+    let dni_correcto = /^[0-9]{8}[A-Za-z]$/;
+    if (!dni_correcto.test(dniValor) || dniValor === "") {
+        dni.style.borderColor = "red";
+        return false;
     } else {
-        input.classList.remove("correcto");
-        input.classList.add("incorrecto");
+        dni.style.borderColor = "green";
+        return true;
     }
+}
+function validarContrasena() {
+    let contrasena=document.getElementById("contraseña");
+    
+    let contrasenaValor = contrasena.value.trim();
+    let contraseña_correcta = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{1,16}$/;
 
-    mostrar_resultado_correcto(input, correcto, campo);
+    if (!contraseña_correcta.test(contrasenaValor) || contrasenaValor === "") {
+        contrasena.style.borderColor = "red";
+        return false;
+    } else{
+        contrasena.style.borderColor = "green";
+        return true;
+    }
 }
 
-function validar_campo(input, regex) {
-    const correcto = regex.test(input.value);
-
-    if (correcto) {
-        input.classList.remove("incorrecto");
-        input.classList.add("correcto");
+function validarFormulario() {
+    let esDNI = validarDNI();
+    let esContrasena = validarContrasena()
+    if (esDNI && esContrasena) {
+        alert("Formulario correcto")
     } else {
-        input.classList.remove("correcto");
-        input.classList.add("incorrecto");
+        alert("Por favor, complete todos los campos correctamente.");
     }
-
-    return correcto;
 }
 
-function mostrar_resultado_correcto(input, correcto, campo) {
-    
-    const etiqueta = input.parentNode.querySelector(".validar-icono");
-    if (etiqueta) {
-        input.parentNode.removeChild(etiqueta);
-    }
-
-    
-    const icono = document.createElement("span");
-    icono.className = correcto ? "icono correcto" : "icono incorrecto";
-    icono.title = correcto ? `${campo} correcto` : `${campo} incorrecto`;
-    input.parentNode.appendChild(icono);
-}
+// document.getElementById("dni").addEventListener("blur", validarDNI);
+// document.getElementById("contraseña").addEventListener("blur", validarContrasena);
+// document.getElementById("botonsubmit").addEventListener("click", validarFormulario);

@@ -28,3 +28,13 @@
         </div>
     </div>
 </div>  
+<div class="redessociales">
+                <ul>
+                    <li><a href="https://es-es.facebook.com/" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.instagram.com/" class="instagram"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://twitter.com/" class="twitter"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.youtube.com/" class="youtube"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="https://es.linkedin.com/" class="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+                
+        </div>

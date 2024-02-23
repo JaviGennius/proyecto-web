@@ -20,7 +20,7 @@
                         <li><a href="#">Imagenes del Centro</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Portal del Paciente</a></li>
+                <li><a href="/back-end/inicio_sesion.php">Portal del Paciente</a></li>
             </ul>
             <a href="#"><img src="../imagenes/boton_registro.png" class="boton_registro"/></a>
         </nav>

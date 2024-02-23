@@ -45,32 +45,23 @@ form {
 
 /*Estilos label e Input formulario*/
 
-.nombrel {
-    grid-column: 1;
-    grid-row: 2;
-    text-align: center;
-}
 .dnil{
     grid-column: 1;
-    grid-row: 3;
+    grid-row: 2;
     text-align: center;
 }
 .contrasenal {
     grid-column: 1;
-    grid-row: 4;
+    grid-row: 3;
     text-align: center;
-}
-.nombre {
-    grid-column: 2;
-    grid-row: 2;
 }
 .dni{
     grid-column:2 ;
-    grid-row: 3;
+    grid-row: 2;
 }
 .contrasena {
     grid-column: 2;
-    grid-row: 4;
+    grid-row: 3;
 }
 label {
     padding: 5px;
