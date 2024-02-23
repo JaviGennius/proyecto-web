@@ -1,27 +1,33 @@
 <?php
     $titulo = "Traumatologia";
 ?>
+<?php require("initdb.php");
+    $consulta2 = "SELECT Nombre_servicio FROM servicios INNER JOIN departamentos ON departamentos.ID_departamento = servicios.ID_departamento WHERE Nombre_departamento = '$titulo';";
+    $guardar2 = $con -> query($consulta2);
+    $consulta3 = "SELECT Descripcion_departamento FROM departamentos WHERE Nombre_departamento = '$titulo';";
+    $guardar3 = $con -> query($consulta3);
+    $consulta4 = "SELECT Nombre_sanitario, Tipo_sanitario, Especialidad FROM sanitarios INNER JOIN departamentos ON departamentos.ID_departamento = sanitarios.ID_departamento WHERE Nombre_departamento = '$titulo';";
+    $guardar4 = $con -> query($consulta4);
+?>
 <?php require("_header-trauma.php");?>
 <main>
-    <section class="descripcion">
+<section class="descripcion">
         <h3 class="h3">Descripción</h3>
-        <p>
-            El departamento de Traumatología del Hospital Felipe VI es responsable de la evaluación, diagnóstico y tratamiento de pacientes con problemas que afectan a músculos, articulaciones y huesos, al igual que infecciones, lesiones deportivas, fracturas y problemas en las articulaciones.
-            Nuestro equipo de médicos y personal médico altamente calificados garantizan un tratamiento rápido a los pacientes.
-        </p>
+        <?php
+            while($row3 = $guardar3->fetch_assoc()) {
+                echo "<p>" . $row3['Descripcion_departamento'] . "</p>";
+            }
+        ?>
     </section>
 
     <section class="servicios">
         <h3 class="h3">Servicios</h3>
         <ul>
-            <li>Diagnóstico de lumbalgia</li>
-            <li>Tratamiento y Evaluación de fracturas de todo tipo</li>
-            <li>Tratamiento de hernias discales</li>
-            <li>Tratamiento y Diagnóstico de contracturas musculares</li>
-            <li>Tratamiento de las muñecas y manos</li>
-            <li>Tratamiento de la cadera</li>
-            <li>Tratamiento de sindrome del túnel carpiano</li>
-            <li>Tratamiento de traumatología general</li>
+            <?php
+                while($row2 = $guardar2->fetch_assoc()) {
+                    echo "<li>" . $row2['Nombre_servicio'] . "</li>";
+                }
+            ?>
         </ul>
     </section>
     <details open class="chatbotrobot">

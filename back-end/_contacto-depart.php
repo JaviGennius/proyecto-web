@@ -6,7 +6,7 @@
 <?php
     while($row = $guardar->fetch_assoc()) {
     echo "<p>Teléfono: " . $row['Telefono_Departamento'] . "</p>";
-    echo "<a href='mailto:traumatologia@hospitalfelipeVI.com?subject=Traumatología&body='><p>Correo: " . $row['Correo_Departamento'] . "</p></a>";
+    echo "<a href='mailto:" . $row['Correo_Departamento'] ."?subject=&body='><p>Correo: " . $row['Correo_Departamento'] . "</p></a>";
     }
 ?>
         </div>
