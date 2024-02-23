@@ -19,7 +19,7 @@ function appendMessage(sender, message) {
 }
 
 function fetchBotResponse(userMessage) {
-  return fetch('bot_response.php', {
+  return fetch('bot_server.php', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
