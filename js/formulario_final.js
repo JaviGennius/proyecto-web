@@ -134,22 +134,6 @@ function validarEmail() {
     }
 }
 
-function validarContrasena() {
-    let contrasena=document.getElementById("contrasena");
-    let contrasenaValor = contrasena.value.trim();
-    let error_contrasena=document.getElementById("error_contrasena");
-    let expresionRegular = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{3,16}$/;
-
-    if (expresionRegular.test(contrasena) || contrasenaValor === "") {
-        error_contrasena.style.display = "block";
-        contrasena.style.borderColor = "red";
-        return true;
-    } else {
-        error_contrasena.style.display = "none";
-        contrasena.style.borderColor = "green";
-        return false;
-    }
-}
 
 function validarContrasena() {
     let contrasena=document.getElementById("contrasena");
@@ -157,7 +141,7 @@ function validarContrasena() {
     let error_contrasena=document.getElementById("error_contrasena");
     
     let contrasenaValor = contrasena.value.trim();
-    let contraseña_correcta = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{1,16}$/;
+    let contraseña_correcta = /^(?=.*\d)(?=.*[a-zA-Z]).{1,16}$/;
 
     if (!contraseña_correcta.test(contrasenaValor) || contrasenaValor === "") {
         error_contrasena.style.display = "block";

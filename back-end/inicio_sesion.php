@@ -16,6 +16,7 @@
 </body>
 </html>
 <?php
+
 session_start();
 require("initdb.php");
 
@@ -26,18 +27,23 @@ if (!isset($_POST['dni']) || !isset($_POST['contrasena'])) {
 $dni = $_POST['dni'];
 $contrasena = $_POST['contrasena'];
 
-$query = "SELECT * FROM pacientes WHERE DNI_paciente ='$dni' AND Cts_usuario='$passwd';";
+$query = "SELECT * FROM pacientes WHERE DNI_paciente ='$dni';";
 
 $resultado = mysqli_query($con, $query);
 
-if ($resultado) {
-    $_SESSION["dni_usuario"] = $dni; 
-    header('Location: /back-end/portal_paciente.php');
-    exit();
+if ($datos = mysqli_fetch_object($resultado)) {
+    if ($contrasena == $datos->Cts_usuario) {
+        $_SESSION["dni_usuario"] = $dni; 
+        header('Location: /back-end/portal_paciente.php');
+        exit();
+    } else {
+        header('Location: /back-end/inicio_sesion.php');
+        exit();
+    }
 } else {
     header('Location: /back-end/inicio_sesion.php');
     exit();
 }
 
 mysqli_close($con);
-?>
+?> 

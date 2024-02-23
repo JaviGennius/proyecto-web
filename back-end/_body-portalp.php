@@ -8,7 +8,7 @@
     <main>
         <article class="article1">
             <img src="../imagenes/portal1.jpg">
-            <a href="../index.html"><img src="../imagenes/corazon.jpg.jpeg" title="Menú" draggable="false"></a>
+            <a href="../back-end/index.php"><img src="../imagenes/corazon.jpg.jpeg" title="Menú" draggable="false"></a>
         </article>
         <!--HTML Buscador: https://www.youtube.com/watch?v=Gqto7IflO84&ab_channel=MagtimusPro-->
         <div class="buscar1">         
@@ -32,6 +32,6 @@
             </div>
             <article class="article2">
                 <img src="../imagenes/corazon2.jpg">
-                <a href="../html/formulario2.html"><img src="../imagenes/globo.png" title="Cerrar Sesión" draggable="false"></a>
+                <a href="../back-end/inicio_sesion.php"><img src="../imagenes/globo.png" title="Cerrar Sesión" draggable="false"></a>
             </article>
             <?php require("_informacion_paciente.php") ?>

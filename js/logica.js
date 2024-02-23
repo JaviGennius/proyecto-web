@@ -1,6 +1,6 @@
 function validarDNI() {
     let dni=document.getElementById("dni");
-    let dniValor = dni.value.trim();
+    let dniValor = dni.value.toUpperCase();
     let dni_correcto = /^[0-9]{8}[A-Za-z]$/;
     if (!dni_correcto.test(dniValor) || dniValor === "") {
         dni.style.borderColor = "red";
@@ -14,7 +14,7 @@ function validarContrasena() {
     let contrasena=document.getElementById("contraseña");
     
     let contrasenaValor = contrasena.value.trim();
-    let contraseña_correcta = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{1,16}$/;
+    let contraseña_correcta = /^(?=.*\d)(?=.*[a-zA-Z]).{1,16}$/;
 
     if (!contraseña_correcta.test(contrasenaValor) || contrasenaValor === "") {
         contrasena.style.borderColor = "red";
@@ -28,9 +28,7 @@ function validarContrasena() {
 function validarFormulario() {
     let esDNI = validarDNI();
     let esContrasena = validarContrasena();
-    if (esDNI && esContrasena) {
-        alert("Formulario correcto")
-    } else {
+    if (!esDNI && !esContrasena) {
         alert("Por favor, complete todos los campos correctamente.");
     }
 }
