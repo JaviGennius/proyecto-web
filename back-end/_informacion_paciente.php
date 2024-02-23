@@ -1,7 +1,18 @@
 <?php session_start();
 require("initdb.php");
-    $consulta = "SELECT DNI_paciente, Num_Historial, Nombre_paciente, Primer_apellido_paciente, Segundo_apellido_paciente, Fecha_nacimiento,Sexo,Telefono_paciente,Correo_paciente FROM Pacientes WHERE DNI_paciente = '$_SESSION[dni]';";
-    $guardar = $con -> query($consulta);
+// Assuming you have an established database connection in $conn
+$consulta = "SELECT DNI_paciente, Num_Historial, Nombre_paciente, Primer_apellido_paciente, Segundo_apellido_paciente, Fecha_nacimiento, Sexo, Telefono_paciente, Correo_paciente FROM Pacientes WHERE DNI_paciente = ?";
+
+$stmt = $con->prepare($consulta);
+
+$stmt->bind_param("s", $_SESSION['dni']);
+
+$stmt->execute();
+$stmt->bind_result($dni, $numHistorial, $nombre, $apellido1, $apellido2, $fechaNacimiento, $sexo, $telefono, $correo);
+
+$stmt->fetch();
+$stmt->close();
+$guardar = $con -> query($consulta);
 ?>
 <div class="carrusel">
         <div class="informacion">
