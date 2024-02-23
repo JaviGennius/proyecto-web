@@ -23,7 +23,7 @@
 // Para validar
 require("initdb.php");
 
-if (!isset($_POST['dni']) || !isset($_POST['contrasena']) || !isset($_POST['contrasena_verific']) || $_POST['contrasena_verific'] !== $_POST['contrasena'] || $_POST['contrasena'] === "" || $_POST['contrasena_verific'] === "" ) {
+if (!isset($_POST['dni']) || !isset($_POST['contrasena']) || !isset($_POST['contrasena_verific']) || $_POST['contrasena_verific'] !== $_POST['contrasena'] || $_POST['contrasena'] === "" || $_POST['contrasena_verific'] === "" || !preg_match('/^[0-9]{8}[A-Za-z]$/', $_POST['dni']) || !preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{3,16}$/', $_POST['contrasena'])) {
     exit();
 }
 
@@ -36,7 +36,7 @@ $resultado = mysqli_query($con, $query);
 
 if ($resultado) {
 
-    header('Location: /back-end/portal_paciente.php');
+    header('Location: /back-end/inicio_sesion.php');
     exit();
 } else {
     header('Location: /back-end/cambiocontrasena.php');
