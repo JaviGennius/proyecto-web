@@ -27,7 +27,7 @@ function validarContrasena() {
 
 function validarFormulario() {
     let esDNI = validarDNI();
-    let esContrasena = validarContrasena()
+    let esContrasena = validarContrasena();
     if (esDNI && esContrasena) {
         alert("Formulario correcto")
     } else {
@@ -35,6 +35,6 @@ function validarFormulario() {
     }
 }
 
-// document.getElementById("dni").addEventListener("blur", validarDNI);
-// document.getElementById("contraseña").addEventListener("blur", validarContrasena);
-// document.getElementById("botonsubmit").addEventListener("click", validarFormulario);
+document.getElementById("dni").addEventListener("blur", validarDNI);
+document.getElementById("contraseña").addEventListener("blur", validarContrasena);
+document.getElementById("botonsubmit").addEventListener("click", validarFormulario);
