@@ -53,7 +53,8 @@ CREATE TABLE Sanitarios(
     Nombre_Sanitario CHAR(45),
 	Tipo_sanitario ENUM("Medico","Enfermero","Auxiliar"),
     Especialidad CHAR(30),
-	ID_departamento int
+	ID_departamento int,
+    Foto_sanitario longblob
 	);
 
 CREATE TABLE Departamentos (
@@ -114,42 +115,42 @@ INSERT INTO DEPARTAMENTOS VALUES ("4", "Neurologia","El departamento de neurolog
 
 /*oncologia*/
 
-INSERT INTO Sanitarios (NIF_sanitario, Nombre_Sanitario, Tipo_sanitario, Especialidad, ID_departamento) VALUES
-    ('11111111A', 'Dr. Nicolás Urioitia', 'Medico', 'Quimioterapia', '1'),
-    ('22222222B', 'Dr. Paco Urrutia', 'Enfermero', 'Cualquier tipo de cáncer', '1'),
-    ('33333333C', 'Dr. Javier Espada', 'Medico', 'Terapia hormonal', '1'),
-    ('44444444D', 'Dra. Alba', 'Medico', 'Terapia biológica', '1'),
-    ('55555555E', 'Dr. Mikel Oyarzabal', 'Auxiliar', 'Oncología de radiación', '1'),
-    ('66666666F', 'Dr. David Almendra', 'Medico', 'Cáncer en adultos', '1');
+INSERT INTO Sanitarios (NIF_sanitario, Nombre_Sanitario, Tipo_sanitario, Especialidad, ID_departamento, Foto_sanitario) VALUES
+    ('11111111A', 'Dr. Nicolás Urioitia', 'Medico', 'Quimioterapia', '1','/imagenes/c21.png'),
+    ('22222222B', 'Dr. Paco Urrutia', 'Enfermero', 'Cualquier tipo de cáncer', '1','/imagenes/c18.jpg'),
+    ('33333333C', 'Dr. Javier Espada', 'Medico', 'Terapia hormonal', '1','/imagenes/c19.jpg'),
+    ('44444444D', 'Dra. Alba', 'Medico', 'Terapia biológica', '1','/imagenes/c17.jpg'),
+    ('55555555E', 'Dr. Mikel Oyarzabal', 'Auxiliar', 'Oncología de radiación', '1','/imagenes/c22.jpeg'),
+    ('66666666F', 'Dr. David Almendra', 'Medico', 'Cáncer en adultos', '1','/imagenes/c23.jpg');
 
 /*cardiologia*/
 
-INSERT INTO Sanitarios (NIF_sanitario, Nombre_Sanitario, Tipo_sanitario, Especialidad, ID_departamento) VALUES
-    ('77777777G', 'Dr. Fernando Alonso', 'Medico', 'Accidentes cardiovasculares', '2'),
-    ('99999999H', 'Dra. Carla Fernández', 'Enfermero', 'Medicina vascular', '2'),
-    ('10101010I', 'Dr. Antonio Herrero', 'Medico', 'Cardiología general', '2'),
-    ('12121212J', 'Dra. Ana Sánchez', 'Medico', 'Cardiopatía congénita', '2'),
-    ('13131313K', 'Dr. Carlos Rodríguez', 'Auxiliar', 'Enfermedad vascular periférica', '2'),
-    ('14141414L', 'Dr. José Pérez', 'Medico', 'Insuficiencia cardíaca', '2');
+INSERT INTO Sanitarios (NIF_sanitario, Nombre_Sanitario, Tipo_sanitario, Especialidad, ID_departamento, Foto_sanitario) VALUES
+    ('77777777G', 'Dr. Fernando Alonso', 'Medico', 'Accidentes cardiovasculares', '2', '/imagenes/cardiologo1.jpg'),
+    ('99999999H', 'Dra. Carla Fernández', 'Enfermero', 'Medicina vascular', '2', '/imagenes/c3.jpg'),
+    ('10101010I', 'Dr. Antonio Herrero', 'Medico', 'Cardiología general', '2','/imagenes/c2.jpg' ),
+    ('12121212J', 'Dra. Ana Sánchez', 'Medico', 'Cardiopatía congénita', '2','/imagenes/c4.png' ),
+    ('13131313K', 'Dr. Carlos Rodríguez', 'Auxiliar', 'Enfermedad vascular periférica', '2','/imagenes/c5.jpeg'),
+    ('14141414L', 'Dr. José Pérez', 'Medico', 'Insuficiencia cardíaca', '2','/imagenes/c6.jpg');
 /*traumatologia*/
 
-INSERT INTO Sanitarios (NIF_sanitario, Nombre_Sanitario, Tipo_sanitario, Especialidad, ID_departamento) VALUES
-    ('15151515M', 'Dr. Felipe Gimenez', 'Medico', 'Lumbalgia', '3'),
-    ('16161616N', 'Dr. Daniel García', 'Medico', 'Fracturas de todo tipo', '3'),
-    ('17171717O', 'Dr. José Pérez', 'Medico', 'Contracturas musculares', '3'),
-    ('18181818P', 'Dra. Eva Hernando', 'Auxiliar', 'Las muñecas y manos', '3'),
-    ('19191919Q', 'Dr. Carlos Rodríguez', 'Enfermero', 'La cadera', '3'),
-    ('20202020R', 'Dra. Carla Fernandez', 'Medico', 'Sindrome del túnel carpiano', '3');
+INSERT INTO Sanitarios (NIF_sanitario, Nombre_Sanitario, Tipo_sanitario, Especialidad, ID_departamento, Foto_sanitario) VALUES
+    ('15151515M', 'Dr. Felipe Gimenez', 'Medico', 'Lumbalgia', '3','/imagenes/c14.jpeg'),
+    ('16161616N', 'Dr. Daniel García', 'Medico', 'Fracturas de todo tipo', '3','/imagenes/c15.jpeg'),
+    ('17171717O', 'Dr. José Pérez', 'Medico', 'Contracturas musculares', '3','/imagenes/c13.jpeg'),
+    ('18181818P', 'Dra. Eva Hernando', 'Auxiliar', 'Las muñecas y manos', '3','/imagenes/c11.jpeg'),
+    ('19191919Q', 'Dr. Carlos Rodríguez', 'Enfermero', 'La cadera', '3','/imagenes/c16.jpeg'),
+    ('20202020R', 'Dra. Carla Fernandez', 'Medico', 'Sindrome del túnel carpiano', '3','/imagenes/c12.jpg');
 
 /*neurologia*/
 
-INSERT INTO Sanitarios (NIF_sanitario, Nombre_Sanitario, Tipo_sanitario, Especialidad, ID_departamento) VALUES
-    ('21212121S', 'Dr. Fran Gonzalez', 'Medico', 'Trastornos neurológicos', '4'),
-    ('23232323T', 'Dr. Fernando Alonso', 'Medico', 'Accidentes cerebrovasculares', '4'),
-    ('24242424U', 'Dr. Antonio Herrero', 'Auxiliar', 'Cardiología general', '4'),
-    ('25252525V', 'Dra. Ana Sánchez', 'Medico', 'Epilepsia', '4'),
-    ('26262626W', 'Dr. Carlos Rodríguez', 'Medico', 'Demencia', '4'),
-    ('27272727X', 'Dra. Carla Fernández', 'Enfermero', 'Parkinson', '4');
+INSERT INTO Sanitarios (NIF_sanitario, Nombre_Sanitario, Tipo_sanitario, Especialidad, ID_departamento, Foto_sanitario) VALUES
+    ('21212121S', 'Dr. Fran Gonzalez', 'Medico', 'Trastornos neurológicos', '4','/imagenes/doctor_1.jpeg'),
+    ('23232323T', 'Dr. Fernando Alonso', 'Medico', 'Accidentes cerebrovasculares', '4','/imagenes/doctor_2.jpeg'),
+    ('24242424U', 'Dr. Antonio Herrero', 'Auxiliar', 'Neurologia general', '4','/imagenes/doctor_3.jpeg'),
+    ('25252525V', 'Dra. Ana Sánchez', 'Medico', 'Epilepsia', '4','/imagenes/c9.jpg'),
+    ('26262626W', 'Dr. Carlos Rodríguez', 'Medico', 'Demencia', '4','/imagenes/c7.jpg'),
+    ('27272727X', 'Dra. Carla Fernández', 'Enfermero', 'Parkinson', '4','/imagenes/c10.jpg');
 /*Servicios:*/
 
 /*Oncología:*/

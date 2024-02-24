@@ -6,10 +6,8 @@
     $guardar2 = $con -> query($consulta2);
     $consulta3 = "SELECT Descripcion_departamento FROM departamentos WHERE Nombre_departamento = '$titulo';";
     $guardar3 = $con -> query($consulta3);
-    $consulta4 = "SELECT Nombre_sanitario, Tipo_sanitario, Especialidad FROM sanitarios INNER JOIN departamentos ON departamentos.ID_departamento = sanitarios.ID_departamento WHERE Nombre_departamento = '$titulo';";
+    $consulta4 = "SELECT * FROM sanitarios INNER JOIN departamentos ON departamentos.ID_departamento = sanitarios.ID_departamento WHERE Nombre_departamento = '$titulo';";
     $guardar4 = $con -> query($consulta4);
-    $clase = 'c1';
-    $flip = 10;
 ?>
 <?php require("_header-neuro.php");?>
 <main>
