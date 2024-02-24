@@ -1,9 +1,4 @@
 <div class="carrusel">
-        <div class="informacion">
-            <div>
-    <!--La url del tutorial que bsuqué para hacer el script de cambio de imagenes ocn un botón: https://www.lawebdelprogramador.com/foros/JavaScript/1491641-cambiar-imagen-al-pusar-sobre-un-boton.html-->        
-                <img id="foto" src="../imagenes/delante.png"  onclick="cambioImagen()" class="perfil" draggable="false">
-            </div>
             <?php 
                 session_start();
                 require("initdb.php");
@@ -14,13 +9,12 @@
 
                 $stmt->bind_param("s", $_SESSION['dni_usuario']);
                 $stmt->execute();
-                $result = $stmt->get_result();  // Fixed method name from fechObject() to get_result()
-
+                $result = $stmt->get_result(); 
                 while ($row = $result->fetch_assoc()) { 
-                 echo "<div class='informacion'>"
-                echo"<div>"
-                    <img id="foto" src="../imagenes/delante.png"  onclick="cambioImagen()" class="perfil" draggable="false">
-                echo"</div>"
+                 echo "<div class='informacion'>";
+                echo"<div>";
+                echo "<img id='foto' src='" . $row['Foto_usuario'] . "' class='perfil' draggable='false'>";
+                echo"</div>";
                     echo "<h4>" . $row['Nombre_paciente'] . " " . $row['Primer_apellido_paciente'] . " " . $row['Segundo_apellido_paciente'] . "</h4>";
                     echo "<h5> Información Personal</h5>";
                         echo "<p> Fecha Nacimiento: " . $row['Fecha_nacimiento'] . "</p>";

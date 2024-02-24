@@ -19,7 +19,7 @@ CREATE TABLE Pacientes(
     Telefono_paciente int,
     Correo_paciente varchar(50),
 	Cts_usuario char(255),
-    Foto_usuario blob
+    Foto_usuario longblob
 	);
     
 CREATE TABLE Medicamentos (
@@ -77,9 +77,6 @@ Create TABLE Salas (
 	ID_Departamento int
 );
 
-Create table Foto_Sanitarios (
-	
-);
 /*Claves Ajenas*/
 
 /*Ingresos:*/
@@ -98,16 +95,16 @@ ALTER TABLE Servicios ADD FOREIGN KEY(ID_Departamento) REFERENCES Departamentos(
 ALTER TABLE Salas ADD FOREIGN KEY(ID_Departamento) REFERENCES Departamentos(ID_Departamento) ON UPDATE CASCADE ON DELETE SET NULL;
 /*Insertar los Datos*/
 /*Pacientes:*/
-INSERT INTO Pacientes VALUES ('12345678A', '1001', 'Juan', 'Gomez', 'Perez', '1990-05-15',"Hombre", 616164011, 'juan@gmail.com', 'juanito123', '../imagenes/Personal1.jpg');
-INSERT INTO Pacientes VALUES ('23456789B', '1002', 'Maria', 'Rodriguez', 'Lopez', '1985-08-22',"Mujer", 661626829, 'maria@yahoo.com', 'maria_85','../imagenes/Personal2.jpg') ;
-INSERT INTO Pacientes VALUES ('34567890C', '1003', 'Carlos', 'Fernandez', 'Martinez', '1978-12-10',"Otro", 666666938, 'carlos@hotmail.com', 'cfm1978','../imagenes/Personal7.jpg');
-INSERT INTO Pacientes VALUES ('45678901D', '1004', 'Laura', 'Sanchez', 'Garcia', '1995-04-03', "Mujer",669622447, 'laura@gmail.com', 'lsg95','../imagenes/Personal2.jpg');
-INSERT INTO Pacientes VALUES ('56789012E', '1005', 'Roberto', 'Torres', 'Alvarez', '1980-09-27', "Hombre",606464525, 'roberto@gmail.com', 'rta80','../imagenes/Personal8.jpg');
-INSERT INTO Pacientes VALUES ('67890123F', '1006', 'Ana', 'Gutierrez', 'Lopez', '1992-11-14', "Mujer",662616360, 'ana@yahoo.com', 'anaGL','../imagenes/Personal3.jpg');
-INSERT INTO Pacientes VALUES ('78901234G', '1007', 'Francisco', 'Jimenez', 'Santos', '1987-07-08',"Hombre", 667161587, 'francisco@hotmail.com', 'fjs87','../imagenes/Personal9.jpg');
-INSERT INTO Pacientes VALUES ('89012345H', '1008', 'Elena', 'Martinez', 'Ruiz', '1975-02-20', "Otro",636361968, 'elena@gmail.com', 'emr75','../imagenes/Personal4.jpg');
-INSERT INTO Pacientes VALUES ('90123456I', '1009', 'David', 'Perez', 'Rodriguez', '1998-06-02', "Hombre",661621492, 'david@yahoo.com', 'dpr98','../imagenes/Personal9.jpg');
-INSERT INTO Pacientes VALUES ('01234567J', '1010', 'Isabel', 'Sanz', 'Gomez', '1983-03-17',"Mujer" ,616451201, 'isabel@hotmail.com', 'isg83','../imagenes/Personal5.jpg');
+INSERT INTO Pacientes VALUES ('12345678A', '1001', 'Juan', 'Gomez', 'Perez', '1990-05-15',"Hombre", 616164011, 'juan@gmail.com', 'juanito123', '/imagenes/Persona1.jpg');
+INSERT INTO Pacientes VALUES ('23456789B', '1002', 'Maria', 'Rodriguez', 'Lopez', '1985-08-22',"Mujer", 661626829, 'maria@yahoo.com', 'maria_85','/imagenes/Persona2.jpg') ;
+INSERT INTO Pacientes VALUES ('34567890C', '1003', 'Carlos', 'Fernandez', 'Martinez', '1978-12-10',"Otro", 666666938, 'carlos@hotmail.com', 'cfm1978','/imagenes/Persona7.jpg');
+INSERT INTO Pacientes VALUES ('45678901D', '1004', 'Laura', 'Sanchez', 'Garcia', '1995-04-03', "Mujer",669622447, 'laura@gmail.com', 'lsg95','/imagenes/Persona2.jpg');
+INSERT INTO Pacientes VALUES ('56789012E', '1005', 'Roberto', 'Torres', 'Alvarez', '1980-09-27', "Hombre",606464525, 'roberto@gmail.com', 'rta80','/imagenes/Persona8.jpg');
+INSERT INTO Pacientes VALUES ('67890123F', '1006', 'Ana', 'Gutierrez', 'Lopez', '1992-11-14', "Mujer",662616360, 'ana@yahoo.com', 'anaGL','/imagenes/Persona3.jpg');
+INSERT INTO Pacientes VALUES ('78901234G', '1007', 'Francisco', 'Jimenez', 'Santos', '1987-07-08',"Hombre", 667161587, 'francisco@hotmail.com', 'fjs87','/imagenes/Persona9.jpg');
+INSERT INTO Pacientes VALUES ('89012345H', '1008', 'Elena', 'Martinez', 'Ruiz', '1975-02-20', "Otro",636361968, 'elena@gmail.com', 'emr75','/imagenes/Persona4.jpg');
+INSERT INTO Pacientes VALUES ('90123456I', '1009', 'David', 'Perez', 'Rodriguez', '1998-06-02', "Hombre",661621492, 'david@yahoo.com', 'dpr98','/imagenes/Persona9.jpg');
+INSERT INTO Pacientes VALUES ('01234567J', '1010', 'Isabel', 'Sanz', 'Gomez', '1983-03-17',"Mujer" ,616451201, 'isabel@hotmail.com', 'isg83','/imagenes/Persona5.jpg');
 
 /*Departamentos:*/
 INSERT INTO DEPARTAMENTOS VALUES ("1", "Oncologia","El departamento de neurología del Hospital Felipe VI es responsable de la evaluación,diagnóstico y tratamiento de pacientes con problemas del sistema nervioso. Nuestro equipo de médicos y personal médico altamente calificados garantizan un tratamiento rápido a los pacientes","8:00-16:00","neurologia@hospitalfelipeVI.org", "911234542");

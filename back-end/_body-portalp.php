@@ -16,14 +16,14 @@
                 <div class="buscar">
                     <div class="contenido">
                         <ul>
-                            <li class="pagina"><a href="../back-end/index.php">Inicio</a></li>
-                            <li class="pagina"><a href="../back-end/calculadora.php">Calculadora</a></li>            
+                            <li class="pagina"><a href="/back-end/index.php">Inicio</a></li>
+                            <li class="pagina"><a href="/back-end/calculadora.php">Calculadora</a></li>            
                             <li class="pagina"><a href="#">Cardiología</a></li>
-                            <li class="pagina"><a href="../back-end/portal_paciente.php">Formulario Paciente</a></li>
+                            <li class="pagina"><a href="/back-end/portal_paciente.php">Formulario Paciente</a></li>
                             <li class="pagina"><a href="#">Formulario Registro</a></li>
-                            <li class="pagina"><a href="../back-end/horarios.php">Horarios y Ubicación</a></li>
-                            <li class="pagina"><a href="#">Neurología</a></li>
-                            <li class="pagina"><a href="#">Traumatología</a></li>
+                            <li class="pagina"><a href="/back-end/horarios.php">Horarios y Ubicación</a></li>
+                            <li class="pagina"><a href="/back-end/Neurologia.php">Neurología</a></li>
+                            <li class="pagina"><a href="/back-end/Traumatologia.php">Traumatología</a></li>
                             <li class="pagina"><a href="#">Oncología</a></li>
                             <li class="pagina"><a href="#">Imagenes del Centro</a></li>
                         </ul>

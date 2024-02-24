@@ -4,7 +4,7 @@
             session_start();
             require("initdb.php");
 
-            $consulta = "SELECT 
+            $consulta2 = "SELECT 
             Fecha_alta,
             Fecha_baja,
             Nombre_medicamento,	
@@ -17,7 +17,7 @@
             INNER JOIN sanitarios ON ingresos.NIF_sanitario = sanitarios.NIF_sanitario
             WHERE DNI_paciente = ?;";
 
-            $stmt = $con->prepare($consulta);
+            $stmt = $con->prepare($consulta2);
 
             $stmt->bind_param("s", $_SESSION['dni_usuario']);
             $stmt->execute();
