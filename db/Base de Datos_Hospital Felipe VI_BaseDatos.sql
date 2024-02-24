@@ -18,7 +18,8 @@ CREATE TABLE Pacientes(
 	Sexo ENUM("Hombre", "Mujer", "Otro"),
     Telefono_paciente int,
     Correo_paciente varchar(50),
-	Cts_usuario char(255)
+	Cts_usuario char(255),
+    Foto_usuario blob
 	);
     
 CREATE TABLE Medicamentos (
@@ -75,12 +76,10 @@ Create TABLE Salas (
     Sala_3 int,
 	ID_Departamento int
 );
-CREATE TABLE chatbot (
-	id INT AUTO_INCREMENT PRIMARY KEY,
-	pregunta VARCHAR(150) NOT NULL,
-	respuesta VARCHAR(500) NOT NULL
-);
 
+Create table Foto_Sanitarios (
+	
+);
 /*Claves Ajenas*/
 
 /*Ingresos:*/
@@ -99,16 +98,16 @@ ALTER TABLE Servicios ADD FOREIGN KEY(ID_Departamento) REFERENCES Departamentos(
 ALTER TABLE Salas ADD FOREIGN KEY(ID_Departamento) REFERENCES Departamentos(ID_Departamento) ON UPDATE CASCADE ON DELETE SET NULL;
 /*Insertar los Datos*/
 /*Pacientes:*/
-INSERT INTO Pacientes VALUES ('12345678A', '1001', 'Juan', 'Gomez', 'Perez', '1990-05-15',"Hombre", 616164011, 'juan@gmail.com', 'juanito123' );
-INSERT INTO Pacientes VALUES ('23456789B', '1002', 'Maria', 'Rodriguez', 'Lopez', '1985-08-22',"Mujer", 661626829, 'maria@yahoo.com', 'maria_85') ;
-INSERT INTO Pacientes VALUES ('34567890C', '1003', 'Carlos', 'Fernandez', 'Martinez', '1978-12-10',"Otro", 666666938, 'carlos@hotmail.com', 'cfm1978' );
-INSERT INTO Pacientes VALUES ('45678901D', '1004', 'Laura', 'Sanchez', 'Garcia', '1995-04-03', "Mujer",669622447, 'laura@gmail.com', 'lsg95' );
-INSERT INTO Pacientes VALUES ('56789012E', '1005', 'Roberto', 'Torres', 'Alvarez', '1980-09-27', "Hombre",606464525, 'roberto@gmail.com', 'rta80');
-INSERT INTO Pacientes VALUES ('67890123F', '1006', 'Ana', 'Gutierrez', 'Lopez', '1992-11-14', "Mujer",662616360, 'ana@yahoo.com', 'anaGL');
-INSERT INTO Pacientes VALUES ('78901234G', '1007', 'Francisco', 'Jimenez', 'Santos', '1987-07-08',"Hombre", 667161587, 'francisco@hotmail.com', 'fjs87');
-INSERT INTO Pacientes VALUES ('89012345H', '1008', 'Elena', 'Martinez', 'Ruiz', '1975-02-20', "Otro",636361968, 'elena@gmail.com', 'emr75');
-INSERT INTO Pacientes VALUES ('90123456I', '1009', 'David', 'Perez', 'Rodriguez', '1998-06-02', "Hombre",661621492, 'david@yahoo.com', 'dpr98');
-INSERT INTO Pacientes VALUES ('01234567J', '1010', 'Isabel', 'Sanz', 'Gomez', '1983-03-17',"Mujer" ,616451201, 'isabel@hotmail.com', 'isg83');
+INSERT INTO Pacientes VALUES ('12345678A', '1001', 'Juan', 'Gomez', 'Perez', '1990-05-15',"Hombre", 616164011, 'juan@gmail.com', 'juanito123', '../imagenes/Personal1.jpg');
+INSERT INTO Pacientes VALUES ('23456789B', '1002', 'Maria', 'Rodriguez', 'Lopez', '1985-08-22',"Mujer", 661626829, 'maria@yahoo.com', 'maria_85','../imagenes/Personal2.jpg') ;
+INSERT INTO Pacientes VALUES ('34567890C', '1003', 'Carlos', 'Fernandez', 'Martinez', '1978-12-10',"Otro", 666666938, 'carlos@hotmail.com', 'cfm1978','../imagenes/Personal7.jpg');
+INSERT INTO Pacientes VALUES ('45678901D', '1004', 'Laura', 'Sanchez', 'Garcia', '1995-04-03', "Mujer",669622447, 'laura@gmail.com', 'lsg95','../imagenes/Personal2.jpg');
+INSERT INTO Pacientes VALUES ('56789012E', '1005', 'Roberto', 'Torres', 'Alvarez', '1980-09-27', "Hombre",606464525, 'roberto@gmail.com', 'rta80','../imagenes/Personal8.jpg');
+INSERT INTO Pacientes VALUES ('67890123F', '1006', 'Ana', 'Gutierrez', 'Lopez', '1992-11-14', "Mujer",662616360, 'ana@yahoo.com', 'anaGL','../imagenes/Personal3.jpg');
+INSERT INTO Pacientes VALUES ('78901234G', '1007', 'Francisco', 'Jimenez', 'Santos', '1987-07-08',"Hombre", 667161587, 'francisco@hotmail.com', 'fjs87','../imagenes/Personal9.jpg');
+INSERT INTO Pacientes VALUES ('89012345H', '1008', 'Elena', 'Martinez', 'Ruiz', '1975-02-20', "Otro",636361968, 'elena@gmail.com', 'emr75','../imagenes/Personal4.jpg');
+INSERT INTO Pacientes VALUES ('90123456I', '1009', 'David', 'Perez', 'Rodriguez', '1998-06-02', "Hombre",661621492, 'david@yahoo.com', 'dpr98','../imagenes/Personal9.jpg');
+INSERT INTO Pacientes VALUES ('01234567J', '1010', 'Isabel', 'Sanz', 'Gomez', '1983-03-17',"Mujer" ,616451201, 'isabel@hotmail.com', 'isg83','../imagenes/Personal5.jpg');
 
 /*Departamentos:*/
 INSERT INTO DEPARTAMENTOS VALUES ("1", "Oncologia","El departamento de neurología del Hospital Felipe VI es responsable de la evaluación,diagnóstico y tratamiento de pacientes con problemas del sistema nervioso. Nuestro equipo de médicos y personal médico altamente calificados garantizan un tratamiento rápido a los pacientes","8:00-16:00","neurologia@hospitalfelipeVI.org", "911234542");
@@ -267,20 +266,3 @@ INSERT INTO Salas VALUES (1,"104", "114","118",'1');
 INSERT INTO Salas VALUES (2,"101","111","115",'2');
 INSERT INTO Salas VALUES (3,"102","112","116",'4');
 INSERT INTO Salas VALUES (4,"103","113","117",'3');
-
-
-/*chatbot*/
-INSERT INTO Chatbot (pregunta, respuesta) VALUES ('hola', 'Hola, ¿cómo estás?');
-INSERT INTO Chatbot (pregunta, respuesta) VALUES ('adios', 'Hasta luego, que tenga buen día.');
-INSERT INTO Chatbot (pregunta, respuesta) VALUES ('adiós', 'Hasta luego, que tenga buen día.');
-INSERT INTO Chatbot (pregunta, respuesta) VALUES ('gracias', 'De nada, estoy aquí para ayudarte.');
-INSERT INTO Chatbot (pregunta, respuesta) VALUES ('horarios', 'Los horarios de los diferentes departamentos del hospital son los siguientes:, Departamento de oncología: Lunes a viernes de 8:00 a 16:00., Departamento de neurología: Lunes a viernes de 7:00 a 16:00., Departamento de cardiología: Lunes a viernes de 9:00 a 15:30., Departamento de traumatología: Lunes a viernes de 9:00 a 17:00.');
-INSERT INTO Chatbot (pregunta, respuesta) VALUES ('horario', 'Los horarios de los diferentes departamentos del hospital son los siguientes:, Departamento de oncología: Lunes a viernes de 8:00 a 16:00., Departamento de neurología: Lunes a viernes de 7:00 a 16:00. Departamento de cardiología: Lunes a viernes de 9:00 a 15:30. Departamento de traumatología: Lunes a viernes de 9:00 a 17:00.');
-INSERT INTO Chatbot (pregunta, respuesta) VALUES ('ubicacion', 'Las ubicaciones de los diferentes departamentos del hospital son las siguientes:, Departamento de cardiología: Sala 101, 111 y 115., Departamento de neurología: Sala 102, 112 y 116., Departamento de traumatología: Sala 103, 113 y 117., Departamento de oncología: Sala 104, 114 y 118., Departamento de traumatología: Sala 105.');
-INSERT INTO Chatbot (pregunta, respuesta) VALUES ('ubicación', 'Las ubicaciones de los diferentes departamentos del hospital son las siguientes:, Departamento de cardiología: Sala 101, 111 y 115., Departamento de neurología: Sala 102, 112 y 116. Departamento de traumatología: Sala 103, 113 y 117., Departamento de oncología: Sala 104, 114 y 118., Departamento de traumatología: Sala 105.');
-INSERT INTO Chatbot (pregunta, respuesta) VALUES ('telefonos', 'Los contactos de los diferentes departamentos del hospital son los siguientes:, Departamento de oncología: Tel: +34 911 23 45 17., Departamento de cardiología: Tel: +34 911 23 45 67., Departamento de traumatología: Tel: +34 911 23 45 89., Departamento de neurología: Tel: +34 911 23 45 42.');
-INSERT INTO Chatbot (pregunta, respuesta) VALUES ('telefono', 'Los contactos de los diferentes departamentos del hospital son los siguientes:, Departamento de oncología: Tel: +34 911 23 45 17., Departamento de cardiología: Tel: +34 911 23 45 67., Departamento de traumatología: Tel: +34 911 23 45 89., Departamento de neurología: Tel: +34 911 23 45 42.');
-INSERT INTO Chatbot (pregunta, respuesta) VALUES ('teléfonos', 'Los contactos de los diferentes departamentos del hospital son los siguientes:, Departamento de oncología: Tel: +34 911 23 45 17., Departamento de cardiología: Tel: +34 911 23 45 67., Departamento de traumatología: Tel: +34 911 23 45 89., Departamento de neurología: Tel: +34 911 23 45 42.');
-INSERT INTO Chatbot (pregunta, respuesta) VALUES ('teléfono', 'Los contactos de los diferentes departamentos del hospital son los siguientes:, Departamento de oncología: Tel: +34 911 23 45 17., Departamento de cardiología: Tel: +34 911 23 45 67., Departamento de traumatología: Tel: +34 911 23 45 89., Departamento de neurología: Tel: +34 911 23 45 42.');
-INSERT INTO Chatbot (pregunta, respuesta) VALUES ('correos', 'Los contactos de los diferentes departamentos del hospital son los siguientes:, Departamento de oncología: Correo: oncologia@hospitalfelipeVI.org., Departamento de cardiología: Correo: cardiologia@hospitalfelipeVI.org., Departamento de traumatología: Correo: traumatologia@hospitalfelipeVI.org., Departamento de neurología: Correo: neurologia@hospitalfelipeVI.org., Hospital: Correo: hospitalfelipevi@madrid.org.');
-INSERT INTO Chatbot (pregunta, respuesta) VALUES ('correo', 'Los contactos de los diferentes departamentos del hospital son los siguientes:, Departamento de oncología: Correo: oncologia@hospitalfelipeVI.org., Departamento de cardiología: Correo: cardiologia@hospitalfelipeVI.org., Departamento de traumatología: Correo: traumatologia@hospitalfelipeVI.org., Departamento de neurología: Correo: neurologia@hospitalfelipeVI.org., Hospital: Correo: hospitalfelipevi@madrid.org.');

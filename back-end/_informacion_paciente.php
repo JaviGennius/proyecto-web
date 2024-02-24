@@ -8,7 +8,7 @@
                 session_start();
                 require("initdb.php");
 
-                $consulta = "SELECT DNI_paciente, Num_Historial, Nombre_paciente, Primer_apellido_paciente, Segundo_apellido_paciente, Fecha_nacimiento, Sexo, Telefono_paciente, Correo_paciente FROM Pacientes WHERE DNI_paciente = ?";
+                $consulta = "SELECT DNI_paciente, Num_Historial, Nombre_paciente, Primer_apellido_paciente, Segundo_apellido_paciente, Fecha_nacimiento, Sexo, Telefono_paciente, Correo_paciente,Foto_usuario FROM Pacientes WHERE DNI_paciente = ?";
 
                 $stmt = $con->prepare($consulta);
 
@@ -16,7 +16,11 @@
                 $stmt->execute();
                 $result = $stmt->get_result();  // Fixed method name from fechObject() to get_result()
 
-                while ($row = $result->fetch_assoc()) {  // Fixed variable name from $consulta to $result
+                while ($row = $result->fetch_assoc()) { 
+                 echo "<div class='informacion'>"
+                echo"<div>"
+                    <img id="foto" src="../imagenes/delante.png"  onclick="cambioImagen()" class="perfil" draggable="false">
+                echo"</div>"
                     echo "<h4>" . $row['Nombre_paciente'] . " " . $row['Primer_apellido_paciente'] . " " . $row['Segundo_apellido_paciente'] . "</h4>";
                     echo "<h5> Información Personal</h5>";
                         echo "<p> Fecha Nacimiento: " . $row['Fecha_nacimiento'] . "</p>";
