@@ -61,6 +61,11 @@ $titulo = "Calculadora";
     <?php require("_modal.php"); ?>
     <?php require("_resultados-calculadora.php"); ?>
 <?php 
-    require("_footer.php");
+session_start(); 
+    if($_SESSION['dni_usuario']){
+        require_once("_footer-cerrar.php");
+    }else {
+            require("_footer.php");
+    }
     require("_contacto-hospital.php");
 ?>

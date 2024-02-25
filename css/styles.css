@@ -177,6 +177,19 @@ ul.menu {
 	visibility: visible;
 	opacity: 1;
 }
+
+.menu button {
+    background: #d10002;
+  border: 0px;
+  font-family: 'open sans';
+  color: white;
+  font-size: medium;
+}
+.menu button:hover{
+    text-decoration: underline 2px;
+    transition: all 0.7s;
+    color: #000000;
+}
 /*Main*/
 
 main {

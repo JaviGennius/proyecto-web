@@ -1,8 +1,4 @@
-<?php require("initdb.php");
-    $consulta = "SELECT Nombre_departamento FROM departamentos;";
-    $guardar = $con -> query($consulta);
-?>
- <div class="navegador">
+<div class="navegador">
             <a href="/back-end/index.php"><img src="../imagenes/hospital 2.png" title="Inicio" class="hospital" draggable="false" /></a>
             <div class="menuToggle"></div>
             <nav>
@@ -23,7 +19,8 @@
                         <li><a href="/back-end/imagenescentro.php">Imagenes del centro</a></li>
                     </ul>
                     </li>
-                    <li><a href="/back-end/inicio_sesion.php">Portal del paciente</a></li>
+                    <li><a href="/back-end/portal_paciente.php">Portal del paciente</a></li>
+                    <li><a href="/back-end/inicio_sesion.php" name="logout">Cerrar Sesión</a></li>
                 </ul>
             </nav>
             <a href="#"><img src="../imagenes/boton_registro.png" class="boton_registro" draggable="false"/></a>

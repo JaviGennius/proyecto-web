@@ -25,4 +25,17 @@
             };
         ?>
     </header>
-    <?php require_once("_menu.php")?>
+    <?php
+    session_start();
+    if($_SESSION['dni_usuario']){
+        require_once("_menu-cerrar.php");
+        if(isset($_POST['logout'])) {
+            session_destroy();
+            header("Location: inicio_sesion.php");
+            exit();
+            }
+        } else {
+            
+            require_once("_menu.php");
+        }
+?>

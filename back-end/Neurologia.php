@@ -65,10 +65,16 @@
             <img src="../imagenes/c10.jpg" draggable="false" onmouseover="flip12()" onmouseout="flipout12()" id="neurologo3">
             <p>Dra. Carla Fernández<br>Parkinson</p>
         </div>
-    </div><br><br>
+    </div>
+    <br><br>
 </main>
 <script src="../js/chatb.js"></script>
 <?php 
-    require("_footer.php");
+session_start();
+    if($_SESSION['dni_usuario']){
+        require_once("_footer-cerrar.php");
+    }else {
+            require("_footer.php");
+    }
     require("_contacto-depart.php");
 ?>

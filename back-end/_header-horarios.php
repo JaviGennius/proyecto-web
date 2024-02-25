@@ -14,4 +14,17 @@
         <img src="../imagenes/hospital.png" class="imagenhospital" draggable="false">
         <h1>Horarios y Ubicación del Hospital Felipe VI</h1>
     </header>
-<?php require("_menu.php") ?>
+    <?php
+    session_start();
+    if($_SESSION['dni_usuario']){
+        require_once("_menu-cerrar.php");
+        if(isset($_POST['logout'])) {
+            session_destroy();
+            header("Location: inicio_sesion.php");
+            exit();
+            }
+        } else {
+            
+            require_once("_menu.php");
+        }
+?>

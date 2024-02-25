@@ -21,7 +21,12 @@ require("initdb.php");
                         <li><a href="/back-end/imagenescentro.php">Imagenes del Centro</a></li>
                     </ul>
                 </li>
-                <li><a href="/back-end/inicio_sesion.php">Portal del Paciente</a></li>
+                <li><a href="/back-end/portal_paciente.php">Portal del Paciente</a></li>
+                <li><a href="#">
+                    <form method="post" action="">
+                            <button type="submit" name="logout">Cerrar Sesión</button>
+                    </form>
+                </a></li>
             </ul>
             <a href="#"><img src="../imagenes/boton_registro.png" class="boton_registro"/></a>
         </nav>

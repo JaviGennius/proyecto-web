@@ -137,6 +137,11 @@ ul.menu {
 	visibility: visible;
 	opacity: 1;
 }
+.menu button:hover{
+    text-decoration: underline 2px;
+    transition: all 0.7s;
+    color: #000000;
+}
 /*Main*/
 
 main{

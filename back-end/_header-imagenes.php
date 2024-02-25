@@ -10,5 +10,17 @@
         <header id="cabecera">
             <a href="../index.html"><img src="../imagenes/hospital.png" title="Inicio" class="image2" draggable="false"/></a>
             <h1>Imágenes del centro</h1>
-          </header>
-          <?php require_once("menuimagenes.php")?>
+        </header>
+        <?php 
+            session_start();
+            if($_SESSION['dni_usuario']){
+                require_once("menuimagenes-cerrar.php");
+                if(isset($_POST['logout'])) {
+                    session_destroy();
+                    header("Location: inicio_sesion.php");
+                    exit();
+                }
+            } else {
+                    require("menuimagenes.php");
+                }
+        ?>

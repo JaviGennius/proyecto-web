@@ -66,6 +66,11 @@
     </main>
 <script src="../js/chatb.js"></script>
 <?php 
-    require("_footer.php");
+session_start();
+    if($_SESSION['dni_usuario']){
+        require_once("_footer-cerrar.php");
+    }else {
+            require("_footer.php");
+    }
     require("_contacto-depart.php");
 ?>
