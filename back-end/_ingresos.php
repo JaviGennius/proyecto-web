@@ -21,7 +21,7 @@
 
             $stmt->bind_param("s", $_SESSION['dni_usuario']);
             $stmt->execute();
-             $result = $stmt->get_result();  // Fixed method name from fechObject() to get_result()
+            $result = $stmt->get_result();
 
             while($row = $result->fetch_assoc()) { 
                 echo "<li class='lista'> Ingreso: ";
