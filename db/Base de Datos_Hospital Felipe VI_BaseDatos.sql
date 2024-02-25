@@ -78,6 +78,11 @@ Create TABLE Salas (
 	ID_Departamento int
 );
 
+Create Table Imagenes_centro (
+	ID_imagen int auto_increment PRIMARY KEY,
+    Imagen_centro longblob
+    );
+    
 /*Claves Ajenas*/
 
 /*Ingresos:*/
@@ -264,3 +269,14 @@ INSERT INTO Salas VALUES (1,"104", "114","118",'1');
 INSERT INTO Salas VALUES (2,"101","111","115",'2');
 INSERT INTO Salas VALUES (3,"102","112","116",'4');
 INSERT INTO Salas VALUES (4,"103","113","117",'3');
+
+
+INSERT INTO Imagenes_centro VALUES (1, '/imagenes/hospitalslicer.png');
+INSERT INTO Imagenes_centro VALUES (2, '/imagenes/saladeingresos.png');
+INSERT INTO Imagenes_centro VALUES (3, '/imagenes/salaespera.png');
+INSERT INTO Imagenes_centro VALUES (4, '/imagenes/quirofano.png');
+INSERT INTO Imagenes_centro VALUES (5, '/imagenes/personal.png');
+INSERT INTO Imagenes_centro VALUES (6, '/imagenes/entradahsopital.png');
+INSERT INTO Imagenes_centro VALUES (7, '/imagenes/salaoncologia.png');
+INSERT INTO Imagenes_centro VALUES (8, '/imagenes/salacardiologia.png');
+INSERT INTO Imagenes_centro VALUES (9, '/imagenes/parking.png');
