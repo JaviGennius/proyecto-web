@@ -1,5 +1,5 @@
 <?php
-    $titulo = "Neurologia";
+    $titulo = "Oncologia";
 ?>
 <?php require("initdb.php");
     $consulta2 = "SELECT Nombre_servicio FROM servicios INNER JOIN departamentos ON departamentos.ID_departamento = servicios.ID_departamento WHERE Nombre_departamento = '$titulo';";
@@ -8,7 +8,7 @@
     $guardar3 = $con -> query($consulta3);
 
 ?>
-<?php require("_header-neuro.php");?>
+<?php require("_header-onco.php");?>
 <main>
     <section class="descripcion">
         <h3 class="h3">Descripción</h3>
@@ -40,32 +40,30 @@
     <h3 class="h3">Nuestros profesionales</h3>
     <div class="cardiologos">
         <div class="c1">
-            <img src="../imagenes/doctor_1.jpg" draggable="false" onmouseover="flip10()" onmouseout="flipout10()" id="neurologo1"/>
-            <p>Dr. Fran Gonzalez</td><br>Trastornos neurológicos</p>
-
+            <img src="../imagenes/c21.png" draggable="false" onmouseover="flip4()" onmouseout="flipout4()" id="oncologo1">
+            <p>Dr. Nicolás Urioitia<br>Quimioterapia</p>          
         </div>
         <div class="c2">
-            <img src="../imagenes/doctor_2.jpeg" draggable="false" onmouseover="flip11()" onmouseout="flipout11()" id="neurologo2">
-            <p>Dr. Fernando Alonso<br>Accidentes cerebrovasculares</p>
+            <img src="../imagenes/c18.jpg" draggable="false" onmouseover="flip5()" onmouseout="flipout5()" id="oncologo2">
+            <p>Dr. Paco Urrutia<br>Cualquier tipo de cáncer</p>
         </div>
         <div class="c3">
-            <img src="../imagenes/doctor_3.jpeg" draggable="false" onmouseover="flip23()" onmouseout="flipout23()" id="neurologo4">
-            <p>Dr. Antonio Herrero <br>Neurología general</p>
+            <img src="../imagenes/c19.jpg" draggable="false" id="oncologo4" onmouseover="flip17()" onmouseout="flipout17()">
+            <p>Dr. Javier Espada<br>Terapia hormonal</p>
         </div>
         <div class="c4">
-            <img src="../imagenes/c9.jpg" draggable="false" onmouseover="flip24()" onmouseout="flipout24()" id="neurologo5">
-            <p>Dra. Ana Sánchez<br>Epilepsia</p>
+            <img src="../imagenes/c17.jpg" draggable="false" id="oncologo5" onmouseover="flip18()" onmouseout="flipout18()">
+            <p>Dra. Alba <br>Terapia biológica</p>
         </div>
         <div class="c5">
-            <img src="../imagenes/c7.jpg" draggable="false" onmouseover="flip25()" onmouseout="flipout25()" id="neurologo6">
-            <p>Dr. Carlos Rodríguez<br>Demencia</p>
+            <img src="../imagenes/c22.jpeg" draggable="false" id="oncologo6" onmouseover="flip19()" onmouseout="flipout19()"/>
+            <p>Dr. Mikel Oyarzabal<br>Oncología de radiación</p>
         </div>
         <div class="c6"> 
-            <img src="../imagenes/c10.jpg" draggable="false" onmouseover="flip12()" onmouseout="flipout12()" id="neurologo3">
-            <p>Dra. Carla Fernández<br>Parkinson</p>
-        </div>
-    </div><br><br>
-</main>
+            <img src="../imagenes/c23.jpg" draggable="false" onmouseover="flip6()" onmouseout="flipout6()" id="oncologo3">
+            <p>Dr. David Almendra<br>Cáncer en adultos</p>
+        </div><br><br>
+    </main>
 <script src="../js/chatb.js"></script>
 <?php 
     require("_footer.php");
