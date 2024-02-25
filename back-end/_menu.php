@@ -17,7 +17,7 @@
                     <ul class="sumenu">
                         <li><a href="/back-end/calculadora.php">Calculadora</a></li>
                         <li><a href="/back-end/horarios.php">Horarios y Ubicación</a></li>
-                        <li><a href="#">Imagenes del Centro</a></li>
+                        <li><a href="/back-end/imagenescentro.php">Imagenes del Centro</a></li>
                     </ul>
                 </li>
                 <li><a href="/back-end/inicio_sesion.php">Portal del Paciente</a></li>
