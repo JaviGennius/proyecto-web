@@ -18,7 +18,7 @@ if(isset($_POST['logout'])) {
                 $stmt->execute();
                 $result = $stmt->get_result(); 
                 while ($row = $result->fetch_assoc()) { 
-                 echo "<div class='informacion'>";
+                echo "<div class='informacion'>";
                 echo"<div>";
                 echo "<img id='foto' src='" . $row['Foto_usuario'] . "' class='perfil' draggable='false'>";
                 echo"</div>";

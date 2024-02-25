@@ -12,6 +12,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
     }
 
@@ -37,7 +38,10 @@
 
     .navegador ul li a:hover
     {
-        background:rgb(93, 9, 10);
+        transition: all 0.5s;
+        color: #000000;
+        background:#d10002;
+        text-decoration: underline 2px;
     }
 
     .navegador ul li ul{
