@@ -7,7 +7,7 @@
                 <li><a href="/back-end/horarios.php">Información</a></li>
                 <li><a href="/back-end/index.php">Inicio</li></a>
                 <li><a href="/back-end/inicio_sesion.php">Portal del Paciente</a></li>
-                <li><a href="#">Imagenes del centro</a></li>
+                <li><a href="/back-end/imagenescentro.php">Imagenes del centro</a></li>
             </ul>
         </div>
         <div class="contenedor">
