@@ -1,3 +1,10 @@
+<?php session_start();
+if(isset($_POST['logout'])) {
+    session_destroy();
+    header("Location: inicio_sesion.php");
+    exit();
+}
+?>
 <div class="carrusel">
             <?php 
                 session_start();
@@ -15,6 +22,12 @@
                 echo"<div>";
                 echo "<img id='foto' src='" . $row['Foto_usuario'] . "' class='perfil' draggable='false'>";
                 echo"</div>";
+                echo"<br>";
+                echo "<form method='post'>
+                    <button name='logout' class='boton_cerrar'>Cerrar Sesión</button>
+                    <button name='edit' class='boton_cerrar'>Editar Perfil</button>
+                </form> ";
+                echo "<br>";
                     echo "<h4>" . $row['Nombre_paciente'] . " " . $row['Primer_apellido_paciente'] . " " . $row['Segundo_apellido_paciente'] . "</h4>";
                     echo "<h5> Información Personal</h5>";
                         echo "<p> Fecha Nacimiento: " . $row['Fecha_nacimiento'] . "</p>";

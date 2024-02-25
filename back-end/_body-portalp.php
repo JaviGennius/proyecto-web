@@ -32,6 +32,6 @@
             </div>
             <article class="article2">
                 <img src="../imagenes/corazon2.jpg">
-                <a href="../back-end/inicio_sesion.php"><img src="../imagenes/globo.png" title="Cerrar Sesión" draggable="false"></a>
+                <a href="https://www.who.int/es"><img src="../imagenes/globo.png" title="Página de la OMS" draggable="false"></a>
             </article>
             <?php require("_informacion_paciente.php") ?>

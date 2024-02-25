@@ -177,3 +177,9 @@ hr{
     height: 2px;
 
 }
+button{
+    background-color: #fff;
+    color: #d10002;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+}
