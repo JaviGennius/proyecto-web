@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
     .navegador{
         position:absolute;
         width: 100%;
@@ -251,6 +250,7 @@
    margin-top: 50px;
    text-align: center;
    justify-content: center;
+   margin-right: 100px;
 }
 
 
