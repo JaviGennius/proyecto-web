@@ -1,5 +1,7 @@
 <?php
     $titulo = "Imagenes del centro";
+    $consulta3 = "SELECT Imagen_centro, Title FROM imagenes_centro;";
+    $guardar2 = $con -> query($consulta3);
 ?>
 <?php require("_header-imagenes.php");?>
 <div class="informacion">
@@ -18,15 +20,11 @@
             <span onclick="cerrarImagen()">X</span>
         </div>
         <div class="galeria">
-           <img src="../imagenes/hospitalslicer.png" onclick="abririmagen(this.src)" title="Hospital">
-           <img src="../imagenes/saladeingresos.png" onclick="abririmagen(this.src)" title="Sala de ingresos">
-           <img src="../imagenes/salaespera.png" onclick="abririmagen(this.src)" title="Sala de espera">
-           <img src="../imagenes/quirofano.png" onclick="abririmagen(this.src)" title="Quirófano">
-           <img src="../imagenes/personal.png" onclick="abririmagen(this.src)" title="Personal">
-           <img src="../imagenes/entradahsopital.png" onclick="abririmagen(this.src)" title="Entrada del hospital">
-           <img src="../imagenes/salaoncologia.png" onclick="abririmagen(this.src)" title="Sala Oncología">
-           <img src="../imagenes/salacardiologia.png" onclick="abririmagen(this.src)" title="Sala cardiología">
-           <img src="../imagenes/parking.png" onclick="abririmagen(this.src)" title="Parking">
+        <?php
+            while($row2 = $guardar2->fetch_assoc()) {
+                echo "<img src=' . $row2['Imagen_centro'] . ' onclick='abririmagen(this.src)' title='".$row2['Title']."'>";
+            }
+        ?>
         </div>
 <?php 
     require("_footer.php");
