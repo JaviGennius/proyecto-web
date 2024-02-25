@@ -205,7 +205,9 @@
     height: 100%;
     display: flex;
 }
-
+h1, h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 /*Galeria de imagenes*/
 .galeria{
     width: 80%;
