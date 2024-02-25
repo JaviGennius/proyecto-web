@@ -9,7 +9,7 @@
     $guardar3 = $con -> query($consulta3);
     
 ?>
-<?php require("_header-cardio.php");?>
+<?php require("_header-onco.php");?>
 <main>
     <section class="descripcion">
         <h3 class="h3">Descripción</h3>
