@@ -6,7 +6,8 @@
     $guardar2 = $con -> query($consulta2);
     $consulta3 = "SELECT Descripcion_departamento FROM departamentos WHERE Nombre_departamento = '$titulo';";
     $guardar3 = $con -> query($consulta3);
-
+    $consulta5 = "SELECT * FROM sanitarios INNER JOIN departamentos ON departamentos.ID_departamento = sanitarios.ID_departamento WHERE Nombre_departamento = '$titulo';";
+    $guardar5 = $con -> query($consulta5);
 ?>
 <?php require("_header-neuro.php");?>
 <main>

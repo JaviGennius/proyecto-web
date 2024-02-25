@@ -4,9 +4,10 @@
 <?php require("initdb.php");
     $consulta2 = "SELECT Nombre_servicio FROM servicios INNER JOIN departamentos ON departamentos.ID_departamento = servicios.ID_departamento WHERE Nombre_departamento = '$titulo';";
     $guardar2 = $con -> query($consulta2);
+    var_dump($consulta3);
     $consulta3 = "SELECT Descripcion_departamento FROM departamentos WHERE Nombre_departamento = '$titulo';";
     $guardar3 = $con -> query($consulta3);
-
+    
 ?>
 <?php require("_header-cardio.php");?>
 <main>
