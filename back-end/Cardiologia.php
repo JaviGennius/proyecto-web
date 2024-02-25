@@ -1,5 +1,5 @@
 <?php
-    $titulo = "Oncologia";
+    $titulo = "Cardiologia";
 ?>
 <?php require("initdb.php");
     $consulta2 = "SELECT Nombre_servicio FROM servicios INNER JOIN departamentos ON departamentos.ID_departamento = servicios.ID_departamento WHERE Nombre_departamento = '$titulo';";
@@ -39,30 +39,32 @@
     </details>
     <h3 class="h3">Nuestros profesionales</h3>
     <div class="cardiologos">
-        <div class="c1">
-            <img src="../imagenes/c21.png" draggable="false" onmouseover="flip4()" onmouseout="flipout4()" id="oncologo1">
-            <p>Dr. Nicolás Urioitia<br>Quimioterapia</p>          
+    <div class="c1">
+                <img src="../imagenes/cardiolog1.jpg" draggable="false" onmouseover="flip()" onmouseout="flipout()" id="cardiologo1" draggable="false">
+                <P>Dr. Fernando Alonso<br> Accidentes cardiovasculares</P>
+            </div>
+            <div class="c2">
+                <img src="../imagenes/c3.jpg" draggable="false" onmouseover="flip2()" onmouseout="flipout2()" id="cardiologo2">
+                <p>Dra. Carla Fernández<br>Medicina vascular</p>
+            </div>
+            <div class="c3">
+                <img src="../imagenes/c2.jpg" draggable="false" id="cardiologo4" onmouseover="flip13()" onmouseout="flipout13()">
+                <p>Dr. Antonio Herrero <br>Cardiología general</p> 
+            </div>
+            <div class="c4">
+                <img src="../imagenes/c4.png" draggable="false" id="cardiologo5" onmouseover="flip14()" onmouseout="flipout14()">
+                <p>Dra. Ana Sánchez<br>Cardiopatía congénita</p>
+            </div>
+            <div class="c5">
+                <img src="../imagenes/c5.jpeg" draggable="false" id="cardiologo6" onmouseover="flip15()" onmouseout="flipout15()">
+                <p>Dr. Carlos Rodríguez<br>Enfermedad vascular periférica</p>
+            </div>
+            <div class="c6">
+                <img src="../imagenes/c6.jpg" draggable="false" onmouseover="flip3()" onmouseout="flipout3()" id="cardiologo3">
+                <p>Dr. José Pérez<br>Insuficiencia cardíaca</p>
+            </div>
         </div>
-        <div class="c2">
-            <img src="../imagenes/c18.jpg" draggable="false" onmouseover="flip5()" onmouseout="flipout5()" id="oncologo2">
-            <p>Dr. Paco Urrutia<br>Cualquier tipo de cáncer</p>
-        </div>
-        <div class="c3">
-            <img src="../imagenes/c19.jpg" draggable="false" id="oncologo4" onmouseover="flip17()" onmouseout="flipout17()">
-            <p>Dr. Javier Espada<br>Terapia hormonal</p>
-        </div>
-        <div class="c4">
-            <img src="../imagenes/c17.jpg" draggable="false" id="oncologo5" onmouseover="flip18()" onmouseout="flipout18()">
-            <p>Dra. Alba <br>Terapia biológica</p>
-        </div>
-        <div class="c5">
-            <img src="../imagenes/c22.jpeg" draggable="false" id="oncologo6" onmouseover="flip19()" onmouseout="flipout19()"/>
-            <p>Dr. Mikel Oyarzabal<br>Oncología de radiación</p>
-        </div>
-        <div class="c6"> 
-            <img src="../imagenes/c23.jpg" draggable="false" onmouseover="flip6()" onmouseout="flipout6()" id="oncologo3">
-            <p>Dr. David Almendra<br>Cáncer en adultos</p>
-        </div><br><br>
+        <br><br>
     </main>
 <script src="../js/chatb.js"></script>
 <?php 

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <?php
-    $titulo = 'Oncologia';
+    $titulo = 'Cardiologia';
     $consulta4 = "SELECT Nombre_departamento FROM departamentos WHERE Nombre_departamento = '$titulo';";
     $guardar4 = $con -> query($consulta4);
 ?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Departamento de Oncología</title>
+    <title>Departamento de Cardiología</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet"href="../css/departamentos.css">
     <link rel="icon" type="image/png" href="../imagenes/madrid.png"/>
