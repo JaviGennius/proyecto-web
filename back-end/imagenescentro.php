@@ -1,4 +1,5 @@
 <?php
+    require("initdb.php");
     $titulo = "Imagenes del centro";
     $consulta3 = "SELECT Imagen_centro, Title FROM imagenes_centro;";
     $guardar2 = $con -> query($consulta3);
@@ -22,10 +23,11 @@
         <div class="galeria">
         <?php
             while($row2 = $guardar2->fetch_assoc()) {
-                echo "<img src=' . $row2['Imagen_centro'] . ' onclick='abririmagen(this.src)' title='".$row2['Title']."'>";
+                echo "<img src='" . $row2['Imagen_centro'] . "' onclick='abririmagen(this.src)' title='" . $row2['Title'] . "'>";
             }
         ?>
         </div>
+        <script src="../js/imagenescentro.js"></script>
 <?php 
     require("_footer.php");
     require("_contacto-hospital.php");
