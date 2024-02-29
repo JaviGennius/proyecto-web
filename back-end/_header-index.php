@@ -14,19 +14,5 @@
 <header>
         <img src="../imagenes/hospital.png" class="imagenhospital" draggable="false">
     </header>
-    <?php
-    session_start();
-    if($_SESSION['dni_usuario']){
-        require_once("_menu-cerrar.php");
-        if(isset($_POST['logout'])) {
-            session_destroy();
-            header("Location: inicio_sesion.php");
-            exit();
-            }
-        } else {
-            
-            require_once("_menu.php");
-        }
-?>
-
+    <?php require_once("_menu.php"); ?>
     <?php require_once("_reloj-index.php")?>

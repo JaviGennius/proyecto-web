@@ -1,3 +1,10 @@
+<?php
+session_start();
+require("initdb.php");
+
+$consulta = "SELECT Nombre_departamento, ID_departamento FROM departamentos;";
+$guardar = $con->query($consulta);
+?>
 <body>
     <header>
     <video autoplay muted preload loop>
@@ -18,13 +25,13 @@
                         <ul>
                             <li class="pagina"><a href="/back-end/index.php">Inicio</a></li>
                             <li class="pagina"><a href="/back-end/calculadora.php">Calculadora</a></li>            
-                            <li class="pagina"><a href="/back-end/Cardiologia.php">Cardiología</a></li>
                             <li class="pagina"><a href="/back-end/portal_paciente.php">Portal del Paciente</a></li>
                             <li class="pagina"><a href="#">Formulario Registro</a></li>
                             <li class="pagina"><a href="/back-end/horarios.php">Horarios y Ubicación</a></li>
-                            <li class="pagina"><a href="/back-end/Neurologia.php">Neurología</a></li>
-                            <li class="pagina"><a href="/back-end/Traumatologia.php">Traumatología</a></li>
-                            <li class="pagina"><a href="/back-end/Traumatologia.php">Oncología</a></li>
+                            <?php while ($row = $guardar->fetch_assoc()) {
+                            echo "<li class='pagina'><a href='/back-end/departamentos.php?ID_departamento=" . $row['ID_departamento'] . "'>" . $row['Nombre_departamento'] . "</a></li>";
+                            }
+                            ?>
                             <li class="pagina"><a href="/back-end/imagenescentro.php">Imagenes del Centro</a></li>
                         </ul>
                     </div>

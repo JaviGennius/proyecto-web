@@ -198,7 +198,19 @@
         }
     }
     
-     
+    nav button {
+        background: #d10002;
+      border: 0px;
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: white;
+      font-size: medium;
+    }
+    nav button:hover{
+        text-decoration: underline 2px;
+        transition: all 0.7s;
+        color: #000000;
+    }
+
     /*Imagen Comunidad de Madrid*/
 .hospital {
     width: 300px;

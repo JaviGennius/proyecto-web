@@ -1,20 +1,26 @@
-<?php
-    $titulo = "Neurologia";
-?>
 <?php require("initdb.php");
-    $consulta2 = "SELECT Nombre_servicio FROM servicios INNER JOIN departamentos ON departamentos.ID_departamento = servicios.ID_departamento WHERE Nombre_departamento = '$titulo';";
-    $guardar2 = $con -> query($consulta2);
-    $consulta3 = "SELECT Descripcion_departamento FROM departamentos WHERE Nombre_departamento = '$titulo';";
-    $guardar3 = $con -> query($consulta3);
+    $ID_departamento = $_GET['ID_departamento'];
+    $consulta2 = "SELECT Nombre_servicio FROM servicios INNER JOIN departamentos ON departamentos.ID_departamento = servicios.ID_departamento WHERE departamentos.ID_departamento = ?;";
+    $stmt = $con->prepare($consulta2);
+    $stmt->bind_param("i", $ID_departamento);
+    $stmt->execute();
+    $result = $stmt->get_result(); 
+    
+    $consulta3 = "SELECT Descripcion_departamento FROM departamentos WHERE ID_departamento = ?;";
+    $stmt = $con->prepare($consulta3);
+    $stmt->bind_param("i", $ID_departamento);
+    $stmt->execute();
+    $result2 = $stmt->get_result(); 
+    
     $consulta5 = "SELECT * FROM sanitarios INNER JOIN departamentos ON departamentos.ID_departamento = sanitarios.ID_departamento WHERE Nombre_departamento = '$titulo';";
     $guardar5 = $con -> query($consulta5);
 ?>
-<?php require("_header-neuro.php");?>
+<?php require("_header-departamentos.php");?>
 <main>
     <section class="descripcion">
         <h3 class="h3">Descripción</h3>
         <?php
-            while($row3 = $guardar3->fetch_assoc()) {
+            while($row3 = $result2->fetch_assoc()) {
                 echo "<p>" . $row3['Descripcion_departamento'] . "</p>";
             }
         ?>
@@ -24,7 +30,7 @@
         <h3 class="h3">Servicios</h3>
         <ul>
             <?php
-                while($row2 = $guardar2->fetch_assoc()) {
+                while($row2 = $result->fetch_assoc()) {
                     echo "<li>" . $row2['Nombre_servicio'] . "</li>";
                 }
             ?>
@@ -70,11 +76,6 @@
 </main>
 <script src="../js/chatb.js"></script>
 <?php 
-session_start();
-    if($_SESSION['dni_usuario']){
-        require_once("_footer-cerrar.php");
-    }else {
-            require("_footer.php");
-    }
+    require("_footer.php");
     require("_contacto-depart.php");
 ?>
