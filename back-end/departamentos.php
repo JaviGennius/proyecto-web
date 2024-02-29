@@ -12,7 +12,7 @@
     $stmt->execute();
     $result2 = $stmt->get_result(); 
     
-    $consulta5 = "SELECT * FROM sanitarios INNER JOIN departamentos ON departamentos.ID_departamento = sanitarios.ID_departamento WHERE departamentos.ID_departamento = ?;";;
+    $consulta5 = "SELECT * FROM sanitarios INNER JOIN departamentos ON departamentos.ID_departamento = sanitarios.ID_departamento WHERE departamentos.ID_departamento = ? ORDER BY Posicion_sanitario;";;
     $stmt = $con->prepare($consulta5);
     $stmt->bind_param("i", $ID_departamento);
     $stmt->execute();

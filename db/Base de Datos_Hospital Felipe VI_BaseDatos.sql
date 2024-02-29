@@ -135,7 +135,7 @@ INSERT INTO Sanitarios (NIF_sanitario, Nombre_Sanitario, Tipo_sanitario, Especia
 /*cardiologia*/
 
 INSERT INTO Sanitarios (NIF_sanitario, Nombre_Sanitario, Tipo_sanitario, Especialidad, ID_departamento, Foto_sanitario,flip,Posicion_sanitario,ID_sanitario) VALUES
-    ('77777777G', 'Dr. Fernando Alonso', 'Medico', 'Accidentes cardiovasculares', '2', '/imagenes/cardiologo1.jpg',1,'c1','cardiologo1'),
+    ('77777777G', 'Dr. Fernando Alonso', 'Medico', 'Accidentes cardiovasculares', '2', '/imagenes/cardiolog1.jpg',1,'c1','cardiologo1'),
     ('99999999H', 'Dra. Carla Fernández', 'Enfermero', 'Medicina vascular', '2', '/imagenes/c3.jpg',2,'c2','cardiologo2'),
     ('10101010I', 'Dr. Antonio Herrero', 'Medico', 'Cardiología general', '2','/imagenes/c2.jpg',13,'c3','cardiologo4'),
     ('12121212J', 'Dra. Ana Sánchez', 'Medico', 'Cardiopatía congénita', '2','/imagenes/c4.png' ,14,'c4','cardiologo5'),
@@ -154,7 +154,7 @@ INSERT INTO Sanitarios (NIF_sanitario, Nombre_Sanitario, Tipo_sanitario, Especia
 /*neurologia*/
 
 INSERT INTO Sanitarios (NIF_sanitario, Nombre_Sanitario, Tipo_sanitario, Especialidad, ID_departamento, Foto_sanitario,flip,Posicion_sanitario,ID_sanitario) VALUES
-    ('21212121S', 'Dr. Fran Gonzalez', 'Medico', 'Trastornos neurológicos', '4','/imagenes/doctor_1.jpeg',10,'c1','neurologo1'),
+    ('21212121S', 'Dr. Fran Gonzalez', 'Medico', 'Trastornos neurológicos', '4','/imagenes/doctor_1.jpg',10,'c1','neurologo1'),
     ('23232323T', 'Dr. Fernando Alonso', 'Medico', 'Accidentes cerebrovasculares', '4','/imagenes/doctor_2.jpeg',11,'c2','neurologo2'),
     ('24242424U', 'Dr. Antonio Herrero', 'Auxiliar', 'Neurologia general', '4','/imagenes/doctor_3.jpeg',23,'c3','neurologo4'),
     ('25252525V', 'Dra. Ana Sánchez', 'Medico', 'Epilepsia', '4','/imagenes/c9.jpg',24,'c4','neurologo5'),
@@ -164,7 +164,7 @@ INSERT INTO Sanitarios (NIF_sanitario, Nombre_Sanitario, Tipo_sanitario, Especia
 
 /*Oncología:*/
 INSERT INTO Servicios VALUES (1,"Diagnóstico de cualquier tipo de cáncer","1");
-INSERT INTO Servicios VALUES (2,"Tratamiento, Evaluación y Administraenfermedadesdepartamentosción de quimioterapia","1");
+INSERT INTO Servicios VALUES (2,"Tratamiento, Evaluación y Administración de quimioterapia","1");
 INSERT INTO Servicios VALUES (3,"Tratamiento de terapia hormonal","1");
 INSERT INTO Servicios VALUES (4,"Diagnóstico de terapia biológica","1");
 INSERT INTO Servicios VALUES (5,"Diagnóstico de oncología de radiación","1");
