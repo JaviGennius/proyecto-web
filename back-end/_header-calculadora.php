@@ -14,5 +14,6 @@
 <body>
 <header>
         <img src="../imagenes/hospital.png" class="imagenhospital">
+        <h1>Calculadora de Calorias</h1>
     </header>
     <?php require_once("_menu.php"); ?>

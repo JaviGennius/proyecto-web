@@ -13,6 +13,7 @@
 <body>
 <header>
         <img src="../imagenes/hospital.png" class="imagenhospital" draggable="false">
+        <h1>Bienvenido al Hospital Felipe VI</h1>
     </header>
     <?php require_once("_menu.php"); ?>
     <?php require_once("_reloj-index.php")?>

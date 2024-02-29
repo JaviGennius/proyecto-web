@@ -12,7 +12,13 @@
             </section>
             <section class="noticias">
                         <a href="https://www.oncohealth.eu/"><img src="../imagenes/logo_oncosalud.png" class="enlaces" onmouseover="distorsion(this)" onmouseout="distorsion2()"/></a>
-                        <a href="html/formulario2.html"><img src="../imagenes/portalPaciente.png" class="enlaces" onmouseover="distorsion(this)" onmouseout="distorsion2()"/></a>
+                        <?php 
+                if ($_SESSION['dni_usuario']) {
+                    echo '<a href="/back-end/portal_paciente.php"><img src="../imagenes/portalPaciente.png" class="enlaces" onmouseover="distorsion(this)" onmouseout="distorsion2()"/></a>';
+                } else {
+                    echo '<a href="/back-end/inicio_sesion.php"><img src="../imagenes/portalPaciente.png" class="enlaces" onmouseover="distorsion(this)" onmouseout="distorsion2()"/></a>';
+                }
+                ?>
                         <a href="https://www.comunidad.madrid/servicios/salud"><img src="../imagenes/fotomadrid.png" class="enlaces" onmouseover="distorsion(this)" onmouseout="distorsion2()"/></a>
                         <a href="https://www.comunidad.madrid/servicios/salud/mi-carpeta-salud"><img src="../imagenes/salud_madrid.png" class="enlaces" onmouseover="distorsion(this)" onmouseout="distorsion2()"/></a>
             </section>

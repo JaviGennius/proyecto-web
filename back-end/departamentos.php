@@ -6,14 +6,17 @@
     $stmt->execute();
     $result = $stmt->get_result(); 
     
-    $consulta3 = "SELECT Descripcion_departamento FROM departamentos WHERE ID_departamento = ?;";
+    $consulta3 = "SELECT Descripcion_departamento FROM departamentos WHERE departamentos.ID_departamento = ?;";
     $stmt = $con->prepare($consulta3);
     $stmt->bind_param("i", $ID_departamento);
     $stmt->execute();
     $result2 = $stmt->get_result(); 
     
-    $consulta5 = "SELECT * FROM sanitarios INNER JOIN departamentos ON departamentos.ID_departamento = sanitarios.ID_departamento WHERE Nombre_departamento = '$titulo';";
-    $guardar5 = $con -> query($consulta5);
+    $consulta5 = "SELECT * FROM sanitarios INNER JOIN departamentos ON departamentos.ID_departamento = sanitarios.ID_departamento WHERE departamentos.ID_departamento = ?;";;
+    $stmt = $con->prepare($consulta5);
+    $stmt->bind_param("i", $ID_departamento);
+    $stmt->execute();
+    $result5 = $stmt->get_result(); 
 ?>
 <?php require("_header-departamentos.php");?>
 <main>
@@ -46,31 +49,17 @@
     </details>
     <h3 class="h3">Nuestros profesionales</h3>
     <div class="cardiologos">
-        <div class="c1">
-            <img src="../imagenes/doctor_1.jpg" draggable="false" onmouseover="flip10()" onmouseout="flipout10()" id="neurologo1"/>
-            <p>Dr. Fran Gonzalez</td><br>Trastornos neurológicos</p>
+    <?php
+        while ($row5 = $result5->fetch_assoc()) {
+            echo "<div class='" . $row5['Posicion_sanitario'] . "'>";
+                echo "<img src='" . $row5['Foto_sanitario'] . "' draggable='false' onmouseover='flip" . $row5['flip'] . "()' onmouseout='flipout" . $row5['flip'] . "()' id='" . $row5['ID_sanitario'] . "'>";
+                echo "<p>" . $row5['Nombre_Sanitario'] . "</p>";
+                echo "<p>" . $row5['Especialidad'] . "</p>";
+                echo "<p>" . $row5['Tipo_sanitario'] . "</p>";
+            echo "</div>";
+        }
+    ?>
 
-        </div>
-        <div class="c2">
-            <img src="../imagenes/doctor_2.jpeg" draggable="false" onmouseover="flip11()" onmouseout="flipout11()" id="neurologo2">
-            <p>Dr. Fernando Alonso<br>Accidentes cerebrovasculares</p>
-        </div>
-        <div class="c3">
-            <img src="../imagenes/doctor_3.jpeg" draggable="false" onmouseover="flip23()" onmouseout="flipout23()" id="neurologo4">
-            <p>Dr. Antonio Herrero <br>Neurología general</p>
-        </div>
-        <div class="c4">
-            <img src="../imagenes/c9.jpg" draggable="false" onmouseover="flip24()" onmouseout="flipout24()" id="neurologo5">
-            <p>Dra. Ana Sánchez<br>Epilepsia</p>
-        </div>
-        <div class="c5">
-            <img src="../imagenes/c7.jpg" draggable="false" onmouseover="flip25()" onmouseout="flipout25()" id="neurologo6">
-            <p>Dr. Carlos Rodríguez<br>Demencia</p>
-        </div>
-        <div class="c6"> 
-            <img src="../imagenes/c10.jpg" draggable="false" onmouseover="flip12()" onmouseout="flipout12()" id="neurologo3">
-            <p>Dra. Carla Fernández<br>Parkinson</p>
-        </div>
     </div>
     <br><br>
 </main>
