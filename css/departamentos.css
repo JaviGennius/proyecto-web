@@ -51,6 +51,7 @@ main .cardiologos{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-column: 1/3;
+    flex-wrap: wrap;
 }
 
 main > .cardiologos > .c1 > img, main > .cardiologos > .c2 > img,

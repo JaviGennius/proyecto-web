@@ -8,4 +8,4 @@
     <title><?= $titulo;?></title>
 </head>
 <body>
-    <a href="/back-end/index.php"><img src="../imagenes/hospital.png" draggable="false" title="Inicio"/></a>
+    <a href="/back-end/index.php"><img src="../imagenes/salud.png" draggable="false" title="Inicio"/></a>
