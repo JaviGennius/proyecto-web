@@ -1,6 +1,11 @@
-<?php $titulo="Inicio de Sesión";
-    require("_header-inicio_sesion.php");
+<?php 
+$titulo="Inicio de Sesión";
+$estilos = "<link rel='stylesheet' type='text/css' href='../css/formulario2.css'>";
+
+require("_header-formularios.php");
 ?>
+<body>
+    <a href="/back-end/index.php"><img src="../imagenes/salud.png" draggable="false" title="Inicio"/></a>
 <div class="container">
         <form id="formulario" method="post" action="/back-end/inicio_sesion.php">
             <label for="dni" class="dnil">DNI<font color="red">*</font></label>

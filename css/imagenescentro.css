@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
     .navegador{
         position:absolute;
         width: 100%;
@@ -13,6 +12,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
     }
 
@@ -39,7 +39,10 @@
 
     .navegador ul li a:hover
     {
-        background:rgb(93, 9, 10);
+        transition: all 0.5s;
+        color: #000000;
+        background:#d10002;
+        text-decoration: underline 2px;
     }
 
     .navegador ul li ul{
@@ -196,14 +199,28 @@
         }
     }
     
-     
+    nav button {
+        background: #d10002;
+      border: 0px;
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: white;
+      font-size: medium;
+    }
+    nav button:hover{
+        text-decoration: underline 2px;
+        transition: all 0.7s;
+        color: #000000;
+    }
+
     /*Imagen Comunidad de Madrid*/
 .hospital {
     width: 300px;
     height: 100%;
     display: flex;
 }
-
+h1, h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 /*Galeria de imagenes*/
 .galeria{
     width: 85%;
@@ -254,6 +271,7 @@
    margin-top: 50px;
    text-align: center;
    justify-content: center;
+   margin-right: 100px;
 }
 
 

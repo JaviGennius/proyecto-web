@@ -1,3 +1,10 @@
+<?php
+session_start();
+require("initdb.php");
+
+$consulta = "SELECT Nombre_departamento, ID_departamento FROM departamentos;";
+$guardar = $con->query($consulta);
+?>
 <body>
     <header>
     <video autoplay muted preload loop>
@@ -18,20 +25,20 @@
                         <ul>
                             <li class="pagina"><a href="/back-end/index.php">Inicio</a></li>
                             <li class="pagina"><a href="/back-end/calculadora.php">Calculadora</a></li>            
-                            <li class="pagina"><a href="#">Cardiología</a></li>
-                            <li class="pagina"><a href="/back-end/portal_paciente.php">Formulario Paciente</a></li>
+                            <li class="pagina"><a href="/back-end/portal_paciente.php">Portal del Paciente</a></li>
                             <li class="pagina"><a href="#">Formulario Registro</a></li>
                             <li class="pagina"><a href="/back-end/horarios.php">Horarios y Ubicación</a></li>
-                            <li class="pagina"><a href="/back-end/Neurologia.php">Neurología</a></li>
-                            <li class="pagina"><a href="/back-end/Traumatologia.php">Traumatología</a></li>
-                            <li class="pagina"><a href="#">Oncología</a></li>
-                            <li class="pagina"><a href="#">Imagenes del Centro</a></li>
+                            <?php while ($row = $guardar->fetch_assoc()) {
+                            echo "<li class='pagina'><a href='/back-end/departamentos.php?ID_departamento=" . $row['ID_departamento'] . "'>" . $row['Nombre_departamento'] . "</a></li>";
+                            }
+                            ?>
+                            <li class="pagina"><a href="/back-end/imagenescentro.php">Imagenes del Centro</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <article class="article2">
                 <img src="../imagenes/corazon2.jpg">
-                <a href="../back-end/inicio_sesion.php"><img src="../imagenes/globo.png" title="Cerrar Sesión" draggable="false"></a>
+                <a href="https://www.who.int/es"><img src="../imagenes/globo.png" title="Página de la OMS" draggable="false"></a>
             </article>
             <?php require("_informacion_paciente.php") ?>

@@ -145,7 +145,7 @@ ul.menu {
 	display: block;
 	padding: 15px 20px;
 	color: #ffffff;
-	font-family: 'Open sans';
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	text-decoration: none;
 }
 
@@ -168,7 +168,7 @@ ul.menu {
 	display: block;
 	padding: 15px;
 	color: #ffffff;
-	font-family: 'Open sans';
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	text-decoration: none;
     background-color: #d10002;
 }
@@ -176,6 +176,19 @@ ul.menu {
 .menu li:hover .sumenu{
 	visibility: visible;
 	opacity: 1;
+}
+
+.menu button {
+    background: #d10002;
+  border: 0px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+  font-size: medium;
+}
+.menu button:hover{
+    text-decoration: underline 2px;
+    transition: all 0.7s;
+    color: #000000;
 }
 /*Main*/
 
