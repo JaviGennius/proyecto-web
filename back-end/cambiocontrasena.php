@@ -1,7 +1,9 @@
-<?php $titulo="Cambio Contraseña"
+<?php $titulo="Cambio Contraseña";
+$script = "<link rel='stylesheet' type='text/css' href='../css/cambio.css'>";
+$estilos = "<script src='../js/cambio.js'></script>";
 ?>
 
-<?php require("_header-cambiocontrasena.php")?>
+<?php require("_header-formularios.php")?>
 <body>
     <a href="/back-end/inicio_sesion.php" id="cabecera"><img src="../imagenes/salud_contraseña.png" draggable="false" title="Volver Inicio Sesión Portal Paciente"/></a>
     <main class="container" id="container">

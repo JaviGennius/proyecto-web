@@ -1,7 +1,20 @@
-<?php 
-$titulo = "Calculadora";
+<?php
+    $titulo = "Calculadora";
+    $estilos = 
+    "<link href='../css/calculadora.css' rel='stylesheet'/>
+    <link href='../css/styles.css' rel='stylesheet'/>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.8.1/css/all.css' integrity='sha384'/>";
+    
+    $script = 
+    "<script src='https://kit.fontawesome.com/e3d46192fc.js' crossorigin='anonymous'></script> 
+    <script src='../js/calculadora.js'></script>";
 ?>
-<?php require("_header-calculadora.php");?>
+<?php require("_header.php")?>
+<header>
+        <img src="../imagenes/hospital.png" class="imagenhospital">
+        <h1>Calculadora de Calorias</h1>
+    </header>
+    <?php require("_menu.php"); ?>
     <main>
     <div class="enunciado">
     <h1 id="iniciocalc">Calculadora de Calorías Diarias</h1>	

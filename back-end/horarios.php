@@ -1,4 +1,11 @@
-<?php $titulo="Ubicación y Horarios"?>
+<?php 
+$titulo="Ubicación y Horarios";
+$estilos = "
+<link rel='stylesheet' href='../css/styles.css'/>
+<link rel='stylesheet' href='../css/ubicacion.css'/>
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.8.1/css/all.css' integrity='sha384'>";
+$script = "<script src='https://kit.fontawesome.com/e3d46192fc.js' crossorigin='anonymous'></script>";
+?>
 <?php require("initdb.php");
     $consulta3 = "SELECT Nombre_departamento, Horario FROM Departamentos;";
     $consulta2 = "SELECT Nombre_departamento, Sala_1, Sala_2, Sala_3 FROM Departamentos INNER JOIN Salas ON Salas.ID_departamento = Departamentos.ID_departamento;";
@@ -7,7 +14,12 @@
     $clase = 'dp2';
     $clase2 = 'dp2';
 ?>
-<?php require("_header-horarios.php") ?> 
+<?php require("_header.php") ?> 
+<header>
+        <img src="../imagenes/hospital.png" class="imagenhospital" draggable="false">
+        <h1>Horarios y Ubicación del Hospital Felipe VI</h1>
+    </header>
+    <?php require_once("_menu.php"); ?>
 <main>
         <div>
             <h1>Bienvenido al apartado de horarios y ubicación del Hospital Felipe VI.</h1>

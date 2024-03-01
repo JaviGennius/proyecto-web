@@ -1,17 +1,23 @@
 <?php
+    $estilos = "<link rel='stylesheet' type='text/css' href='../css/imagenescentro.css'>";
     require("initdb.php");
     $titulo = "Imagenes del centro";
     $consulta3 = "SELECT Imagen_centro, Title FROM imagenes_centro;";
     $guardar2 = $con -> query($consulta3);
 ?>
-<?php require("_header-imagenes.php");?>
+<?php require("_header.php");?>
+<header id="cabecera">
+            <a href="../index.html"><img src="../imagenes/hospital.png" title="Inicio" class="image2" draggable="false"/></a>
+            <h1>Imágenes del centro</h1>
+        </header>
+        <?php require("_menuimagenes.php"); ?>
 <div class="informacion">
             <h1>Explora el hospital Felipe VI a través de imágenes</h1>
             <br>
             <p>
             <h2>
                 En el Hospital Felipe VI, compartimos momentos que reflejan la dedicación y el cuidado en cada área, desde Oncología hasta espacios de bienestar. 
-               Sumérgete en la atmósfera única del hospital, donde cada imagen cuenta una historia de compromiso con la salud y el bienestar de nuestros pacientes.
+                Sumérgete en la atmósfera única del hospital, donde cada imagen cuenta una historia de compromiso con la salud y el bienestar de nuestros pacientes.
             </h2>
             </p>
         </div>

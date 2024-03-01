@@ -1,7 +1,20 @@
 <?php
     $titulo = "Página Inicio";
+    $estilos = 
+    "<link rel='stylesheet' href='../css/styles.css'/>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.8.1/css/all.css' integrity='sha384'>";
+    $script = 
+    "<script src='https://kit.fontawesome.com/e3d46192fc.js' crossorigin='anonymous'></script>
+    <script src='../js/reloj.js'></script>
+    <script src='../js/inicio.js'></script>";
 ?>
-<?php require("_header-index.php");?>    
+<?php require("_header.php");?>    
+<header>
+        <img src="../imagenes/hospital.png" class="imagenhospital" draggable="false">
+        <h1>Bienvenido al Hospital Felipe VI</h1>
+    </header>
+<?php require_once("_menu.php"); ?>
+<?php require_once("_reloj-index.php")?>
             <section class="articulo">
                 <img src="../imagenes/hospitalart.jpeg" class="hospitalart">
                 <div class="parrafo+h3">
