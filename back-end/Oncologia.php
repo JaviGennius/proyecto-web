@@ -1,10 +1,11 @@
 <?php
-    $titulo = "Oncologia";
+    $titulo = "Oncologia"; // Variable
 ?>
-<?php require("initdb.php");
+<?php require("initdb.php"); // Archivo de inicialización de la base de datos
+    // Consulta para obtener los nombres de los servicios relacionados con el departamento de Oncologia
     $consulta2 = "SELECT Nombre_servicio FROM servicios INNER JOIN departamentos ON departamentos.ID_departamento = servicios.ID_departamento WHERE Nombre_departamento = '$titulo';";
-    $guardar2 = $con -> query($consulta2);
-    $consulta3 = "SELECT Descripcion_departamento FROM departamentos WHERE Nombre_departamento = '$titulo';";
+    $guardar2 = $con -> query($consulta2); // Ejecuta la consulta
+    $consulta3 = "SELECT Descripcion_departamento FROM departamentos WHERE Nombre_departamento = '$titulo';";// Consulta para obtener la descripción del departamento de Oncologia
     $guardar3 = $con -> query($consulta3);
     
 ?>
@@ -12,6 +13,7 @@
 <main>
     <section class="descripcion">
         <h3 class="h3">Descripción</h3>
+        <!-- Muestra la descripción del departamento -->
         <?php
             while($row3 = $guardar3->fetch_assoc()) {
                 echo "<p>" . $row3['Descripcion_departamento'] . "</p>";
@@ -22,6 +24,7 @@
     <section class="servicios">
         <h3 class="h3">Servicios</h3>
         <ul>
+            <!-- Muestra la descripción de los sevicios -->
             <?php
                 while($row2 = $guardar2->fetch_assoc()) {
                     echo "<li>" . $row2['Nombre_servicio'] . "</li>";
