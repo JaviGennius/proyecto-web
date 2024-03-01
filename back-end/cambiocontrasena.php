@@ -3,7 +3,7 @@ $script = "<link rel='stylesheet' type='text/css' href='../css/cambio.css'>";
 $estilos = "<script src='../js/cambio.js'></script>";
 ?>
 
-<?php require("_header-formularios.php")?>
+<?php require("_header.php")?>
 <body>
     <a href="/back-end/inicio_sesion.php" id="cabecera"><img src="../imagenes/salud_contraseña.png" draggable="false" title="Volver Inicio Sesión Portal Paciente"/></a>
     <main class="container" id="container">

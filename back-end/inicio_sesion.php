@@ -2,7 +2,7 @@
 $titulo="Inicio de Sesión";
 $estilos = "<link rel='stylesheet' type='text/css' href='../css/formulario2.css'>";
 
-require("_header-formularios.php");
+require("_header.php");
 ?>
 <body>
     <a href="/back-end/index.php"><img src="../imagenes/salud.png" draggable="false" title="Inicio"/></a>

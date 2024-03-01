@@ -5,6 +5,7 @@ require("initdb.php");
 $consulta = "SELECT Nombre_departamento, ID_departamento FROM departamentos;";
 $guardar = $con->query($consulta);
 ?>
+<?php require("_header.php");?>
 <body>
     <header>
     <video autoplay muted preload loop>
