@@ -86,6 +86,12 @@ Create Table Imagenes_centro (
     Imagen_centro longblob,
     Title varchar(100)
     );
+
+CREATE TABLE chatbot (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	pregunta VARCHAR(150) NOT NULL,
+	respuesta VARCHAR(500) NOT NULL
+);
     
 /*Claves Ajenas*/
 
@@ -284,3 +290,21 @@ INSERT INTO Imagenes_centro VALUES (6, '/imagenes/entradahsopital.png','Entrada 
 INSERT INTO Imagenes_centro VALUES (7, '/imagenes/salaoncologia.png','Sala Oncología');
 INSERT INTO Imagenes_centro VALUES (8, '/imagenes/salacardiologia.png','Sala cardiólogia');
 INSERT INTO Imagenes_centro VALUES (9, '/imagenes/parking.png','Parking');
+
+
+
+/*chatbot*/
+INSERT INTO Chatbot (pregunta, respuesta) VALUES ('hola', 'Hola, ¿cómo estás?');
+INSERT INTO Chatbot (pregunta, respuesta) VALUES ('adios', 'Hasta luego, que tenga buen día.');
+INSERT INTO Chatbot (pregunta, respuesta) VALUES ('adiós', 'Hasta luego, que tenga buen día.');
+INSERT INTO Chatbot (pregunta, respuesta) VALUES ('gracias', 'De nada, estoy aquí para ayudarte.');
+INSERT INTO Chatbot (pregunta, respuesta) VALUES ('horarios', 'Los horarios de los diferentes departamentos del hospital son los siguientes:, Departamento de oncología: Lunes a viernes de 8:00 a 16:00., Departamento de neurología: Lunes a viernes de 7:00 a 16:00., Departamento de cardiología: Lunes a viernes de 9:00 a 15:30., Departamento de traumatología: Lunes a viernes de 9:00 a 17:00.');
+INSERT INTO Chatbot (pregunta, respuesta) VALUES ('horario', 'Los horarios de los diferentes departamentos del hospital son los siguientes:, Departamento de oncología: Lunes a viernes de 8:00 a 16:00., Departamento de neurología: Lunes a viernes de 7:00 a 16:00. Departamento de cardiología: Lunes a viernes de 9:00 a 15:30. Departamento de traumatología: Lunes a viernes de 9:00 a 17:00.');
+INSERT INTO Chatbot (pregunta, respuesta) VALUES ('ubicacion', 'Las ubicaciones de los diferentes departamentos del hospital son las siguientes:, Departamento de cardiología: Sala 101, 111 y 115., Departamento de neurología: Sala 102, 112 y 116., Departamento de traumatología: Sala 103, 113 y 117., Departamento de oncología: Sala 104, 114 y 118., Departamento de traumatología: Sala 105.');
+INSERT INTO Chatbot (pregunta, respuesta) VALUES ('ubicación', 'Las ubicaciones de los diferentes departamentos del hospital son las siguientes:, Departamento de cardiología: Sala 101, 111 y 115., Departamento de neurología: Sala 102, 112 y 116. Departamento de traumatología: Sala 103, 113 y 117., Departamento de oncología: Sala 104, 114 y 118., Departamento de traumatología: Sala 105.');
+INSERT INTO Chatbot (pregunta, respuesta) VALUES ('telefonos', 'Los contactos de los diferentes departamentos del hospital son los siguientes:, Departamento de oncología: Tel: +34 911 23 45 17., Departamento de cardiología: Tel: +34 911 23 45 67., Departamento de traumatología: Tel: +34 911 23 45 89., Departamento de neurología: Tel: +34 911 23 45 42.');
+INSERT INTO Chatbot (pregunta, respuesta) VALUES ('telefono', 'Los contactos de los diferentes departamentos del hospital son los siguientes:, Departamento de oncología: Tel: +34 911 23 45 17., Departamento de cardiología: Tel: +34 911 23 45 67., Departamento de traumatología: Tel: +34 911 23 45 89., Departamento de neurología: Tel: +34 911 23 45 42.');
+INSERT INTO Chatbot (pregunta, respuesta) VALUES ('teléfonos', 'Los contactos de los diferentes departamentos del hospital son los siguientes:, Departamento de oncología: Tel: +34 911 23 45 17., Departamento de cardiología: Tel: +34 911 23 45 67., Departamento de traumatología: Tel: +34 911 23 45 89., Departamento de neurología: Tel: +34 911 23 45 42.');
+INSERT INTO Chatbot (pregunta, respuesta) VALUES ('teléfono', 'Los contactos de los diferentes departamentos del hospital son los siguientes:, Departamento de oncología: Tel: +34 911 23 45 17., Departamento de cardiología: Tel: +34 911 23 45 67., Departamento de traumatología: Tel: +34 911 23 45 89., Departamento de neurología: Tel: +34 911 23 45 42.');
+INSERT INTO Chatbot (pregunta, respuesta) VALUES ('correos', 'Los contactos de los diferentes departamentos del hospital son los siguientes:, Departamento de oncología: Correo: oncologia@hospitalfelipeVI.org., Departamento de cardiología: Correo: cardiologia@hospitalfelipeVI.org., Departamento de traumatología: Correo: traumatologia@hospitalfelipeVI.org., Departamento de neurología: Correo: neurologia@hospitalfelipeVI.org., Hospital: Correo: hospitalfelipevi@madrid.org.');
+INSERT INTO Chatbot (pregunta, respuesta) VALUES ('correo', 'Los contactos de los diferentes departamentos del hospital son los siguientes:, Departamento de oncología: Correo: oncologia@hospitalfelipeVI.org., Departamento de cardiología: Correo: cardiologia@hospitalfelipeVI.org., Departamento de traumatología: Correo: traumatologia@hospitalfelipeVI.org., Departamento de neurología: Correo: neurologia@hospitalfelipeVI.org., Hospital: Correo: hospitalfelipevi@madrid.org.');
