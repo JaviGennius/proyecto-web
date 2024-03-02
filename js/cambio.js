@@ -14,7 +14,7 @@ function validarDNI() {
 function validarContrasena() {
     let contrasena=document.getElementById("contrasena");
     let contrasenaValor = contrasena.value.trim();
-    let expresionRegular = /^(?=.*\d)(?=.*[a-zA-Z]){3,16}$/;
+    let expresionRegular = /^(?=.*\d)(?=.*[a-zA-Z]).{3,16}$/;
 
     if (expresionRegular.test(contrasena) || contrasenaValor === "") {
         contrasena.style.borderColor = "red";
@@ -50,8 +50,6 @@ function validarFormulario() {
         document.getElementById("formulario").style.display = "none";
         document.getElementById("cabecera").style.display = "none";
         document.getElementById("cargar").style.display = "block";
-    } else {
-        alert("Por favor, complete todos los campos correctamente.");
     }
 }
 

@@ -22,10 +22,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 header('Location: /back-end/portal_paciente.php');
                 exit();
             } else {
-                $error = "Contraseña incorrecta";
+                $error = "La contraseña es incorrecta";
             }
         } else {
-            $error = "Usuario no encontrado";
+            $error = "El usuario no existe";
         }
     }
 }
@@ -33,14 +33,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 mysqli_close($con);
 ?>
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio de Sesión</title>
-    <link rel="stylesheet" type="text/css" href="../css/formulario2.css">
-</head>
+<?php 
+$titulo="Inicio de Sesión";
+$estilos = "<link rel='stylesheet' type='text/css' href='../css/formulario2.css'>";
+
+require("_header.php");
+?>
 <body>
     <a href="/back-end/index.php"><img src="../imagenes/salud.png" draggable="false" title="Inicio"/></a>
     <div class="container">

@@ -141,7 +141,7 @@ function validarContrasena() {
     let error_contrasena=document.getElementById("error_contrasena");
     
     let contrasenaValor = contrasena.value.trim();
-    let contraseña_correcta = /^(?=.*\d)(?=.*[a-zA-Z]).{1,16}$/;
+    let contraseña_correcta = /^(?=.*\d)(?=.*[a-zA-Z]).{3,16}$/;
 
     if (!contraseña_correcta.test(contrasenaValor) || contrasenaValor === "") {
         error_contrasena.style.display = "block";
