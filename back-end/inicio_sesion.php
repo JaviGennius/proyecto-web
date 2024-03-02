@@ -2,7 +2,7 @@
 session_start();
 require("initdb.php");
 
-$error = ""; // Inicializar la variable de error
+$error = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!isset($_POST['dni']) || !isset($_POST['contrasena'])) {
