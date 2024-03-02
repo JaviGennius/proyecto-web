@@ -25,13 +25,13 @@ function validarContrasena() {
     }
 }
 
-function validarFormulario() {
-    let esDNI = validarDNI();
-    let esContrasena = validarContrasena();
-    if (!esDNI && !esContrasena) {
-        alert("Por favor, complete todos los campos correctamente.");
-    }
-}
+// function validarFormulario() {
+//     let esDNI = validarDNI();
+//     let esContrasena = validarContrasena();
+//     if (!esDNI && !esContrasena) {
+//         alert("Por favor, complete todos los campos correctamente.");
+//     }
+// }
 
 document.getElementById("dni").addEventListener("blur", validarDNI);
 document.getElementById("contraseña").addEventListener("blur", validarContrasena);
