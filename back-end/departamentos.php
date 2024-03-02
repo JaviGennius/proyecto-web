@@ -47,3 +47,52 @@
 <main>
     <section class="descripcion">
         <h3 class="h3">Descripción</h3>
+        <?php
+            while($row3 = $result2->fetch_assoc()) {
+                echo "<p>" . $row3['Descripcion_departamento'] . "</p>";
+            }
+        ?>
+    </section>
+
+    <section class="servicios">
+        <h3 class="h3">Servicios</h3>
+        <ul>
+            <?php
+                while($row2 = $result->fetch_assoc()) {
+                    echo "<li>" . $row2['Nombre_servicio'] . "</li>";
+                }
+            ?>
+        </ul>
+    </section>
+
+    <details open class="chatbotrobot">
+        <summary><img src="../imagenes/CBOT.png" class="imagenchatbot" onclick="openchatbot()"/></summary>
+        <div class="chatbot" id="chat-contenedor">
+            <div id="chat-mensaje"></div>
+            <input type="text" id="usuario-input" placeholder="Escribe un mensaje...">
+            <button id="boton-enviar" onclick="sendMessage()">Enviar</button>
+        </div>
+    </details>
+    
+    <h3 class="h3">Nuestros profesionales</h3>
+    <div class="cardiologos">
+    <?php
+        while ($row5 = $result5->fetch_assoc()) {
+            echo "<div class='" . $row5['Posicion_sanitario'] . "'>";
+                echo "<img src='" . $row5['Foto_sanitario'] . "' draggable='false' onmouseover='flip" . $row5['flip'] . "()' onmouseout='flipout" . $row5['flip'] . "()' id='" . $row5['ID_sanitario'] . "'>";
+                echo "<p>" . $row5['Nombre_Sanitario'] . "</p>";
+                echo "<p>" . $row5['Especialidad'] . "</p>";
+                echo "<p>" . $row5['Tipo_sanitario'] . "</p>";
+            echo "</div>";
+        }
+    ?>
+
+    </div>
+    <br><br>
+</main>
+
+<script src="../js/chatb.js"></script>
+<?php 
+    require("_footer.php");
+    require("_contacto-depart.php");
+?>
