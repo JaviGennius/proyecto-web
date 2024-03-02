@@ -17,7 +17,7 @@ $(document).ready(function() {
 
       // iniciar el código ajax
       $.ajax({
-          url: 'message.php',
+          url: '_chatbot.php',
           type: 'POST',
           data: 'text=' + $value,
           success: function(result) {
