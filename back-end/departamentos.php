@@ -44,7 +44,6 @@
         <h1>Departamento de <?php echo $departamentoData['Nombre_departamento']; ?></h1>
     </header>
     <?php require_once("_menu.php");?>
-
 <main>
     <section class="descripcion">
         <h3 class="h3">Descripción</h3>
@@ -65,7 +64,6 @@
             ?>
         </ul>
     </section>
-
     <details open class="chatbotrobot">
         <summary><img src="../imagenes/CBOT.png" class="imagenchatbot" onclick="openchatbot()"/></summary>
         <div class="chatbot" id="chat-contenedor">
@@ -92,7 +90,6 @@
 </div>
 
     </details>
-    
     <h3 class="h3">Nuestros profesionales</h3>
     <div class="cardiologos">
     <?php
@@ -109,7 +106,6 @@
     </div>
     <br><br>
 </main>
-
 <script src="../js/chatb.js"></script>
 <?php 
     require("_footer.php");
