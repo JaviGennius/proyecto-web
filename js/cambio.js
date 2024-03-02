@@ -1,6 +1,6 @@
 function validarDNI() {
     let dni=document.getElementById("dni");
-    let dniValor = dni.value.trim();
+    let dniValor = dni.value.toUpperCase();
     let dni_correcto = /^[0-9]{8}[A-Za-z]$/;
     if (!dni_correcto.test(dniValor) || dniValor === "") {
         dni.style.borderColor = "red";
@@ -14,7 +14,7 @@ function validarDNI() {
 function validarContrasena() {
     let contrasena=document.getElementById("contrasena");
     let contrasenaValor = contrasena.value.trim();
-    let expresionRegular = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{3,16}$/;
+    let expresionRegular = /^(?=.*\d)(?=.*[a-zA-Z]){3,16}$/;
 
     if (expresionRegular.test(contrasena) || contrasenaValor === "") {
         contrasena.style.borderColor = "red";
@@ -50,7 +50,6 @@ function validarFormulario() {
         document.getElementById("formulario").style.display = "none";
         document.getElementById("cabecera").style.display = "none";
         document.getElementById("cargar").style.display = "block";
-        alert("Cambio de contraseña exitoso")
     } else {
         alert("Por favor, complete todos los campos correctamente.");
     }

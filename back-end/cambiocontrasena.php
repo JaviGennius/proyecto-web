@@ -36,7 +36,6 @@ $query = "UPDATE pacientes SET Cts_usuario = '$contrasena_hasheada' WHERE DNI_pa
 $resultado = mysqli_query($con, $query);
 
 if ($resultado) {
-
     header('Location: /back-end/inicio_sesion.php');
     exit();
 } else {

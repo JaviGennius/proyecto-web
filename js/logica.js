@@ -14,7 +14,7 @@ function validarContrasena() {
     let contrasena=document.getElementById("contraseña");
     
     let contrasenaValor = contrasena.value.trim();
-    let contraseña_correcta = /^(?=.*\d)(?=.*[a-zA-Z]).{1,16}$/;
+    let contraseña_correcta = /^(?=.*\d)(?=.*[a-zA-Z]).{3,16}$/;
 
     if (!contraseña_correcta.test(contrasenaValor) || contrasenaValor === "") {
         contrasena.style.borderColor = "red";
