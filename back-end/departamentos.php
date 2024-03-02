@@ -1,3 +1,4 @@
+<!-- https://www.youtube.com/watch?v=757WTYQxVmc&t=231s&ab_channel=MauricioSevillaBritto -->
 <?php
     $estilos = "<link rel='stylesheet' href='../css/styles.css'>
     <link rel='stylesheet' href='../css/departamentos.css'>
@@ -68,10 +69,28 @@
     <details open class="chatbotrobot">
         <summary><img src="../imagenes/CBOT.png" class="imagenchatbot" onclick="openchatbot()"/></summary>
         <div class="chatbot" id="chat-contenedor">
-            <div id="chat-mensaje"></div>
+            <!-- <div id="chat-mensaje"></div>
             <input type="text" id="usuario-input" placeholder="Escribe un mensaje...">
-            <button id="boton-enviar" onclick="sendMessage()">Enviar</button>
+            <button id="boton-enviar" onclick="sendMessage()">Enviar</button> -->
+            <div class="form" id="chat-mensaje">
+            <div class="bot-inbox inbox bot">
+                <div class="icon">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="msg-header">
+                    <p>Hola, ¿cómo puedo ayudarte?</p>
+                </div>
+            </div>
         </div>
+        <div class="typing-field">
+            <div class="input-data">
+                <input id="data" type="text" placeholder="Escribe algo aquí.." required>
+                <button id="send-btn">Enviar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
     </details>
     
     <h3 class="h3">Nuestros profesionales</h3>

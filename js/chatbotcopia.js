@@ -1,43 +1,4 @@
-/*https://youtu.be/nRF4HrUoAh4?si=9deMtFIWkZn4P6jK*/    /*https://stackoverflow.com/questions/12491182/how-to-send-user-data-using-sendmessage-function*/
-const chatMessages = document.getElementById('chat-mensaje');
-const userInput = document.getElementById('usuario-input');
-
-function sendMessage() {
-  const userMessage = userInput.value;
-  appendMessage('user', userMessage);
-  const botResponse = getBotResponse(userMessage);
-  appendMessage('bot', botResponse);
-  userInput.value = '';
-}
-
-function appendMessage(sender, message) {
-  const messageElement = document.createElement('div');
-  messageElement.classList.add(sender);
-  messageElement.textContent = message;
-  chatMessages.appendChild(messageElement);
-  chatMessages.scrollTop = chatMessages.scrollHeight;
-}
-
-function fetchBotResponse(userMessage) {
-  return fetch('bot_server.php', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ userMessage: userMessage }),
-  })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Error en la solicitud AJAX');
-      }
-      return response.json();
-    })
-    .then(data => {
-      return data.botResponse;
-    });
-}
-
-
+// https://www.youtube.com/watch?v=757WTYQxVmc&t=231s&ab_channel=MauricioSevillaBritto
 function openchatbot() {
   var chatbot = document.getElementById("chat-contenedor");
 
@@ -47,3 +8,22 @@ function openchatbot() {
       chatbot.style.display = "none";
   }
 }
+$(document).ready(function() {
+  $("#send-btn").on("click", function() {
+      $value = $("#data").val();
+      $msg = '<div class="user-inbox inbox user"><div class="msg-header"><p>Usuario: '+ $value + '</p></div></div>';
+      $(".form").append($msg);
+      $("#data").val('');
+
+      $.ajax({
+          url: 'message.php',
+          type: 'POST',
+          data: 'text=' + $value,
+          success: function(result) {
+              $replay = '<div class="bot-inbox inbox bot"><div class="icon"><i class="fas fa-user"></i></div><div class="msg-header"><p>Bot: ' + result + '</p></div></div>';
+              $(".form").append($replay);
+              $(".form").scrollTop($(".form")[0].scrollHeight);
+          }
+      });
+  });
+});
