@@ -30,8 +30,8 @@ if (isset($_POST['edit'])) {
                 echo"</div>";
                 echo"<br>";
                 echo "<form method='post'>
-                    <button name='logout' class='boton_cerrar'>Cerrar Sesión</button>
-                    <button name='edit' class='boton_cerrar'>Editar Perfil</button>
+                    <button name='logout' class='boton_cerrar' id='boton_cerrar'>Cerrar Sesión</button>
+                    <button name='edit' class='boton_cerrar' id='boton_cerrar'>Editar Perfil</button>
                 </form> ";
                 echo "<br>";
                     echo "<h4>" . $row['Nombre_paciente'] . " " . $row['Primer_apellido_paciente'] . " " . $row['Segundo_apellido_paciente'] . "</h4>";

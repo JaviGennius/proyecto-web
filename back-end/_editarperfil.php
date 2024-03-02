@@ -1,4 +1,6 @@
 <?php
+$estilos = "<link href='../css/edita.css' rel='stylesheet'/>";
+require("_header.php");
 session_start();
 require("initdb.php");
 
@@ -52,16 +54,17 @@ while ($row = $result->fetch_assoc()) {
     echo "<img id='foto' src='" . $row['Foto_usuario'] . "' class='perfil' draggable='false'><br>";
     echo "</div>";
     echo "<br>";
-    echo "<h4>" . $row['Nombre_paciente'] . $row['Primer_apellido_paciente'] . $row['Segundo_apellido_paciente'] . "</h4>";
+    echo "<h4>" . $row['Nombre_paciente'] ." " . $row['Primer_apellido_paciente'] . " " . $row['Segundo_apellido_paciente'] . "</h4>";
     echo "<h5> Información Personal</h5>";
-    echo "<label for='fecha'>Fecha de Nacimiento:</label>";
-    echo "<input name='fecha' type='date' value='" . $row['Fecha_nacimiento'] ."'><br>";
+    echo "<p><label for='fecha'>Fecha de Nacimiento:</label>";
+    echo "<input name='fecha' type='date' value='" . $row['Fecha_nacimiento'] ."'</p><br>";
     echo "<h5>Información de Contacto:</h5>";
-    echo "<label for='tel'>Teléfono:</label>";
-    echo "<input name='tel' type='text' value='" . $row['Telefono_paciente'] . "'><br>";
-    echo "<label for='correo'>Correo:</label>";
-    echo "<input name='correo' type='email' value='" . $row['Correo_paciente'] ."'><br>";
+    echo "<p><label for='tel'>Teléfono:</label>";
+    echo "<input name='tel' type='text' value='" . $row['Telefono_paciente'] . "'</p><br>";
+    echo "<p><label for='correo'>Correo:</label>";
+    echo "<input name='correo' type='email' value='" . $row['Correo_paciente'] ."'</p><br><br>";
     echo "<input type='submit' value='Guardar Cambios'>";
+    echo "<a href='portal_paciente.php'><input type='button' name='volver' value='Volver Sin Cambios'></a>";
     echo "</form>";
     echo "</div>";
 }
@@ -69,3 +72,5 @@ while ($row = $result->fetch_assoc()) {
 $stmt->close();
 $con->close();
 ?>
+
+
