@@ -5,7 +5,8 @@
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.8.1/css/all.css' integrity='sha384'>";
     $script = "
     <script src='../js/flipimg.js'></script>
-    <script src='https://kit.fontawesome.com/e3d46192fc.js' crossorigin='anonymous'></script>";
+    <script src='https://kit.fontawesome.com/e3d46192fc.js' crossorigin='anonymous'></script>
+    <script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>";
 
     require("initdb.php");
     $ID_departamento = $_GET['ID_departamento'];
@@ -70,7 +71,8 @@
             <!-- <div id="chat-mensaje"></div>
             <input type="text" id="usuario-input" placeholder="Escribe un mensaje...">
             <button id="boton-enviar" onclick="sendMessage()">Enviar</button> -->
-            <div class="form" id="chat-mensaje">
+
+        <div class="form" id="chat-mensaje">
             <div class="bot-inbox inbox bot">
                 <div class="icon">
                     <i class="fas fa-user"></i>
@@ -87,8 +89,6 @@
             </div>
         </div>
     </div>
-</div>
-
     </details>
     <h3 class="h3">Nuestros profesionales</h3>
     <div class="cardiologos">
@@ -106,7 +106,7 @@
     </div>
     <br><br>
 </main>
-<script src="../js/chatb.js"></script>
+<script src="../js/chatbotcopia.js"></script>
 <?php 
     require("_footer.php");
     require("_contacto-depart.php");

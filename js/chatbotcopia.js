@@ -11,10 +11,11 @@ function openchatbot() {
 $(document).ready(function() {
   $("#send-btn").on("click", function() {
       $value = $("#data").val();
-      $msg = '<div class="user-inbox inbox user"><div class="msg-header"><p>Usuario: '+ $value + '</p></div></div>';
+      $msg = '<div class="user-inbox inbox user"><div class="msg-header"><p>Usuario: ' + $value + '</p></div></div>';
       $(".form").append($msg);
       $("#data").val('');
 
+      // iniciar el código ajax
       $.ajax({
           url: 'message.php',
           type: 'POST',
@@ -22,6 +23,7 @@ $(document).ready(function() {
           success: function(result) {
               $replay = '<div class="bot-inbox inbox bot"><div class="icon"><i class="fas fa-user"></i></div><div class="msg-header"><p>Bot: ' + result + '</p></div></div>';
               $(".form").append($replay);
+              // cuando el chat baja, la barra de desplazamiento llega automáticamente al final
               $(".form").scrollTop($(".form")[0].scrollHeight);
           }
       });
