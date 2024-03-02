@@ -1,0 +1,75 @@
+body {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000000;
+    font-family: Arial, sans-serif;
+}
+
+.informacion {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 10px 20px #d10002;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+h4 {
+    margin: 10px 0;
+    font-size: 40px;
+    color: #000;
+}
+h5 { 
+    font-size: large;
+  margin: 5px 0;
+  color: #ffffff;
+  text-transform: uppercase;
+  line-height: 60px;
+  background-color: #f80000;
+  width: 106%;
+}
+
+label,input {
+    font-size:large;
+  color: #0a66c2;
+  line-height: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-left: 10px;
+}
+
+input[type="submit"], input[type="button"]{
+    background-color: #d10002;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover, input[type="button"]:hover {
+    background-color: #2d35a3;
+}
+.error{
+    color:#d10002;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 70%;
+    align-items: center;
+    font-size: large;
+}

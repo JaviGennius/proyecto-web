@@ -16,3 +16,6 @@ imgcompleta.src = reference
 function cerrarImagen(){
 imgcompletacaja.style.display = "none";
 }
+
+// menu hamburguesa:https://www.youtube.com/watch?v=samof05Dy6A&t=846s
+// galeria de imagenes:https://www.youtube.com/watch?v=3vn6JubwmCs

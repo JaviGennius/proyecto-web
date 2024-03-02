@@ -2,12 +2,56 @@
 $script = "<link rel='stylesheet' type='text/css' href='../css/cambio.css'>";
 $estilos = "<script src='../js/cambio.js'></script>";
 ?>
+<?php
+session_start();
+require("initdb.php");
 
-<?php require("_header-formularios.php")?>
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $error = "";
+
+    if (!isset($_POST['dni']) || !isset($_POST['contrasena']) || !isset($_POST['contrasena_verific'])) {
+        $error = "No se ha podido cambiar la contraseña correctamente";
+    }
+
+    if (!preg_match('/^[0-9]{8}[A-Za-z]$/', $_POST['dni'])) {
+        $error = "Formato de DNI incorrecto";
+    }
+
+    if (!preg_match('/^(?=.*\d)(?=.*[a-zA-Z]).{3,16}$/', $_POST['contrasena'])) {
+        $error = "La contraseña debe tener al menos 3 caracteres y 16 máximo (Entre ellos 1 dígito y 3 letras)";
+    }
+
+    if ($_POST['contrasena_verific'] !== $_POST['contrasena']) {
+        $error = "Las contraseñas deben coincidir";
+    }
+
+    if ($error == "") {
+        $dni = $_POST['dni'];
+        $contrasena = $_POST['contrasena'];
+
+        $query = "UPDATE pacientes SET Cts_usuario = '$contrasena' WHERE DNI_paciente = '$dni'";
+        $resultado = mysqli_query($con, $query);
+
+        if ($resultado) {
+            header('Location: /back-end/inicio_sesion.php');
+            exit();
+        } else {
+            $error = "No se ha podido cambiar la contraseña";
+        }
+    }
+}
+
+mysqli_close($con);
+?>
+
+<?php require("_header.php")?>
 <body>
     <a href="/back-end/inicio_sesion.php" id="cabecera"><img src="../imagenes/salud_contraseña.png" draggable="false" title="Volver Inicio Sesión Portal Paciente"/></a>
     <main class="container" id="container">
         <form id="formulario" method="post" action="/back-end/cambiocontrasena.php">
+        <?php if ($error != "") {
+                echo "<p class='error'>$error</p>";
+            }?>
             <label for="dni" class="dnil">DNI<font color="red">*</font></label>
             <input type="text" id="dni" name="dni"  onblur="validarDNI()">
             <label for="contrasena" class="contrasenal">Contraseña<font color="red">*</font></label>
@@ -20,30 +64,4 @@ $estilos = "<script src='../js/cambio.js'></script>";
     </main>
 </body>
 </html>
-<?php
-// Para validar
-require("initdb.php");
-
-if (!isset($_POST['dni']) || !isset($_POST['contrasena']) || !isset($_POST['contrasena_verific']) || $_POST['contrasena_verific'] !== $_POST['contrasena'] || $_POST['contrasena'] === "" || $_POST['contrasena_verific'] === "" || !preg_match('/^[0-9]{8}[A-Za-z]$/', $_POST['dni']) || !preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{3,16}$/', $_POST['contrasena'])) {
-    exit();
-}
-
-$dni = $_POST['dni'];
-$contrasena = $_POST['contrasena'];
-$contrasena_hasheada = password_hash($_POST['password'],PASSWORD_DEFAULT);
-$query = "UPDATE pacientes SET Cts_usuario = '$contrasena_hasheada' WHERE DNI_paciente = '$dni'";
-
-$resultado = mysqli_query($con, $query);
-
-if ($resultado) {
-
-    header('Location: /back-end/inicio_sesion.php');
-    exit();
-} else {
-    header('Location: /back-end/cambiocontrasena.php');
-    exit();
-}
-
-mysqli_close($con);
-?>
 

@@ -1,9 +1,9 @@
 <?php
     $estilos = "<link rel='stylesheet' type='text/css' href='../css/imagenescentro.css'>";
     require("initdb.php");
-    $titulo = "Imagenes del centro";
-    $consulta3 = "SELECT Imagen_centro, Title FROM imagenes_centro;";
-    $guardar2 = $con -> query($consulta3);
+    $titulo = "Imagenes del centro"; // Variable
+    $consulta3 = "SELECT Imagen_centro, Title FROM imagenes_centro;"; // Consulta para obtener la imagen y el titulo de la tabla imagenes_centro
+    $guardar2 = $con -> query($consulta3); // Ejecuta la consulta
 ?>
 <?php require("_header.php");?>
 <header id="cabecera">
@@ -12,7 +12,7 @@
         </header>
         <?php require("_menuimagenes.php"); ?>
 <div class="informacion">
-            <h1>Explora el hospital Felipe VI a través de imágenes</h1>
+            <h1>Explora el Hospital Felipe VI a través de imágenes</h1>
             <br>
             <p>
             <h2>
@@ -26,6 +26,7 @@
             <img src="..imagenes/hospitalslicer.png" id="imgcompleta">
             <span onclick="cerrarImagen()">X</span>
         </div>
+        <!-- Genera la galería de imágenes del centro a partir de los resultados de la consulta -->
         <div class="galeria">
         <?php
             while($row2 = $guardar2->fetch_assoc()) {
