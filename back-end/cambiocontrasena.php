@@ -30,8 +30,7 @@ if (!isset($_POST['dni']) || !isset($_POST['contrasena']) || !isset($_POST['cont
 
 $dni = $_POST['dni'];
 $contrasena = $_POST['contrasena'];
-$contrasena_hasheada = password_hash($_POST['password'],PASSWORD_DEFAULT);
-$query = "UPDATE pacientes SET Cts_usuario = '$contrasena_hasheada' WHERE DNI_paciente = '$dni'";
+$query = "UPDATE pacientes SET Cts_usuario = '$contrasena' WHERE DNI_paciente = '$dni'";
 
 $resultado = mysqli_query($con, $query);
 

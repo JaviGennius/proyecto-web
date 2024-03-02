@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Validar teléfono (solo dígitos)
-    if (!preg_match("/^\d+{9}$/", $tel)) {
+    if (!preg_match("/^\d{9}$/", $tel)) {
         $error = "Debe introducir solo dígitos en télefono (Hasta 9 máximo).";
     }
 
