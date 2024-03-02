@@ -4,6 +4,12 @@ if(isset($_POST['logout'])) {
     header("Location: inicio_sesion.php");
     exit();
 }
+
+if (isset($_POST['edit'])) {
+    header("Location: _editarperfil.php");
+    exit();
+}
+?>
 ?>
 <div class="carrusel">
             <?php 
