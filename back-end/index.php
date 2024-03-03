@@ -1,7 +1,20 @@
 <?php
     $titulo = "Página Inicio";
+    $estilos = 
+    "<link rel='stylesheet' href='../css/styles.css'/>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.8.1/css/all.css' integrity='sha384'>";
+    $script = 
+    "<script src='https://kit.fontawesome.com/e3d46192fc.js' crossorigin='anonymous'></script>
+    <script src='../js/reloj.js'></script>
+    <script src='../js/inicio.js'></script>";
 ?>
-<?php require("_header-index.php");?>    
+<?php require("_header.php");?>    
+<header>
+        <img src="../imagenes/hospital.png" class="imagenhospital" draggable="false">
+        <h1>Bienvenido al Hospital Felipe VI</h1>
+    </header>
+<?php require_once("_menu.php"); ?>
+<?php require_once("_reloj-index.php")?>
             <section class="articulo">
                 <img src="../imagenes/hospitalart.jpeg" class="hospitalart">
                 <div class="parrafo+h3">
@@ -12,7 +25,13 @@
             </section>
             <section class="noticias">
                         <a href="https://www.oncohealth.eu/"><img src="../imagenes/logo_oncosalud.png" class="enlaces" onmouseover="distorsion(this)" onmouseout="distorsion2()"/></a>
-                        <a href="html/formulario2.html"><img src="../imagenes/portalPaciente.png" class="enlaces" onmouseover="distorsion(this)" onmouseout="distorsion2()"/></a>
+                        <?php 
+                if ($_SESSION['dni_usuario']) {
+                    echo '<a href="/back-end/portal_paciente.php"><img src="../imagenes/portalPaciente.png" class="enlaces" onmouseover="distorsion(this)" onmouseout="distorsion2()"/></a>';
+                } else {
+                    echo '<a href="/back-end/inicio_sesion.php"><img src="../imagenes/portalPaciente.png" class="enlaces" onmouseover="distorsion(this)" onmouseout="distorsion2()"/></a>';
+                }
+                ?>
                         <a href="https://www.comunidad.madrid/servicios/salud"><img src="../imagenes/fotomadrid.png" class="enlaces" onmouseover="distorsion(this)" onmouseout="distorsion2()"/></a>
                         <a href="https://www.comunidad.madrid/servicios/salud/mi-carpeta-salud"><img src="../imagenes/salud_madrid.png" class="enlaces" onmouseover="distorsion(this)" onmouseout="distorsion2()"/></a>
             </section>
@@ -34,6 +53,9 @@
                     </div>    
                     </div>
             </section>
-<?php require("_footer-index.php")?>
+<?php 
+    require("_footer.php");
+    require("_contacto-hospital.php");
+?>
 </body>
 </html>

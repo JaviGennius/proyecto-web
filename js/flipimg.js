@@ -1,13 +1,13 @@
 //cardiologos
 let  fotomedico = "delante";
-function flip() {
+function flip1() {
     let imagen = document.getElementById("cardiologo1");
     if (fotomedico =="delante"){
         imagen.src = "../imagenes/c2.d.png";
         fotomedico ="detras"
     }
 }
-function flipout(){
+function flipout1(){
     let imagen = document.getElementById("cardiologo1");
     
         imagen.src ="../imagenes/cardiolog1.jpg";
@@ -53,7 +53,7 @@ function flip13() {
 
 function flipout13(){
     let imagen = document.getElementById("cardiologo4");
-        imagen.src ="../imagenes/c13.jpeg";
+        imagen.src ="../imagenes/c2.jpg";
         fotomedico13 ="delante"
 }
 
@@ -224,7 +224,7 @@ function flip22() {
 }
 function flipout22(){
     let imagen = document.getElementById("traumatologo4");
-    imagen.src ="../imagenes/c13.jpeg";
+    imagen.src ="../imagenes/c8.jpeg";
     fotomedico19 ="delante"   
 }
 

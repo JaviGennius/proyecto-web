@@ -141,7 +141,7 @@ function validarContrasena() {
     let error_contrasena=document.getElementById("error_contrasena");
     
     let contrasenaValor = contrasena.value.trim();
-    let contraseña_correcta = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{1,16}$/;
+    let contraseña_correcta = /^(?=.*\d)(?=.*[a-zA-Z]).{3,16}$/;
 
     if (!contraseña_correcta.test(contrasenaValor) || contrasenaValor === "") {
         error_contrasena.style.display = "block";
@@ -191,9 +191,7 @@ function validarFormulario() {
     console.log({ esVerificarContrasena })
 
     if (esDNI && esNombreValido && esPrimerApellidoValido && esSegundoApellidoValido && esFechaNacimientoValida && esSexoValido && esTelefonoValido && esEmailValido && esContrasena && esVerificarContrasena) {
-        setTimeout(function() {
-            window.location.href = '../index.html'; // Funcion sacada de Chatgpt
-        }, 3000);
+
         document.getElementById("patientForm").style.display = "none";
         document.getElementById("cabecera").style.display = "none";
         document.getElementById("cargar").style.display = "block";

@@ -1,17 +1,21 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const iconoMenu = document.querySelector('#icono-menu');
-    const menu = document.querySelector('#menu');
-    const cerrarMenuBtn = document.querySelector('#cerrar');
+let menuToggle = document.querySelector('.menuToggle');
+let header = document.querySelector('.navegador');
+menuToggle.onclick = function(){
+    header.classList.toggle('active');
 
-    function toggleMenu() {
-        // Alternamos estilo para menu y body
-        menu.classList.toggle('active');
-        document.body.classList.toggle('opacity');
+}
 
-        // Alternamos la clase 'hidden' para el icono del menú
-        iconoMenu.classList.toggle('hidden');
-    }
+const imgcompletacaja = document.getElementById("imgcompletacaja");
+imgcompleta = document.getElementById("imgcompleta");
 
-    iconoMenu.addEventListener('click', toggleMenu);
-    cerrarMenuBtn.addEventListener('click', toggleMenu);
-});
+function abririmagen(reference){
+imgcompletacaja.style.display ="flex";
+imgcompleta.src = reference
+}
+
+function cerrarImagen(){
+imgcompletacaja.style.display = "none";
+}
+
+// menu hamburguesa:https://www.youtube.com/watch?v=samof05Dy6A&t=846s
+// galeria de imagenes:https://www.youtube.com/watch?v=3vn6JubwmCs

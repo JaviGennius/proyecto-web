@@ -2,29 +2,116 @@
 <html lang="en">
     <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,
-    initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="../css/imagenescentro.css">
-    <title>menu</title>
+    <title>Imagenes centro</title>
     </head>
-    <body>
+    <body> 
         <header id="cabecera">
             <a href="../index.html"><img src="../imagenes/hospital.png" title="Inicio" class="image2" draggable="false"/></a>
-            <h1>Imagenes del centro</h1>
-        </header>  
-        <div class="icono-menu">
-            <img src="../imagenes/menu.png" id="icono-menu">
+            <h1>Imágenes del centro</h1>
+          </header>
+        <div class="navegador">
+            <a href="../index.html"><img src="../imagenes/hospital 2.png" title="Inicio" class="hospital" draggable="false" /></a>
+            <div class="menuToggle"></div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="#">Departamentos</a>
+                    <ul>
+                        <li><a href="../html/oncologia.html">Oncología</a></li>
+                        <li><a href="../html/cardiologia.html">Cardiología</a></li>
+                        <li><a href="../html/traumatologia.html">Traumatología</a></li>
+                        <li><a href="../html/neurologia.html">Neurología</a></li>
+                    </ul>
+                    </li>
+                    <li><a href="#">Información</a>
+                    <ul>
+                        <li><a href="../html/calculadora.html">Calculadora</a></li>
+                        <li><a href="../html/horarios_ubicacion.html">Horarios y Ubicación</a></li>
+                        <li><a href="../html/imagenescentro.html">Imagenes del centro</a></li>
+                    </ul>
+                    </li>
+    
+                    <li><a href="../html/portalpaciente.html">Portal del paciente</a></li>
+                </ul>
+            </nav>
+            <a href="../html/formulariofina.html"><img src="../imagenes/boton_registro.png" class="boton_registro" draggable="false"/></a>
+        </div><br><br><br><br>
+
+        <div class="informacion">
+            <h1>Explora el Hospital Felipe VI a través de imágenes</h1>
+            <br>
+            <p>
+            <h2>
+                En el Hospital Felipe VI, compartimos momentos que reflejan la dedicación y el cuidado en cada área, desde Oncología hasta espacios de bienestar. 
+               Sumérgete en la atmósfera única del hospital, donde cada imagen cuenta una historia de compromiso con la salud y el bienestar de nuestros pacientes.
+            </h2>
+            </p>
         </div>
-        <nav class="cont-menu active" id="menu">
-            <button class="cerrar-menu" id="cerrar">X</button>
-            <ul>
-                <li>INICIO</li>
-                <li>DEPARTAMENTOS</li>
-                <li>INFORMACIÓN</li>
-                <li>PORTAL DEL PACIENTE</li>
-            </ul>
-        </nav>
-        <div></div>
+
+        <div class="img-completa" id="imgcompletacaja">
+            <img src="..imagenes/hospitalslicer.png" id="imgcompleta">
+            <span onclick="cerrarImagen()">X</span>
+        </div>
+        <div class="galeria">
+           <img src="../imagenes/hospitalslicer.png" onclick="abririmagen(this.src)" title="Hospital">
+           <img src="../imagenes/saladeingresos.png" onclick="abririmagen(this.src)" title="Sala de ingresos">
+           <img src="../imagenes/salaespera.png" onclick="abririmagen(this.src)" title="Sala de espera">
+           <img src="../imagenes/quirofano.png" onclick="abririmagen(this.src)" title="Quirófano">
+           <img src="../imagenes/personal.png" onclick="abririmagen(this.src)" title="Personal">
+           <img src="../imagenes/entradahsopital.png" onclick="abririmagen(this.src)" title="Entrada del hospital">
+           <img src="../imagenes/salaoncologia.png" onclick="abririmagen(this.src)" title="Sala Oncología">
+           <img src="../imagenes/salacardiologia.png" onclick="abririmagen(this.src)" title="Sala cardiología">
+           <img src="../imagenes/parking.png" onclick="abririmagen(this.src)" title="Parking">
+        </div>
+
+        <footer class="footer">
+            <div class="cont">
+            <div class="fila">
+                <div class="contenedor">
+                    <h4>Nuestras Páginas y Contactos</h4>
+                    <ul>
+                        <li><a href="html/horarios_ubicacion.html">Información</a></li>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="html/formulario2.html">Portal del Paciente</a></li>
+                        <li><a href="#">Imagenes del Centro</a></li>
+                    </ul>
+                </div>
+                <div class="contenedor">
+                    <h4>Página de la Comunidad de Madrid</h4>
+                        <ul>
+                            <li><a href="https://www.bocm.es/">BOCM</a></li>
+                            <li><a href="https://www.comunidad.madrid/servicios/salud">Salud</a></li>
+                            <li><a href="https://www.comunidad.madrid/servicios/atencion-ciudadano">Atención al Ciudadano</a></li>
+                            <li><a href="https://sede.comunidad.madrid/buscador?t=&tipo=All&consejeria=All&estado_pendiente%5B1%5D=1&estado_plazo%5B1%5D=1&estado_tramitacion%5B1%5D=1">Buscador de trámites</a></li>
+                        </ul>
+                </div>
+                <div class="contenedor">
+                    <h4>Página del Estado</h4>
+                    <ul>
+                        <li><a href="https://www.sanidad.gob.es/">Ministerio de Sanidad</li></a>
+                        <li><a href="https://boe.es/">BOE</li></a>
+                    </ul>
+                </div>
+            </div>
+        </div>    
+                <div class="redessociales">
+                        <ul>
+                            <li><a href="https://es-es.facebook.com/" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://www.instagram.com/" class="instagram"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="https://twitter.com/" class="twitter"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="https://www.youtube.com/" class="youtube"><i class="fab fa-youtube"></i></a></li>
+                            <li><a href="https://es.linkedin.com/" class="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                        </ul>
+                        
+                </div>
+            <div class="parrafos">
+            <p>Teléfono: +34 690 90 12 12</p>
+            <a href="mailto:hospitalfelipevi@madrid.org?subject=Petición de Información&body="><p>Correo: hospitalfelipevi@madrid.org</p></a>
+            </div>
+            </footer>
+
         <script src="../js/imagenescentro.js"></script>
     </body>
 </html>
