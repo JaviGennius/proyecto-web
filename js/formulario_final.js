@@ -134,22 +134,6 @@ function validarEmail() {
     }
 }
 
-function validarContrasena() {
-    let contrasena=document.getElementById("contrasena");
-    let contrasenaValor = contrasena.value.trim();
-    let error_contrasena=document.getElementById("error_contrasena");
-    let expresionRegular = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{3,16}$/;
-
-    if (expresionRegular.test(contrasena) || contrasenaValor === "") {
-        error_contrasena.style.display = "block";
-        contrasena.style.borderColor = "red";
-        return true;
-    } else {
-        error_contrasena.style.display = "none";
-        contrasena.style.borderColor = "green";
-        return false;
-    }
-}
 
 function validarContrasena() {
     let contrasena=document.getElementById("contrasena");
@@ -191,6 +175,8 @@ function validarContrasenaVeficada(){
 
 
 function validarFormulario() {
+   document.getElementById("patientForm").submit()
+   return;
     let esNombreValido = validarNombre();
     let esPrimerApellidoValido = validarPrimerApellido();
     let esSegundoApellidoValido = validarSegundoApellido();
@@ -201,6 +187,8 @@ function validarFormulario() {
     let esDNI = validarDNI();
     let esContrasena = validarContrasena()
     let esVerificarContrasena = validarContrasenaVeficada()
+
+    console.log({ esVerificarContrasena })
 
     if (esDNI && esNombreValido && esPrimerApellidoValido && esSegundoApellidoValido && esFechaNacimientoValida && esSexoValido && esTelefonoValido && esEmailValido && esContrasena && esVerificarContrasena) {
         setTimeout(function() {
