@@ -33,6 +33,6 @@ function validarContrasena() {
 //     }
 // }
 
-document.getElementById("dni").addEventListener("blur", validarDNI);
-document.getElementById("contraseña").addEventListener("blur", validarContrasena);
-document.getElementById("botonsubmit").addEventListener("click", validarFormulario);
+//document.getElementById("dni").addEventListener("blur", validarDNI);
+//document.getElementById("contraseña").addEventListener("blur", validarContrasena);
+//document.getElementById("botonsubmit").addEventListener("click", validarFormulario);
