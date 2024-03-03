@@ -50,5 +50,5 @@ $guardar = $con->query($consulta);
                     ?>
                 </ul>
             </nav>
-            <a href="#"><img src="../imagenes/boton_registro.png" class="boton_registro" draggable="false"/></a>
+            <a href="/back-end/formulario_final.php"><img src="../imagenes/boton_registro.png" class="boton_registro" draggable="false"/></a>
         </div><br><br><br><br>
