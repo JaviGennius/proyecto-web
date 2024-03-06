@@ -9,7 +9,8 @@
     <script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>";
 
     require("initdb.php");
-    $ID_departamento = $_GET['ID_departamento'];
+    $ID_departamento = $_GET['ID_departamento']; // Obtener el ID del departamento desde la URL
+    // Consultas SQL para obtener información específica del departamento y sus servicios
     $consulta2 = "SELECT Nombre_servicio FROM servicios INNER JOIN departamentos ON departamentos.ID_departamento = servicios.ID_departamento WHERE departamentos.ID_departamento = ?;";
     $stmt = $con->prepare($consulta2);
     $stmt->bind_param("i", $ID_departamento);
@@ -93,6 +94,7 @@
     <h3 class="h3">Nuestros profesionales</h3>
     <div class="cardiologos">
     <?php
+    // Obtener resultados de la consulta y recorrer cada fila
         while ($row5 = $result5->fetch_assoc()) {
             echo "<div class='" . $row5['Posicion_sanitario'] . "'>";
                 echo "<img src='" . $row5['Foto_sanitario'] . "' draggable='false' onmouseover='flip" . $row5['flip'] . "()' onmouseout='flipout" . $row5['flip'] . "()' id='" . $row5['ID_sanitario'] . "'>";
