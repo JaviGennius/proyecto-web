@@ -96,9 +96,9 @@
         while ($row5 = $result5->fetch_assoc()) {
             echo "<div class='" . $row5['Posicion_sanitario'] . "'>";
                 echo "<img src='" . $row5['Foto_sanitario'] . "' draggable='false' onmouseover='flip" . $row5['flip'] . "()' onmouseout='flipout" . $row5['flip'] . "()' id='" . $row5['ID_sanitario'] . "'>";
-                echo "<p>" . $row5['Nombre_Sanitario'] . "</p>";
-                echo "<p>" . $row5['Especialidad'] . "</p>";
-                echo "<p>" . $row5['Tipo_sanitario'] . "</p>";
+                echo "<p> Nombre: " . $row5['Nombre_Sanitario'] . "</p>";
+                echo "<p>Especialidad: " . $row5['Especialidad'] . "</p>";
+                echo "<p>Profesión: " . $row5['Tipo_sanitario'] . "</p>";
             echo "</div>";
         }
     ?>
