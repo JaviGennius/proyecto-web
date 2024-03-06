@@ -33,8 +33,9 @@ $resultado->bind_param(
 );
 
 $resultado->execute();
-var_dump($resultado->num_rows());
-
+if ($resultado) {
+  header("location:portal_paciente.php");
+} else {header("location:formulario_final");}
 ?>
 
 <!DOCTYPE html>
