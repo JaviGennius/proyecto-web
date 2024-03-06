@@ -1,52 +1,9 @@
 <?php
-require("initdb.php");
+$titulo="Formulario del paciente";
+$estilos= "<link rel='stylesheet' type='text/css' href='../css/formulario.css'>";?>
 
 
-$resultado = $con->prepare("
-INSERT INTO Pacientes (
-    DNI_paciente,
-    Num_Historial,
-    Nombre_paciente,
-    Primer_apellido_paciente,
-    Segundo_apellido_paciente,
-    Fecha_nacimiento,
-    Sexo,
-    Telefono_paciente,
-    Correo_paciente)  
-    VALUES (?,?,?,?,?,?,?,?,?)     
-    ");
-
-$numeroHistorial= 5555;
-$fecha = date("Y-m-d");
-$sexo =ucfirst($_POST["sexo"]);
-$resultado->bind_param(
-    "sisssssis",
-    $_POST["dni"],
-    $numeroHistorial,
-    $_POST["nombre"], 
-    $_POST["primero"],
-    $_POST["segundo"],
-    $fecha,
-    $sexo,
-    $_POST["telefono"],
-    $_POST["email"],
-);
-
-$resultado->execute();
-if ($resultado) {
-  header("location:portal_paciente.php");
-} else {header("location:formulario_final");}
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../css/formulario.css">
-    <link rel="icon" type="image/png" href="../imagenes/madrid.png"/>
-    <title>Formulario del Paciente</title>
-</head>
+<?php require("_header.php"); ?>
 <body>
   <header id="cabecera">
     <a href="../index.html"><img src="../imagenes/hospital.png" title="Inicio" class="image2" draggable="false"/></a>
@@ -174,6 +131,51 @@ if ($resultado) {
     <div class="cargador" id="cargar"></div>
   </main>
   
+  <?php
+session_start();
+require("initdb.php");
+
+if(!isset($_POST["dni"])||!isset( $_POST["nombre"])||!isset($_POST["primero"])||!isset($_POST["segundo"])||!isset( $_POST["dia"])||!isset($_POST["mes"])||
+!isset($_POST["ano"])||!isset( $_POST["sexo"])||!isset($_POST["telefono"])||
+!isset($_POST["email"])||!isset($_POST["contrasena"])||!isset($_POST["contraseña_verific"])){
+  exit();
+}
+$resultado = $con->prepare("
+INSERT INTO Pacientes (
+    DNI_paciente,
+    Num_Historial,
+    Nombre_paciente,
+    Primer_apellido_paciente,
+    Segundo_apellido_paciente,
+    Fecha_nacimiento,
+    Sexo,
+    Telefono_paciente,
+    Correo_paciente)  
+    VALUES (?,?,?,?,?,?,?,?,?)     
+    ");
+
+$numeroHistorial= 5555;
+$fecha = date("Y-m-d");
+$sexo =ucfirst($_POST["sexo"]);
+$resultado->bind_param(
+    "sisssssis",
+    $_POST["dni"],
+    $numeroHistorial,
+    $_POST["nombre"], 
+    $_POST["primero"],
+    $_POST["segundo"],
+    $fecha,
+    $sexo,
+    $_POST["telefono"],
+    $_POST["email"],
+);
+
+$resultado->execute();
+if ($resultado) {
+$_SESSION["dni_usuario"]=$_POST["dni"];
+  header("location:portal_paciente.php");
+} else {header("location:formulario_final");}
+?>
   <script src="../js/formulario_final.js"></script>
 </body>
 </html>
