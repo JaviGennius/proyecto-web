@@ -48,5 +48,5 @@ $guardar = $con->query($consulta);
         }
         ?>
     </ul>
-    <a href="#"><img src="../imagenes/boton_registro.png" class="boton_registro" /></a>
+    <a href="/back-end/formulario_final.php"><img src="../imagenes/boton_registro.png" class="boton_registro" /></a>
 </nav>
