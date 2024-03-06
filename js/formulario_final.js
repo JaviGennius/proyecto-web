@@ -175,8 +175,7 @@ function validarContrasenaVeficada(){
 
 
 function validarFormulario() {
-   document.getElementById("patientForm").submit()
-   return;
+   document.getElementById("patientForm").submit();
     let esNombreValido = validarNombre();
     let esPrimerApellidoValido = validarPrimerApellido();
     let esSegundoApellidoValido = validarSegundoApellido();
@@ -188,10 +187,7 @@ function validarFormulario() {
     let esContrasena = validarContrasena()
     let esVerificarContrasena = validarContrasenaVeficada()
 
-    console.log({ esVerificarContrasena })
-
     if (esDNI && esNombreValido && esPrimerApellidoValido && esSegundoApellidoValido && esFechaNacimientoValida && esSexoValido && esTelefonoValido && esEmailValido && esContrasena && esVerificarContrasena) {
-
         document.getElementById("patientForm").style.display = "none";
         document.getElementById("cabecera").style.display = "none";
         document.getElementById("cargar").style.display = "block";

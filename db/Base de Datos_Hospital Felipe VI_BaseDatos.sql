@@ -10,7 +10,7 @@ USE Hospital_Felipe_VI;
 /*Creacción de las Tablas*/	
 CREATE TABLE Pacientes(
 	DNI_paciente varchar(9) PRIMARY KEY,
-    Num_Historial CHAR(10) UNIQUE,
+    Num_Historial int UNIQUE auto_increment,
 	Nombre_paciente varchar(20),
 	Primer_apellido_paciente varchar(20),
 	Segundo_apellido_paciente varchar(20),
@@ -119,7 +119,7 @@ INSERT INTO Pacientes VALUES ('56789012E', '1005', 'Roberto', 'Torres', 'Alvarez
 INSERT INTO Pacientes VALUES ('67890123F', '1006', 'Ana', 'Gutierrez', 'Lopez', '1992-11-14', "Mujer",662616360, 'ana@yahoo.com', 'anaGL','/imagenes/Persona3.jpg');
 INSERT INTO Pacientes VALUES ('78901234G', '1007', 'Francisco', 'Jimenez', 'Santos', '1987-07-08',"Hombre", 667161587, 'francisco@hotmail.com', 'fjs87','/imagenes/Persona9.jpg');
 INSERT INTO Pacientes VALUES ('89012345H', '1008', 'Elena', 'Martinez', 'Ruiz', '1975-02-20', "Otro",636361968, 'elena@gmail.com', 'emr75','/imagenes/Persona4.jpg');
-INSERT INTO Pacientes VALUES ('90123456I', '1009', 'David', 'Perez', 'Rodriguez', '1998-06-02', "Hombre",661621492, 'david@yahoo.com', 'dpr98','/imagenes/Persona9.jpg');
+INSERT INTO Pacientes VALUES ('90123456I', '1009', 'David', 'Perez', 'Rodriguez', '1998-06-02', "Hombre",661621492, 'david@yahoo.com', 'dpr98'chatbot,'/imagenes/Persona9.jpg');
 INSERT INTO Pacientes VALUES ('01234567J', '1010', 'Isabel', 'Sanz', 'Gomez', '1983-03-17',"Mujer" ,616451201, 'isabel@hotmail.com', 'isg83','/imagenes/Persona5.jpg');
 
 /*Departamentos:*/
