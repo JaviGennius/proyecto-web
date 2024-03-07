@@ -1,3 +1,6 @@
+<!-- https://stackoverflow.com/questions/409351/post-vs-serverrequest-method-post -->
+<!-- https://www.youtube.com/watch?v=Qy-Ic-vVGF0 -->
+<!-- https://es.stackoverflow.com/questions/132691/transacciones-o-consultas-preparadas-en-php -->
 <?php
 $estilos = "<link href='../css/edita.css' rel='stylesheet'/>";
 require("_header.php");
@@ -6,7 +9,7 @@ require("initdb.php");
 // Variable para rastrear errores
 $error = ""; 
  // Obtener y almacenar los valores del formulario en variables
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") { // Procesar los datos del formulario que se enviaron mediante POST
     $fecha = $_POST['fecha'];
     $tel = $_POST['tel'];
     $correo = $_POST['correo'];
