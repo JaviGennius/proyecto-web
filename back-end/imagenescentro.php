@@ -1,7 +1,7 @@
 <?php
     $estilos = "<link rel='stylesheet' type='text/css' href='../css/imagenescentro.css'>";
     require("initdb.php");
-    $titulo = "Imagenes del centro"; // Variable
+    $titulo = "Imagenes del centro"; // Variable // Definir el título de la página
     $consulta3 = "SELECT Imagen_centro, Title FROM imagenes_centro;"; // Consulta para obtener la imagen y el titulo de la tabla imagenes_centro
     $guardar2 = $con -> query($consulta3); // Ejecuta la consulta
 ?>

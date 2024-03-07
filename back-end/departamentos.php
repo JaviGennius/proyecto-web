@@ -39,7 +39,6 @@
     $departamentoData = $result3->fetch_assoc();
     $titulo = $departamentoData['Nombre_departamento'];
 
-?>
 <?php require("_header.php");?>
 <header id="cabecera">
         <img src="../imagenes/hospital.png" class="image2"/>
