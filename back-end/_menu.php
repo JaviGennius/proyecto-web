@@ -41,6 +41,7 @@ $guardar = $con->query($consulta);
                             <button type="submit" name="logout">Cerrar Sesión</button>
                         </form>
                     </a></li>';
+            //Cerrar sesión al darle al botón (Youtube): https://www.youtube.com/watch?time_continue=698&v=IAL6Nq6FW0s&embeds_referring_euri=https%3A%2F%2Fwww.bing.com%2F&embeds_referring_origin=https%3A%2F%2Fwww.bing.com&source_ve_path=Mjg2NjY&feature=emb_logo
             if (isset($_POST['logout'])) {
                 session_destroy();
                 header("Location: inicio_sesion.php");
