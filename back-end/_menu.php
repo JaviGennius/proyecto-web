@@ -34,6 +34,7 @@ $guardar = $con->query($consulta);
             }
         ?>
         <?php
+        //Destruir a una sesión en PHP (Stack overflow): https://es.stackoverflow.com/questions/63965/como-destruir-una-session-iniciada-en-php
         if ($_SESSION['dni_usuario']) {
             echo '<li><a href="#">
                         <form method="post" action="">
