@@ -6,7 +6,7 @@ $estilos= "<link rel='stylesheet' type='text/css' href='../css/formulario.css'>"
 <?php require("_header.php"); ?>
 <body>
   <header id="cabecera">
-    <a href="../index.html"><img src="../imagenes/hospital.png" title="Inicio" class="image2" draggable="false"/></a>
+    <a href="/back-end/index.php"><img src="../imagenes/hospital.png" title="Inicio" class="image2" draggable="false"/></a>
     <h1>Formulario del Pacientes</h1>
   </header>
   <main>
