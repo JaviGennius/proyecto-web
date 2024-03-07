@@ -181,6 +181,7 @@ $resultado->bind_param(
 $resultado->execute();
 
 if ($resultado->affected_rows > 0) {
+    //tutorial del inicio de sesion//
     $_SESSION["dni_usuario"] = $_POST["dni"];
     header("location: portal_paciente.php");
     exit();

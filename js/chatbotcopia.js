@@ -1,4 +1,6 @@
 // https://www.youtube.com/watch?v=757WTYQxVmc&t=231s&ab_channel=MauricioSevillaBritto
+
+// Para que al pulsar en la imagen del bot, se abra el panel y si vulebes a hacer click se esconde
 function openchatbot() {
   var chatbot = document.getElementById("chat-contenedor");
 
@@ -15,7 +17,8 @@ $(document).ready(function() {
       $(".form").append($msg);
       $("#data").val('');
 
-      // iniciar el código ajax
+
+// Iniciamos la funcion ajax
       $.ajax({
           url: '_chatbot.php',
           type: 'POST',
@@ -23,7 +26,8 @@ $(document).ready(function() {
           success: function(result) {
               $replay = '<div class="bot-inbox inbox bot"><div class="icon"><i class="fas fa-user"></i></div><div class="msg-header"><p>Bot: ' + result + '</p></div></div>';
               $(".form").append($replay);
-              // cuando el chat baja, la barra de desplazamiento llega automáticamente al final
+
+// Cuando hay muchas respuestas, la barra baja para ver las preguntas y respuestas anteriores
               $(".form").scrollTop($(".form")[0].scrollHeight);
           }
       });
