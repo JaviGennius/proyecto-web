@@ -44,12 +44,14 @@
 <header id="cabecera">
         <img src="../imagenes/hospital.png" class="image2"/>
         <h1>Departamento de <?php echo $departamentoData['Nombre_departamento']; ?></h1>
+        <!-- Mostramos el nombre del departamento obtenido de los datos proporcionados -->
     </header>
-    <?php require_once("_menu.php");?>
+    <?php require_once("_menu.php");?>    <!-- Incluimos el menú de la página -->
 <main>
     <section class="descripcion">
         <h3 class="h3">Descripción</h3>
         <?php
+        // Mostramos la descripción del departamento obtenida de los resultados de la consulta
             while($row3 = $result2->fetch_assoc()) {
                 echo "<p>" . $row3['Descripcion_departamento'] . "</p>";
             }
@@ -60,6 +62,7 @@
         <h3 class="h3">Servicios</h3>
         <ul>
             <?php
+            // Mostramos la lista de servicios del departamento obtenida de los resultados de la consulta
                 while($row2 = $result->fetch_assoc()) {
                     echo "<li>" . $row2['Nombre_servicio'] . "</li>";
                 }
