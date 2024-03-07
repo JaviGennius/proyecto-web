@@ -1,3 +1,6 @@
+<!-- https://stackoverflow.com/questions/409351/post-vs-serverrequest-method-post -->
+<!-- https://www.youtube.com/watch?v=Qy-Ic-vVGF0 -->
+<!-- https://es.stackoverflow.com/questions/132691/transacciones-o-consultas-preparadas-en-php -->
 <?php
 $estilos = "<link href='../css/edita.css' rel='stylesheet'/>";
 require("_header.php");

@@ -6,7 +6,7 @@ $estilos= "<link rel='stylesheet' type='text/css' href='../css/formulario.css'>"
 <?php require("_header.php"); ?>
 <body>
   <header id="cabecera">
-    <a href="../index.html"><img src="../imagenes/hospital.png" title="Inicio" class="image2" draggable="false"/></a>
+    <a href="/back-end/index.php"><img src="../imagenes/hospital.png" title="Inicio" class="image2" draggable="false"/></a>
     <h1>Formulario del Pacientes</h1>
   </header>
   <main>
@@ -37,15 +37,15 @@ $estilos= "<link rel='stylesheet' type='text/css' href='../css/formulario.css'>"
             <option disabled></option>
             <hr>
             <option disabled></option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
+            <option value="01">1</option>
+            <option value="02">2</option>
+            <option value="03">3</option>
+            <option value="04">4</option>
+            <option value="05">5</option>
+            <option value="06">6</option>
+            <option value="07">7</option>
+            <option value="08">8</option>
+            <option value="09">9</option>
             <option value="10">10</option>
             <option value="11">11</option>
             <option value="12">12</option>
@@ -76,18 +76,18 @@ $estilos= "<link rel='stylesheet' type='text/css' href='../css/formulario.css'>"
             <option disabled></option>
             <hr>
             <option disabled></option>
-            <option value="enero">enero</option>
-            <option value="febrero">febrero</option>
-            <option value="marzo">marzo</option>
-            <option value="abril">abril</option>
-            <option value="mayo">mayo</option>
-            <option value="junio">junio</option>
-            <option value="julio">julio</option>
-            <option value="agosto">agosto</option>
-            <option value="septiembre">septiembre</option>
-            <option value="octubre">octubre</option>
-            <option value="noviembre">noviembre</option>
-            <option value="diciembre">diciembre</option>
+            <option value="01">enero</option>
+            <option value="02">febrero</option>
+            <option value="03">marzo</option>
+            <option value="04">abril</option>
+            <option value="05">mayo</option>
+            <option value="06">junio</option>
+            <option value="07">julio</option>
+            <option value="08">agosto</option>
+            <option value="09">septiembre</option>
+            <option value="10">octubre</option>
+            <option value="11">noviembre</option>
+            <option value="12">diciembre</option>
           </select>
           <label for="ano">Año:<font color="red">*</font></label>
           <input type="number" placeholder="Seleccione año..." min="1950" max="2030" id="ano" name="ano">
@@ -125,61 +125,73 @@ $estilos= "<link rel='stylesheet' type='text/css' href='../css/formulario.css'>"
         <br>
       </fieldset>
       <br>     
-      <button type="button" id="submitButton">Enviar</button>
+      <button type="submit" id="submitButton">Enviar</button>
     </form>
     <!--Sacado de Youtube: https://youtu.be/8nm9WPptL0c?si=XRXdnEUw17DXZX4L-->
     <div class="cargador" id="cargar"></div>
   </main>
-  
-  <?php
+  <script src="../js/formulario_final.js"></script>
+</body>
+</html>
+<?php
 session_start();
 require("initdb.php");
 
-if(!isset($_POST["dni"])||!isset( $_POST["nombre"])||!isset($_POST["primero"])||!isset($_POST["segundo"])||!isset( $_POST["dia"])||!isset($_POST["mes"])||
-!isset($_POST["ano"])||!isset( $_POST["sexo"])||!isset($_POST["telefono"])||
-!isset($_POST["email"])||!isset($_POST["contrasena"])||!isset($_POST["contraseña_verific"])){
-  exit();
+if (!isset($_POST["dni"]) || !isset($_POST["nombre"]) || !isset($_POST["primero"]) || !isset($_POST["segundo"]) || !isset($_POST["dia"]) || !isset($_POST["mes"]) ||
+    !isset($_POST["ano"]) || !isset($_POST["sexo"]) || !isset($_POST["telefono"]) || !isset($_POST["email"]) || !isset($_POST["contrasena"]) || !isset($_POST["contrasena_verific"])) {
+    exit();
 }
-$resultado = $con->prepare("
-INSERT INTO Pacientes (
-    DNI_paciente,
-    Num_Historial,
-    Nombre_paciente,
-    Primer_apellido_paciente,
-    Segundo_apellido_paciente,
-    Fecha_nacimiento,
-    Sexo,
-    Telefono_paciente,
-    Correo_paciente)  
-    VALUES (?,?,?,?,?,?,?,?,?)     
-    ");
 
-$numeroHistorial= 5555;
-$fecha = date("Y-m-d");
-$sexo =ucfirst($_POST["sexo"]);
+$resultado = $con->prepare("
+    INSERT INTO Pacientes (
+        DNI_paciente,
+        Num_Historial,
+        Nombre_paciente,
+        Primer_apellido_paciente,
+        Segundo_apellido_paciente,
+        Fecha_nacimiento,
+        Sexo,
+        Telefono_paciente,
+        Correo_paciente,
+        Cts_usuario,
+        Foto_usuario
+    )  
+    VALUES (?,?,?,?,?,?,?,?,?,?,?)     
+");
+$numeroHistorial = 5555;
+$foto_usuario = "/imagenes/Persona2.jpg";
+$fecha = $_POST["ano"] . "-" . $_POST["mes"] . "-" . $_POST["dia"];
+$sexo = ucfirst($_POST["sexo"]);
+
 $resultado->bind_param(
-    "sisssssis",
+    "sisssssssss",
     $_POST["dni"],
     $numeroHistorial,
-    $_POST["nombre"], 
+    $_POST["nombre"],
     $_POST["primero"],
     $_POST["segundo"],
     $fecha,
     $sexo,
     $_POST["telefono"],
     $_POST["email"],
+    $_POST["contrasena"],
+    $foto_usuario
 );
 
 $resultado->execute();
-if ($resultado) {
-  //tutorial del inicio de sesion//
-$_SESSION["dni_usuario"]=$_POST["dni"];
-  header("location:portal_paciente.php");
-} else {header("location:formulario_final");}
+
+if ($resultado->affected_rows > 0) {
+    //tutorial del inicio de sesion//
+    $_SESSION["dni_usuario"] = $_POST["dni"];
+    header("location: portal_paciente.php");
+    exit();
+} else {
+    header("location: formulario_final.php");
+    exit();
+}
+
 ?>
-  <script src="../js/formulario_final.js"></script>
-</body>
-</html>
+
 
 
 
