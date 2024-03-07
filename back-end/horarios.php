@@ -7,6 +7,7 @@ $estilos = "
 $script = "<script src='https://kit.fontawesome.com/e3d46192fc.js' crossorigin='anonymous'></script>";
 ?>
 <?php require("initdb.php");
+// Crear tablas de forma dinamica (Youtube): https://www.youtube.com/watch?v=546RfWuuJFs
     $consulta3 = "SELECT Nombre_departamento, Horario FROM Departamentos;";
     $consulta2 = "SELECT Nombre_departamento, Sala_1, Sala_2, Sala_3 FROM Departamentos INNER JOIN Salas ON Salas.ID_departamento = Departamentos.ID_departamento;";
     $guardar2 = $con -> query($consulta2);
@@ -34,7 +35,9 @@ $script = "<script src='https://kit.fontawesome.com/e3d46192fc.js' crossorigin='
                     </tr>
                 </thead>
                 <tbody>
-                    <?php while($row = $guardar3->fetch_assoc()) { 
+                    <?php 
+                    //Crear tabla con echo (Stack overflow): https://es.stackoverflow.com/questions/380216/echo-dentro-de-un-echo-en-un-while-ayuda-con-php-y-html
+                    while($row = $guardar3->fetch_assoc()) { 
                         if ($clase === 'dp2'){
                             $clase = 'dp1'; 
                         } else {
@@ -55,7 +58,10 @@ $script = "<script src='https://kit.fontawesome.com/e3d46192fc.js' crossorigin='
                     </tr>
                 </thead>
                 <tbody>
-                <?php while($row2 = $guardar2->fetch_assoc()) { 
+                <?php 
+                //Crear tabla con echo (Stack overflow): https://es.stackoverflow.com/questions/380216/echo-dentro-de-un-echo-en-un-while-ayuda-con-php-y-html
+
+                while($row2 = $guardar2->fetch_assoc()) { 
                         $clase2 = ($clase2 === 'dp2') ? 'dp1' : 'dp2';
                         
                         echo "<tr class='$clase2'>";

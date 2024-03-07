@@ -7,6 +7,7 @@
                 <li><a href="/back-end/horarios.php">Información</a></li>
                 <li><a href="/back-end/index.php">Inicio</li></a>
                 <?php 
+                //Iniciar variable sesión
                 if ($_SESSION['dni_usuario']) {
                     echo '<li><a href="/back-end/portal_paciente.php">Portal del Paciente</a></li>';
                 } else {

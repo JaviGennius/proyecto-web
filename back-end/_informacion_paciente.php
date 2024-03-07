@@ -13,6 +13,7 @@ if (isset($_POST['edit'])) {
 ?>
 <div class="carrusel">
             <?php 
+            //Crear sesión con variable de sesión (Youtube): https://www.youtube.com/watch?v=VAUVAdQfPOw&t=756s
                 session_start();
                 require("initdb.php");
 

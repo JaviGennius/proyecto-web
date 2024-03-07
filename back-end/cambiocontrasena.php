@@ -8,11 +8,12 @@ require("initdb.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $error = "";
-
+    //Expresiones regulares (athento): https://soporte.athento.com/hc/es/articles/4406002654994-Ejemplos-de-expresiones-regulares-frecuentes#:~:text=Ejemplos%20de%20expresiones%20regulares%20frecuentes%201%20Texto%20con,sensibles%20en%20esta%20herramienta%29%3A%20https%3A%2F%2Fpythex.org%2F%20Otros%20patrones%3A%20https%3A%2F%2Fwww.html5pattern.com%2F 
+    //Comprobaciones de que si no existe (php documentación): https://www.php.net/manual/es/function.isset.php
     if (!isset($_POST['dni']) || !isset($_POST['contrasena']) || !isset($_POST['contrasena_verific'])) {
         $error = "No se ha podido cambiar la contraseña correctamente";
     }
-
+    //Mirar pregmatch (php documentación): https://www.php.net/manual/es/function.preg-match.php
     if (!preg_match('/^[0-9]{8}[A-Za-z]$/', $_POST['dni'])) {
         $error = "Formato de DNI incorrecto";
     }
