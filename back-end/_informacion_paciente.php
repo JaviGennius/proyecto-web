@@ -16,7 +16,7 @@ if (isset($_POST['edit'])) {
             //Crear sesión con variable de sesión (Youtube): https://www.youtube.com/watch?v=VAUVAdQfPOw&t=756s
                 session_start();
                 require("initdb.php");
-
+                //Consulta para sacar todos los datos del paciente
                 $consulta = "SELECT DNI_paciente, Num_Historial, Nombre_paciente, Primer_apellido_paciente, Segundo_apellido_paciente, Fecha_nacimiento, Sexo, Telefono_paciente, Correo_paciente,Foto_usuario FROM Pacientes WHERE DNI_paciente = ?";
 
                 $stmt = $con->prepare($consulta);
@@ -55,7 +55,7 @@ if (isset($_POST['edit'])) {
             <?php 
             session_start();
             require("initdb.php");
-
+            //Sacar todos los datos de los diferentes campos que forman la tabla Ingresos
             $consulta2 = "SELECT 
             Fecha_alta,
             Fecha_baja,
@@ -68,7 +68,7 @@ if (isset($_POST['edit'])) {
             INNER JOIN tratamientos ON ingresos.ID_tratamiento = tratamientos.ID_Tratamiento
             INNER JOIN sanitarios ON ingresos.NIF_sanitario = sanitarios.NIF_sanitario
             WHERE DNI_paciente = ?;";
-
+            
             $stmt = $con->prepare($consulta2);
 
             $stmt->bind_param("s", $_SESSION['dni_usuario']);

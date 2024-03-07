@@ -7,7 +7,7 @@
                 <li><a href="/back-end/horarios.php">Información</a></li>
                 <li><a href="/back-end/index.php">Inicio</li></a>
                 <?php 
-                //Iniciar variable sesión
+                //Iniciar variable sesión y cambio de enlace si existe o no la sesión creada
                 if ($_SESSION['dni_usuario']) {
                     echo '<li><a href="/back-end/portal_paciente.php">Portal del Paciente</a></li>';
                 } else {

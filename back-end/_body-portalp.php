@@ -29,7 +29,8 @@ $guardar = $con->query($consulta);
                             <li class="pagina"><a href="/back-end/portal_paciente.php">Portal del Paciente</a></li>
                             <li class="pagina"><a href="/back-end/formulario_final.php">Formulario Registro</a></li>
                             <li class="pagina"><a href="/back-end/horarios.php">Horarios y Ubicación</a></li>
-                            <?php while ($row = $guardar->fetch_assoc()) {
+                            <?php //Genera una linea por cada departamento en la base de datos 
+                            while ($row = $guardar->fetch_assoc()) {
                             echo "<li class='pagina'><a href='/back-end/departamentos.php?ID_departamento=" . $row['ID_departamento'] . "'>" . $row['Nombre_departamento'] . "</a></li>";
                             }
                             ?>

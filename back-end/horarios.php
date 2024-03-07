@@ -38,6 +38,7 @@ $script = "<script src='https://kit.fontawesome.com/e3d46192fc.js' crossorigin='
                     <?php 
                     //Crear tabla con echo (Stack overflow): https://es.stackoverflow.com/questions/380216/echo-dentro-de-un-echo-en-un-while-ayuda-con-php-y-html
                     while($row = $guardar3->fetch_assoc()) { 
+                        //Cambia la clase cada dos filas para darle estilos
                         if ($clase === 'dp2'){
                             $clase = 'dp1'; 
                         } else {

@@ -8,6 +8,7 @@
 ?>
 <div class="parrafos">
 <?php
+//Carga los datos del departamento dependiendo de su id
     while($row = $result4->fetch_assoc()) {
     echo "<p>Teléfono: " . $row['Telefono_Departamento'] . "</p>";
     echo "<a href='mailto:" . $row['Correo_Departamento'] ."?subject=&body='><p>Correo: " . $row['Correo_Departamento'] . "</p></a>";

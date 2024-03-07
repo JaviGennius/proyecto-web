@@ -5,15 +5,19 @@ require("initdb.php");
 $error = "";
 //Metodo para validad los campos del formulario con POSR (Youtube): https://www.bing.com/videos/riverview/relatedvideo?&q=%24_SERVER%5b%22REQUEST_METHOD%22%5d+%3d%3d+%22POST%22)+php&&mid=C6C24A5BAB8D9CDC2509C6C24A5BAB8D9CDC2509&&FORM=VRDGAR
 //Iniciar sesión: https://www.youtube.com/watch?v=VAUVAdQfPOw&t=756s
+
+//Verificar si el metodo de envio del formulario es post
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    //Verificación de que se ha incluido la contraseña y el DNI del usuario
     if (!isset($_POST['dni']) || !isset($_POST['contrasena'])) {
         $error = "No se puede iniciar sesión con este usuario";
     }
-
+//Guardar los datos en variables para su posterior uso en consultas
     $dni = $_POST['dni'];
     $contrasena = $_POST['contrasena'];
 
     if ($error == "") {
+        //Consulta para verificar los datos del usuario
         $query = "SELECT * FROM pacientes WHERE DNI_paciente ='$dni';";
         //Creacion de mysqli_query (w3schools):https://www.bing.com/search?pglt=513&q=mysqli_query&cvid=dc8008eaf75c4d669d255b035c09783a&gs_lcrp=EgZjaHJvbWUqBggBEAAYQDIGCAAQRRg5MgYIARAAGEAyBggCEAAYQDIGCAMQABhAMgYIBBAAGEAyBggFEAAYQDIGCAYQABhAMgYIBxAAGEAyBggIEAAYQNIBCDY0ODVqMGoxqAIAsAIA&FORM=ANNTA1&pcmpc=PCMEDGEDP&PC=PCMEDGEDP
         $resultado = mysqli_query($con, $query);
@@ -30,6 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $error = "La contraseña es incorrecta";
             }
         } else {
+            //En caso de que no exista el usuario muestra el error
             $error = "El usuario no existe";
         }
     }
@@ -48,7 +53,9 @@ require("_header.php");
     <a href="/back-end/index.php"><img src="../imagenes/salud.png" draggable="false" title="Inicio"/></a>
     <div class="container">
         <form id="formulario" method="post" action="/back-end/inicio_sesion.php">
-            <?php if ($error != "") {
+            <?php
+            //Verificar si existe o no la variable error al haber hecho las comprobaciones previas 
+            if ($error != "") {
                 echo "<p class='error'>$error</p>";
             }?>
             <label for="dni" class="dnil">DNI<font color="red">*</font></label>

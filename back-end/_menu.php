@@ -1,7 +1,7 @@
 <?php
 session_start();
 require("initdb.php");
-
+//Seleccion del nombre del departamento y su id para generar las páginas de los diferentes departamentos
 $consulta = "SELECT Nombre_departamento, ID_departamento FROM departamentos;";
 $guardar = $con->query($consulta);
 ?>
@@ -13,6 +13,7 @@ $guardar = $con->query($consulta);
         <li><a href="#">Departamentos</a>
             <ul class="sumenu">
                 <?php
+                //Crear cada departamento en base a su id
                 while ($row = $guardar->fetch_assoc()) {
                     echo "<li><a href='/back-end/departamentos.php?ID_departamento=" . $row['ID_departamento'] . "'>" . $row['Nombre_departamento'] . "</a></li>";
                 }
@@ -35,7 +36,9 @@ $guardar = $con->query($consulta);
         ?>
         <?php
         //Destruir a una sesión en PHP (Stack overflow): https://es.stackoverflow.com/questions/63965/como-destruir-una-session-iniciada-en-php
+        //Verificamos si se ha iniciado sesión
         if ($_SESSION['dni_usuario']) {
+            //Crea un formulario para que en caso de que se pulse el botón se elimine la sesión
             echo '<li><a href="#">
                         <form method="post" action="">
                             <button type="submit" name="logout">Cerrar Sesión</button>

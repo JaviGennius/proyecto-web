@@ -26,6 +26,7 @@
             <section class="noticias">
                         <a href="https://www.oncohealth.eu/"><img src="../imagenes/logo_oncosalud.png" class="enlaces" onmouseover="distorsion(this)" onmouseout="distorsion2()"/></a>
                         <?php 
+                //Cambiar el nombre el enlace dependiendo si existe o no una sesión
                 if ($_SESSION['dni_usuario']) {
                     echo '<a href="/back-end/portal_paciente.php"><img src="../imagenes/portalPaciente.png" class="enlaces" onmouseover="distorsion(this)" onmouseout="distorsion2()"/></a>';
                 } else {
