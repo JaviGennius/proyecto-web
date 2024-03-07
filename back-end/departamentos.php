@@ -9,8 +9,9 @@
     <script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>";
 
     require("initdb.php");
-    $ID_departamento = $_GET['ID_departamento']; // Obtener el ID del departamento desde la URL
-    // Consultas SQL para obtener información específica del departamento y sus servicios
+    $ID_departamento = $_GET['ID_departamento'];
+
+    // Consultas SQL información departamento y sus servicios
     $consulta2 = "SELECT Nombre_servicio FROM servicios INNER JOIN departamentos ON departamentos.ID_departamento = servicios.ID_departamento WHERE departamentos.ID_departamento = ?;";
     $stmt = $con->prepare($consulta2);
     $stmt->bind_param("i", $ID_departamento);
@@ -66,23 +67,31 @@
             ?>
         </ul>
     </section>
-    <details open class="chatbotrobot">
-        <summary><img src="../imagenes/CBOT.png" class="imagenchatbot" onclick="openchatbot()"/></summary>
-        <div class="chatbot" id="chat-contenedor">
-            <!-- <div id="chat-mensaje"></div>
-            <input type="text" id="usuario-input" placeholder="Escribe un mensaje...">
-            <button id="boton-enviar" onclick="sendMessage()">Enviar</button> -->
 
+<!-- Sección principal del chatbot con detalles abiertos por defecto -->
+    <details open class="chatbotrobot">
+
+    <!-- Encabezado del resumen con la imagen del chatbot y función onclick para abrir el chat -->
+        <summary><img src="../imagenes/CBOT.png" class="imagenchatbot" onclick="openchatbot()"/></summary>
+    
+        <!-- Contenedor del bot -->
+        <div class="chatbot" id="chat-contenedor">
+ 
+        <!-- Contenedor mensaje -->
         <div class="form" id="chat-mensaje">
+
+            <!-- Mensaje inicial bot -->
             <div class="bot-inbox inbox bot">
                 <div class="icon">
-                    <i class="fas fa-user"></i>
+                    <i class="fas fa-user"></i> <!-- simbolo usuario -->
                 </div>
                 <div class="msg-header">
                     <p>Hola, ¿cómo puedo ayudarte?</p>
                 </div>
             </div>
         </div>
+
+        <!-- escribir mensaje usuario -->
         <div class="typing-field">
             <div class="input-data">
                 <input id="data" type="text" placeholder="Escribe algo aquí.." required>
