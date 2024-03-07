@@ -71,28 +71,18 @@
     </section>
 
     <details open class="chatbotrobot">
-
-    <!-- imagen del chatbot y función abrir el bot -->
         <summary><img src="../imagenes/CBOT.png" class="imagenchatbot" onclick="openchatbot()"/></summary>
-    
-        <!-- bloque del bot -->
         <div class="chatbot" id="chat-contenedor">
- 
-        <!-- bloque mensaje -->
         <div class="form" id="chat-mensaje">
-
-            <!-- mensaje inicial bot -->
             <div class="bot-inbox inbox bot">
                 <div class="icon">
-                    <i class="fas fa-user"></i> <!-- simbolo usuario -->
+                    <i class="fas fa-user"></i>
                 </div>
                 <div class="msg-header">
                     <p>Hola, ¿cómo puedo ayudarte?</p>
                 </div>
             </div>
         </div>
-
-        <!-- escribir mensaje usuario -->
         <div class="typing-field">
             <div class="input-data">
                 <input id="data" type="text" placeholder="Escribe algo aquí.." required>
