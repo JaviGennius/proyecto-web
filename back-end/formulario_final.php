@@ -172,6 +172,7 @@ $resultado->bind_param(
 
 $resultado->execute();
 if ($resultado) {
+  //tutorial del inicio de sesion//
 $_SESSION["dni_usuario"]=$_POST["dni"];
   header("location:portal_paciente.php");
 } else {header("location:formulario_final");}
