@@ -67,19 +67,18 @@
         </ul>
     </section>
 
-<!-- Sección principal del chatbot con detalles abiertos por defecto -->
     <details open class="chatbotrobot">
 
-    <!-- Encabezado del resumen con la imagen del chatbot y función onclick para abrir el chat -->
+    <!-- imagen del chatbot y función abrir el bot -->
         <summary><img src="../imagenes/CBOT.png" class="imagenchatbot" onclick="openchatbot()"/></summary>
     
-        <!-- Contenedor del bot -->
+        <!-- bloque del bot -->
         <div class="chatbot" id="chat-contenedor">
  
-        <!-- Contenedor mensaje -->
+        <!-- bloque mensaje -->
         <div class="form" id="chat-mensaje">
 
-            <!-- Mensaje inicial bot -->
+            <!-- mensaje inicial bot -->
             <div class="bot-inbox inbox bot">
                 <div class="icon">
                     <i class="fas fa-user"></i> <!-- simbolo usuario -->
