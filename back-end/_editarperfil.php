@@ -9,7 +9,7 @@ require("initdb.php");
 // Variable para rastrear errores
 $error = ""; 
  // Obtener y almacenar los valores del formulario en variables
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") { // Procesar los datos del formulario que se enviaron mediante POST
     $fecha = $_POST['fecha'];
     $tel = $_POST['tel'];
     $correo = $_POST['correo'];
