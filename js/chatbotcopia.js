@@ -12,6 +12,7 @@ function openchatbot() {
 }
 // espera a que el documento esté listo para ejecutar el código
 $(document).ready(function() {
+  // Asocia el evento clic al botón de enviar
   $("#send-btn").on("click", function() {     // asociamos el evento clic al botón de enviar
       $value = $("#data").val();              // obtenemos el valor del campo de entrada
 
@@ -19,17 +20,19 @@ $(document).ready(function() {
       $msg = '<div class="user-inbox inbox user"><div class="msg-header"><p>Usuario: ' + $value + '</p></div></div>';
       $(".form").append($msg);
 
-    // limpiamos el campo de entrada
+    // Limpia el campo de entrada con el id
       $("#data").val('');
 
 
-// iniciamos la funcion ajax
+      // Inicia la función AJAX para enviar el mensaje al archivo '_chatbot.php'
       $.ajax({
           url: '_chatbot.php',
           type: 'POST',
           data: 'text=' + $value,
           success: function(result) {
+            // Crea el mensaje de respuesta del bot y lo agrega al contenedor del chat
               $replay = '<div class="bot-inbox inbox bot"><div class="icon"><i class="fas fa-user"></i></div><div class="msg-header"><p>Bot: ' + result + '</p></div></div>';
+              // Desplaza la barra hacia abajo para ver las preguntas y respuestas anteriores
               $(".form").append($replay);
 
 // cuando hay muchas respuestas, la barra baja para ver las preguntas y respuestas anteriores

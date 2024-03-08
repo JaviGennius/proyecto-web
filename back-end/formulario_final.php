@@ -191,9 +191,3 @@ if ($resultado->affected_rows > 0) {
 }
 
 ?>
-
-
-
-
-
-
