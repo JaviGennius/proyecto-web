@@ -11,7 +11,7 @@
     require("initdb.php");
     $ID_departamento = $_GET['ID_departamento'];
 
-    // Consultas SQL información departamento y sus servicios (W3schools): https://www.w3schools.com/php/php_mysql_prepared_statements.asp
+    // Consultas SQL información departamento y sus servicios (W3schools): https://www.w3schools.com/php/php_mysql_prepared_statements.asp 
     $consulta2 = "SELECT Nombre_servicio FROM servicios INNER JOIN departamentos ON departamentos.ID_departamento = servicios.ID_departamento WHERE departamentos.ID_departamento = ?;";
     $stmt = $con->prepare($consulta2);
     $stmt->bind_param("i", $ID_departamento);
