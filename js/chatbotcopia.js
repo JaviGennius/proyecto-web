@@ -13,7 +13,7 @@ function openchatbot() {
 // espera a que el documento esté listo para ejecutar el código
 $(document).ready(function() {
   // Asocia el evento clic al botón de enviar
-  $("#send-btn").on("click", function() {     // asociamos el evento clic al botón de enviar
+  $("#send-btn").on("click", function() {
       $value = $("#data").val();              // obtenemos el valor del campo de entrada
 
     // creamos el mensaje del usuario y lo agregamos al contenedor del chat
