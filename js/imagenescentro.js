@@ -1,7 +1,8 @@
+//Funcion que activa el menu hamburguesa para abrirlo y cerrarlo
 let menuToggle = document.querySelector('.menuToggle');
-let header = document.querySelector('.navegador');
-menuToggle.onclick = function(){
-    header.classList.toggle('active');
+let navegador = document.querySelector('.navegador');
+menuToggle.onclick = function(){// Asigna una función al evento 'onclick' del elemento menuToggle que activa el menu hamburguesa 
+    navegador.classList.toggle('active');
 
 }
 
