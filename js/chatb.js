@@ -1,30 +1,33 @@
 /*https://youtu.be/nRF4HrUoAh4?si=9deMtFIWkZn4P6jK*/    /*https://stackoverflow.com/questions/12491182/how-to-send-user-data-using-sendmessage-function*/
+
+/*referencias a dos elementos del DOM utilizando sus ID*/
 const chatMessages = document.getElementById('chat-mensaje');
 const userInput = document.getElementById('usuario-input');
 
 function sendMessage() {
   const userMessage = userInput.value;
-  appendMessage('user', userMessage);
+  appendMessage('user', userMessage); /*agrega el mensaje del usuario al área de mensajes con una clase 'user'*/
   const botResponse = getBotResponse(userMessage);
-  appendMessage('bot', botResponse);
+  appendMessage('bot', botResponse); /*agrega la respuesta del bot al área de mensajes con una clase 'bot'*/
   userInput.value = '';
 }
 
 function appendMessage(sender, message) {
-  const messageElement = document.createElement('div');
+  const messageElement = document.createElement('div'); // nuevo elemento div llamado messageElement
   messageElement.classList.add(sender);
-  messageElement.textContent = message;
+  messageElement.textContent = message; // contenido del mensaje
   chatMessages.appendChild(messageElement);
   chatMessages.scrollTop = chatMessages.scrollHeight;
 }
 
 function getBotResponse(userMessage) {
-  return "Bot: " + userMessage;
+  return "Bot: " + userMessage; // funcion que devuelve la respuesta del mensaje
 }
 
 function getBotResponse(userMessage) {
 const lowerCaseMessage = userMessage.toLowerCase();
 
+// if y else para determinar la respuesta del bot
 if (lowerCaseMessage.includes('hola')) {
   return 'Hola, ¿cómo estás?';
 } else if (lowerCaseMessage.includes('adios')||lowerCaseMessage.includes('adiós')) {
@@ -48,8 +51,8 @@ else {
 function openchatbot() {
   var chatbot = document.getElementById("chat-contenedor");
 
-  if (chatbot.style.display === "none") {
-      chatbot.style.display = "block";
+  if (chatbot.style.display === "none") { // "none" (oculto)
+      chatbot.style.display = "block"; // "block" (visible)
   } else {
       chatbot.style.display = "none";
   }
